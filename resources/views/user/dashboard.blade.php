@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="mobile-header d-flex justify-content-between d-lg-none align-items-center">
                         <div class="author">
-                            <img src="assets/images/dashboard/author.png" alt="dashboard">
+                            <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
                         </div>
                         <div class="cross-header-bar">
                             <span></span>
@@ -57,7 +57,7 @@
                                             <li>
                                                 <a href="#0">
                                                     <div class="icon">
-                                                        <img src="assets/images/dashboard/author.png" alt="dashboard">
+                                                        <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
                                                     </div>
                                                     <div class="cont">
                                                         <span class="title">Robinhood Pandey</span>
@@ -70,7 +70,7 @@
                                             <li>
                                                 <a href="#0">
                                                     <div class="icon">
-                                                        <img src="assets/images/dashboard/author.png" alt="dashboard">
+                                                        <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
                                                     </div>
                                                     <div class="cont">
                                                         <span class="title">Robinhood Pandey</span>
@@ -83,7 +83,7 @@
                                             <li>
                                                 <a href="#0">
                                                     <div class="icon">
-                                                        <img src="assets/images/dashboard/author.png" alt="dashboard">
+                                                        <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
                                                     </div>
                                                     <div class="cont">
                                                         <span class="title">Robinhood Pandey</span>
@@ -163,7 +163,7 @@
                                 <li>
                                     <a href="#0" class="author">
                                         <div class="thumb">
-                                            <img src="assets/images/dashboard/author.png" alt="dashboard">
+                                            <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
                                             <span class="checked">
                                                 <i class="flaticon-checked"></i>
                                             </span>
@@ -205,7 +205,7 @@
                 </div>
             </div>
             <div class="dashboard-hero-content text-white">
-                <h3 class="title">Dashboard</h3>
+                <h3 class="title">User Dashboard</h3>
                 <ul class="breadcrumb">
                     <li>
                         <a href="index.html">Home</a>
@@ -223,10 +223,10 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Balance</span>
-                                <h5 class="amount">0 USD</h5>
+                                <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
-                                <img src="assets/images/dashboard/dashboard1.png" alt="dasboard">
+                                <img src="{{asset('assets/images/dashboard/dashboard1.png')}}" alt="dasboard">
                             </div>
                         </div>
                     </div>
@@ -236,10 +236,10 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Balance</span>
-                                <h5 class="amount">0 BTC</h5>
+                                <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
-                                <img src="assets/images/dashboard/dashboard2.png" alt="dasboard">
+                                <img src="{{asset('assets/images/dashboard/dashboard2.png')}}" alt="dasboard">
                             </div>
                         </div>
                     </div>
@@ -249,10 +249,10 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Balance</span>
-                                <h5 class="amount">0 ETH</h5>
+                                <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
-                                <img src="assets/images/dashboard/dashboard3.png" alt="dasboard">
+                                <img src="{{asset('assets/images/dashboard/dashboard3.png')}}" alt="dasboard">
                             </div>
                         </div>
                     </div>
@@ -262,10 +262,10 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Balance</span>
-                                <h5 class="amount">0 XRP</h5>
+                                <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
-                                <img src="assets/images/dashboard/dashboard4.png" alt="dasboard">
+                                <img src="{{ asset('assets/images/dashboard/dashboard4.png') }}" alt="dasboard">
                             </div>
                         </div>
                     </div>

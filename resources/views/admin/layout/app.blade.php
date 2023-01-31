@@ -4,4 +4,5 @@
 
 <x-alert />
 
+@yield('datatable')
 @include('admin.layout.footer')

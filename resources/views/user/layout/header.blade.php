@@ -8,18 +8,18 @@
 
     <title>Hyipland - HYIP Investment HTML Template</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/owl.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                 <div class="site-header-container">
                     <div class="side-logo">
                         <a href="dashboard.html">
-                            <img src="assets/images/logo/logo.png" alt="logo">
+                            <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo">
                         </a>
                     </div>
                     <ul class="dashboard-menu">
@@ -92,7 +92,11 @@
                             <a href="promotional-metarials.html"><i class="flaticon-deal"></i>Promotional</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"><i class="flaticon-right-arrow"></i>Logout</a>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" style="border: none"><i
+                                        class="flaticon-right-arrow"></i>Logout</button>
+                            </form>
                         </li>
                     </ul>
                 </div>
