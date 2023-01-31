@@ -97,7 +97,7 @@
                                 <a href="index.html">Home</a>
                             </li>
                             <li>
-                                <a href="{{ route('dashboard') }}">Dashboard</a>
+                                <a href="{{ route('User.Dashboard') }}">Dashboard</a>
                             </li>
                             <li>
                                 <a href="about.html">About</a>
