@@ -97,7 +97,7 @@
                                 <a href="index.html">Home</a>
                             </li>
                             <li>
-                                <a href="dashboard.html">Dashboard</a>
+                                <a href="{{ route('dashboard') }}">Dashboard</a>
                             </li>
                             <li>
                                 <a href="about.html">About</a>
