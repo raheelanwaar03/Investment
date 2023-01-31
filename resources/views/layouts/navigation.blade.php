@@ -1,15 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from pixner.net/hyipland/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Jan 2023 19:30:18 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Hyipland - HYIP Investment HTML Template</title>
+    <title>{{ env('APP_NAME') }} - HYIP Investment HTML Template</title>
 
     <link rel="stylesheet" href="{{ ('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ ('assets/css/all.min.css') }}">
@@ -60,7 +57,7 @@
                                     <a href="#0"><i class="flaticon-support"></i>Support</a>
                                 </li>
                                 <li>
-                                    <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="d4bdbab2bb94bcadbda4b8b5bab0fab7bbb9">[email&#160;protected]</span> </a>
+                                    <a href="Mailto:info@{{ env('APP_NAME') }}.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="d4bdbab2bb94bcadbda4b8b5bab0fab7bbb9">[email&#160;protected]</span> </a>
                                 </li>
                             </ul>
                         </div>
@@ -77,10 +74,10 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="sign-in.html">Sign In</a>
+                                    <a href="{{ route('login') }}">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="sign-up.html">Sign Up</a>
+                                    <a href="{{ route('register') }}">Sign Up</a>
                                 </li>
                             </ul>
                         </div>

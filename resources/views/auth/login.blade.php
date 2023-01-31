@@ -1,47 +1,43 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('auth.layout.app')
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
+@section('content')
+    <div class="account-section bg_img" data-background="assets/images/account-bg.jpg">
+        <div class="container">
+            <div class="account-title text-center">
+                <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
+                            class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
+                <a href="#0" class="logo">
+                    <img src="assets/images/logo/footer-logo.png" alt="logo">
                 </a>
-            @endif
-
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
+            </div>
+            <div class="account-wrapper">
+                <div class="account-body">
+                    <h4 class="title mb-20">Welcome To {{ env('APP_NAME') }}</h4>
+                    <form action="{{ route('login') }}" method="POST" class="account-form">
+                        @csrf
+                        <div class="form-group">
+                            <label for="sign-up">Your Email </label>
+                            <input type="text" placeholder="Enter Your Email " id="sign-up" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+                            <input type="password" placeholder="Enter Your Password" id="pass" name="password">
+                            <span class="sign-in-recovery">Forgot your password? <a href="#0">recover
+                                    password</a></span>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="mt-2 mb-2">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="or">
+                    <span>OR</span>
+                </div>
+                <div class="account-header pb-0">
+                    <span class="d-block mb-30 mt-2">Sign up with your work email</span>
+                    <span class="d-block mt-15">Don't have an account? <a href="{{ route('register') }}">Sign Up Here</a></span>
+                </div>
+            </div>
         </div>
-    </form>
-</x-guest-layout>
+    </div>
+@endsection

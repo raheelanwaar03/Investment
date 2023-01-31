@@ -134,10 +134,10 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-header left-style">
-                        <span class="cate">WELCOME TO HYIPLAND</span>
-                        <h2 class="title">about hyipland</h2>
+                        <span class="cate">WELCOME TO {{ env('APP_NAME') }}</span>
+                        <h2 class="title">about {{ env('APP_NAME') }}</h2>
                         <p>
-                            HYIPLAND is an investment company, whose team is working on making money from the volatility of
+                            {{ env('APP_NAME') }} is an investment company, whose team is working on making money from the volatility of
                             cryptocurrencies and offer great returns to our clients.
                         </p>
                     </div>
@@ -379,7 +379,7 @@
                         <span class="cate">INVESTMENT OFFER</span>
                         <h2 class="title">OUR INVESTMENT PLANS</h2>
                         <p>
-                            Hyipland provides a straightforward and transparent mechanism to attract investments and make
+                            {{ env('APP_NAME') }} provides a straightforward and transparent mechanism to attract investments and make
                             more profits.
                         </p>
                     </div>
@@ -1153,7 +1153,7 @@
                         </div>
                     </div>
                     <div class="affiliate-bottom">
-                        <h6 class="title">Make money with hyipland</h6>
+                        <h6 class="title">Make money with {{ env('APP_NAME') }}</h6>
                         <a href="#0" class="custom-button">
                             learn more <i class="flaticon-right"></i>
                         </a>
@@ -1275,7 +1275,7 @@
                             <div class="client-item">
                                 <div class="client-content">
                                     <p>
-                                        Awesome hyipland most profitable site!
+                                        Awesome {{ env('APP_NAME') }} most profitable site!
                                     </p>
                                     <div class="rating">
                                         <span>

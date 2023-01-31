@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\landingPageController;
 use Illuminate\Support\Facades\Route;
 
 
