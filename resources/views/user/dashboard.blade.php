@@ -169,8 +169,8 @@
                                             </span>
                                         </div>
                                         <div class="content">
-                                            <h6 class="title">John Doe</h6>
-                                            <span class="country">Indonesia</span>
+                                            <h6 class="title">{{ auth()->user()->name }}</h6>
+                                            <span class="country">{{ auth()->user()->country }}</span>
                                         </div>
                                     </a>
                                     <div class="notification-area">
@@ -178,7 +178,7 @@
                                             <div class="thumb">
                                                 <img src="assets/images/dashboard/author.png" alt="dashboard">
                                             </div>
-                                            <h6 class="title">John Doe</h6>
+                                            <h6 class="title">{{ auth()->user()->name }}</h6>
                                             <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
                                                     data-cfemail="5d173235333932381d3a303c3431733e3230">[email&#160;protected]</span></a>
                                         </div>
@@ -208,7 +208,7 @@
                 <h3 class="title">User Dashboard</h3>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{{ route('LandingPage') }}">Home</a>
                     </li>
                     <li>
                         Dashboard

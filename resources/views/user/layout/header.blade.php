@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Hyipland - HYIP Investment HTML Template</title>
+    <title>{{ env('APP_NAME') }} - HYIP Investment HTML Template</title>
 
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
@@ -62,35 +62,26 @@
                     </div>
                     <ul class="dashboard-menu">
                         <li>
-                            <a href="dashboard.html" class="active"><i class="flaticon-man"></i>Dashboard</a>
+                            <a href="{{ route('User.Dashboard') }}" class="active"><i class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="operations.html"><i class="flaticon-coin"></i>Operations</a>
+                            <a href="operations.html"><i class="flaticon-interest"></i>Refer Friend</a>
                         </li>
                         <li>
-                            <a href="deposit.html"><i class="flaticon-interest"></i>Deposits</a>
+                            <a href="deposit.html"><i class="flaticon-team"></i>Team</a>
                         </li>
                         <li>
                             <a href="withdraw.html"><i class="flaticon-atm"></i>Withdraw</a>
                         </li>
                         <li>
-                            <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Fund Transfer </a>
+                            <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Level</a>
                         </li>
                         <li>
                             <a href="partners.html"><i class="flaticon-deal"></i>Partners</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="setting.html"><i class="flaticon-gears"></i>Settings</a>
-                        </li>
-                        <li>
-                            <a href="notification.html"><i class="flaticon-bell"></i>Notifications</a>
-                        </li>
-                        <li>
-                            <a href="ticket.html"><i class="flaticon-sms"></i>Tickets</a>
-                        </li>
-                        <li>
-                            <a href="promotional-metarials.html"><i class="flaticon-deal"></i>Promotional</a>
-                        </li>
+                        </li> --}}
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
