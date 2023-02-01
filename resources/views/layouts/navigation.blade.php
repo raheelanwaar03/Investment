@@ -64,16 +64,6 @@
                         <div class="col-6">
                             <ul class="cart-area">
                                 <li>
-                                    <i class="flaticon-globe"></i>
-                                    <div class="select-area">
-                                        <select class="select-bar">
-                                            <option value="en">English</option>
-                                            <option value="bn">Bangla</option>
-                                            <option value="sp">Spanish</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li>
                                     <a href="{{ route('login') }}">Sign In</a>
                                 </li>
                                 <li>
@@ -115,7 +105,7 @@
                                 <a href="contact.html">Contact</a>
                             </li>
                             <li class="pr-0">
-                                <a href="contact.html" class="custom-button">Join Us</a>
+                                <a href="{{ route('register') }}" class="custom-button">Join Us</a>
                             </li>
                         </ul>
                         <div class="header-bar d-lg-none">
