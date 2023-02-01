@@ -65,7 +65,7 @@
                             <a href="{{ route('User.Dashboard') }}" class="active"><i class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="operations.html"><i class="flaticon-interest"></i>Refer Friend</a>
+                            <a href="{{ route('User.Refer.New.Friend') }}"><i class="flaticon-interest"></i>Refer Friend</a>
                         </li>
                         <li>
                             <a href="deposit.html"><i class="flaticon-team"></i>Team</a>
