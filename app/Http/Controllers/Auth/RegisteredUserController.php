@@ -50,6 +50,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME)->with('success','Your request has been recived Admin will notify you when your Account activated!');
+        return redirect(RouteServiceProvider::HOME)->with('success','Your request has been received please pay fees for your account activation!');
     }
 }

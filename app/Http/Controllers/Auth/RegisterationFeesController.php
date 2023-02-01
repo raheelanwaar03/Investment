@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\FeesCollecator;
 use Illuminate\Http\Request;
 
 class RegisterationFeesController extends Controller
@@ -10,5 +11,21 @@ class RegisterationFeesController extends Controller
     public function registerationFees()
     {
         return view('auth.registerationFees');
+    }
+
+    public function feesDetailStore(Request $request)
+    {
+        $validated = $request->validate([
+            'bank' => 'required',
+            'tid' => 'required'
+        ]);
+
+        $feesDetails = new FeesCollecator();
+        $feesDetails->user_id = auth()->user()->id;
+        $feesDetails->bank = $validated['bank'];
+        $feesDetails->tid = $validated['tid'];
+        $feesDetails->save();
+        return redirect('/')->with('success','Admin will check your details and notify you when your account activated');
+
     }
 }

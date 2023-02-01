@@ -38,6 +38,7 @@ Route::middleware('guest')->group(function () {
 
 // registeration fees routes
 Route::get('Registeration/Fees', [RegisterationFeesController::class, 'registerationFees']);
+Route::post('Registeration/Store', [RegisterationFeesController::class, 'feesDetailStore'])->name('Store/Fees/Details');
 
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
