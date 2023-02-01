@@ -20,6 +20,10 @@
                             <input type="text" placeholder="Enter Your name" name="name">
                         </div>
                         <div class="form-group">
+                            <label for="sign-up">Your Username </label>
+                            <input type="text" placeholder="Enter Your Username" name="username">
+                        </div>
+                        <div class="form-group">
                             <label for="sign-up">Your Email </label>
                             <input type="text" placeholder="Enter Your Email" name="email">
                         </div>

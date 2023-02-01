@@ -71,7 +71,7 @@
                             <a href="deposit.html"><i class="flaticon-team"></i>Team</a>
                         </li>
                         <li>
-                            <a href="withdraw.html"><i class="flaticon-atm"></i>Withdraw</a>
+                            <a href="{{ route('User.Widthraw.Balance') }}"><i class="flaticon-atm"></i>Withdraw</a>
                         </li>
                         <li>
                             <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Level</a>

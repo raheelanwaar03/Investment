@@ -222,14 +222,28 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-12 mb-4">
-                    <div class="card shadow bordered-primary mb-4">
-                        <div>
-                            <input type="text" style="width: 100%;border:none"
-                                value="{{ route('register', ['referal' => Auth::user()->username]) }}" id="myInput">
-                            <button onclick="copy()" class="btn btn-secondary px-2">copy</button>
+                    <div class="card mt-3">
+                        <div class="card-title">
+                            <h3 class="text-center m-3">Widthraw Balance</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="{{ route('User.Widthraw.Balance.Request') }}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="">Widthraw Amount</label>
+                                    <input type="num" name="widthraw_amount" class="form-control" placeholder="Enter Amount Your want to widthraw" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Select Bank</label>
+                                    <select class="form-control" name="widthraw_bank">
+                                        <option value="easypaisa">Easypaisa</option>
+                                        <option value="jazzcash">Jazzcash</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Procced</button>
+                            </form>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
         <div class="container-fluid sticky-bottom">
@@ -254,18 +268,5 @@
     </div>
     </section>
 
-
-<script>
-    function copy() {
-      // Get the text field
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(copyText.value);
-
-      // Alert the copied text
-      alert("Copied the text: " + copyText.value);
-    }
-    </script>
 
 @endsection
