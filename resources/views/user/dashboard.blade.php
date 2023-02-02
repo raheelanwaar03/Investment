@@ -172,7 +172,7 @@
                                     <div class="notification-area">
                                         <div class="author-header">
                                             <div class="thumb">
-                                                <img src="assets/images/dashboard/author.png" alt="dashboard">
+                                                <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
                                             <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
@@ -188,8 +188,10 @@
                                                         Profile</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><i class="fas fa-sign-out-alt"></i>Log
-                                                        Out</a>
+                                                    <form action="{{ route('logout') }}" method="POST">
+                                                        @csrf
+                                                        <button class="btn btn-block btn-primary">Logout</button>
+                                                    </form>
                                                 </li>
                                             </ul>
                                         </div>

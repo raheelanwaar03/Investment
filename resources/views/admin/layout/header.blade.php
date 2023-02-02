@@ -73,10 +73,10 @@
                             <a href="{{ route('Admin.Pending.Users') }}"><i class="flaticon-coin"></i>Pending Users</a>
                         </li>
                         <li>
-                            <a href="deposit.html"><i class="flaticon-interest"></i>Deposits</a>
+                            <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-interest"></i>Easypaisa User</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-interest"></i>Easypaisa User</a>
+                            <a href="deposit.html"><i class="flaticon-interest"></i>Deposits</a>
                         </li>
                         <li>
                             <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Fund Transfer </a>
