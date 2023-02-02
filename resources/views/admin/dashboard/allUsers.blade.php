@@ -27,13 +27,6 @@
                             </li>
                             <li>
                                 <i class="flaticon-globe"></i>
-                                <div class="select-area">
-                                    <select class="select-bar" style="display: none;">
-                                        <option value="en">English</option>
-                                        <option value="bn">Bangla</option>
-                                        <option value="sp">Spanish</option>
-                                    </select>
-                                </div>
                             </li>
                         </ul>
                         <div

@@ -64,16 +64,19 @@
                     </div>
                     <ul class="dashboard-menu">
                         <li>
-                            <a href="dashboard.html" class="active"><i class="flaticon-man"></i>Dashboard</a>
+                            <a href="{{ route('Admin.Dashboard') }}" class="active"><i class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="{{ route('Admin.All.Users') }}"><i class="flaticon-coin"></i>All Users</a>
                         </li>
                         <li>
+                            <a href="{{ route('Admin.Pending.Users') }}"><i class="flaticon-coin"></i>Pending Users</a>
+                        </li>
+                        <li>
                             <a href="deposit.html"><i class="flaticon-interest"></i>Deposits</a>
                         </li>
                         <li>
-                            <a href="withdraw.html"><i class="flaticon-atm"></i>Withdraw</a>
+                            <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-interest"></i>Easypaisa User</a>
                         </li>
                         <li>
                             <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Fund Transfer </a>

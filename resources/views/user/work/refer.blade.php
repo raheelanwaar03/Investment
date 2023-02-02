@@ -219,7 +219,7 @@
                 </ul>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid m-4">
             <div class="row justify-content-center">
                 <div class="col-lg-12 mb-4">
                     <div class="card shadow bordered-primary mb-4">

@@ -18,9 +18,9 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(): View
+    public function create($referal = 'default'): View
     {
-        return view('auth.register');
+        return view('auth.register',compact('referal'));
     }
 
     /**
@@ -38,6 +38,12 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        if($user = User::where('username',$request->referal)->first())
+        {
+            $user->balance += 50;
+            $user->save();
+        }
 
         $user = User::create([
             'name' => $request->name,

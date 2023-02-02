@@ -19,4 +19,16 @@ class AdminDashboardController extends Controller
         return view('admin.dashboard.allUsers',compact('users'));
     }
 
+    public function pendingUsers()
+    {
+        $users = User::where('status','pending')->get();
+        return view('admin.dashboard.pendingUser',compact('users'));
+    }
+
+    public function easypaisaUsers()
+    {
+        $users = User::get();
+        return view('admin.dashboard.easypaisUser',compact('users'));
+    }
+
 }

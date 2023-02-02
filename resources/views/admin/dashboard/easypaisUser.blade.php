@@ -218,58 +218,34 @@
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="dashboard-item">
-                        <div class="dashboard-inner">
-                            <div class="cont">
-                                <span class="title">All User's</span>
-                                {{-- <h5 class="amount">{{ allUser() }}</h5> --}}
-                            </div>
-                            <div class="thumb">
-                                <img src="{{ asset('assets/images/dashboard/dashboard1.png') }}" alt="dasboard">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="dashboard-item">
-                        <div class="dashboard-inner">
-                            <div class="cont">
-                                <span class="title">Pending User's</span>
-                                {{-- <h5 class="amount">{{ pendingUsers() }}</h5> --}}
-                            </div>
-                            <div class="thumb">
-                                <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="dashboard-item">
-                        <div class="dashboard-inner">
-                            <div class="cont">
-                                <span class="title">Verified User's</span>
-                                {{-- <h5 class="amount">{{ verifiedUsers() }}</h5> --}}
-                            </div>
-                            <div class="thumb">
-                                <img src="{{ asset('assets/images/dashboard/dashboard3.png') }}" alt="dasboard">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="dashboard-item">
-                        <div class="dashboard-inner">
-                            <div class="cont">
-                                <span class="title">Rejected User's</span>
-                                {{-- <h5 class="amount">{{ rejectedUsers() }}</h5> --}}
-                            </div>
-                            <div class="thumb">
-                                <img src="{{ asset('assets/images/dashboard/dashboard4.png') }}" alt="dasboard">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-center text-white">Easypaisa Users</h2>
+                <hr>
+                <table id="myTable" class="table table-bordered">
+                    <thead>
+                        <tr class="text-white">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Country</th>
+                            <th>Status</th>
+                            <th>Account</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->phone }}</td>
+                                <td>{{ $user->country }}</td>
+                                <td>{{ $user->status }}</td>
+                                <td>easypaisa</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+
+                </table>
             </div>
         </div>
         <div class="container-fluid sticky-bottom">
@@ -293,4 +269,14 @@
         </div>
     </div>
     </section>
+@endsection
+
+@section('datatable')
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 @endsection

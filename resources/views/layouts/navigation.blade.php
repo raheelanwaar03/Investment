@@ -74,12 +74,12 @@
                                         </form>
                                     </li>
                                 @else
-                                <li>
-                                    <a href="{{ route('login') }}">Sign In</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('register') }}">Sign Up</a>
-                                </li>
+                                    <li>
+                                        <a href="{{ route('login') }}">Sign In</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('register') }}">Sign Up</a>
+                                    </li>
                                 @endif
                             </ul>
                         </div>
@@ -96,18 +96,18 @@
                         </div>
                         <ul class="menu">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="{{ route('LandingPage') }}">Home</a>
                             </li>
                             @if (auth()->user())
-                            <li>
-                                <a href="{{ route('User.Dashboard') }}">Dashboard</a>
-                            </li>
+                                <li>
+                                    <a href="{{ route('User.Dashboard') }}">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="affiliate.html">Affiliate</a>
+                                </li>
                             @endif
                             <li>
                                 <a href="about.html">About</a>
-                            </li>
-                            <li>
-                                <a href="affiliate.html">Affiliate</a>
                             </li>
                             <li>
                                 <a href="investment-plan.html">Plan</a>
