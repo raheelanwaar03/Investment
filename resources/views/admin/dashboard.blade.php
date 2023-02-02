@@ -27,13 +27,6 @@
                             </li>
                             <li>
                                 <i class="flaticon-globe"></i>
-                                <div class="select-area">
-                                    <select class="select-bar" style="display: none;">
-                                        <option value="en">English</option>
-                                        <option value="bn">Bangla</option>
-                                        <option value="sp">Spanish</option>
-                                    </select>
-                                </div>
                             </li>
                         </ul>
                         <div
@@ -229,8 +222,8 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Balance</span>
-                                <h5 class="amount">0</h5>
+                                <span class="title">All User's</span>
+                                <h5 class="amount">{{ allUser() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard1.png') }}" alt="dasboard">
@@ -242,8 +235,8 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Balance</span>
-                                <h5 class="amount">0</h5>
+                                <span class="title">Pending User's</span>
+                                <h5 class="amount">{{ pendingUsers() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">
@@ -255,8 +248,8 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Balance</span>
-                                <h5 class="amount">0</h5>
+                                <span class="title">Verified User's</span>
+                                <h5 class="amount">{{ verifiedUsers() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard3.png') }}" alt="dasboard">
@@ -268,8 +261,8 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Balance</span>
-                                <h5 class="amount">0</h5>
+                                <span class="title">Rejected User's</span>
+                                <h5 class="amount">{{ rejectedUsers() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard4.png') }}" alt="dasboard">
