@@ -25,3 +25,9 @@ function rejectedUsers()
     $user = User::where('status','rejected')->get()->count();
     return $user;
 }
+
+function totalReferFriends()
+{
+    $user = User::where('refer',auth()->user()->username)->get()->count();
+    return $user;
+}

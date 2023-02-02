@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('username');
             $table->integer('balance')->default(0);
+            $table->string('referal')->default('default');
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->string('country');

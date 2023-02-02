@@ -22,6 +22,10 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="">Amount</label>
+                            <input type="num" name="amount" placeholder="Please enter 670 pkr for account activation">
+                        </div>
+                        <div class="form-group">
                             <label for="">TRX or TID Num</label>
                             <input type="text" name="tid" placeholder="Enter TID or TRX num or Transcation">
                         </div>

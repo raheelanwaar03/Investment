@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('user_id');
             $table->string('bank');
-            $table->string('tid');
+            $table->string('amount');
+            $table->string('tid')->unique();
             $table->timestamps();
         });
     }

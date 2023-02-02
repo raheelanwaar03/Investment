@@ -17,15 +17,22 @@ class RegisterationFeesController extends Controller
     {
         $validated = $request->validate([
             'bank' => 'required',
+            'amount' => 'required',
             'tid' => 'required'
         ]);
 
-        $feesDetails = new FeesCollecator();
-        $feesDetails->user_id = auth()->user()->id;
-        $feesDetails->bank = $validated['bank'];
-        $feesDetails->tid = $validated['tid'];
-        $feesDetails->save();
-        return redirect('/')->with('success','Admin will check your details and notify you when your account activated');
-
+        if ($validated['amount'] = 670) {
+            return 1;
+            return redirect()->back()->with('error', 'You have not entered desired Amount');
+        } else {
+            return 2;
+            $feesDetails = new FeesCollecator();
+            $feesDetails->user_id = auth()->user()->id;
+            $feesDetails->bank = $validated['bank'];
+            $feesDetails->amount = $validated['amount'];
+            $feesDetails->tid = $validated['tid'];
+            $feesDetails->save();
+            return redirect('/')->with('success', 'Admin will check your details and notify you when your account activated');
+        }
     }
 }

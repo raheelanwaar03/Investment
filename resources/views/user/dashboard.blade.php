@@ -219,7 +219,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Balance</span>
-                                <h5 class="amount">0</h5>
+                                <h5 class="amount">{{ auth()->user()->balance }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard1.png') }}" alt="dasboard">
@@ -231,8 +231,8 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Balance</span>
-                                <h5 class="amount">0</h5>
+                                <span class="title">Level</span>
+                                <h5 class="amount"></h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">
@@ -244,8 +244,8 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Balance</span>
-                                <h5 class="amount">0</h5>
+                                <span class="title">Total Referal Friends</span>
+                                <h5 class="amount">{{ totalReferFriends() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard3.png') }}" alt="dasboard">
@@ -257,7 +257,7 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Balance</span>
+                                <span class="title">Widthrawal Balance</span>
                                 <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
