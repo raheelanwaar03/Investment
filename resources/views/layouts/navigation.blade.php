@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,18 @@
 
     <title>{{ env('APP_NAME') }} - HYIP Investment HTML Template</title>
 
-    <link rel="stylesheet" href="{{ ('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/odometer.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/owl.min.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ ('assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/all.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/animate.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/odometer.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/nice-select.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/owl.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/jquery-ui.min.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/magnific-popup.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/flaticon.css' }}">
+    <link rel="stylesheet" href="{{ 'assets/css/main.css' }}">
 
-    <link rel="shortcut icon" href="{{ ('assets/images/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.png' }}" type="image/x-icon">
 </head>
 
 <body>
@@ -57,18 +57,30 @@
                                     <a href="#0"><i class="flaticon-support"></i>Support</a>
                                 </li>
                                 <li>
-                                    <a href="Mailto:info@{{ env('APP_NAME') }}.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="d4bdbab2bb94bcadbda4b8b5bab0fab7bbb9">[email&#160;protected]</span> </a>
+                                    <a href="Mailto:info@{{ env('APP_NAME') }}.com"><i class="flaticon-email"></i><span
+                                            class="__cf_email__"
+                                            data-cfemail="d4bdbab2bb94bcadbda4b8b5bab0fab7bbb9">[email&#160;protected]</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="cart-area">
+                                @if (auth()->user())
+                                    <li>
+                                        <form action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" style="border: none;">Logout</button>
+                                        </form>
+                                    </li>
+                                @else
                                 <li>
                                     <a href="{{ route('login') }}">Sign In</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('register') }}">Sign Up</a>
                                 </li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -86,9 +98,11 @@
                             <li>
                                 <a href="index.html">Home</a>
                             </li>
+                            @if (auth()->user())
                             <li>
                                 <a href="{{ route('User.Dashboard') }}">Dashboard</a>
                             </li>
+                            @endif
                             <li>
                                 <a href="about.html">About</a>
                             </li>

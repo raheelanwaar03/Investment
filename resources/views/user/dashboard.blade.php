@@ -27,13 +27,6 @@
                             </li>
                             <li>
                                 <i class="flaticon-globe"></i>
-                                <div class="select-area">
-                                    <select class="select-bar" style="display: none;">
-                                        <option value="en">English</option>
-                                        <option value="bn">Bangla</option>
-                                        <option value="sp">Spanish</option>
-                                    </select>
-                                </div>
                             </li>
                         </ul>
                         <div
@@ -57,7 +50,8 @@
                                             <li>
                                                 <a href="#0">
                                                     <div class="icon">
-                                                        <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
+                                                        <img src="{{ asset('assets/images/dashboard/author.png') }}"
+                                                            alt="dashboard">
                                                     </div>
                                                     <div class="cont">
                                                         <span class="title">Robinhood Pandey</span>
@@ -70,7 +64,8 @@
                                             <li>
                                                 <a href="#0">
                                                     <div class="icon">
-                                                        <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
+                                                        <img src="{{ asset('assets/images/dashboard/author.png') }}"
+                                                            alt="dashboard">
                                                     </div>
                                                     <div class="cont">
                                                         <span class="title">Robinhood Pandey</span>
@@ -83,7 +78,8 @@
                                             <li>
                                                 <a href="#0">
                                                     <div class="icon">
-                                                        <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
+                                                        <img src="{{ asset('assets/images/dashboard/author.png') }}"
+                                                            alt="dashboard">
                                                     </div>
                                                     <div class="cont">
                                                         <span class="title">Robinhood Pandey</span>
@@ -163,7 +159,7 @@
                                 <li>
                                     <a href="#0" class="author">
                                         <div class="thumb">
-                                            <img src="{{asset('assets/images/dashboard/author.png')}}" alt="dashboard">
+                                            <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
                                             <span class="checked">
                                                 <i class="flaticon-checked"></i>
                                             </span>
@@ -226,7 +222,7 @@
                                 <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
-                                <img src="{{asset('assets/images/dashboard/dashboard1.png')}}" alt="dasboard">
+                                <img src="{{ asset('assets/images/dashboard/dashboard1.png') }}" alt="dasboard">
                             </div>
                         </div>
                     </div>
@@ -239,7 +235,7 @@
                                 <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
-                                <img src="{{asset('assets/images/dashboard/dashboard2.png')}}" alt="dasboard">
+                                <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">
                             </div>
                         </div>
                     </div>
@@ -252,7 +248,7 @@
                                 <h5 class="amount">0</h5>
                             </div>
                             <div class="thumb">
-                                <img src="{{asset('assets/images/dashboard/dashboard3.png')}}" alt="dasboard">
+                                <img src="{{ asset('assets/images/dashboard/dashboard3.png') }}" alt="dasboard">
                             </div>
                         </div>
                     </div>

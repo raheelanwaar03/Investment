@@ -11,6 +11,7 @@
             <div class="account-wrapper">
                 <div class="account-body">
                     <h4 class="title mb-20">Welcome To {{ env('APP_NAME') }}</h4>
+                    <p>Please Pay(pkr:670) Your Registeration Fees For Account Activation</p>
                     <form action="{{ route('Store/Fees/Details') }}" method="POST" class="account-form">
                         @csrf
                         <div class="form-group">
