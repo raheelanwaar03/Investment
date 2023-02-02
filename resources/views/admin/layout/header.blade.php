@@ -76,10 +76,10 @@
                             <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-interest"></i>Easypaisa User</a>
                         </li>
                         <li>
-                            <a href="deposit.html"><i class="flaticon-interest"></i>Deposits</a>
+                            <a href="{{ route('Admin.Approved.Users') }}"><i class="flaticon-interest"></i>Approved User</a>
                         </li>
                         <li>
-                            <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Fund Transfer </a>
+                            <a href="{{ route('Admin.Rejected.Users') }}"><i class="flaticon-exchange"></i>Rejected User </a>
                         </li>
                         <li>
                             <a href="partners.html"><i class="flaticon-deal"></i>Partners</a>

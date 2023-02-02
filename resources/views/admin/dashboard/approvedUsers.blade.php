@@ -218,7 +218,7 @@
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">Pending Users</h2>
+                <h2 class="text-center text-white">Approved Users</h2>
                 <hr>
                 <table id="myTable" class="table table-bordered">
                     <thead>
@@ -243,7 +243,6 @@
                                 <td>{{ $user->country }}</td>
                                 <td>{{ $user->status }}</td>
                                 <td>
-                                    <a href="{{ route('Admin.Approve.User.Account.Request',['id'=>$user->id]) }}" class="btn btn-small btn-success">Approved</a>
                                     <a href="{{ route('Admin.Rejected.User.Account.Request',['id'=>$user->id]) }}" class="btn btn-small btn-primary">Reject</a>
                                 </td>
                             </tr>

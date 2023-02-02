@@ -25,10 +25,38 @@ class AdminDashboardController extends Controller
         return view('admin.dashboard.pendingUser',compact('users'));
     }
 
+    public function approvedUsers()
+    {
+        $users = User::where('status','approved')->get();
+        return view('admin.dashboard.approvedUsers',compact('users'));
+    }
+
+    public function rejectedUsers()
+    {
+        $users = User::where('status','rejected')->get();
+        return view('admin.dashboard.rejectedUser',compact('users'));
+    }
+
     public function easypaisaUsers()
     {
         $users = User::get();
         return view('admin.dashboard.easypaisUser',compact('users'));
+    }
+
+    public function approvUserAccount($id)
+    {
+        $user = User::find($id);
+        $user->status = 'approved';
+        $user->save();
+        return redirect()->back()->with('success','Account has beed Approved successfully');
+    }
+
+    public function rejectUserAccount($id)
+    {
+        $user = User::find($id);
+        $user->status = 'rejected';
+        $user->save();
+        return redirect()->back()->with('success','Account has been Rejected successfully');
     }
 
 }
