@@ -43,7 +43,7 @@ class AdminDashboardController extends Controller
         return view('admin.dashboard.easypaisUser',compact('users'));
     }
 
-    public function approvUserAccount($id)
+    public function approveUserAccount($id)
     {
         $user = User::find($id);
         $user->status = 'approved';
