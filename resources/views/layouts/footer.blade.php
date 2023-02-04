@@ -11,24 +11,24 @@
                     </form>
                 </div>
                 <div class="newslater-thumb">
-                    <img src="assets/images/footer/footer.png" alt="footer">
+                    <img src="{{ asset('assets/images/footer/footer.png') }}" alt="footer">
                     <div class="coin-1">
-                        <img src="assets/images/footer/Coin_01.png" alt="footer">
+                        <img src="{{ asset('assets/images/footer/Coin_01.png') }}" alt="footer">
                     </div>
                     <div class="coin-2">
-                        <img src="assets/images/footer/Coin_02.png" alt="footer">
+                        <img src="{{ asset('assets/images/footer/Coin_02.png') }}" alt="footer">
                     </div>
                     <div class="coin-3">
-                        <img src="assets/images/footer/Coin_03.png" alt="footer">
+                        <img src="{{ asset('assets/images/footer/Coin_03.png') }}" alt="footer">
                     </div>
                     <div class="coin-4">
-                        <img src="assets/images/footer/Coin_04.png" alt="footer">
+                        <img src="{{ asset('assets/images/footer/Coin_04.png') }}" alt="footer">
                     </div>
                     <div class="coin-5">
-                        <img src="assets/images/footer/Coin_05.png" alt="footer">
+                        <img src="{{ asset('assets/images/footer/Coin_05.png') }}" alt="footer">
                     </div>
                     <div class="coin-6">
-                        <img src="assets/images/footer/Coin_06.png" alt="footer">
+                        <img src="{{ asset('assets/images/footer/Coin_06.png') }}" alt="footer">
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
         <div class="footer-top">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo/footer-logo.png" alt="logo">
+                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" alt="logo">
                 </a>
             </div>
             <ul class="links">
@@ -62,7 +62,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom-area">
                 <div class="left">
-                    <p>&copy; 2020 <a href="#0">Hyipland</a> | All right reserved</p>
+                    <p>&copy; 2023 <a href="#0">Hyipland</a> | All right reserved</p>
                 </div>
                 <ul class="social-icons">
                     <li>
@@ -92,19 +92,20 @@
 </footer>
 </div>
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="{{('assets/js/modernizr-3.6.0.min.js')}}"></script>
-<script src="{{('assets/js/plugins.js')}}"></script>
-<script src="{{('assets/js/bootstrap.min.js')}}"></script>
-<script src="{{('assets/js/magnific-popup.min.js')}}"></script>
-<script src="{{('assets/js/jquery-ui.min.js')}}"></script>
-<script src="{{ ('assets/js/wow.min.js') }}"></script>
-<script src="{{ ('assets/js/odometer.min.js') }}"></script>
-<script src="{{ ('assets/js/viewport.jquery.js') }}"></script>
-<script src="{{ ('assets/js/nice-select.js') }}"></script>
-<script src="{{ ('assets/js/owl.min.js') }}"></script>
-<script src="{{ ('assets/js/paroller.js') }}"></script>
-<script src="{{ ('assets/js/main.js') }}"></script>
+<script data-cfasync="false" src="{{ asset('../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/modernizr-3.6.0.min.js')}}"></script>
+<script src="{{ asset('assets/js/plugins.js')}}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/js/magnific-popup.min.js')}}"></script>
+<script src="{{ asset('assets/js/jquery-ui.min.js')}}"></script>
+<script src="{{ asset('assets/js/wow.min.js') }}"></script>
+<script src="{{ asset('assets/js/odometer.min.js') }}"></script>
+<script src="{{ asset('assets/js/viewport.jquery.js') }}"></script>
+<script src="{{ asset('assets/js/nice-select.js') }}"></script>
+<script src="{{ asset('assets/js/owl.min.js') }}"></script>
+<script src="{{ asset('assets/js/paroller.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

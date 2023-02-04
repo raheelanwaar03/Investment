@@ -16,4 +16,9 @@ class landingPageController extends Controller
         return view('LandingPage.contact');
     }
 
+    public function affilate()
+    {
+        return view('LandingPage.affliatePage');
+    }
+
 }

@@ -8,18 +8,18 @@
 
     <title>{{ env('APP_NAME') }} - HYIP Investment HTML Template</title>
 
-    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/all.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/animate.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/odometer.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/nice-select.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/owl.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/jquery-ui.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/magnific-popup.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/flaticon.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/main.css' }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
-    <link rel="shortcut icon" href="{{ 'assets/images/favicon.png' }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
 </head>
 
 <body>
@@ -70,7 +70,7 @@
                                     <li>
                                         <form action="{{ route('logout') }}" method="POST">
                                             @csrf
-                                            <button type="submit" style="border: none;">Logout</button>
+                                            <button type="submit" class="btn btn-primary">Logout</button>
                                         </form>
                                     </li>
                                 @else
@@ -91,7 +91,7 @@
                     <div class="header-area">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="assets/images/logo/logo.png" alt="logo">
+                                <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo">
                             </a>
                         </div>
                         <ul class="menu">
@@ -103,7 +103,7 @@
                                     <a href="{{ route('User.Dashboard') }}">Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="affiliate.html">Affiliate</a>
+                                    <a href="{{ route('LandingPage.Affilate') }}">Affiliate</a>
                                 </li>
                             @endif
                             <li>

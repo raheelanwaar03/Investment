@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[landingPageController::class,'home'])->name('LandingPage');
 Route::get('/Home/Contact',[landingPageController::class,'contact'])->name('LandingPage.Contact');
+Route::get('/Home/Affilate/Page',[landingPageController::class,'affilate'])->name('LandingPage.Affilate');
 
 
 // Profile routes
