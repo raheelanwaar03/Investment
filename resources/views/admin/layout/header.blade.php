@@ -82,7 +82,7 @@
                             <a href="{{ route('Admin.Rejected.Users') }}"><i class="flaticon-exchange"></i>Rejected User </a>
                         </li>
                         <li>
-                            <a href="partners.html"><i class="flaticon-deal"></i>Partners</a>
+                            <a href="{{ route('Admin.Product.create') }}"><i class="flaticon-deal"></i>Add Product</a>
                         </li>
                         <li>
                             <a href="setting.html"><i class="flaticon-gears"></i>Settings</a>
