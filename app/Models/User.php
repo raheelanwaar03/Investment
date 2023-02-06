@@ -24,6 +24,7 @@ class User extends Authenticatable
         'country',
         'status',
         'role',
+        'level',
         'username',
         'balance',
         'password',

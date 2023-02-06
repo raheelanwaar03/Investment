@@ -36,6 +36,16 @@ function totalReferFriends()
 
 function level()
 {
-   $user = User::where('referal',auth()->user()->username)->count();
-   return $user;
+//    $referalUserCheck = User::where('referal',auth()->user()->username)->count();
+
+//    if(auth()->user())
+//    {
+//        if($referalUserCheck = 1)
+//        {
+//         $user->level = 'level1';
+//         $user->save();
+//         return 'level1';
+//        }
+//    }
+
 }
