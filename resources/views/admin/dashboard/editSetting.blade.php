@@ -91,14 +91,14 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        Set limite
+                        Update limit
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">Set Limite</h2>
+                <h2 class="text-center text-white">Update Limit</h2>
                 <hr>
                 <div class="col-md-12">
                     <div class="card">

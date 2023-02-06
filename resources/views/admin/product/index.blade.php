@@ -91,14 +91,14 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        Dashboard
+                        All Product
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">All Users</h2>
+                <h2 class="text-center text-white">All Products</h2>
                 <hr>
                 <table id="myTable" class="table table-bordered">
                     <thead>
@@ -119,12 +119,12 @@
                                 <td>{{ $product->product_des }}</td>
                                 <td><img src="{{ asset('images/' . $product->product_img) }}" class="img-fluid img-thumbnail"
                                         height="90px" width="90px" alt="{{ $product->product_img }}"></td>
-                                <td>
-                                    <a href="{{ route('Admin.Product.edit',$product->id) }}" class="btn btn-sm btn-info">Edit</a>
+                                <td class="d-flex justify-content-center align-items-center">
+                                    <a href="{{ route('Admin.Product.edit',$product->id) }}" class="btn btn-sm btn-info mx-3">Edit</a>
                                     <form action="{{ route('Admin.Product.destroy',$product->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <a type="submit" class="btn btn-sm btn-danger">Delete</a>
                                     </form>
                                 </td>
                             </tr>

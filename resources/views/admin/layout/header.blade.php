@@ -100,12 +100,6 @@
                             <a href="#"><i class="flaticon-atm"></i>Reject Widt</a>
                         </li>
                         <li>
-                            <a href="ticket.html"><i class="flaticon-sms"></i>Tickets</a>
-                        </li>
-                        <li>
-                            <a href="promotional-metarials.html"><i class="flaticon-deal"></i>Promotional</a>
-                        </li>
-                        <li>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <button type="submit">

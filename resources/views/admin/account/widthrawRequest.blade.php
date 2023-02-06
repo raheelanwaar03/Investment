@@ -211,14 +211,14 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        Dashboard
+                        Widthrawal Requests
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">All Users</h2>
+                <h2 class="text-center text-white">Widthrawal Requests</h2>
                 <hr>
                 <table id="myTable" class="table table-bordered">
                     <thead>

@@ -71,7 +71,8 @@
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
                                                         @csrf
-                                                        <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>Log
+                                                        <button type="submit" class="btn btn-danger"><i
+                                                                class="fas fa-sign-out-alt"></i>Log
                                                             Out</button>
                                                     </form>
                                                 </li>
@@ -114,7 +115,7 @@
                 </div>
                 <div class="col-md-12 mt-4">
 
-                    <h4 class="text-center my-4">Settings</h4>
+                    <h4 class="text-center my-4">Applied Settings</h4>
                     <table id="myTable" class="table table-bordered">
                         <thead>
                             <tr>
@@ -124,9 +125,13 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{ $setting->refer_amount }}</td>
-                                <td><a href="{{ route('Admin.Setting.edit',$setting->id) }}"
-                                        class="btn btn-sm btn-primary">Edit</a></td>
+                                @forelse ($settings as $setting)
+                                    <td>{{ $setting->refer_amount }}</td>
+                                    <td><a href="{{ route('Admin.Setting.edit', $setting->id) }}"
+                                            class="btn btn-sm btn-primary">Edit</a></td>
+                                @empty
+                                <h4 class="text-center">No Limite Applied Yet</h4>
+                                @endforelse
                             </tr>
                         </tbody>
                     </table>

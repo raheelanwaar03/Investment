@@ -91,14 +91,14 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        Dashboard
+                        Edit Product
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">Add Product Details</h2>
+                <h2 class="text-center text-white">Edit Product Details</h2>
                 <hr>
                 <div class="col-md-12">
                     <div class="card">

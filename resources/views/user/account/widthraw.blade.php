@@ -109,6 +109,10 @@
                                     <input type="num" name="widthraw_amount" class="form-control" placeholder="Enter Amount Your want to widthraw" required>
                                 </div>
                                 <div class="form-group">
+                                    <label for="">Number</label>
+                                    <input type="num" name="widthraw_amount" class="form-control" placeholder="Enter Your Easypais or Jazzcash Number" required>
+                                </div>
+                                <div class="form-group">
                                     <label for="">Select Bank</label>
                                     <select class="form-control" name="widthraw_bank">
                                         <option value="easypaisa">Easypaisa</option>

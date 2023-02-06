@@ -15,8 +15,8 @@ class SettingController extends Controller
      */
     public function index()
     {
-        $setting = Setting::where('status',1)->first();
-        return view('admin.dashboard.setting',compact('setting'));
+        $settings = Setting::where('status',1)->get();
+        return view('admin.dashboard.setting',compact('settings'));
     }
 
     /**
