@@ -58,7 +58,7 @@
                 </div>
                 <div class="site-header-container">
                     <div class="side-logo">
-                        <a href="dashboard.html">
+                        <a href="{{ route('LandingPage') }}">
                             <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo">
                         </a>
                     </div>
@@ -83,6 +83,9 @@
                         </li>
                         <li>
                             <a href="{{ route('Admin.Product.create') }}"><i class="flaticon-deal"></i>Add Product</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('Admin.Product.index')}}"><i class="flaticon-deal"></i>All Product</a>
                         </li>
                         <li>
                             <a href="setting.html"><i class="flaticon-gears"></i>Settings</a>

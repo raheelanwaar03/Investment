@@ -98,27 +98,10 @@
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">Add Product Details</h2>
+                <h2 class="text-center text-white">All Product Details</h2>
                 <hr>
                 <div class="col-md-12">
-                    <div class="card">
-                        <form action="{{ route('Admin.Product.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="form-group">
-                            <label for="" class="m-3">Product Title</label>
-                            <input type="text" name="product_title" class="form-group" placeholder="Add Product Title">
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="m-3">Product Description</label>
-                                <textarea name="product_des" class="form-control" rows="7" placeholder="Enter Product Details"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="m-3">Product Image</label>
-                                <input type="file" name="product_img" class="form-control">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enter</button>
-                        </form>
-                    </div>
+                    all data
                 </div>
             </div>
         </div>
