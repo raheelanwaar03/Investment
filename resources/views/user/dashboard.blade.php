@@ -114,7 +114,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Level</span>
-                                <h5 class="amount"></h5>
+                                <h5 class="amount">{{ level() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">

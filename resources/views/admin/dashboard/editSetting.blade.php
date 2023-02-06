@@ -102,34 +102,16 @@
                 <hr>
                 <div class="col-md-12">
                     <div class="card">
-                        <form action="{{ route('Admin.Setting.store') }}" method="POST">
+                        <form action="{{ route('Admin.Setting.update',$setting->id) }}" method="POST">
                             @csrf
+                            @method('put')
                             <div class="form-group">
-                                <label for="" class="m-3">Refer Amount</label>
-                                <input type="text" name="refer_amount" class="form-group" placeholder="Refer Setting">
+                            <label for="" class="m-3">Edit Refer Amount</label>
+                            <input type="text" name="refer_amount" value="{{ $setting->refer_amount }}" class="form-group">
                             </div>
-                            <button type="submit" class="btn btn-primary">Set</button>
+                            <button type="submit" class="btn btn-primary">update</button>
                         </form>
                     </div>
-                </div>
-                <div class="col-md-12 mt-4">
-
-                    <h4 class="text-center my-4">Settings</h4>
-                    <table id="myTable" class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Price</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{ $setting->refer_amount }}</td>
-                                <td><a href="{{ route('Admin.Setting.edit',$setting->id) }}"
-                                        class="btn btn-sm btn-primary">Edit</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>

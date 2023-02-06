@@ -31,3 +31,11 @@ function totalReferFriends()
     $user = User::where('refer',auth()->user()->username)->get()->count();
     return $user;
 }
+
+// Level function
+
+function level()
+{
+   $user = User::where('referal',auth()->user()->username)->count();
+   return $user;
+}

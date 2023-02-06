@@ -88,7 +88,7 @@
                             <a href="{{ route('Admin.Product.index')}}"><i class="flaticon-deal"></i>All Product</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Refer.Setting') }}"><i class="flaticon-gears"></i>Settings</a>
+                            <a href="{{ route('Admin.Setting.index') }}"><i class="flaticon-gears"></i>Settings</a>
                         </li>
                         <li>
                             <a href="notification.html"><i class="flaticon-bell"></i>Notifications</a>

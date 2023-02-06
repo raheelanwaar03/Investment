@@ -45,12 +45,14 @@ class RegisteredUserController extends Controller
             $setting = Setting::where('status','1')->first();
             $referCommission = $setting->refer_amount;
             $user->balance += $referCommission;
+            $user->referal = $request->username;
             $user->save();
         }
 
         $user = User::create([
             'name' => $request->name,
             'username' => $request->username,
+            'referal' => $request->referal,
             'email' => $request->email,
             'phone' => $request->phone,
             'country' => $request->country,
