@@ -114,7 +114,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">All User's</span>
-                                {{-- <h5 class="amount">{{ allUser() }}</h5> --}}
+                                <h5 class="amount">{{ allUser() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard1.png') }}" alt="dasboard">
@@ -127,7 +127,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Pending User's</span>
-                                {{-- <h5 class="amount">{{ pendingUsers() }}</h5> --}}
+                                <h5 class="amount">{{ pendingUsers() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">
@@ -140,7 +140,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Verified User's</span>
-                                {{-- <h5 class="amount">{{ verifiedUsers() }}</h5> --}}
+                                <h5 class="amount">{{ verifiedUsers() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard3.png') }}" alt="dasboard">
@@ -153,7 +153,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Rejected User's</span>
-                                {{-- <h5 class="amount">{{ rejectedUsers() }}</h5> --}}
+                                <h5 class="amount">{{ rejectedUsers() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard4.png') }}" alt="dasboard">
