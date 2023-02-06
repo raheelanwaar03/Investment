@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\Setting;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -41,7 +42,9 @@ class RegisteredUserController extends Controller
 
         if($user = User::where('username',$request->referal)->first())
         {
-            $user->balance += 50;
+            $setting = Setting::where('status','1')->first();
+            $referCommission = $setting->refer_amount;
+            $user->balance += $referCommission;
             $user->save();
         }
 

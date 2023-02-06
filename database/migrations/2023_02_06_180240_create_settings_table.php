@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->integer('refer_amount');
+            $table->string('status')->default(0);
             $table->timestamps();
         });
     }
