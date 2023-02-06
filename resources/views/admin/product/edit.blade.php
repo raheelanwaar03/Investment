@@ -98,40 +98,32 @@
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">All Users</h2>
+                <h2 class="text-center text-white">Add Product Details</h2>
                 <hr>
-                <table id="myTable" class="table table-bordered">
-                    <thead>
-                        <tr class="text-white">
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Image</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @foreach ($products as $product)
-                            <tr>
-                                <td>{{ $product->id }}</td>
-                                <td>{{ $product->product_title }}</td>
-                                <td>{{ $product->product_des }}</td>
-                                <td><img src="{{ asset('images/' . $product->product_img) }}" class="img-fluid img-thumbnail"
-                                        height="90px" width="90px" alt="{{ $product->product_img }}"></td>
-                                <td>
-                                    <a href="{{ route('Admin.Product.edit',$product->id) }}" class="btn btn-sm btn-info">Edit</a>
-                                    <form action="{{ route('Admin.Product.destroy',$product->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-
-                </table>
+                <div class="col-md-12">
+                    <div class="card">
+                        <form action="{{ route('Admin.Product.update',$product->id) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('put')
+                            <div class="form-group">
+                            <label for="" class="m-3">Product Title</label>
+                            <input type="text" name="product_title" value="{{ $product->product_title }}" class="form-group">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="m-3">Product Description</label>
+                                <textarea name="product_des" value="{{ $product->product_des }}" class="form-control" rows="7" ></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="m-3">Product Image</label>
+                                <input type="file" name="product_img" class="form-control">
+                            </div>
+                            <div class="my-3">
+                                <img src="{{ asset('images/'. $product->product_img) }}" alt="product img" width="200px" height="200px">
+                            </div>
+                            <button type="submit" class="btn btn-primary">update</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

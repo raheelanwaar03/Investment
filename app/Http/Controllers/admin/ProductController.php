@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = AdminProductModel::all();
-        return view('admin.product.index',compact('products'));
+        return view('admin.product.index', compact('products'));
     }
 
     /**
@@ -52,8 +52,7 @@ class ProductController extends Controller
         $product->product_des = $validated['product_des'];
         $product->product_img = $imageName;
         $product->save();
-        return redirect()->back()->with('success','Product Added successfully');
-
+        return redirect()->back()->with('success', 'Product Added successfully');
     }
 
     /**
@@ -64,7 +63,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        // $product = AdminProductModel::find($id);
+
     }
 
     /**
@@ -75,7 +75,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = AdminProductModel::find($id);
+        return view('admin.product.edit', compact('product'));
     }
 
     /**
@@ -87,7 +88,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = AdminProductModel::find($id);
+
+        // check image
+
+        if ($request->product_img) {
+            $image = $request->product_img;
+            $imageName = rand(111111, 99999) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+            $product->product_img = $imageName;
+        }
+        $product->product_title = $request->product_title;
+        $product->product_des = $request->product_des;
+        $product->save();
+        return redirect()->back()->with('success', 'Product Updated successfully');
     }
 
     /**
@@ -98,6 +112,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = AdminProductModel::find($id);
+        $product->delete();
+        return redirect()->back()->with('success', 'Product Deleted successfully');
     }
 }
