@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\ProductController;
-use App\Http\Controllers\admin\SettingContrller;
 use App\Http\Controllers\admin\SettingController;
+use App\Http\Controllers\admin\WidthrawRequestsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +18,9 @@ Route::prefix('Admin')->name('Admin.')->middleware('auth','admin')->group(functi
     // routes for approving user account
     Route::get('Approve/User/Account/{id}',[AdminDashboardController::class,'approveUserAccount'])->name('Approve.User.Account.Request');
     Route::get('Reject/User/Account/{id}',[AdminDashboardController::class,'rejectUserAccount'])->name('Rejected.User.Account.Request');
+
+    // Widthraw request Routes
+    Route::get('/Widthraw/Requests',[WidthrawRequestsController::class,'allRequests'])->name('All.Widthraw.Requests');
 
     // setting route
     Route::resource('Setting', SettingController::class);

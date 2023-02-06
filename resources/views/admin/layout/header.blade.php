@@ -91,7 +91,13 @@
                             <a href="{{ route('Admin.Setting.index') }}"><i class="flaticon-gears"></i>Settings</a>
                         </li>
                         <li>
-                            <a href="notification.html"><i class="flaticon-bell"></i>Notifications</a>
+                            <a href="{{ route('Admin.All.Widthraw.Requests') }}"><i class="flaticon-atm"></i>Widthraw Req</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="flaticon-atm"></i>Approve Widt</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="flaticon-atm"></i>Reject Widt</a>
                         </li>
                         <li>
                             <a href="ticket.html"><i class="flaticon-sms"></i>Tickets</a>

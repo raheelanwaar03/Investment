@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('user_id');
             $table->string('widthraw_bank');
             $table->string('widthraw_amount');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
