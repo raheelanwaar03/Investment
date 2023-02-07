@@ -21,6 +21,8 @@ Route::prefix('Admin')->name('Admin.')->middleware('auth','admin')->group(functi
 
     // Widthraw request Routes
     Route::get('/Widthraw/Requests',[WidthrawRequestsController::class,'allRequests'])->name('All.Widthraw.Requests');
+    Route::get('/Rejected/Widthraw/Requests',[WidthrawRequestsController::class,'rejectedWidthrawal'])->name('Rejected.Widthraw');
+    Route::get('/Approved/Widthraw/Requests',[WidthrawRequestsController::class,'approvedWidthrawal'])->name('Approved.Widthraw');
 
     // setting route
     Route::resource('Setting', SettingController::class);

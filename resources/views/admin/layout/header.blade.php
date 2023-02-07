@@ -94,10 +94,10 @@
                             <a href="{{ route('Admin.All.Widthraw.Requests') }}"><i class="flaticon-atm"></i>Widthraw Req</a>
                         </li>
                         <li>
-                            <a href="#"><i class="flaticon-atm"></i>Approve Widt</a>
+                            <a href="{{ route('Admin.Approved.Widthraw') }}"><i class="flaticon-atm"></i>Approve Widt</a>
                         </li>
                         <li>
-                            <a href="#"><i class="flaticon-atm"></i>Reject Widt</a>
+                            <a href="{{ route('Admin.Rejected.Widthraw') }}"><i class="flaticon-atm"></i>Reject Widt</a>
                         </li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
