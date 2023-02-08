@@ -70,10 +70,6 @@
             </div>
         </div>
     </section>
-    <!--=======Banner-Section Ends Here=======-->
-
-
-    <!--=======Counter-Section Starts Here=======-->
     <div class="counter-section">
         <div class="container">
             <div class="row align-items-center mb-30-none justify-content-center">

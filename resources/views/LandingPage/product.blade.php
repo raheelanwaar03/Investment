@@ -17,8 +17,6 @@
             </div>
         </div>
     </section>
-    <!--=======Banner-Section Ends Here=======-->
-
     <section class="contact-section padding-bottom padding-top">
         <div class="container">
             <div class="row">
@@ -33,7 +31,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->product_title }}</h5>
                                         <p class="card-text">{{ $product->product_des }}</p>
-                                        <a href="#">share</a>
+                                        <a href="#">copy link</a>
                                     </div>
                                 </div>
                             </div>
