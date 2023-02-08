@@ -17,17 +17,6 @@
                     </div>
                     <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-between align-items-center">
                         <ul class="support-area">
-                            <li>
-                                <a href="#0"><i class="flaticon-support"></i>Support</a>
-                            </li>
-                            <li>
-                                <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__"
-                                        data-cfemail="f49d9a929bb49c8d9d8498959a90da979b99">[email&#160;protected]</span>
-                                </a>
-                            </li>
-                            <li>
-                                <i class="flaticon-globe"></i>
-                            </li>
                         </ul>
                         <div
                             class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">

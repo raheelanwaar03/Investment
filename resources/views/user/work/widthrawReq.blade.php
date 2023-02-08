@@ -17,17 +17,6 @@
                     </div>
                     <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-between align-items-center">
                         <ul class="support-area">
-                            <li>
-                                <a href="#0"><i class="flaticon-support"></i>Support</a>
-                            </li>
-                            <li>
-                                <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__"
-                                        data-cfemail="f49d9a929bb49c8d9d8498959a90da979b99">[email&#160;protected]</span>
-                                </a>
-                            </li>
-                            <li>
-                                <i class="flaticon-globe"></i>
-                            </li>
                         </ul>
                         <div
                             class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
@@ -89,14 +78,14 @@
                         <a href="{{ route('LandingPage') }}">Home</a>
                     </li>
                     <li>
-                        My Team
+                        All Widthrawal
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">Approved Widthrawal</h2>
+                <h2 class="text-center text-white">All Widthrawal Status</h2>
                 <hr>
                 <table id="myTable" class="table table-bordered">
                     <thead>
@@ -111,14 +100,14 @@
                     </thead>
 
                     <tbody>
-                        @foreach ($widthrawRequests as $widthrawRequest)
+                        @foreach ($widthraws as $widthraw)
                             <tr>
-                               <td>{{ $widthrawRequest->widthraw_name }}</td>
-                                <td>{{ $widthrawRequest->widthraw_bank }}</td>
-                                <td>{{ $widthrawRequest->widthraw_num }}</td>
-                                <td>{{ $widthrawRequest->widthraw_amount }}</td>
-                                <td>{{ $widthrawRequest->status }}</td>
-                                <td>{{ $widthrawRequest->created_at }}</td>
+                               <td>{{ $widthraw->widthraw_name }}</td>
+                                <td>{{ $widthraw->widthraw_bank }}</td>
+                                <td>{{ $widthraw->widthraw_num }}</td>
+                                <td>{{ $widthraw->widthraw_amount }}</td>
+                                <td>{{ $widthraw->status }}</td>
+                                <td>{{ $widthraw->created_at }}</td>
                             </tr>
                         @endforeach
                     </tbody>

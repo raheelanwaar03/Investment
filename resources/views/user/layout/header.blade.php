@@ -73,6 +73,9 @@
                         <li>
                             <a href="{{ route('User.Widthraw.Balance') }}"><i class="flaticon-atm"></i>Withdraw</a>
                         </li>
+                         <li>
+                            <a href="{{ route('User.Widthraw.Request') }}"><i class="flaticon-atm"></i>All Withdraw</a>
+                        </li>
                         <li>
                             <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Level</a>
                         </li>
