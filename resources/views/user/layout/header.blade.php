@@ -79,13 +79,10 @@
                         <li>
                             <a href="partners.html"><i class="flaticon-deal"></i>Partners</a>
                         </li>
-                        {{-- <li>
-                            <a href="setting.html"><i class="flaticon-gears"></i>Settings</a>
-                        </li> --}}
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button type="submit" style="border: none"><i
+                                <button type="submit" style="border: none" class="btn btn-danger"><i
                                         class="flaticon-right-arrow"></i>Logout</button>
                             </form>
                         </li>
