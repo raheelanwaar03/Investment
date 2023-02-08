@@ -3,7 +3,7 @@
         <div class="container">
             <div class="newslater-area">
                 <div class="newslater-content padding-bottom padding-top">
-                    <span class="cate">SUBSCRIBE TO hyipland</span>
+                    <span class="cate">SUBSCRIBE TO {{ env('APP_NAME') }}</span>
                     <h3 class="title">To Get Exclusive Benefits</h3>
                     <form class="newslater-form">
                         <input type="text" placeholder="Enter Your Email Here" required>
@@ -62,7 +62,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom-area">
                 <div class="left">
-                    <p>&copy; 2023 <a href="#0">Hyipland</a> | All right reserved</p>
+                    <p>&copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved</p>
                 </div>
                 <ul class="social-icons">
                     <li>

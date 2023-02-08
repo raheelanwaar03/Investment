@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="bg_img hero-section-2 left-bottom-lg-max" data-background="assets/images/about/hero-bg5.png">
+<section class="bg_img hero-section-2 left-bottom-lg-max" data-background="{{ asset('assets/images/about/hero-bg5.png') }}">
     <div class="container">
         <div class="hero-content text-white">
             <h1 class="title">Contact</h1>
             <ul class="breadcrumb">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="{{ route('LandingPage') }}">Home</a>
                 </li>
                 <li>
                     Contact
@@ -18,8 +18,6 @@
 </section>
 <!--=======Banner-Section Ends Here=======-->
 
-
-<!--=======Contact-Section Starts Here=======-->
 <section class="contact-section padding-bottom padding-top">
     <div class="container">
         <div class="contact-wrapper padding-top">
@@ -64,5 +62,6 @@
         </div>
     </div>
 </section>
+<!--=======Contact-Section Ends Here=======-->
 <!--=======Contact-Section Ends Here=======-->
 @endsection

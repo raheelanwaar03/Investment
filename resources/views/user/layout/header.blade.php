@@ -56,7 +56,7 @@
                 </div>
                 <div class="site-header-container">
                     <div class="side-logo">
-                        <a href="dashboard.html">
+                        <a href="{{ route('LandingPage') }}">
                             <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo">
                         </a>
                     </div>

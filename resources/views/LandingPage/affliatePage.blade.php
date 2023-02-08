@@ -67,7 +67,7 @@
                     </div>
                     <div class="affiliate-bottom">
                         <h6 class="title">Make money with hyipland</h6>
-                        <a href="#0" class="custom-button">
+                        <a href="{{ route('LandingPage.Product') }}" class="custom-button">
                             learn more <i class="flaticon-right"></i>
                         </a>
                     </div>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-xl-6 text-center text-sm-left text-md-right">
-                    <a href="#0" class="custom-button">learn more <i class="flaticon-right"></i></a>
+                    <a href="{{ route('LandingPage.Product') }}" class="custom-button">learn more <i class="flaticon-right"></i></a>
                 </div>
             </div>
         </div>

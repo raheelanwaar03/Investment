@@ -107,16 +107,10 @@
                                 </li>
                             @endif
                             <li>
-                                <a href="about.html">About</a>
+                                <a href="{{ route('LandingPage.Product') }}">Products</a>
                             </li>
                             <li>
-                                <a href="investment-plan.html">Plan</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">Faqs</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
+                                <a href="{{ route('LandingPage.Contact') }}">Contact</a>
                             </li>
                             <li class="pr-0">
                                 <a href="{{ route('register') }}" class="custom-button">Join Us</a>
