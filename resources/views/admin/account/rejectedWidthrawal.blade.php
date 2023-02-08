@@ -223,7 +223,9 @@
                 <table id="myTable" class="table table-bordered">
                     <thead>
                         <tr class="text-white">
+                            <th>Name</th>
                             <th>Bank</th>
+                            <th>Number</th>
                             <th>Amount</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -234,7 +236,9 @@
                     <tbody>
                         @foreach ($widthrawRequests as $widthrawRequest)
                             <tr>
+                                <<td>{{ $widthrawRequest->widthraw_name }}</td>
                                 <td>{{ $widthrawRequest->widthraw_bank }}</td>
+                                <td>{{ $widthrawRequest->widthraw_num }}</td>
                                 <td>{{ $widthrawRequest->widthraw_amount }}</td>
                                 <td>{{ $widthrawRequest->status }}</td>
                                 <td>
