@@ -154,7 +154,7 @@
             <div class="dashboard-footer">
                 <div class="d-flex flex-wrap justify-content-between m-0-15-none">
                     <div class="left">
-                        &copy; 2023 <a href="#0">Hyipland</a> | All right reserved.
+                        &copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
                     </div>
                     <div class="right">
                         <ul>

@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 Route::name('User.')->prefix('User')->middleware('user','auth')->group(function(){
 
         Route::get('/Dashboard',[UserDashboardController::class,'dashboard'])->name('Dashboard');
+        Route::get('/My/Team',[UserDashboardController::class,'team'])->name('Team');
+        Route::get('/Widthraw/Request',[UserDashboardController::class,'widthrawReq'])->name('Widthraw.Request');
         Route::get('/Refer/Friend',[UserWorkController::class,'referFriend'])->name('Refer.New.Friend');
         Route::get('/Widthraw/Balance',[UserWorkController::class,'widthrawBalance'])->name('Widthraw.Balance');
         Route::post('/Widthraw/Balance/Request',[UserWorkController::class,'widthrawBalanceRequest'])->name('Widthraw.Balance.Request');

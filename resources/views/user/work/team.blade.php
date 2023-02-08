@@ -21,7 +21,7 @@
                                 <a href="#0"><i class="flaticon-support"></i>Support</a>
                             </li>
                             <li>
-                                <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__"
+                                <a href="Mailto:info@{{ env('APP_NAME') }}.com"><i class="flaticon-email"></i><span class="__cf_email__"
                                         data-cfemail="f49d9a929bb49c8d9d8498959a90da979b99">[email&#160;protected]</span>
                                 </a>
                             </li>
@@ -89,44 +89,39 @@
                         <a href="{{ route('LandingPage') }}">Home</a>
                     </li>
                     <li>
-                        Widthraw Balance
+                        My Team
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 mb-4">
-                    <div class="card mt-3">
-                        <div class="card-title">
-                            <h3 class="text-center m-3">Widthraw Balance</h3>
-                        </div>
-                        <div class="card-body">
-                            <form action="{{ route('User.Widthraw.Balance.Request') }}" method="POST">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="">Widthraw Amount</label>
-                                    <input type="num" name="widthraw_amount" class="form-control" placeholder="Enter Amount Your want to widthraw" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Your Name</label>
-                                    <input type="num" name="widthraw_name" class="form-control" placeholder="Enter Your bank Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Number</label>
-                                    <input type="num" name="widthraw_num" class="form-control" placeholder="Enter Your Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Select Bank</label>
-                                    <select class="form-control" name="widthraw_bank">
-                                        <option value="easypaisa">Easypaisa</option>
-                                        <option value="jazzcash">Jazzcash</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Procced</button>
-                            </form>
-                        </div>
-                    </div>
+            <div class="row justify-content-center mt--85">
+                <h2 class="text-center text-white">Approved Widthrawal</h2>
+                <hr>
+                <table id="myTable" class="table table-bordered">
+                    <thead>
+                        <tr class="text-white">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Level</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach ($users as $user)
+                            <tr>
+                               <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->level }}</td>
+                                <td>{{ $user->status }}</td>
+                                <td>{{ $user->created_at }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+
+                </table>
             </div>
         </div>
         <div class="container-fluid sticky-bottom">
@@ -151,5 +146,18 @@
     </div>
     </section>
 
+
+<script>
+    function copy() {
+      // Get the text field
+      var copyText = document.getElementById("myInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+
+      // Alert the copied text
+      alert("Copied the text: " + copyText.value);
+    }
+    </script>
 
 @endsection
