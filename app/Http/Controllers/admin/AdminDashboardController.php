@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\FeesCollecator;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,12 @@ class AdminDashboardController extends Controller
     public function dashboard()
     {
         return view('admin.dashboard');
+    }
+
+    public function userTids()
+    {
+        $tids = FeesCollecator::all();
+        return view('admin.dashboard.userTids',compact('tids'));
     }
 
     public function allUsers()

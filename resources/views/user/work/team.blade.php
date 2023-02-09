@@ -92,7 +92,6 @@
                         <tr class="text-white">
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Level</th>
                             <th>Status</th>
                             <th>Date</th>
                         </tr>
@@ -103,7 +102,6 @@
                             <tr>
                                <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
-                                <td>{{ $user->level }}</td>
                                 <td>{{ $user->status }}</td>
                                 <td>{{ $user->created_at }}</td>
                             </tr>

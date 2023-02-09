@@ -67,6 +67,9 @@
                             <a href="{{ route('Admin.Dashboard') }}" class="active"><i class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
+                            <a href="{{ route('Admin.All.Tids') }}"><i class="flaticon-man"></i>All Tids</a>
+                        </li>
+                        <li>
                             <a href="{{ route('Admin.All.Users') }}"><i class="flaticon-coin"></i>All Users</a>
                         </li>
                         <li>

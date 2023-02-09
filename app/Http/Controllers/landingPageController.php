@@ -29,12 +29,11 @@ class landingPageController extends Controller
     public function productPage($referal = 'default')
     {
 
-        if($referal != 'default')
-        {
-            if(!auth()->user())
-            {
-                return redirect()->route('register',$referal)->with('error','Please make your account to see Products');
+        if ($referal != 'default') {
+            if (!auth()->user()) {
+                return redirect()->route('register', $referal)->with('error', 'Please make your account to see Products');
             }
+        } else {
             $productShare = new ShareProduct();
             $productShare->shareby = $referal;
             $productShare->username = auth()->user()->username;
@@ -48,7 +47,7 @@ class landingPageController extends Controller
         $date = date('Y-m-d');
 
         $visitor = Vistor::where('ip', request()->ip())->first();
-        if (! $visitor) {
+        if (!$visitor) {
             $visitor = new Vistor();
             $visitor->ip = request()->ip();
             $visitor->dateTime = date(now());
@@ -57,7 +56,6 @@ class landingPageController extends Controller
         }
 
         $products = AdminProductModel::paginate(9);
-        return view('LandingPage.product',compact('products','referal'));
+        return view('LandingPage.product', compact('products', 'referal'));
     }
-
 }

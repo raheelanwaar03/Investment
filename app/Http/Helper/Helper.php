@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\admin\Setting;
+use App\Models\ShareProduct;
 use App\Models\User;
 
 function allUser()
@@ -40,17 +42,44 @@ function level()
     $users = User::where('referal', auth()->user()->username)->get();
     $userLevel = $users->count();
 
-        if ($userLevel = 1) {
-            $userLevel = 'Level1';
-        }
-
-    if ($userLevel = 2) {
-        $userLevel = 'Level2';
+    if ($userLevel >= 5) {
+        $userLevel = 'Level 1';
     }
 
-    if ($userLevel = 3) {
-        $userLevel = 'Level2';
+    if($userLevel >= 20)
+    {
+        $userLevel = 'Level 2';
+    }
+
+    if ($userLevel >= 45) {
+        $userLevel = 'Level 3';
     }
 
     return $userLevel;
+}
+
+
+function productShareReward()
+{
+    $productShare = ShareProduct::where('shareby',auth()->user()->username)->get();
+    $totalProduct = $productShare->count();
+}
+
+// indirect commission
+
+function indirectCommission()
+{
+    $adminLimit = Setting::where('status',1)->first();
+     // Giving upliner commissionS
+     $referCommission = $adminLimit->refer_amount;
+     $indirectCommission = $referCommission * 25 / 100;
+     $upLiners = User::where('referal',auth()->user()->username)->get();
+     foreach ($upLiners as $upLiner)
+     {
+         $user = User::where('username',$upLiner->referal)->first();
+         $user->balance += $indirectCommission;
+         $user->save();
+     }
+
+
 }

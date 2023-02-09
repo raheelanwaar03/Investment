@@ -16,8 +16,6 @@
         </div>
     </div>
 </section>
-<!--=======Banner-Section Ends Here=======-->
-
 <section class="contact-section padding-bottom padding-top">
     <div class="container">
         <div class="contact-wrapper padding-top">
