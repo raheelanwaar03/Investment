@@ -106,7 +106,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Level</span>
-                                <h5 class="amount">{{ auth()->user()->level }}</h5>
+                                <h5 class="amount">{{ level() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">
@@ -119,7 +119,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Total Referal Friends</span>
-                                {{-- <h5 class="amount">{{ totalReferFriends() }}</h5> --}}
+                                <h5 class="amount">{{ totalReferFriends() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard3.png') }}" alt="dasboard">

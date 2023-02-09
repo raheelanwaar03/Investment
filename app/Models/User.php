@@ -23,6 +23,7 @@ class User extends Authenticatable
         'phone',
         'country',
         'status',
+        'referal',
         'role',
         'level',
         'username',
