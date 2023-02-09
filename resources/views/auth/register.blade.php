@@ -1,7 +1,7 @@
 @extends('auth.layout.app')
 
 @section('content')
-    <div class="account-section bg_img" data-background="assets/images/account-bg.jpg">
+    <div class="account-section bg_img" data-background="{{ asset('assets/images/account-bg.jpg') }}">
         <div class="container">
             <div class="account-title text-center">
                 <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span

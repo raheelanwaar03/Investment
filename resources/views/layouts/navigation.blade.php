@@ -57,15 +57,11 @@
                     <div class="row align-items-center">
                         <div class="col-6">
                             <ul class="support-area">
+                                @if (!auth()->user())
                                 <li>
-                                    <a href="#0"><i class="flaticon-support"></i>Support</a>
+                                 <p>You have to Login first if you want working with us.</p>
                                 </li>
-                                <li>
-                                    <a href="Mailto:info@{{ env('APP_NAME') }}.com"><i class="flaticon-email"></i><span
-                                            class="__cf_email__"
-                                            data-cfemail="d4bdbab2bb94bcadbda4b8b5bab0fab7bbb9">[email&#160;protected]</span>
-                                    </a>
-                                </li>
+                                @endif
                             </ul>
                         </div>
                         <div class="col-6">
@@ -74,7 +70,7 @@
                                     <li>
                                         <form action="{{ route('logout') }}" method="POST">
                                             @csrf
-                                            <button type="submit" class="btn btn-primary">Logout</button>
+                                            <button type="submit" class="btn btn-sm btn-primary">Logout</button>
                                         </form>
                                     </li>
                                 @else
@@ -107,11 +103,11 @@
                                     <a href="{{ route('User.Dashboard') }}">Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('LandingPage.Affilate') }}">Affiliate</a>
+                                    <a href="{{ route('LandingPage.Product') }}">Products</a>
                                 </li>
                             @endif
                             <li>
-                                <a href="{{ route('LandingPage.Product') }}">Products</a>
+                                <a href="{{ route('LandingPage.Affilate') }}">Affiliate</a>
                             </li>
                             <li>
                                 <a href="{{ route('LandingPage.Contact') }}">Contact</a>

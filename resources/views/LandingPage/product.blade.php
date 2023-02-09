@@ -31,7 +31,11 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->product_title }}</h5>
                                         <p class="card-text">{{ $product->product_des }}</p>
-                                        <a href="#">copy link</a>
+                                        <div>
+                                            <input type="text" style="width:0%;height:0%;color:white;border:none"
+                                                value="{{ route('LandingPage.Product', ['shareby' => auth()->user()->username],['referal' => Auth::user()->username]) }}" id="myInput">
+                                            <button onclick="copy()" class="btn btn-secondary px-2">copy</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -44,4 +48,16 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function copy() {
+          // Get the text field
+          var copyText = document.getElementById("myInput");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999);
+          navigator.clipboard.writeText(copyText.value);
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+    </script>
 @endsection

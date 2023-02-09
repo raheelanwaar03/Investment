@@ -7,12 +7,10 @@ use App\Models\admin\Setting;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
-use Illuminate\View\View;
 
 class RegisteredUserController extends Controller
 {
@@ -45,7 +43,6 @@ class RegisteredUserController extends Controller
             $setting = Setting::where('status','1')->first();
             $referCommission = $setting->refer_amount;
             $user->balance += $referCommission;
-            $user->referal = $request->username;
             $user->save();
         }
 

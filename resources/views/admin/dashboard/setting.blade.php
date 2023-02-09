@@ -128,7 +128,7 @@
                                 @forelse ($settings as $setting)
                                     <td>{{ $setting->refer_amount }}</td>
                                     <td><a href="{{ route('Admin.Setting.edit', $setting->id) }}"
-                                            class="btn btn-sm btn-primary">Edit</a></td>
+                                            class="btn btn-sm btn-primary">Change Limit</a></td>
                                 @empty
                                 <h4 class="text-center">No Limite Applied Yet</h4>
                                 @endforelse

@@ -126,10 +126,9 @@
       copyText.select();
       copyText.setSelectionRange(0, 99999);
       navigator.clipboard.writeText(copyText.value);
-
       // Alert the copied text
       alert("Copied the text: " + copyText.value);
     }
-    </script>
+</script>
 
 @endsection
