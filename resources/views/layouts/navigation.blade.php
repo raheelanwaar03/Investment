@@ -90,7 +90,7 @@
                 <div class="container">
                     <div class="header-area">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{ route('LandingPage') }}">
                                 <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo">
                             </a>
                         </div>
