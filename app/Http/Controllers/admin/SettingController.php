@@ -38,11 +38,15 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'refer_amount' => 'required'
+            'refer_amount' => 'required',
+            'minimum_amount' => 'required',
+            'maximun_amount' => 'required'
         ]);
 
         $setting = new Setting();
         $setting->refer_amount = $validated['refer_amount'];
+        $setting->minimum_amount = $validated['minimum_amount'];
+        $setting->maximun_amount = $validated['maximun_amount'];
         $setting->save();
         return redirect()->back()->with('succss','New Setting Appllied');
 

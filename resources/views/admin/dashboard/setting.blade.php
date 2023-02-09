@@ -106,8 +106,16 @@
                         <form action="{{ route('Admin.Setting.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="" class="m-3">Refer Amount</label>
+                                <label for="" class="m-3">Referal Amount</label>
                                 <input type="text" name="refer_amount" class="form-group" placeholder="Refer Setting">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="m-3">Minimum Widthraw</label>
+                                <input type="text" name="minimum_amount" class="form-group" placeholder="Minimum Widthraw">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="m-3">Maximum Widthraw</label>
+                                <input type="text" name="maximun_amount" class="form-group" placeholder="Maximun Widthraw">
                             </div>
                             <button type="submit" class="btn btn-primary">Set</button>
                         </form>
@@ -119,7 +127,9 @@
                     <table id="myTable" class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Price</th>
+                                <th>Referal Price</th>
+                                <th>Minimum</th>
+                                <th>Maximum</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -127,6 +137,8 @@
                             <tr>
                                 @forelse ($settings as $setting)
                                     <td>{{ $setting->refer_amount }}</td>
+                                    <td>{{ $setting->minimum_amount }}</td>
+                                    <td>{{ $setting->maximun_amount }}</td>
                                     <td><a href="{{ route('Admin.Setting.edit', $setting->id) }}"
                                             class="btn btn-sm btn-primary">Change Limit</a></td>
                                 @empty

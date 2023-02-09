@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\Setting;
 use App\Models\User;
 use App\Models\user\WidthrawBalance;
 use Illuminate\Http\Request;
@@ -28,17 +29,37 @@ class UserWorkController extends Controller
             'widthraw_num' => 'required',
         ]);
 
+        // Checking Admin Limite
+
+        $adminWidthraw = Setting::where('status',1)->first();
+        $adminWidthrawMini = $adminWidthraw->minimum_amount;
+        $adminWidthrawMax = $adminWidthraw->maximun_amount;
+
+        if($validated['widthraw_amount'] < $adminWidthrawMini)
+        {
+            return redirect()->back()->with('error','Your Widthraw request is less than Admin Limite');
+        }
+
+        if($validated['widthraw_amount'] >= $adminWidthrawMax)
+        {
+            return redirect()->back()->with('error','Your Widthraw request is Greater than Admin Limite');
+        }
+
+        // See user balance
         if (auth()->user()->balance < $validated['widthraw_amount']) {
             return redirect()->back()->with('error', 'You have not enough balance');
         }
-        else
-         {
+
+        if (auth()->user()->balance >= $validated['widthraw_amount']) {
+
             $user = User::where('id',auth()->user()->id)->first();
             $totalBalance = auth()->user()->balance;
             $deductedBalance = $totalBalance - $validated['widthraw_amount'];
             $user->balance = $deductedBalance;
             $user->save();
         }
+
+
 
         $widthraw = new WidthrawBalance();
         $widthraw->user_id = auth()->user()->id;
