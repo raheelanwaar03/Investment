@@ -724,7 +724,7 @@ input {
 }
 
 input:focus {
-    border: 1px solid #324fb0;
+    border: 1px solid #F36528;
 }
 
 input[type="submit"] {
@@ -887,7 +887,7 @@ input[type="submit"] {
 }
 
 .loader-line-wrap:nth-child(5) .loader-line {
-    border-color: #4747eb;
+    border-color: #F36528;
     height: 34px;
     width: 34px;
     top: 35px;
@@ -1024,7 +1024,7 @@ input[type="submit"] {
     font-size: 24px;
     font-weight: 500;
     text-transform: capitalize;
-    color: #324fb0;
+    color: #F36528;
     display: block;
     margin-top: -5px;
     margin-bottom: 26px;
@@ -1130,7 +1130,7 @@ input[type="submit"] {
 }
 
 .cl-1 {
-    color: #324fb0;
+    color: #F36528;
 }
 
 .cl-2 {
@@ -2532,7 +2532,7 @@ input[type="submit"] {
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
-    color: #324fb0;
+    color: #F36528;
 }
 
 .transaction-item:hover {
@@ -2625,13 +2625,13 @@ input[type="submit"] {
 .affiliate-item .affiliate-inner .affiliate-thumb .cont {
     font-size: 16px;
     width: 100%;
-    color: #3c9ef1;
+    color: #F36528;
     line-height: 1;
 }
 
 .affiliate-item .affiliate-inner .affiliate-thumb .title {
     width: 100%;
-    color: #3c9ef1;
+    color: #F36528;
     line-height: 1;
     margin-bottom: -45px;
 }
@@ -2640,7 +2640,7 @@ input[type="submit"] {
     position: absolute;
     color: #ffffff;
     width: 24px;
-    background: #3c9ef1;
+    background: #F36528;
     height: 24px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -2937,7 +2937,7 @@ div[class*="ball"] img {
     line-height: 1;
     margin: 0;
     text-transform: uppercase;
-    color: #324fb0;
+    color: #F36528;
     margin-bottom: 15px;
     font-weight: 500;
     font-size: 36px;
@@ -3028,7 +3028,7 @@ div[class*="ball"] img {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 1px solid #bad0fb;
+    border: 1px solid #f57b2b;
     width: 65px;
     height: 65px;
 }
@@ -3040,10 +3040,10 @@ div[class*="ball"] img {
     border-radius: 50%;
     text-align: center;
     font-size: 36px;
-    background-color: #e3ecfd;
+    background-color: #F36528;
     width: 53px;
     display: inline-block;
-    color: #33406a;
+    color: #f09115;
 }
 
 .hover-tab-menu .tab-menu li .menu-content {
@@ -3057,7 +3057,7 @@ div[class*="ball"] img {
 }
 
 .hover-tab-menu .tab-menu li.active .menu-thumb span {
-    background: #324fb0;
+    background: #F36528;
     color: #ffffff;
     animation-name: fadeIn;
     -webkit-animation-name: fadeIn;
@@ -3188,7 +3188,7 @@ div[class*="ball"] img {
 }
 
 .hover-tab-menu::after {
-    border: 2px dashed #324fb0;
+    border: 2px dashed #F36528;
     right: calc(75% + 4px);
     animation: rotate2 2s linear infinite;
 }
@@ -3376,7 +3376,7 @@ div[class*="ball"] img {
     display: inline-block;
     padding: 0 10px;
     color: #ffffff;
-    background: #1554c2;
+    background: #F36528;
     text-transform: uppercase;
     position: relative;
     border-radius: 22px;
@@ -3392,7 +3392,7 @@ div[class*="ball"] img {
 
 .offer-item .offer-header span::after {
     width: 143px;
-    background: #1554c2;
+    background: #F36528;
     z-index: 0;
     height: 44px;
     mask: url(img/offer-shape.png) no-repeat center center;
@@ -3452,7 +3452,7 @@ div[class*="ball"] img {
 
 .offer-item .offer-body .item .item-content .subtitle {
     font-weight: 500;
-    color: #324fb0;
+    color: #F36528;
 }
 
 .offer-item .offer-body .item .item-content .subtitle .to {
@@ -3468,7 +3468,7 @@ div[class*="ball"] img {
     display: block;
     width: 60px;
     height: 2px;
-    background-color: #324fb0;
+    background-color: #F36528;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
@@ -3480,7 +3480,7 @@ div[class*="ball"] img {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background: #324fb0;
+    background: #F36528;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -4030,7 +4030,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .cl-theme-1 {
-    color: #324fb0;
+    color: #F36528;
 }
 
 .cl-theme {
@@ -4490,7 +4490,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .mission-item:hover .mission-content a {
-    color: #324fb0;
+    color: #F36528;
 }
 
 .mission-wrapper {
@@ -5284,7 +5284,7 @@ body *::-webkit-scrollbar-track {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    background: #4a61ff;
+    background: #F36528;
     height: 54px;
     width: 100%;
     -webkit-border-radius: 27px;
@@ -5308,7 +5308,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .dashboard-menu li a:hover, .dashboard-menu li a.active {
-    color: #4a61ff;
+    color:#F36528;
 }
 
 .dashboard-menu li a:hover::before, .dashboard-menu li a.active::before {
@@ -5357,7 +5357,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .dashboard-menu li.open.menu-item-has-children > a {
-    color: #4a61ff;
+    color:#F36528;
 }
 
 .dashboard-menu li.open.menu-item-has-children > a::after {
@@ -5379,13 +5379,13 @@ body *::-webkit-scrollbar-track {
 }
 
 .dashboard-menu li.open.menu-item-has-children .submenu li a:hover i {
-    color: #4a61ff;
+    color: #F36528;
 }
 
 .dashboard-hero {
-    background: -moz-linear-gradient(-127deg, #8b89fd 0%, #5351fb 100%);
-    background: -webkit-linear-gradient(-127deg, #8b89fd 0%, #5351fb 100%);
-    background: -ms-linear-gradient(-127deg, #8b89fd 0%, #5351fb 100%);
+    background: -moz-linear-gradient(-127deg, #eb6a1f 0%, #F36528 100%);
+    background: -webkit-linear-gradient(-127deg, #f55c04 0%, #F36528 100%);
+    background: -ms-linear-gradient(-127deg, #ff8800 0%, #F36528 100%);
     -webkit-border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
     border-radius: 0 0 30px 30px;
@@ -5526,7 +5526,7 @@ body *::-webkit-scrollbar-track {
     height: 20px;
     line-height: 20px;
     display: block;
-    background: #324fb0;
+    background: #F36528;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -5661,7 +5661,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .notification-area .notifacation-header a {
-    color: #324fb0 !important;
+    color: #F36528 !important;
     font-size: 14px;
 }
 
@@ -5671,7 +5671,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .notification-area .notifacation-footer a {
-    color: #324fb0 !important;
+    color: #F36528 !important;
     font-size: 14px;
 }
 
@@ -5836,7 +5836,7 @@ body *::-webkit-scrollbar-track {
 
     .mobile-header-content {
         position: fixed;
-        background: #324fb0;
+        background: #F36528;
         z-index: 99999;
         left: 0;
         top: 0;
@@ -6463,7 +6463,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .deposit-inner:hover, .deposit-inner.active {
-    border-color: #6588c6;
+    border-color: #F36528;
 }
 
 .deposit-inner:last-child {
@@ -6485,7 +6485,7 @@ body *::-webkit-scrollbar-track {
     display: inline-block;
     padding: 0 10px;
     color: #ffffff;
-    background: #1554c2;
+    background: #ff7300;
     text-transform: uppercase;
     position: relative;
     border-radius: 22px;
@@ -6501,7 +6501,7 @@ body *::-webkit-scrollbar-track {
 
 .deposit-inner .deposit-header span::after {
     width: 143px;
-    background: #1554c2;
+    background: #F36528;
     z-index: 0;
     height: 44px;
     mask: url(img/offer-shape.png) no-repeat center center;
@@ -6540,7 +6540,7 @@ body *::-webkit-scrollbar-track {
 .deposit-inner .deposit-body .item .item-content .subtitle {
     font-size: 20px;
     font-weight: 500;
-    color: #324fb0;
+    color: #F36528;
 }
 
 .deposit-inner .deposit-body .item .item-content .subtitle .to {
@@ -6844,7 +6844,7 @@ body *::-webkit-scrollbar-track {
     border-radius: 20px;
     font-size: 24px;
     font-weight: 700;
-    color: #324fb0;
+    color: #F36528;
     margin-top: 10px;
 }
 
@@ -7977,7 +7977,7 @@ body *::-webkit-scrollbar-track {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background: #324fb0;
+    background: #F36528;
     position: relative;
     color: #ffffff;
 }
