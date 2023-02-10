@@ -53,13 +53,13 @@
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <li>
+                                                {{-- <li>
                                                     <a href="#0"><i class="far fa-user"></i>Profile</a>
                                                 </li>
                                                 <li>
                                                     <a href="#0"><i class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
-                                                </li>
+                                                </li> --}}
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
                                                         @csrf

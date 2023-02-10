@@ -1,13 +1,13 @@
 @extends('auth.layout.app')
 
 @section('content')
-    <div class="account-section bg_img" data-background="assets/images/account-bg.jpg">
+    <div class="account-section bg_img" data-background="{{ asset('assets/images/account-bg.jpg') }}">
         <div class="container">
             <div class="account-title text-center">
                 <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
                             class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
                 <a href="#0" class="logo">
-                    <img src="assets/images/logo/footer-logo.png" alt="logo">
+                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
                 </a>
             </div>
             <div class="account-wrapper">
@@ -22,7 +22,7 @@
                         <div class="form-group">
                             <label for="pass">Password</label>
                             <input type="password" placeholder="Enter Your Password" id="pass" name="password">
-                            <span class="sign-in-recovery">Forgot your password? <a href="#0">recover
+                            <span class="sign-in-recovery">Forgot your password? <a href="{{ route('password.request') }}">recover
                                     password</a></span>
                         </div>
                         <div class="form-group text-center">
