@@ -72,14 +72,66 @@ function indirectCommission()
     $adminLimit = Setting::where('status',1)->first();
      // Giving upliner commissionS
      $referCommission = $adminLimit->refer_amount;
+    //  first upliner
      $indirectCommission = $referCommission * 25 / 100;
-     $upLiners = User::where('referal',auth()->user()->username)->get();
-     foreach ($upLiners as $upLiner)
-     {
-         $user = User::where('username',$upLiner->referal)->first();
-         $user->balance += $indirectCommission;
-         $user->save();
-     }
+     //  Third Upliner
+     $indirectCommission2 = $referCommission * 1 / 100;
 
+    //  getting user
+
+    $users = User::where('username',auth()->user()->referal)->get();
+    foreach ($users as $user) {
+        $user = User::where('username',$user->username)->first();
+        $user->balance += $indirectCommission;
+        $user->save();
+    }
 
 }
+
+function secondCommission()
+{
+    $adminLimit = Setting::where('status',1)->first();
+    // Giving upliner commissionS
+    $referCommission = $adminLimit->refer_amount;
+     //  Second Upliner
+     $indirectCommission1 = $referCommission * 5 / 100;
+
+    //  getting user
+
+     $users = User::where('username',auth()->user()->referal)->get();
+     foreach ($users as $user) {
+         $users = User::where('username',$user->username)->get();
+         foreach($users as $user)
+         $user = User::where('username',$user->username)->first();
+         $user->balance += $indirectCommission1;
+         $user->save();
+     }
+}
+
+function thirdCommission()
+{
+    $adminLimit = Setting::where('status',1)->first();
+    // Giving upliner commissionS
+    $referCommission = $adminLimit->refer_amount;
+     //  Second Upliner
+     $indirectCommission2 = $referCommission * 1 / 100;
+
+    //  getting user
+
+     $users = User::where('username',auth()->user()->referal)->get();
+     foreach ($users as $user) {
+        $users = User::where('username',$user->username)->get();
+        foreach($users as $user)
+        $users = User::where('username',$user->username)->get();
+        foreach($users as $user)
+        $users = User::where('username',$user->username)->get();
+        foreach($users as $user)
+        {
+            $users = User::where('username',$user->username)->first();
+            $user->balance += $indirectCommission2;
+            $user->save();
+        }
+    }
+
+}
+

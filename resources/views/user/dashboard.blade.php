@@ -44,7 +44,8 @@
                                     <div class="notification-area">
                                         <div class="author-header">
                                             <div class="thumb">
-                                                <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
+                                                <img src="{{ asset('assets/images/dashboard/author.png') }}"
+                                                    alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
                                             <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
@@ -82,6 +83,7 @@
                     </li>
                     <li>
                         Dashboard
+                        {{ indirectCommission() }}
                     </li>
                 </ul>
             </div>
