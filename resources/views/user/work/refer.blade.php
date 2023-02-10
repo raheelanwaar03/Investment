@@ -41,7 +41,8 @@
                                     <div class="notification-area">
                                         <div class="author-header">
                                             <div class="thumb">
-                                                <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
+                                                <img src="{{ asset('assets/images/dashboard/author.png') }}"
+                                                    alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
                                             <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
@@ -102,16 +103,6 @@
                     <div class="left">
                         &copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
                     </div>
-                    <div class="right">
-                        <ul>
-                            <li>
-                                <a href="#0">Terms of use</a>
-                            </li>
-                            <li>
-                                <a href="#0">Privacy policy</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
@@ -119,16 +110,15 @@
     </section>
 
 
-<script>
-    function copy() {
-      // Get the text field
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(copyText.value);
-      // Alert the copied text
-      alert("Copied the text: " + copyText.value);
-    }
-</script>
-
+    <script>
+        function copy() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
 @endsection

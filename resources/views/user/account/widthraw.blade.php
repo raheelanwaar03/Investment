@@ -41,7 +41,8 @@
                                     <div class="notification-area">
                                         <div class="author-header">
                                             <div class="thumb">
-                                                <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
+                                                <img src="{{ asset('assets/images/dashboard/author.png') }}"
+                                                    alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
                                             <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
@@ -95,15 +96,18 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Widthraw Amount</label>
-                                    <input type="num" name="widthraw_amount" class="form-control" placeholder="Enter Amount Your want to widthraw" required>
+                                    <input type="num" name="widthraw_amount" class="form-control"
+                                        placeholder="Enter Amount Your want to widthraw" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Your Name</label>
-                                    <input type="num" name="widthraw_name" class="form-control" placeholder="Enter Your bank Name" required>
+                                    <input type="num" name="widthraw_name" class="form-control"
+                                        placeholder="Enter Your bank Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Number</label>
-                                    <input type="num" name="widthraw_num" class="form-control" placeholder="Enter Your Number" required>
+                                    <input type="num" name="widthraw_num" class="form-control"
+                                        placeholder="Enter Your Number" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Select Bank</label>
@@ -116,29 +120,17 @@
                             </form>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
-        <div class="container-fluid sticky-bottom">
-            <div class="dashboard-footer">
-                <div class="d-flex flex-wrap justify-content-between m-0-15-none">
-                    <div class="left">
-                        &copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
-                    </div>
-                    <div class="right">
-                        <ul>
-                            <li>
-                                <a href="#0">Terms of use</a>
-                            </li>
-                            <li>
-                                <a href="#0">Privacy policy</a>
-                            </li>
-                        </ul>
+            <div class="container-fluid sticky-bottom">
+                <div class="dashboard-footer">
+                    <div class="d-flex flex-wrap justify-content-between m-0-15-none">
+                        <div class="left">
+                            &copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </section>
-
-
-@endsection
+        </section>
+    @endsection

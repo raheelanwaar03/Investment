@@ -150,16 +150,6 @@
                     <div class="left">
                         &copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
                     </div>
-                    <div class="right">
-                        <ul>
-                            <li>
-                                <a href="#0">Terms of use</a>
-                            </li>
-                            <li>
-                                <a href="#0">Privacy policy</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

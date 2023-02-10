@@ -77,10 +77,7 @@
                             <a href="{{ route('User.Widthraw.Request') }}"><i class="flaticon-atm"></i>All Withdraw</a>
                         </li>
                         <li>
-                            <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Level</a>
-                        </li>
-                        <li>
-                            <a href="partners.html"><i class="flaticon-deal"></i>Partners</a>
+                            <a href="fund-transfer.html"><i class="flaticon-deal"></i>Level</a>
                         </li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
