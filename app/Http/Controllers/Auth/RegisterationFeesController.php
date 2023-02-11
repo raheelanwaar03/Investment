@@ -21,11 +21,19 @@ class RegisterationFeesController extends Controller
             'tid' => 'required'
         ]);
 
+        $tidChecks = FeesCollecator::get();
+
+        foreach ($tidChecks as $tidCheck) {
+            $tidCheck = $tidCheck->tid;
+            if ($validated['tid'] == $tidCheck)
+            return redirect()->back()->with('error','This tid is used before');
+        }
+
+
         $userAmount = $validated['amount'];
 
-        if ($userAmount != 670)
-        {
-            return redirect()->back()->with('error','You have not entered desired amount');
+        if ($userAmount != 670) {
+            return redirect()->back()->with('error', 'You have not entered desired amount');
         }
 
         $feesDetails = new FeesCollecator();
