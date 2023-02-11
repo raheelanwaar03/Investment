@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('shareBy');
             $table->string('username');
-            $table->string('quantaty');
             $table->timestamps();
         });
     }

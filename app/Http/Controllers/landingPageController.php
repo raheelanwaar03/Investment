@@ -28,6 +28,7 @@ class landingPageController extends Controller
 
     public function productPage($referal = 'default')
     {
+        // return $referal;
 
         if ($referal != 'default') {
             if (!auth()->user()) {

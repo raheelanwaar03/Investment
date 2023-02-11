@@ -83,7 +83,6 @@
                     </li>
                     <li>
                         Dashboard
-                        {{ indirectCommission() }}
                     </li>
                 </ul>
             </div>

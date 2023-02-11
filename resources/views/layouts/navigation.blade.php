@@ -58,9 +58,13 @@
                         <div class="col-6">
                             <ul class="support-area">
                                 @if (!auth()->user())
-                                <li>
-                                 <p>You have to Login first if you want working with us.</p>
-                                </li>
+                                    <li>
+                                        <p>You have to Login first if you want working with us.</p>
+                                    </li>
+                                @else
+                                    <li>
+                                        <p>Wellcome {{ auth()->user()->username }}! you are successfully Login.</p>
+                                    </li>
                                 @endif
                             </ul>
                         </div>

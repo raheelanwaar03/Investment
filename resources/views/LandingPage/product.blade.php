@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center mb-2">All Products</h1>
-                    @foreach ($products as $product)
+                    @forelse ($products as $product)
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="card">
@@ -33,14 +33,17 @@
                                         <p class="card-text">{{ $product->product_des }}</p>
                                         <div>
                                             <input type="text" style="width:0%;height:0%;color:white;border:none"
-                                                value="{{ route('LandingPage.Product', ['shareby' => auth()->user()->username],['referal' => Auth::user()->username]) }}" id="myInput">
+                                                value="{{ route('LandingPage.Product', ['shareby' => auth()->user()->username], ['referal' => Auth::user()->username]) }}"
+                                                id="myInput">
                                             <button onclick="copy()" class="btn btn-secondary px-2">copy</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <h3>Admin have not added any product yet!</h3>
+                    @endforelse
                     <div>
                         {{ $products->withQueryString()->links('pagination::bootstrap-5') }}
                     </div>
@@ -51,13 +54,13 @@
 
     <script>
         function copy() {
-          // Get the text field
-          var copyText = document.getElementById("myInput");
-          copyText.select();
-          copyText.setSelectionRange(0, 99999);
-          navigator.clipboard.writeText(copyText.value);
-          // Alert the copied text
-          alert("Copied the text: " + copyText.value);
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
         }
     </script>
 @endsection
