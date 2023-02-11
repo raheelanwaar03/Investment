@@ -11,17 +11,17 @@
             <div class="account-wrapper">
                 <div class="account-body">
                     <h4 class="title mb-20">Welcome To {{ env('APP_NAME') }} Its just a litle survey about our products</h4>
-                    <form action="#">
+                    <form action="{{ route('LandingPage.Survey.Result') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label for="">First question</label>
+                            <label for="">Is this product price is reasonable?</label>
                             <select name="question" class="form-control">
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Second Question</label>
+                            <label for="">Our prodcut is benificial for you are not?</label>
                             <select name="question1" class="form-control">
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
