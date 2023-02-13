@@ -61,13 +61,9 @@
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <li>
-                                                    <a href="#0"><i class="far fa-user"></i>Profile</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#0"><i class="fas fa-user-edit"></i>Edit
-                                                        Profile</a>
-                                                </li>
+                                                <a href="{{ route('profile.edit') }}"><i
+                                                    class="fas fa-user-edit"></i>Edit
+                                                Profile</a>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
                                                         @csrf
