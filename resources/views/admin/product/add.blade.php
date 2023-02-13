@@ -105,6 +105,10 @@
                             <input type="text" name="product_title" class="form-group" placeholder="Add Product Title">
                             </div>
                             <div class="form-group">
+                                <label for="" class="m-3">Product Link</label>
+                                <input type="text" name="product_link" class="form-group" placeholder="Add Product Title">
+                                </div>
+                            <div class="form-group">
                                 <label for="" class="m-3">Product Description</label>
                                 <textarea name="product_des" class="form-control" rows="7" placeholder="Enter Product Details"></textarea>
                             </div>

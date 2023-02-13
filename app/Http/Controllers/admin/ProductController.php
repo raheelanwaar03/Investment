@@ -39,6 +39,7 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'product_title' => 'required',
+            'product_link' => 'required',
             'product_des' => 'required',
             'product_img' => 'required',
         ]);
@@ -49,6 +50,7 @@ class ProductController extends Controller
 
         $product = new AdminProductModel();
         $product->product_title = $validated['product_title'];
+        $product->product_link = $validated['product_link'];
         $product->product_des = $validated['product_des'];
         $product->product_img = $imageName;
         $product->save();

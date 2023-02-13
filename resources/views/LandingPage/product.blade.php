@@ -31,11 +31,16 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->product_title }}</h5>
                                         <p class="card-text">{{ $product->product_des }}</p>
-                                        <div>
-                                            <input type="text" style="width:0%;height:0%;color:white;border:none"
-                                                value="{{ route('LandingPage.Product', ['shareby' => auth()->user()->username], ['referal' => Auth::user()->username]) }}"
-                                                id="myInput">
-                                            <button onclick="copy()" class="btn btn-secondary px-2">copy</button>
+                                        <div class="btn-group btn-group-lg">
+                                            <div class="link">
+                                                <a href="{{ $product->product_link }}" target="_blank" class="btn btn-sm btn-primary">Survey</a>
+                                            </div>
+                                            <div class="">
+                                                <input type="text" style="width:0%;height:0%;color:white;border:none"
+                                                    value="{{ route('LandingPage.Product', ['shareby' => auth()->user()->username], ['referal' => Auth::user()->username]) }}"
+                                                    id="myInput">
+                                                    <a onclick="copy()" class="btn btn-sm btn-success text-white">copy</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

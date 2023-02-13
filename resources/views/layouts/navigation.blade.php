@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>{{ env('APP_NAME') }} - HYIP Investment HTML Template</title>
+    <title>{{ env('APP_NAME') }} - is a merging platform to earn money and best deals</title>
 
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
@@ -59,7 +59,7 @@
                             <ul class="support-area">
                                 @if (!auth()->user())
                                     <li>
-                                        <p>You have to Login first if you want working with us.</p>
+                                        <p>You have to Login first if you want to work with us.</p>
                                     </li>
                                 @else
                                     <li>
