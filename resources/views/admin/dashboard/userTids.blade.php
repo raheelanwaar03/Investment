@@ -119,7 +119,7 @@
                     </thead>
 
                     <tbody>
-                        @foreach ($tids as $tid)
+                        @foreach (auth()->user()->tids as $tid)
                             <tr>
                                 <td>{{ $tid->user_id }}</td>
                                 <td>{{ $tid->auth()->user()->name }}</td>

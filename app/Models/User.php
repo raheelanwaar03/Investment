@@ -10,7 +10,13 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+
     use HasApiTokens, HasFactory, Notifiable;
+
+    function registerationFees()
+    {
+        return $this->belongsTo('App\Models\FeesCollecator','user_id');
+    }
 
     /**
      * The attributes that are mass assignable.

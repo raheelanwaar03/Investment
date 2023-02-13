@@ -28,35 +28,26 @@ class UserWorkController extends Controller
             'widthraw_name' => 'required',
             'widthraw_num' => 'required',
         ]);
-
-        // Checking Admin Limite
-
-        $adminWidthraw = Setting::where('status',1)->first();
-        $adminWidthrawMini = $adminWidthraw->minimum_amount;
-        $adminWidthrawMax = $adminWidthraw->maximun_amount;
-
-        if($validated['widthraw_amount'] < $adminWidthrawMini)
-        {
-            return redirect()->back()->with('error','Your Widthraw request is less than Admin Limite');
-        }
-
-        if($validated['widthraw_amount'] >= $adminWidthrawMax)
-        {
-            return redirect()->back()->with('error','Your Widthraw request is Greater than Admin Limite');
-        }
+        $userWidthrawAmount = $validated['widthraw_amount'];
 
         // See user balance
-        if (auth()->user()->balance < $validated['widthraw_amount']) {
+
+        if ($userWidthrawAmount >= auth()->user()->balance ) {
             return redirect()->back()->with('error', 'You have not enough balance');
         }
 
-        if (auth()->user()->balance >= $validated['widthraw_amount']) {
+        // Checking Admin Limite
 
-            $user = User::where('id',auth()->user()->id)->first();
-            $totalBalance = auth()->user()->balance;
-            $deductedBalance = $totalBalance - $validated['widthraw_amount'];
-            $user->balance = $deductedBalance;
-            $user->save();
+        $adminWidthraw = Setting::where('status', 1)->first();
+        $adminWidthrawMini = $adminWidthraw->minimum_amount;
+        $adminWidthrawMax = $adminWidthraw->maximun_amount;
+
+        if ($adminWidthrawMini > $userWidthrawAmount) {
+            return redirect()->back()->with('error', 'Your Widthraw request is less than Admin Limite');
+        }
+
+        if ($userWidthrawAmount > $adminWidthrawMax) {
+            return redirect()->back()->with('error', 'Your Widthraw request is Greater than Admin Limite');
         }
 
 
@@ -67,6 +58,15 @@ class UserWorkController extends Controller
         $widthraw->widthraw_amount = $validated['widthraw_amount'];
         $widthraw->widthraw_name = $validated['widthraw_name'];
         $widthraw->widthraw_num = $validated['widthraw_num'];
+
+        if (auth()->user()->balance >= $validated['widthraw_amount']) {
+
+            $user = User::where('id', auth()->user()->id)->first();
+            $totalBalance = auth()->user()->balance;
+            $deductedBalance = $totalBalance - $validated['widthraw_amount'];
+            $user->balance = $deductedBalance;
+            $user->save();
+        }
         $widthraw->save();
         return redirect()->back()->with('success', 'You have successfully requested for widthraw you will notify when admin approved');
     }

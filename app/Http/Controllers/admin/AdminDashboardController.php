@@ -16,7 +16,8 @@ class AdminDashboardController extends Controller
 
     public function userTids()
     {
-        $tids = FeesCollecator::all();
+        return FeesCollecator::with('User')->get();
+        $tids = FeesCollecator::with('User')->get();
         return view('admin.dashboard.userTids',compact('tids'));
     }
 

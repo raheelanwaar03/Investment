@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('bank');
             $table->string('amount');
             $table->string('tid')->unique();
-            $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
