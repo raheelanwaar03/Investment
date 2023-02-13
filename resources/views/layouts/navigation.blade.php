@@ -63,7 +63,7 @@
                                     </li>
                                 @else
                                     <li>
-                                        <p>Wellcome {{ auth()->user()->username }}! you are successfully Login.</p>
+                                        <p>Wellcome <b>{{ auth()->user()->username }}!</b> you are successfully Login.</p>
                                     </li>
                                 @endif
                             </ul>
