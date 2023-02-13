@@ -37,6 +37,16 @@
                             </form>
                             <ul class="dashboard-right-menus">
                                 <li>
+                                    <a href="#0">
+                                    </a>
+                                    <div class="notification-area">
+                                        <div class="notifacation-header d-flex flex-wrap justify-content-between">
+                                        </div>
+                                        <div class="notifacation-footer text-center">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
                                     <a href="#0" class="author">
                                         <div class="thumb">
                                             <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
@@ -61,9 +71,8 @@
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <a href="{{ route('profile.edit') }}"><i
-                                                    class="fas fa-user-edit"></i>Edit
-                                                Profile</a>
+                                                <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    Profile</a>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
                                                         @csrf

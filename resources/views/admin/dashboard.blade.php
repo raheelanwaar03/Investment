@@ -71,7 +71,7 @@
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <a href="{{ route('profile.edit') }}"><i class="fas fa-user-edit"></i>Edit
+                                                <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
                                                     Profile</a>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
