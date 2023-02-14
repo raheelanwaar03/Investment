@@ -119,14 +119,14 @@
                     </thead>
 
                     <tbody>
-                        @foreach ($users as $user)
+                        @foreach ($tids as $tid)
                             <tr>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->phone }}</td>
-                                <td>{{ $user->country }}</td>
-                                <td>{{ $user->status }}</td>
-                                <td>easypaisa</td>
+                                <td>{{ $tid->userFees->name }}</td>
+                                <td>{{ $tid->userFees->email }}</td>
+                                <td>{{ $tid->userFees->phone }}</td>
+                                <td>{{ $tid->userFees->country }}</td>
+                                <td>{{ $tid->userFees->status }}</td>
+                                <td>{{ $tid->bank }}</td>
                             </tr>
                         @endforeach
                     </tbody>

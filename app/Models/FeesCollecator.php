@@ -11,7 +11,7 @@ class FeesCollecator extends Model
     protected $primaryKey = 'user_id';
     function userFees()
     {
-        return $this->hasOne('App\Models\User', 'user_id');
+        return $this->hasOne('App\Models\User', 'id');
     }
 
 }

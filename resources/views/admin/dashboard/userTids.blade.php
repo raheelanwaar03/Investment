@@ -71,7 +71,8 @@
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                        class="fas fa-user-edit"></i>Edit
                                                     Profile</a>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
@@ -109,7 +110,7 @@
                 <table id="myTable" class="table table-bordered">
                     <thead>
                         <tr class="text-white">
-                            <th>id</th>
+                            <th>User_id</th>
                             <th>Name</th>
                             <th>Bank</th>
                             <th>Amount</th>
@@ -117,12 +118,11 @@
                             <th>Date</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        @foreach (auth()->user()->tids as $tid)
+                        @foreach ($tids as $tid)
                             <tr>
                                 <td>{{ $tid->user_id }}</td>
-                                <td>{{ $tid->auth()->user()->name }}</td>
+                                <td>{{ $tid->userFees->name }}</td>
                                 <td>{{ $tid->bank }}</td>
                                 <td>{{ $tid->amount }}</td>
                                 <td>{{ $tid->tid }}</td>
@@ -130,7 +130,6 @@
                             </tr>
                         @endforeach
                     </tbody>
-
                 </table>
             </div>
         </div>

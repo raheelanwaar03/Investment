@@ -16,9 +16,9 @@ class AdminDashboardController extends Controller
 
     public function userTids()
     {
-        return FeesCollecator::with('User')->get();
-        $tids = FeesCollecator::with('User')->get();
-        return view('admin.dashboard.userTids',compact('tids'));
+        $user = User::where('status','pending')->get();
+        $tids = FeesCollecator::with('userFees')->get();
+        return view('admin.dashboard.userTids',compact('tids','user'));
     }
 
     public function allUsers()
@@ -47,8 +47,8 @@ class AdminDashboardController extends Controller
 
     public function easypaisaUsers()
     {
-        $users = User::get();
-        return view('admin.dashboard.easypaisUser',compact('users'));
+        $tids = FeesCollecator::with('userFees')->get();
+        return view('admin.dashboard.easypaisUser',compact('tids'));
     }
 
     public function approveUserAccount($id)
