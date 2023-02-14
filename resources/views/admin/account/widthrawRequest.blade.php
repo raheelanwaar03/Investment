@@ -21,20 +21,11 @@
                                 <a href="#0"><i class="flaticon-support"></i>Support</a>
                             </li>
                             <li>
-                                <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__"
-                                        data-cfemail="f49d9a929bb49c8d9d8498959a90da979b99">[email&#160;protected]</span>
-                                </a>
-                            </li>
-                            <li>
                                 <i class="flaticon-globe"></i>
                             </li>
                         </ul>
                         <div
                             class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
-                            <form class="dashboard-header-search mr-sm-4">
-                                <label for="search"><i class="flaticon-magnifying-glass"></i></label>
-                                <input type="text" placeholder="Search...">
-                            </form>
                             <ul class="dashboard-right-menus">
                                 <li>
                                     <a href="#0">
@@ -66,13 +57,14 @@
                                                     alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
-                                            <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
-                                                    data-cfemail="5d173235333932381d3a303c3431733e3230">[email&#160;protected]</span></a>
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
-                                                    Profile</a>
+                                                <li>
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
+                                                        Profile</a>
+                                                </li>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
                                                         @csrf
@@ -92,10 +84,7 @@
             </div>
             <div class="dashboard-hero-content text-white">
                 <h3 class="title">Admin Dashboard</h3>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
+                <ul class="">
                     <li>
                         Widthrawal Requests
                     </li>
@@ -103,52 +92,44 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">Widthrawal Requests</h2>
-                <hr>
-                <table id="myTable" class="table table-bordered">
-                    <thead>
-                        <tr class="text-white">
-                            <th>Name</th>
-                            <th>Bank</th>
-                            <th>Number</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @foreach ($widthrawRequests as $widthrawRequest)
-                            <tr>
-                                <td>{{ $widthrawRequest->widthraw_name }}</td>
-                                <td>{{ $widthrawRequest->widthraw_bank }}</td>
-                                <td>{{ $widthrawRequest->widthraw_num }}</td>
-                                <td>{{ $widthrawRequest->widthraw_amount }}</td>
-                                <td>{{ $widthrawRequest->status }}</td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-success">Approve</a>
-                                    <a href="#" class="btn btn-sm btn-danger">Reject</a>
-                                </td>
-                                <td>{{ $widthrawRequest->created_at }}</td>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <h2 class="text-center">Widthrawal Requests</h2>
+                    <hr>
+                    <table id="myTable" class="table table-bordered">
+                        <thead>
+                            <tr class="">
+                                <th>Name</th>
+                                <th>Bank</th>
+                                <th>Number</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                                <th>Date</th>
                             </tr>
-                        @endforeach
-                    </tbody>
+                        </thead>
 
-                </table>
+                        <tbody>
+                            @foreach ($widthrawRequests as $widthrawRequest)
+                                <tr>
+                                    <td>{{ $widthrawRequest->widthraw_name }}</td>
+                                    <td>{{ $widthrawRequest->widthraw_bank }}</td>
+                                    <td>{{ $widthrawRequest->widthraw_num }}</td>
+                                    <td>{{ $widthrawRequest->widthraw_amount }}</td>
+                                    <td>{{ $widthrawRequest->status }}</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-success">Approve</a>
+                                        <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                                    </td>
+                                    <td>{{ $widthrawRequest->created_at }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
+                    </table>
+                </div>
             </div>
         </div>
     </div>
     </section>
-@endsection
-
-@section('datatable')
-    <script>
-        $(document).ready(function() {
-            $('#myTable').DataTable();
-        });
-    </script>
-    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 @endsection

@@ -20,10 +20,6 @@
                         </ul>
                         <div
                             class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
-                            <form class="dashboard-header-search mr-sm-4">
-                                <label for="search"><i class="flaticon-magnifying-glass"></i></label>
-                                <input type="text" placeholder="Search...">
-                            </form>
                             <ul class="dashboard-right-menus">
                                 <li>
                                     <a href="#0" class="author">
@@ -41,17 +37,18 @@
                                     <div class="notification-area">
                                         <div class="author-header">
                                             <div class="thumb">
-                                                <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
+                                                <img src="{{ asset('assets/images/dashboard/author.png') }}"
+                                                    alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
-                                            <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
-                                                    data-cfemail="5d173235333932381d3a303c3431733e3230">[email&#160;protected]</span></a>
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <a href="{{ route('profile.edit') }}"><i
-                                                    class="fas fa-user-edit"></i>Edit
-                                                Profile</a>
+                                                <li>
+                                                    <a href="{{ route('profile.edit') }}"><i
+                                                            class="fas fa-user-edit"></i>Edit
+                                                        Profile</a>
+                                                </li>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
                                                         @csrf
@@ -69,10 +66,7 @@
             </div>
             <div class="dashboard-hero-content text-white">
                 <h3 class="title">User Dashboard</h3>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="{{ route('LandingPage') }}">Home</a>
-                    </li>
+                <ul class="">
                     <li>
                         My Team
                     </li>
@@ -80,48 +74,42 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row justify-content-center mt--85">
-                <h2 class="text-center text-white">Approved Widthrawal</h2>
-                <hr>
-                <table id="myTable" class="table table-bordered">
-                    <thead>
-                        <tr class="text-white">
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @foreach ($users as $user)
-                            <tr>
-                               <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->status }}</td>
-                                <td>{{ $user->created_at }}</td>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <h2 class="text-center">Approved Widthrawal</h2>
+                    <hr>
+                    <table id="myTable" class="table table-bordered">
+                        <thead>
+                            <tr class="">
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Date</th>
                             </tr>
-                        @endforeach
-                    </tbody>
+                        </thead>
 
-                </table>
+                        <tbody>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->status }}</td>
+                                    <td>{{ $user->created_at }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
+                    </table>
+                </div>
             </div>
         </div>
         <div class="container-fluid sticky-bottom">
             <div class="dashboard-footer">
                 <div class="d-flex flex-wrap justify-content-between m-0-15-none">
                     <div class="left">
-                        &copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
+                        &copy; 2019 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
                     </div>
                     <div class="right">
-                        <ul>
-                            <li>
-                                <a href="#0">Terms of use</a>
-                            </li>
-                            <li>
-                                <a href="#0">Privacy policy</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -130,17 +118,16 @@
     </section>
 
 
-<script>
-    function copy() {
-      // Get the text field
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(copyText.value);
+    <script>
+        function copy() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
 
-      // Alert the copied text
-      alert("Copied the text: " + copyText.value);
-    }
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
     </script>
-
 @endsection

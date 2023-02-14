@@ -21,20 +21,11 @@
                                 <a href="#0"><i class="flaticon-support"></i>Support</a>
                             </li>
                             <li>
-                                <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__"
-                                        data-cfemail="f49d9a929bb49c8d9d8498959a90da979b99">[email&#160;protected]</span>
-                                </a>
-                            </li>
-                            <li>
                                 <i class="flaticon-globe"></i>
                             </li>
                         </ul>
                         <div
                             class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
-                            <form class="dashboard-header-search mr-sm-4">
-                                <label for="search"><i class="flaticon-magnifying-glass"></i></label>
-                                <input type="text" placeholder="Search...">
-                            </form>
                             <ul class="dashboard-right-menus">
                                 <li>
                                     <a href="#0">
@@ -66,13 +57,14 @@
                                                     alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
-                                            <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
-                                                    data-cfemail="5d173235333932381d3a303c3431733e3230">[email&#160;protected]</span></a>
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
-                                                    Profile</a>
+                                                <li>
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
+                                                        Profile</a>
+                                                </li>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
                                                         @csrf
@@ -92,12 +84,9 @@
             </div>
             <div class="dashboard-hero-content text-white">
                 <h3 class="title">Admin Dashboard</h3>
-                <ul class="breadcrumb">
+                <ul class="">
                     <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        Dashboard
+                        All Users
                     </li>
                 </ul>
             </div>

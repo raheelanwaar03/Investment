@@ -20,10 +20,6 @@
                         </ul>
                         <div
                             class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
-                            <form class="dashboard-header-search mr-sm-4">
-                                <label for="search"><i class="flaticon-magnifying-glass"></i></label>
-                                <input type="text" placeholder="Search...">
-                            </form>
                             <ul class="dashboard-right-menus">
                                 <li>
                                     <a href="#0" class="author">
@@ -45,13 +41,13 @@
                                                     alt="dashboard">
                                             </div>
                                             <h6 class="title">{{ auth()->user()->name }}</h6>
-                                            <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__"
-                                                    data-cfemail="5d173235333932381d3a303c3431733e3230">[email&#160;protected]</span></a>
                                         </div>
                                         <div class="author-body">
                                             <ul>
-                                                <a href="{{ route('profile.edit') }}"><i
-                                                    class="fas fa-user-edit"></i>Edit
+                                                <li>
+                                                    <a href="{{ route('profile.edit') }}"><i
+                                                            class="fas fa-user-edit"></i>Edit
+                                                </li>
                                                 Profile</a>
                                                 <li>
                                                     <form action="{{ route('logout') }}" method="POST">
@@ -70,10 +66,7 @@
             </div>
             <div class="dashboard-hero-content text-white">
                 <h3 class="title">User Dashboard</h3>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="{{ route('LandingPage') }}">Home</a>
-                    </li>
+                <ul class="">
                     <li>
                         Widthraw Balance
                     </li>

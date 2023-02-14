@@ -18,10 +18,13 @@
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-    {{-- datatable --}}
-    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
-    <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
+    {{-- datatable --}}
+     {{-- datatable Links --}}
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+
 </head>
 
 <body>
@@ -64,7 +67,8 @@
                     </div>
                     <ul class="dashboard-menu">
                         <li>
-                            <a href="{{ route('Admin.Dashboard') }}" class="active"><i class="flaticon-man"></i>Dashboard</a>
+                            <a href="{{ route('Admin.Dashboard') }}" class="active"><i
+                                    class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="{{ route('Admin.All.Tids') }}"><i class="flaticon-man"></i>All Tids</a>
@@ -76,31 +80,37 @@
                             <a href="{{ route('Admin.Pending.Users') }}"><i class="flaticon-coin"></i>Pending Users</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-interest"></i>Easypaisa User</a>
+                            <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-interest"></i>Easypaisa
+                                User</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Approved.Users') }}"><i class="flaticon-interest"></i>Approved User</a>
+                            <a href="{{ route('Admin.Approved.Users') }}"><i class="flaticon-interest"></i>Approved
+                                User</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Rejected.Users') }}"><i class="flaticon-exchange"></i>Rejected User </a>
+                            <a href="{{ route('Admin.Rejected.Users') }}"><i class="flaticon-exchange"></i>Rejected
+                                User </a>
                         </li>
                         <li>
                             <a href="{{ route('Admin.Product.create') }}"><i class="flaticon-deal"></i>Add Product</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Product.index')}}"><i class="flaticon-deal"></i>All Product</a>
+                            <a href="{{ route('Admin.Product.index') }}"><i class="flaticon-deal"></i>All Product</a>
                         </li>
                         <li>
                             <a href="{{ route('Admin.Setting.index') }}"><i class="flaticon-gears"></i>Settings</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.All.Widthraw.Requests') }}"><i class="flaticon-atm"></i>Widthraw Req</a>
+                            <a href="{{ route('Admin.All.Widthraw.Requests') }}"><i class="flaticon-atm"></i>Widthraw
+                                Req</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Approved.Widthraw') }}"><i class="flaticon-atm"></i>Approve Widt</a>
+                            <a href="{{ route('Admin.Approved.Widthraw') }}"><i class="flaticon-atm"></i>Approve
+                                Widt</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Rejected.Widthraw') }}"><i class="flaticon-atm"></i>Reject Widt</a>
+                            <a href="{{ route('Admin.Rejected.Widthraw') }}"><i class="flaticon-atm"></i>Reject
+                                Widt</a>
                         </li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">

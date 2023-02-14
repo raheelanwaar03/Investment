@@ -18,8 +18,14 @@
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-
+    {{-- favi Icon --}}
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
+    {{-- datatable Links --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+
+
 </head>
 
 <body>
@@ -62,10 +68,12 @@
                     </div>
                     <ul class="dashboard-menu">
                         <li>
-                            <a href="{{ route('User.Dashboard') }}" class="active"><i class="flaticon-man"></i>Dashboard</a>
+                            <a href="{{ route('User.Dashboard') }}" class="active"><i
+                                    class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="{{ route('User.Refer.New.Friend') }}"><i class="flaticon-interest"></i>Refer Friend</a>
+                            <a href="{{ route('User.Refer.New.Friend') }}"><i class="flaticon-interest"></i>Refer
+                                Friend</a>
                         </li>
                         <li>
                             <a href="{{ route('User.Team') }}"><i class="flaticon-team"></i>Team</a>
@@ -73,7 +81,7 @@
                         <li>
                             <a href="{{ route('User.Widthraw.Balance') }}"><i class="flaticon-atm"></i>Withdraw</a>
                         </li>
-                         <li>
+                        <li>
                             <a href="{{ route('User.Widthraw.Request') }}"><i class="flaticon-atm"></i>All Withdraw</a>
                         </li>
                         <li>
