@@ -17,8 +17,8 @@ class RegisterationFeesController extends Controller
     {
         $validated = $request->validate([
             'bank' => 'required',
-            'amount' => 'required',
-            'tid' => 'required'
+            'tid' => ['required', 'integer', 'min:10'],
+            'amount' => 'required'
         ]);
 
         $tidChecks = FeesCollecator::get();

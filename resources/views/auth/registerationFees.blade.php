@@ -16,10 +16,7 @@
                         @csrf
                         <div class="form-group">
                             <label for="sign-up">Select Bank</label>
-                            <select name="bank" class="form-control">
-                                <option value="easypaisa">Easypaisa</option>
-                                <option value="jazzcash">Jazzcash</option>
-                            </select>
+                            <input type="text" name="bank" value="Easypaisa" readonly>
                         </div>
                         <div class="form-group">
                             <label for="">Amount</label>
@@ -27,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">TRX or TID Num</label>
-                            <input type="text" name="tid" placeholder="Enter TID or TRX num or Transcation">
+                            <input type="text" name="tid" placeholder="Enter TID or TRX num or Transcation" required>
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="mt-2 mb-2">Procced</button>
