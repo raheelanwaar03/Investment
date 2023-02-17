@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class FeesCollecator extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'user_id';
     function userFees()
     {
-        return $this->hasOne('App\Models\User', 'id');
-    }
+        return $this->belongsTo('App\Models\User', 'user_id');
+    } 
 
 }

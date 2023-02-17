@@ -103,11 +103,11 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Country</th>
-                                <th>Register Date</th>
+                                <th>Balance</th>
+                                <th>Tids</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
@@ -115,8 +115,14 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->country }}</td>
-                                    <td>{{ $user->created_at }}</td>
+                                    <td>{{ $user->balance }}</td>
+                                    <td>{{ $user->trxIds->tid }}</td>
+                                    <td>
+                                        <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"
+                                            class="btn btn-small btn-success">Approved</a>
+                                        <a href="{{ route('Admin.Rejected.User.Account.Request', ['id' => $user->id]) }}"
+                                            class="btn btn-small btn-primary">Reject</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

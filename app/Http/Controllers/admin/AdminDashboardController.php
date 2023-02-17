@@ -16,14 +16,13 @@ class AdminDashboardController extends Controller
 
     public function userTids()
     {
-        $user = User::where('status','pending')->get();
-        $tids = FeesCollecator::with('userFees')->get();
-        return view('admin.dashboard.userTids',compact('tids','user'));
+        $users = User::where('status','pending')->with('trxIds')->get();
+        return view('admin.dashboard.userTids',compact('users'));
     }
 
     public function allUsers()
     {
-        $users = User::get();
+        $users = User::where('status','pending')->with('trxIds')->get();
         return view('admin.dashboard.allUsers',compact('users'));
     }
 
@@ -47,8 +46,8 @@ class AdminDashboardController extends Controller
 
     public function easypaisaUsers()
     {
-        $tids = FeesCollecator::with('userFees')->get();
-        return view('admin.dashboard.easypaisUser',compact('tids'));
+        $users = User::with('trxIds')->get();
+        return view('admin.dashboard.easypaisUser',compact('users'));
     }
 
     public function approveUserAccount($id)

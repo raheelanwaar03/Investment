@@ -36,30 +36,30 @@ class clean extends Command
         Artisan::call('view:clear');
         Artisan::call('route:clear');
 
-        $user = new User();
-        $user->name = 'Raheel Anwaar';
-        $user->username = 'rahee318';
-        $user->referal = 'default';
-        $user->balance = '0';
-        $user->country = 'country';
-        $user->phone = '03149720318';
-        $user->email = 'raheelanwaar0316@gmail.com';
-        $user->password = Hash::make('asdfasdf');
-        $user->role = 'admin';
-        $user->save();
+        // $user = new User();
+        // $user->name = 'Raheel Anwaar';
+        // $user->username = 'rahee318';
+        // $user->referal = 'default';
+        // $user->balance = '0';
+        // $user->country = 'country';
+        // $user->phone = '03149720318';
+        // $user->email = 'raheelanwaar0316@gmail.com';
+        // $user->password = Hash::make('asdfasdf');
+        // $user->role = 'admin';
+        // $user->save();
 
 
-        $user = new User();
-        $user->name = 'Hamza Anwaar';
-        $user->username = 'hamzahamzi';
-        $user->email = 'raheelanwaar28@gmail.com';
-        $user->referal = 'default';
-        $user->balance = '0';
-        $user->country = 'country';
-        $user->phone = '03167007156';
-        $user->password = Hash::make('asdfasdf');
-        $user->role = 'user';
-        $user->save();
+        // $user = new User();
+        // $user->name = 'Hamza Anwaar';
+        // $user->username = 'hamzahamzi';
+        // $user->email = 'raheelanwaar28@gmail.com';
+        // $user->referal = 'default';
+        // $user->balance = '0';
+        // $user->country = 'country';
+        // $user->phone = '03167007156';
+        // $user->password = Hash::make('asdfasdf');
+        // $user->role = 'user';
+        // $user->save();
 
         return Command::SUCCESS;
     }

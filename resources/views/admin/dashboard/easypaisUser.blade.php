@@ -108,14 +108,14 @@
                         </thead>
 
                         <tbody>
-                            @foreach ($tids as $tid)
+                            @foreach ($users as $user)
                                 <tr>
-                                    <td>{{ $tid->userFees->name }}</td>
-                                    <td>{{ $tid->userFees->email }}</td>
-                                    <td>{{ $tid->userFees->phone }}</td>
-                                    <td>{{ $tid->userFees->country }}</td>
-                                    <td>{{ $tid->userFees->status }}</td>
-                                    <td>{{ $tid->bank }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->phone }}</td>
+                                    <td>{{ $user->country }}</td>
+                                    <td>{{ $user->status }}</td>
+                                    <td>{{ $user->trxIds->bank }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

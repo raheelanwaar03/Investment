@@ -12,10 +12,12 @@ class User extends Authenticatable
 {
 
     use HasApiTokens, HasFactory, Notifiable;
+    
+    protected $primaryKey = 'id';
 
-    function registerationFees()
+    function trxIds()
     {
-        return $this->belongsTo('App\Models\FeesCollecator','user_id');
+        return $this->hasOne(FeesCollecator::class,'user_id');
     }
 
     /**
