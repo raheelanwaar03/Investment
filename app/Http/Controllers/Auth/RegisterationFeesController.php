@@ -17,16 +17,24 @@ class RegisterationFeesController extends Controller
     {
         $validated = $request->validate([
             'bank' => 'required',
-            'tid' => ['required', 'integer', 'min:10'],
+            'tid' => 'required',
             'amount' => 'required'
         ]);
+
+        $lenth = $request->tid;
+        $lenthCheck = strlen($lenth);
+        if ($lenthCheck <= 10) {
+            return redirect()->back()->with('error', 'Please enter 11 digits Trx ID');
+        }
+
+        // checking uniqe Trx id.
 
         $tidChecks = FeesCollecator::get();
 
         foreach ($tidChecks as $tidCheck) {
             $tidCheck = $tidCheck->tid;
             if ($validated['tid'] == $tidCheck)
-            return redirect()->back()->with('error','This tid is used before');
+                return redirect()->back()->with('error', 'This tid is used before');
         }
 
 
