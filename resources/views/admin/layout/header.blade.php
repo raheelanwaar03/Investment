@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
     {{-- datatable --}}
-     {{-- datatable Links --}}
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+    {{-- datatable Links --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -71,10 +71,7 @@
                                     class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.All.Tids') }}"><i class="flaticon-man"></i>All Tids</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('Admin.All.Users') }}"><i class="flaticon-coin"></i>All Users</a>
+                            <a href="{{ route('Admin.All.Users') }}"><i class="flaticon-man"></i>All Users</a>
                         </li>
                         <li>
                             <a href="{{ route('Admin.Pending.Users') }}"><i class="flaticon-coin"></i>Pending Users</a>
