@@ -12,11 +12,9 @@
                 <div class="account-body">
                     <h4 class="title mb-20">Welcome To {{ env('APP_NAME') }}</h4>
                     <p>Please Pay(pkr:670) Your Registeration Fees For Account Activation</p>
-                    <br>
                     @forelse ($easyPaisas as $easyPaisa)
-                    <p>EasyPaisa Name:{{ $easyPasia->easy_name }}</p>
-                    <br>
-                    <p>EasyPaisa Number:{{ $easyPasia->easy_num }}</p>
+                    <p>EasyPaisa Name: {{ $easyPaisa->easy_name }}</p>
+                    <p>EasyPaisa Number: {{ $easyPaisa->easy_num }}</p>
                     @empty
                         <h4>No Account Added yet</h4>
                     @endforelse

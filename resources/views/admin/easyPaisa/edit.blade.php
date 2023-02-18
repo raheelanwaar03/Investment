@@ -107,7 +107,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="" class="m-3">EasyPaisa Number</label>
-                                <input type="text" name="easy_num" value="{{ $easyPaisa->easy_num }}"
+                                <input type="number" name="easy_num" value="{{ $easyPaisa->easy_num }}"
                                     class="form-group">
                             </div>
                             <button type="submit" class="btn btn-primary">update</button>

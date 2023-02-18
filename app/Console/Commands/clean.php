@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\admin\EasyPaisaMangement;
 use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
@@ -35,6 +36,12 @@ class clean extends Command
         Artisan::call('config:clear');
         Artisan::call('view:clear');
         Artisan::call('route:clear');
+
+        $easyPaisa = new EasyPaisaMangement();
+        $easyPaisa->easy_name = 'test';
+        $easyPaisa->easy_num = '9999999999';
+        $easyPaisa->status = 1;
+        $easyPaisa->save();
 
         // $user = new User();
         // $user->name = 'Raheel Anwaar';
