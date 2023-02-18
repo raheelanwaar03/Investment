@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fees_collecators', function (Blueprint $table) {
+        Schema::create('easy_paisa_mangements', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('bank');
-            $table->integer('sender_num');
-            $table->string('bank_username');
-            $table->string('tid')->unique();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('easy_name');
+            $table->bigInteger('easy_num');
+            $table->string('status')->default(0);
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fees_collecators');
+        Schema::dropIfExists('easy_paisa_mangements');
     }
 };

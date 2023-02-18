@@ -89,6 +89,9 @@
                                 User </a>
                         </li>
                         <li>
+                            <a href="{{ route('Admin.Easypaisa.index') }}"><i class="flaticon-coin"></i>Add Easypaisa</a>
+                        </li>
+                        <li>
                             <a href="{{ route('Admin.Product.create') }}"><i class="flaticon-deal"></i>Add Product</a>
                         </li>
                         <li>

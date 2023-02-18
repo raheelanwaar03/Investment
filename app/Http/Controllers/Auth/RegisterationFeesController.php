@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\EasyPaisaMangement;
 use App\Models\FeesCollecator;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,8 @@ class RegisterationFeesController extends Controller
 {
     public function registerationFees()
     {
-        return view('auth.registerationFees');
+        $easyPaisas = EasyPaisaMangement::where('status',1)->get();
+        return view('auth.registerationFees',compact('easyPaisas'));
     }
 
     public function feesDetailStore(Request $request)
@@ -18,7 +20,8 @@ class RegisterationFeesController extends Controller
         $validated = $request->validate([
             'bank' => 'required',
             'tid' => 'required',
-            'amount' => 'required'
+            'bank_username' => 'required',
+            'sender_num' => 'required',
         ]);
 
         $lenth = $request->tid;
@@ -37,19 +40,13 @@ class RegisterationFeesController extends Controller
                 return redirect()->back()->with('error', 'This tid is used before');
         }
 
-
-        $userAmount = $validated['amount'];
-
-        if ($userAmount != 670) {
-            return redirect()->back()->with('error', 'You have not entered desired amount');
-        }
-
         $feesDetails = new FeesCollecator();
         $feesDetails->user_id = auth()->user()->id;
         $feesDetails->bank = $validated['bank'];
-        $feesDetails->amount = $validated['amount'];
+        $feesDetails->sender_num = $validated['sender_num'];
+        $feesDetails->bank_username = $validated['bank_username'];
         $feesDetails->tid = $validated['tid'];
         $feesDetails->save();
-        return redirect('/')->with('success', 'Admin will check your details and notify you when your account activated');
+        return redirect('/')->with('success', 'Your details has been submited successfully our team will review your details and approve your account if given information is valid!');
     }
 }
