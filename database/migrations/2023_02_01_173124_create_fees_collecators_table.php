@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('bank');
-            $table->integer('sender_num');
+            $table->string('sender_num');
             $table->string('bank_username');
             $table->string('tid')->unique();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
