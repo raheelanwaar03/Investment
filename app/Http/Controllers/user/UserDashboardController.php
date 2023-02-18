@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\AdminProductModel;
 use App\Models\User;
 use App\Models\user\WidthrawBalance;
-use Illuminate\Http\Request;
 
 class UserDashboardController extends Controller
 {
@@ -24,5 +24,11 @@ class UserDashboardController extends Controller
     {
         $widthraws = WidthrawBalance::where('user_id',auth()->user()->id)->get();
         return view('user.work.widthrawReq',compact('widthraws'));
+    }
+
+    public function work()
+    {
+        $products = AdminProductModel::paginate(9);
+        return view('user.work.index',compact('products'));
     }
 }
