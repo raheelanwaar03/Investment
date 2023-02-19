@@ -41,21 +41,6 @@ class landingPageController extends Controller
             $productShare->save();
         }
 
-
-
-        // get user ip
-        $newUser = request()->ip();
-        $date = date('Y-m-d');
-
-        $visitor = Vistor::where('ip', request()->ip())->first();
-        if (!$visitor) {
-            $visitor = new Vistor();
-            $visitor->ip = request()->ip();
-            $visitor->dateTime = date(now());
-            $visitor->save();
-            return view('LandingPage.survey');
-        }
-
         $products = AdminProductModel::paginate(9);
         return view('LandingPage.product', compact('products', 'referal'));
     }

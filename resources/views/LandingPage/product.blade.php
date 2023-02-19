@@ -25,24 +25,17 @@
                     <div class="row">
                         @forelse ($products as $product)
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card mt-2">
                                     <img class="card-img-top" src="{{ asset('images/' . $product->product_img) }}"
                                         alt="{{ $product->product_img }}">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->product_title }}</h5>
-                                        <h5 class="card-title">Price: {{ $product->product_price }}</h5>
                                         <p class="card-text">{{ $product->product_des }}</p>
-                                        <div class="btn-group btn-group-lg">
-                                            <div class="link">
-                                                <a href="{{ $product->product_link }}" target="_blank"
-                                                    class="btn btn-sm btn-primary">Survey</a>
-                                            </div>
-                                            <div class="">
-                                                <input type="text" style="width:0%;height:0%;color:white;border:none"
-                                                    value="{{ route('LandingPage.Product', ['shareby' => auth()->user()->username], ['referal' => Auth::user()->username]) }}"
-                                                    id="myInput">
-                                                <a onclick="copy()" class="btn btn-sm btn-success text-white">copy</a>
-                                            </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="{{ $product->product_link }}" target="_blank"
+                                                class="btn btn-sm btn-primary">Survey</a>
+                                            <a href="{{ route('User.Product.Reward', ['id' => $product->id]) }}"
+                                                class="btn btn-sm btn-success text-white">Review</a>
                                         </div>
                                     </div>
                                 </div>
@@ -51,23 +44,11 @@
                     </div>
                     <h3>Admin have not added any product yet!</h3>
                     @endforelse
-                    <div>
+                    <div class="col-md-12 text-center">
                         {{ $products->withQueryString()->links('pagination::bootstrap-5') }}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <script>
-        function copy() {
-            // Get the text field
-            var copyText = document.getElementById("myInput");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
-            // Alert the copied text
-            alert("Copied the text: " + copyText.value);
-        }
-    </script>
 @endsection

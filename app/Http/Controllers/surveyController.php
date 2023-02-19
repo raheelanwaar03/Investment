@@ -18,6 +18,6 @@ class surveyController extends Controller
         $surveyResult->question = $validated['question'];
         $surveyResult->question1 = $validated['question1'];
         $surveyResult->save();
-        return redirect()->back()->with('success','Thanks for your opinion');
+        return redirect()->route('LandingPage.Product')->with('success','Thanks for your opinion!Explore more for best deals and reward');
     }
 }

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('vistors', function (Blueprint $table) {
             $table->id();
             $table->string('ip');
+            $table->string('user_id');
+            $table->string('product_id');
             $table->dateTime('dateTime');
             $table->timestamps();
         });
