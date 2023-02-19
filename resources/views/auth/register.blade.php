@@ -1,13 +1,13 @@
 @extends('auth.layout.app')
 
 @section('content')
-    <div class="account-section bg_img" data-background="{{ asset('assets/images/account-bg.jpg') }}">
+    <div class="account-section bg_img" data-background="{{ asset('assets/background.jpg') }}">
         <div class="container">
             <div class="account-title text-center">
                 <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
                             class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
                 <a href="#0" class="logo">
-                    <img src="{{ asset('assets/background.jpg') }}" height="150px" width="150px" alt="logo">
+                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
                 </a>
             </div>
             <div class="account-wrapper">
