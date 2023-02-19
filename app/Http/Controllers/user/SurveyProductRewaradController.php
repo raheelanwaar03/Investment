@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\admin\AdminProductModel;
 use App\Models\User;
 use App\Models\Vistor;
+use Carbon\Carbon;
 
 class SurveyProductRewaradController extends Controller
 {
@@ -16,7 +17,7 @@ class SurveyProductRewaradController extends Controller
 
         // get user ip
 
-        $visitor = Vistor::where('user_id', auth()->user()->id)->where('id', $id)->first();
+        $visitor = Vistor::where('user_id', auth()->user()->id)->where('id', $id)->whereDate('created_at',Carbon::today())->first();
         if (!$visitor) {
             // storing product
             $visitor = new Vistor();
