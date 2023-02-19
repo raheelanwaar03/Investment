@@ -76,7 +76,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <h2 class="text-center">Approved Widthrawal</h2>
+                    <h2 class="text-center">My all team members</h2>
                     <hr>
                     <table id="myTable" class="table table-bordered">
                         <thead>

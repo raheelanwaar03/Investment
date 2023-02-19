@@ -24,10 +24,19 @@ class RegisterationFeesController extends Controller
             'sender_num' => 'required',
         ]);
 
+        // checking the lenght of tid
         $lenth = $request->tid;
         $lenthCheck = strlen($lenth);
         if ($lenthCheck <= 10) {
             return redirect()->back()->with('error', 'Please enter 11 digits Trx ID');
+        }
+
+        // checking the length of num
+        $num = $request->sender_num;
+        $numLength = strlen($num);
+        if($numLength <= 10)
+        {
+            return redirect()->back()->with('error','Please enter 11 charcter num');
         }
 
         // checking uniqe Trx id.

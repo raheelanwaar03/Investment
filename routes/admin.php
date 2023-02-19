@@ -1,17 +1,17 @@
 <?php
 
-use App\Http\Controllers\admin\AddEasypaisaController;
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\EasypisaController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\WidthrawRequestsController;
-use App\Models\admin\EasyPaisaMangement;
 use Illuminate\Support\Facades\Route;
 
 
 Route::prefix('Admin')->name('Admin.')->middleware('auth','admin')->group(function () {
     Route::get('/Dashboard',[AdminDashboardController::class,'dashboard'])->name('Dashboard');
+    Route::get('/Edit/User/{id}',[AdminDashboardController::class,'editUser'])->name('Edit.User');
+    Route::post('/Update/User/{id}',[AdminDashboardController::class,'updateUser'])->name('Update.User');
     Route::get('/User/Tids',[AdminDashboardController::class,'userTids'])->name('All.Tids');
     Route::get('/All/Users',[AdminDashboardController::class,'allUsers'])->name('All.Users');
     Route::get('/Pending/Users',[AdminDashboardController::class,'pendingUsers'])->name('Pending.Users');

@@ -103,7 +103,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Country</th>
+                                <th>Trx Id</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -116,7 +116,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->country }}</td>
+                                    <td>{{ $user->trxIds->tid }}</td>
                                     <td>{{ $user->status }}</td>
                                     <td>
                                         <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"

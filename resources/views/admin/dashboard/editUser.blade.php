@@ -61,8 +61,7 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
-                                                            class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -86,52 +85,46 @@
                 <h3 class="title">Admin Dashboard</h3>
                 <ul class="">
                     <li>
-                        Dashboard
+                        User Details
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt--85">
+                <h2 class="text-center text-white">Update User Details</h2>
+                <hr>
                 <div class="col-md-12">
-                    <h2 class="text-center">All Users</h2>
-                    <hr>
-                    <table id="myTable" class="table table-bordered">
-                        <thead>
-                            <tr class="">
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Balance</th>
-                                <th>Tids</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($users as $user)
-                                <tr>
-                                    <td>{{ $user->id }}</td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->balance }}</td>
-                                    <td>{{ $user->trxIds->tid }}</td>
-                                    <td>
-                                        <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"
-                                            class="btn btn-small btn-success">Approved</a>
-                                        <a href="{{ route('Admin.Rejected.User.Account.Request', ['id' => $user->id]) }}"
-                                            class="btn btn-small btn-primary">Reject</a>
-                                        <a href="{{ route('Admin.Edit.User',['id' => $user->id]) }}" class="btn btn-warning">Edit</a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-
-                    </table>
+                    <div class="card">
+                        <form action="{{ route('Admin.Update.User',['id'=>$user->id]) }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="" class="ml-2">Name</label>
+                                <input type="text" name="name" value="{{ $user->name }}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="ml-2">Email</label>
+                                <input type="text" name="email" value="{{ $user->email }}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="ml-2">UserName</label>
+                                <input type="text" name="username" value="{{ $user->username }}" class="form-control">
+                            </div>
+                             <div class="form-group">
+                                <label for="" class="ml-2">Balance</label>
+                                <input type="text" name="balance" value="{{ $user->balance }}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="ml-2">Password</label>
+                                <input type="text" name="password" value="{{ $user->password }}" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">update</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </section>
 @endsection
