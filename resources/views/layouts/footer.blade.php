@@ -43,20 +43,20 @@
             </div>
             <ul class="links">
                 <li>
-                    <a href="#0">About</a>
+                    <a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#0">Affiliates</a>
+                    <a href="{{ route('LandingPage.Affilate') }}">Affiliates</a>
                 </li>
-                <li>
-                    <a href="#0">Plans</a>
-                </li>
-                <li>
-                    <a href="#0">FAQ</a>
-                </li>
-                <li>
-                    <a href="#0">Privacy Policy</a>
-                </li>
+                if(auth()->user())
+                {
+                    <li>
+                        <a href="{{ route('User.Dashboard') }}">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('LandingPage.Product') }}">Product</a>
+                    </li>
+                }
             </ul>
         </div>
         <div class="footer-bottom">
