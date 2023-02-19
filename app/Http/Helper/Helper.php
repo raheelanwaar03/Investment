@@ -2,6 +2,7 @@
 
 use App\Models\admin\Setting;
 use App\Models\ShareProduct;
+use App\Models\user\WidthrawBalance;
 use App\Models\User;
 use Carbon\Carbon;
 
@@ -34,6 +35,20 @@ function totalReferFriends()
     $user = User::where('referal', auth()->user()->username)->get()->count();
     return $user;
 }
+
+// user widhrawal balance
+
+// function userWidthrawalBalance()
+// {
+//     $widthrawBalance = WidthrawBalance::where('user_id',auth()->user()->id)->get();
+
+//     foreach( $widthrawBalance as $widthraw )
+//     {
+//         $totalWidthraw = $widthraw->widthraw_amount->count();
+//     }
+
+//     return $totalWidthraw;
+// }
 
 // Level function
 
