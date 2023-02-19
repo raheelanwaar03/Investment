@@ -29,7 +29,7 @@ class AdminDashboardController extends Controller
         $user->email = $request->email;
         $user->username = $request->username;
         $user->balance = $request->balance;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
         return redirect()->back()->with('success','User Details updated successfully');
 
