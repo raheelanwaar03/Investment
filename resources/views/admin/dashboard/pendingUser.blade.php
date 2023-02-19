@@ -123,6 +123,8 @@
                                             class="btn btn-small btn-success">Approved</a>
                                         <a href="{{ route('Admin.Rejected.User.Account.Request', ['id' => $user->id]) }}"
                                             class="btn btn-small btn-primary">Reject</a>
+                                        <a href="{{ route('Admin.Edit.User', ['id' => $user->id]) }}"
+                                            class="btn btn-warning">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach

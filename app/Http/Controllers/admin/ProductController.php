@@ -51,7 +51,7 @@ class ProductController extends Controller
 
         $product = new AdminProductModel();
         $product->product_title = $validated['product_title'];
-        $product->product_title = $validated['product_price'];
+        $product->product_price = $validated['product_price'];
         $product->product_link = $validated['product_link'];
         $product->product_des = $validated['product_des'];
         $product->product_img = $imageName;

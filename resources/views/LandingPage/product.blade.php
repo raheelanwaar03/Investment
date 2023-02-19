@@ -30,7 +30,6 @@
                                         alt="{{ $product->product_img }}">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->product_title }}</h5>
-                                        <br>
                                         <h5 class="card-title">Price: {{ $product->product_price }}</h5>
                                         <p class="card-text">{{ $product->product_des }}</p>
                                         <div class="btn-group btn-group-lg">

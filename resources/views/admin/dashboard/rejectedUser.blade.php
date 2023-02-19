@@ -61,7 +61,8 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -102,7 +103,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Country</th>
+                                <th>TrxId</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -115,10 +116,13 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->country }}</td>
+                                    <td>{{ $user->trxIds->tid }}</td>
                                     <td>{{ $user->status }}</td>
                                     <td>
-                                        <a href="{{ route('Admin.Approve.User.Account.Request',['id'=>$user->id]) }}" class="btn btn-small btn-primary">Approved</a>
+                                        <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"
+                                            class="btn btn-small btn-primary">Approved</a>
+                                        <a href="{{ route('Admin.Edit.User', ['id' => $user->id]) }}"
+                                            class="btn btn-warning">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach

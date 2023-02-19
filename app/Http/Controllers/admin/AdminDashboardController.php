@@ -35,8 +35,6 @@ class AdminDashboardController extends Controller
 
     }
 
-
-
     // rest work
 
     public function userTids()
@@ -59,13 +57,13 @@ class AdminDashboardController extends Controller
 
     public function approvedUsers()
     {
-        $users = User::where('status','approved')->get();
+        $users = User::where('status','approved')->with('trxIds')->get();
         return view('admin.dashboard.approvedUsers',compact('users'));
     }
 
     public function rejectedUsers()
     {
-        $users = User::where('status','rejected')->get();
+        $users = User::where('status','rejected')->with('trxIds')->get();
         return view('admin.dashboard.rejectedUser',compact('users'));
     }
 
