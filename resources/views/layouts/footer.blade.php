@@ -37,11 +37,14 @@
     <div class="container">
         <div class="footer-top">
             <div class="logo">
-                <a href="index.html">
+                <a href="{{ route('LandingPage') }}">
                     <img src="{{ asset('assets/images/logo/footer-logo.png') }}" alt="logo">
                 </a>
             </div>
             <ul class="links">
+                <li>
+                    <a href="{{ route('LandingPage') }}">Home</a>
+                </li>
                 <li>
                     <a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
                 </li>
