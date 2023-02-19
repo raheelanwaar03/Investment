@@ -62,7 +62,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom-area">
                 <div class="left">
-                    <p>&copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved</p>
+                    <p>&copy; 2019 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved</p>
                 </div>
                 <ul class="social-icons">
                     <li>
