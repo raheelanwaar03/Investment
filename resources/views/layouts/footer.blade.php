@@ -48,7 +48,7 @@
                 <li>
                     <a href="{{ route('LandingPage.Affilate') }}">Affiliates</a>
                 </li>
-                if(auth()->user())
+                @if(auth()->user())
                 {
                     <li>
                         <a href="{{ route('User.Dashboard') }}">Dashboard</a>
@@ -57,6 +57,7 @@
                         <a href="{{ route('LandingPage.Product') }}">Product</a>
                     </li>
                 }
+                @endif
             </ul>
         </div>
         <div class="footer-bottom">
