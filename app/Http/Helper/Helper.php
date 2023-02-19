@@ -3,6 +3,7 @@
 use App\Models\admin\Setting;
 use App\Models\ShareProduct;
 use App\Models\User;
+use Carbon\Carbon;
 
 function allUser()
 {
@@ -38,7 +39,7 @@ function totalReferFriends()
 
 function level()
 {
-    $user = User::where('id',auth()->user()->id)->first();
+    $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
     $user->balance = 4;
     $user->save();
 
@@ -47,7 +48,7 @@ function level()
 
     if ($userLevel >= 5) {
         $userLevel = 'Level 1';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 8;
         $user->save();
     }
@@ -55,62 +56,62 @@ function level()
     if($userLevel >= 20)
     {
         $userLevel = 'Level 2';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 12;
         $user->save();
     }
 
     if ($userLevel >= 45) {
         $userLevel = 'Level 3';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 16;
         $user->save();
     }
 
     if ($userLevel >= 70) {
         $userLevel = 'Level 4';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 20;
         $user->save();
     }
 
     if ($userLevel >= 100) {
         $userLevel = 'Level 5';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 25;
         $user->save();
     }
 
     if ($userLevel >= 145) {
         $userLevel = 'Level 6';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 30;
         $user->save();
     }
     if ($userLevel >= 200) {
         $userLevel = 'Level 7';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 35;
         $user->save();
     }
 
     if ($userLevel >= 270) {
         $userLevel = 'Level 8';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 40;
         $user->save();
     }
 
     if ($userLevel >= 350) {
         $userLevel = 'Level 9';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 45;
         $user->save();
     }
 
     if ($userLevel >= 450) {
         $userLevel = 'Level 10';
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
         $user->balance += 50;
         $user->save();
     }
