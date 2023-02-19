@@ -40,10 +40,10 @@ function totalReferFriends()
 function level()
 {
     $user = User::where('id',auth()->user()->id)->whereDate('created_at','>=',Carbon::today())->first();
-    $user->balance = 4;
+    $user->balance += 4;
     $user->save();
 
-    $users = User::where('referal', auth()->user()->username)->get();
+    $users = User::where('referal',auth()->user()->username)->get();
     $userLevel = $users->count();
 
     if ($userLevel >= 5) {

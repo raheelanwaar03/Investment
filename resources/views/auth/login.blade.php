@@ -7,7 +7,7 @@
                 <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
                             class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
                 <a href="#0" class="logo">
-                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
+                    <img src="{{ asset('assets/background.jpg') }}" height="150px" width="150px" alt="logo">
                 </a>
             </div>
             <div class="account-wrapper">

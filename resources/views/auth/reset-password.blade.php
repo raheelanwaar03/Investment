@@ -5,7 +5,7 @@
         <div class="container">
             <div class="account-title text-center">
                 <a href="#0" class="logo">
-                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
+                    <img src="{{ asset('assets/background.jpg') }}" height="150px" width="150px" alt="logo">
                 </a>
             </div>
             <div class="account-wrapper">
