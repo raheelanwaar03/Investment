@@ -39,6 +39,7 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'product_title' => 'required',
+            'product_price' => 'required',
             'product_link' => 'required',
             'product_des' => 'required',
             'product_img' => 'required',
@@ -50,6 +51,7 @@ class ProductController extends Controller
 
         $product = new AdminProductModel();
         $product->product_title = $validated['product_title'];
+        $product->product_title = $validated['product_price'];
         $product->product_link = $validated['product_link'];
         $product->product_des = $validated['product_des'];
         $product->product_img = $imageName;
@@ -101,6 +103,8 @@ class ProductController extends Controller
             $product->product_img = $imageName;
         }
         $product->product_title = $request->product_title;
+        $product->product_price = $request->product_price;
+        $product->product_link = $request->product_link;
         $product->product_des = $request->product_des;
         $product->save();
         return redirect()->back()->with('success', 'Product Updated successfully');

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('admin_product_models', function (Blueprint $table) {
             $table->id();
             $table->string('product_title');
+            $table->string('product_price');
             $table->string('product_link');
             $table->string('product_des');
             $table->string('product_img');
