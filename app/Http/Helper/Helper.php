@@ -55,7 +55,7 @@ function totalReferFriends()
 function level()
 {
     $users = User::where('referal', auth()->user()->username)->get();
-    $userLevel = 50;
+    $userLevel = $users->count();
 
     if ($userLevel <= 4 ) {
         $userLevel = 'Level 0';
