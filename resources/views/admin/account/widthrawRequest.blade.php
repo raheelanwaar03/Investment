@@ -118,14 +118,15 @@
                                     <td>{{ $widthrawRequest->widthraw_amount }}</td>
                                     <td>{{ $widthrawRequest->status }}</td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-success">Approve</a>
-                                        <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                                        <a href="{{ route('Admin.Approve.Widthraw', ['id' => $widthrawRequest->id]) }}"
+                                            class="btn btn-sm btn-success">Approve</a>
+                                        <a href="{{ route('Admin.Reject.Widthraw', ['id' => $widthrawRequest->id]) }}"
+                                            class="btn btn-sm btn-danger">Reject</a>
                                     </td>
                                     <td>{{ $widthrawRequest->created_at }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
-
                     </table>
                 </div>
             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\FeesCollecator;
 use App\Models\User;
+use App\Models\user\WidthrawBalance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -87,6 +88,28 @@ class AdminDashboardController extends Controller
         $user->status = 'rejected';
         $user->save();
         return redirect()->back()->with('success','Account has been Rejected successfully');
+    }
+
+    // Approve widthraw by admin
+
+    public function approveWidthraw($id)
+    {
+        $widthraw = WidthrawBalance::find($id);
+        $widthraw->status = 'approved';
+        $widthraw->save();
+        return redirect()->back()->with('success','User widthraw request Approved');
+    }
+
+    public function rejectWidthraw($id)
+    {
+        $widthraw = WidthrawBalance::find($id);
+        $widthraw->status = 'rejected';
+        $widthraw->save();
+
+        $user = User::where('id',$widthraw->user_id)->first();
+        $user->balance += $widthraw->widthraw_amount;
+        $user->save();
+        return redirect()->back()->with('success','User widthraw request rejected');
     }
 
 }

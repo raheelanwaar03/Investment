@@ -79,6 +79,7 @@
                     <div class="card mt-3">
                         <div class="card-title">
                             <h3 class="text-center m-3">Widthraw Balance</h3>
+                            <h5 class="text-center m-3">Your account balance {{ auth()->user()->balance }}</h5>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('User.Widthraw.Balance.Request') }}" method="POST">
@@ -115,7 +116,7 @@
                 <div class="dashboard-footer">
                     <div class="d-flex flex-wrap justify-content-between m-0-15-none">
                         <div class="left">
-                            &copy; 2023 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
+                            &copy; 2019 <a href="#0">{{ env('APP_NAME') }}</a> | All right reserved.
                         </div>
                     </div>
                 </div>
