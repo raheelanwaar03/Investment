@@ -70,6 +70,6 @@ class dailyRewardController extends Controller
                 $user->save();
             }
         }
-        return 'daily commission given to all users';
+        return redirect()->back()->with('success','Daily commission given to all users according to their level!');
     }
 }
