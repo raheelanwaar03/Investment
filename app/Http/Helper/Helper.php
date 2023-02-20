@@ -55,26 +55,41 @@ function totalReferFriends()
 function level()
 {
     $users = User::where('referal', auth()->user()->username)->get();
-    $userLevel = $users->count();
+    $userLevel = 50;
 
     if ($userLevel <= 4 ) {
         $userLevel = 'Level 0';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 5) {
         $userLevel = 'Level 1';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 20) {
         $userLevel = 'Level 2';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 45) {
         $userLevel = 'Level 3';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 70) {
         $userLevel = 'Level 4';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 100) {
@@ -83,21 +98,36 @@ function level()
 
     if ($userLevel <= 145) {
         $userLevel = 'Level 6';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
     if ($userLevel <= 200) {
         $userLevel = 'Level 7';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 270) {
         $userLevel = 'Level 8';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 350) {
         $userLevel = 'Level 9';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     if ($userLevel <= 450) {
         $userLevel = 'Level 10';
+        $user = User::where('id',auth()->user()->id)->first();
+        $user->level = $userLevel;
+        $user->save();
     }
 
     return $userLevel;

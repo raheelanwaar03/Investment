@@ -145,6 +145,7 @@
                         </div>
                     </div>
                 </div>
+                <a href="{{ route('Admin.Daily.Reward.To.Users') }}" class="btn btn-primary">Daily Bouns</a>
             </div>
         </div>
     </div>

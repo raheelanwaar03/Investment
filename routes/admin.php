@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\AdminDashboardController;
+use App\Http\Controllers\admin\dailyRewardController;
 use App\Http\Controllers\admin\EasypisaController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\SettingController;
@@ -21,6 +22,8 @@ Route::prefix('Admin')->name('Admin.')->middleware('auth','admin')->group(functi
     // routes for approving user account
     Route::get('Approve/User/Account/{id}',[AdminDashboardController::class,'approveUserAccount'])->name('Approve.User.Account.Request');
     Route::get('Reject/User/Account/{id}',[AdminDashboardController::class,'rejectUserAccount'])->name('Rejected.User.Account.Request');
+    // Giving daily reward to user according to there level
+    Route::get('Daily/Reward',[dailyRewardController::class,'dailyReward'])->name('Daily.Reward.To.Users');
 
     // Widthraw request Routes
     Route::get('/Widthraw/Requests',[WidthrawRequestsController::class,'allRequests'])->name('All.Widthraw.Requests');
