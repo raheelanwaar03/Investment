@@ -61,7 +61,8 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -96,23 +97,39 @@
                 <hr>
                 <div class="col-md-12">
                     <div class="card">
-                        <form action="{{ route('Admin.Product.update',$product->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('Admin.Product.update', $product->id) }}" method="POST"
+                            enctype="multipart/form-data">
                             @csrf
                             @method('put')
                             <div class="form-group">
-                            <label for="" class="m-3">Product Title</label>
-                            <input type="text" name="product_title" value="{{ $product->product_title }}" class="form-group">
+                                <label for="" class="m-3">Product Title</label>
+                                <input type="text" name="product_title" value="{{ $product->product_title }}"
+                                    class="form-group">
                             </div>
                             <div class="form-group">
+                                <label for="" class="m-3">Product Price</label>
+                                <input type="text" name="product_price" value="{{ $product->product_price }}"
+                                    class="form-group">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="m-3">Product Link</label>
+                                <input type="text" name="product_link" value="{{ $product->product_link }}" class="form-group">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="m-3">Product Level</label>
+                                    <input type="text" name="product_level" value="{{ $product->product_level }}" class="form-group">
+                                    </div>
+                            <div class="form-group">
                                 <label for="" class="m-3">Product Description</label>
-                                <textarea name="product_des" value="{{ $product->product_des }}" class="form-control" rows="7" ></textarea>
+                                <textarea name="product_des" value="{{ $product->product_des }}" class="form-control" rows="7"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="" class="m-3">Product Image</label>
                                 <input type="file" name="product_img" class="form-control">
                             </div>
                             <div class="my-3">
-                                <img src="{{ asset('images/'. $product->product_img) }}" alt="product img" width="200px" height="200px">
+                                <img src="{{ asset('images/' . $product->product_img) }}" alt="product img" width="200px"
+                                    height="200px">
                             </div>
                             <button type="submit" class="btn btn-primary">update</button>
                         </form>

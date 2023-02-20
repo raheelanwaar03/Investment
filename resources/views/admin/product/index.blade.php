@@ -104,6 +104,9 @@
                             <tr class="">
                                 <th>Id</th>
                                 <th>Name</th>
+                                <th>price</th>
+                                <th>Level</th>
+                                <th>link</th>
                                 <th>Description</th>
                                 <th>Image</th>
                                 <th>Action</th>
@@ -115,6 +118,9 @@
                                 <tr>
                                     <td>{{ $product->id }}</td>
                                     <td>{{ $product->product_title }}</td>
+                                    <td>{{ $product->product_price }}</td>
+                                    <td>{{ $product->product_level }}</td>
+                                    <td>{{ $product->product_link }}</td>
                                     <td>{{ $product->product_des }}</td>
                                     <td><img src="{{ asset('images/' . $product->product_img) }}" class="img-fluid img-thumbnail"
                                             height="90px" width="90px" alt="{{ $product->product_img }}"></td>
