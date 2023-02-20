@@ -43,8 +43,9 @@
                             <label for="pass">Confirm Password</label>
                             <input type="password" placeholder="Re-type Password" name="password_confirmation">
                         </div>
-                        <div class="col-sm-12">
-                         <input type="hidden" name="referal" value="{{ $referal }}">
+                         <div class="form-group">
+                            <label for="pass">Referal</label>
+                            <input type="text" name="referal" value="{{ $referal }}" readonly>
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="mt-2 mb-2">Sign Up</button>
