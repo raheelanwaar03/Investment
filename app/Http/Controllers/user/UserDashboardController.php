@@ -28,7 +28,7 @@ class UserDashboardController extends Controller
 
     public function work()
     {
-        $products = AdminProductModel::paginate(6);
+        $products = AdminProductModel::where('product_level',level())->paginate(6);
         return view('user.work.index',compact('products'));
     }
 }
