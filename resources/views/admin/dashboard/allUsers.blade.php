@@ -116,7 +116,7 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
                                     <td>{{ $user->balance }}</td>
-                                    <td>{{ $user->trxIds->tid }}</td>
+                                    <td>{{ $user->trxIds->tid ?? 'fake user' }}</td>
                                     <td>
                                         <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"
                                             class="btn btn-small btn-success">Approved</a>
