@@ -41,7 +41,7 @@ class landingPageController extends Controller
             $productShare->save();
         }
 
-        $products = AdminProductModel::where('product_level',level())->paginate(9);
+        $products = AdminProductModel::where('product_level',auth()->user()->level)->paginate(9);
         return view('LandingPage.product', compact('products', 'referal'));
     }
 }

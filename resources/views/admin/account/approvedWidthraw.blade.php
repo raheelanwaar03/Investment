@@ -95,7 +95,7 @@
                 <div class="col-md-12">
                     <h2 class="text-center">Approved Widthrawal</h2>
                     <hr>
-                    <table id="myTable" class="table table-bordered">
+                    <table id="myTable" class="table table-responsive table-bordered">
                         <thead>
                             <tr>
                                 <th>Name</th>

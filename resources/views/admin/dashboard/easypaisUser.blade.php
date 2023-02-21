@@ -95,7 +95,7 @@
                 <div class="col-md-12">
                     <h2 class="text-center">Easypaisa Users</h2>
                     <hr>
-                    <table id="myTable" class="table table-bordered">
+                    <table id="myTable" class="table table-responsive table-bordered">
                         <thead>
                             <tr class="">
                                 <th>Name</th>

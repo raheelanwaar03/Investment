@@ -77,7 +77,7 @@
                 <div class="col-md-12">
                     <h2 class="text-center">All Widthrawal Status</h2>
                     <hr>
-                    <table id="myTable" class="table table-bordered w-100">
+                    <table id="myTable" class="table table-responsive table-bordered w-100">
                         <thead>
                             <tr class="">
                                 <th>Name</th>
