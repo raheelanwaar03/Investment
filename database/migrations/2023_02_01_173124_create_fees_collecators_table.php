@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('bank');
             $table->string('sender_num');
             $table->string('bank_username');
-            $table->string('tid')->unique();
+            $table->string('tid')->default('unpaid')->unique();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

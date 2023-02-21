@@ -37,7 +37,7 @@ Route::middleware('guest')->group(function () {
 });
 
 // registeration fees routes
-Route::get('Registeration/Fees', [RegisterationFeesController::class, 'registerationFees']);
+Route::get('Registeration/Fees', [RegisterationFeesController::class, 'registerationFees'])->name('Registeration.Fees');
 Route::post('Registeration/Store', [RegisterationFeesController::class, 'feesDetailStore'])->name('Store/Fees/Details');
 
 Route::middleware('auth')->group(function () {

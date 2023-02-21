@@ -24,11 +24,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
 
-      {{-- 
+      {{--
     This website is developed by Raheel Anwaar
     info@raheelanwaar.com for contact.
      --}}
-     
+
 </head>
 
 <body>
@@ -77,10 +77,13 @@
                             <ul class="cart-area">
                                 @if (auth()->user())
                                     <li>
-                                        <form action="{{ route('logout') }}" method="POST">
-                                            @csrf
-                                            <button type="submit" class="btn btn-sm btn-primary">Logout</button>
-                                        </form>
+                                        <div class="d-flex justify-content-around align-items-center">
+                                            <a href="{{ route('Registeration.Fees') }}" class="btn btn-info mr-2 text-white">Enter Tid Again</a>
+                                            <form action="{{ route('logout') }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn btn-sm btn-primary">Logout</button>
+                                            </form>
+                                        </div>
                                     </li>
                                 @else
                                     <li>

@@ -19,6 +19,10 @@ class feesCheck
         if(auth()->user()->status == 'approved'){
             return $next($request);
         }
+        if(auth()->user()->status == 'rejected')
+        {
+            return redirect()->route('Registeration.Fees')->with('error','Your accound has been rejected Please pay your registeration fees and enter correct Tid & if you pay us before then enter correct tid username and number again');
+        }
         else
         {
             return redirect()->back()->with('error','Please wait for your Account Approval Or Pay your Registeration Fees');
