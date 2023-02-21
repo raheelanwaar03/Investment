@@ -19,7 +19,7 @@ class RegisteredUserController extends Controller
      */
     public function create($referal = 'default')
     {
-        return view('auth.register',compact('referal'));
+        return view('auth.register', compact('referal'));
     }
 
     /**
@@ -34,13 +34,12 @@ class RegisteredUserController extends Controller
             'phone' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        if($user = User::where('username',$request->referal)->first())
-        {
-            $setting = Setting::where('status','1')->first();
+        if ($user = User::where('username', $request->referal)->first()) {
+            $setting = Setting::where('status', '1')->first();
             $referCommission = $setting->refer_amount;
             $user->balance += $referCommission;
             $user->save();
@@ -60,6 +59,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME)->with('success','Your request has been received please pay fees for your account activation!');
+        return redirect(RouteServiceProvider::HOME)->with('success', 'Your request has been received please pay fees for your account activation!');
     }
 }
