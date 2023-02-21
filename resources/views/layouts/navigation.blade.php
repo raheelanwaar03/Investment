@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
 
-      {{--
+    {{--
     This website is developed by Raheel Anwaar
     info@raheelanwaar.com for contact.
      --}}
@@ -68,7 +68,8 @@
                                     </li>
                                 @else
                                     <li>
-                                        <p>Wellcome <b>{{ auth()->user()->username }}!</b> you are successfully Login.</p>
+                                        <p>Wellcome <b>{{ auth()->user()->username }}!</b> you are successfully Login.
+                                        </p>
                                     </li>
                                 @endif
                             </ul>
@@ -77,13 +78,10 @@
                             <ul class="cart-area">
                                 @if (auth()->user())
                                     <li>
-                                        <div class="d-flex justify-content-around align-items-center">
-                                            <a href="{{ route('Registeration.Fees') }}" class="btn btn-info mr-2 text-white">Enter Tid Again</a>
-                                            <form action="{{ route('logout') }}" method="POST">
-                                                @csrf
-                                                <button type="submit" class="btn btn-sm btn-primary">Logout</button>
-                                            </form>
-                                        </div>
+                                        <form action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn btn-sm btn-primary">Logout</button>
+                                        </form>
                                     </li>
                                 @else
                                     <li>
@@ -125,7 +123,12 @@
                                 <a href="{{ route('LandingPage.Contact') }}">Contact</a>
                             </li>
                             <li class="pr-0">
-                                <a href="{{ route('register') }}" class="custom-button">Join Us</a>
+                                @if (auth()->user())
+                                    <a href="{{ route('Registeration.Fees') }}" class="custom-button">Enter Tid
+                                        Again</a>
+                                @else
+                                    <a href="{{ route('register') }}" class="custom-button">Join Us</a>
+                                @endif
                             </li>
                         </ul>
                         <div class="header-bar d-lg-none">
