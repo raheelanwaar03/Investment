@@ -132,7 +132,7 @@
                 </div>
             </div>
         </div>
-        {{-- {{ userWidthrawalBalance() }} --}}
+        {{ level() }}
         <div class="container-fluid sticky-bottom">
             <div class="dashboard-footer">
                 <div class="d-flex flex-wrap justify-content-between m-0-15-none">
