@@ -116,7 +116,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->trxIds->tid }}</td>
+                                    <td>{{ $user->trxIds->tid ?? 'unpaid user'}}</td>
                                     <td>{{ $user->status }}</td>
                                     <td>
                                         <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"

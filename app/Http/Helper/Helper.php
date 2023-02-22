@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use App\Models\user\WidthrawBalance;
 
 function allUser()
 {
@@ -34,19 +35,12 @@ function totalReferFriends()
 
 // user widhrawal balance
 
-// function userWidthrawalBalance()
-// {
-//     $widthrawBalance = WidthrawBalance::where('user_id',auth()->user()->id)->get();
+function userWidthrawalBalance()
+{
+    $widthrawBalance = WidthrawBalance::where('user_id',auth()->user()->id)->widthraw_amount->count();
+    return $widthrawBalance;
+}
 
-//     foreach( $widthrawBalance as $widthraw )
-//     {
-//         $totalWidthraw = $widthraw->widthraw_amount->count();
-//     }
-
-//     return $totalWidthraw;
-// }
-
-// Level function
 
 function level()
 {
