@@ -9,7 +9,7 @@ class dailyRewardController extends Controller
 {
     public function dailyReward()
     {
-        $users = User::get();
+        $users = User::where('status','approved')->get();
 
         foreach ($users as $user) {
 
