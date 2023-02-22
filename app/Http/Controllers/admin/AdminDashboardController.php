@@ -80,23 +80,30 @@ class AdminDashboardController extends Controller
         $user->status = 'approved';
         $user->save();
 
-        // Giving upliner commissionS
-        $adminLimit = Setting::where('status', 1)->first();
-        $referCommission = $adminLimit->refer_amount;
-        //  Second Upliner
-        $indirectCommission1 = $referCommission * 5 / 100;
         //  getting second user
-        $secondUpliner = User::where('username', $user->referal)->first();
-        $secondUpliner->balance += $indirectCommission1;
-        $secondUpliner->save();
+        $firstUpliner = User::where('username', $user->referal)->first();
+        //  Second Upliner
+        $indirectCommission1 = 20;
+        // getting user
+        $secondUpliner = User::where('username', $firstUpliner->referal)->first();
+
+        if ($secondUpliner == '') {
+            return redirect()->back()->with('success', 'Account has beed Approved successfully');
+        } else {
+            $secondUpliner->balance += $indirectCommission1;
+            $secondUpliner->save();
+        }
         // Third UPliner
-        $indirectCommission2 = $referCommission * 1 / 100;
+        $indirectCommission2 = 10;
         // getting third person;
         $thirdUpliner = User::where('username', $secondUpliner->referal)->first();
-        $thirdUpliner->balance += $indirectCommission2;
-        $thirdUpliner->save();
-
-        return redirect()->back()->with('success', 'Account has beed Approved successfully');
+        if ($thirdUpliner == '') {
+            return redirect()->back()->with('success', 'Account has beed Approved successfully');
+        } else {
+            $thirdUpliner->balance += $indirectCommission2;
+            $thirdUpliner->save();
+        }
+        return $thirdUpliner;
     }
 
     public function rejectUserAccount($id)

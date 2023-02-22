@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\user\WidthrawBalance;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -12,12 +14,17 @@ class User extends Authenticatable
 {
 
     use HasApiTokens, HasFactory, Notifiable;
-    
+
     protected $primaryKey = 'id';
 
     function trxIds()
     {
         return $this->hasOne(FeesCollecator::class,'user_id');
+    }
+
+    function userWidthraw()
+    {
+        return $this->hasMany(WidthrawBalance::class,'user_id');
     }
 
     /**

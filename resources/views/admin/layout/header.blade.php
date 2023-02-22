@@ -71,21 +71,21 @@
                                     class="flaticon-man"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.All.Users') }}"><i class="flaticon-man"></i>All Users</a>
+                            <a href="{{ route('Admin.All.Users') }}"><i class="flaticon-team"></i>All Users</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Pending.Users') }}"><i class="flaticon-coin"></i>Pending Users</a>
+                            <a href="{{ route('Admin.Pending.Users') }}"><i class="flaticon-team"></i>Pending Users</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-interest"></i>Easypaisa
+                            <a href="{{ route('Admin.Easypaisa.Users') }}"><i class="flaticon-team"></i>Easypaisa
                                 User</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Approved.Users') }}"><i class="flaticon-interest"></i>Approved
+                            <a href="{{ route('Admin.Approved.Users') }}"><i class="flaticon-team"></i>Approved
                                 User</a>
                         </li>
                         <li>
-                            <a href="{{ route('Admin.Rejected.Users') }}"><i class="flaticon-exchange"></i>Rejected
+                            <a href="{{ route('Admin.Rejected.Users') }}"><i class="flaticon-team"></i>Rejected
                                 User </a>
                         </li>
                         <li>

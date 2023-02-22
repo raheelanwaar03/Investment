@@ -51,15 +51,13 @@
                 <li>
                     <a href="{{ route('LandingPage.Affilate') }}">Affiliates</a>
                 </li>
-                @if(auth()->user())
-                {
+                @if (auth()->user())
                     <li>
                         <a href="{{ route('User.Dashboard') }}">Dashboard</a>
                     </li>
                     <li>
                         <a href="{{ route('LandingPage.Product') }}">Product</a>
                     </li>
-                }
                 @endif
             </ul>
         </div>
@@ -96,13 +94,14 @@
 </footer>
 </div>
 
-<script data-cfasync="false" src="{{ asset('../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
+<script data-cfasync="false" src="{{ asset('../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
+</script>
 <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
-<script src="{{ asset('assets/js/modernizr-3.6.0.min.js')}}"></script>
-<script src="{{ asset('assets/js/plugins.js')}}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
-<script src="{{ asset('assets/js/magnific-popup.min.js')}}"></script>
-<script src="{{ asset('assets/js/jquery-ui.min.js')}}"></script>
+<script src="{{ asset('assets/js/modernizr-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('assets/js/wow.min.js') }}"></script>
 <script src="{{ asset('assets/js/odometer.min.js') }}"></script>
 <script src="{{ asset('assets/js/viewport.jquery.js') }}"></script>

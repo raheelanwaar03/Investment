@@ -17,19 +17,9 @@
                     </div>
                     <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-between align-items-center">
                         <ul class="support-area">
-                            <li>
-                                <a href="#0"><i class="flaticon-support"></i>Support</a>
-                            </li>
-                            <li>
-                                <i class="flaticon-globe"></i>
-                            </li>
                         </ul>
-                        <div
-                            class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
-                            <form class="dashboard-header-search mr-sm-4">
-                                <label for="search"><i class="flaticon-magnifying-glass"></i></label>
-                                <input type="text" placeholder="Search...">
-                            </form>
+                        <div class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+
                             <ul class="dashboard-right-menus">
                                 <li>
                                     <a href="#0">
@@ -65,7 +55,8 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -122,11 +113,13 @@
                                     <td>{{ $product->product_level }}</td>
                                     <td>{{ $product->product_link }}</td>
                                     <td>{{ $product->product_des }}</td>
-                                    <td><img src="{{ asset('images/' . $product->product_img) }}" class="img-fluid img-thumbnail"
-                                            height="90px" width="90px" alt="{{ $product->product_img }}"></td>
+                                    <td><img src="{{ asset('images/' . $product->product_img) }}"
+                                            class="img-fluid img-thumbnail" height="90px" width="90px"
+                                            alt="{{ $product->product_img }}"></td>
                                     <td class="d-flex justify-content-center align-items-center">
-                                        <a href="{{ route('Admin.Product.edit',$product->id) }}" class="btn btn-sm btn-info mx-3">Edit</a>
-                                        <form action="{{ route('Admin.Product.destroy',$product->id) }}" method="POST">
+                                        <a href="{{ route('Admin.Product.edit', $product->id) }}"
+                                            class="btn btn-sm btn-info mx-3">Edit</a>
+                                        <form action="{{ route('Admin.Product.destroy', $product->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <a type="submit" class="btn btn-sm btn-danger">Delete</a>
@@ -144,4 +137,3 @@
     </div>
     </section>
 @endsection
-

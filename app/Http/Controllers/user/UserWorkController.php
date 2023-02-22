@@ -32,7 +32,7 @@ class UserWorkController extends Controller
 
         // See user balance
 
-        if ($userWidthrawAmount >= auth()->user()->balance ) {
+        if ($userWidthrawAmount > auth()->user()->balance ) {
             return redirect()->back()->with('error', 'You have not enough balance');
         }
 
