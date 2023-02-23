@@ -35,12 +35,16 @@ function totalReferFriends()
 
 // user widhrawal balance
 
-// function userWidthrawalBalance()
-// {
-//     $widthrawBalance = WidthrawBalance::where('user_id', auth()->user()->id)->get();
-//     return $widthrawBalance->widthraw_amount->count();
+function userWidthrawalBalance()
+{
+    $totalWidthraw = 0;
+    $widthrawBalance = WidthrawBalance::where('user_id', auth()->user()->id)->get();
+    foreach ($widthrawBalance as $widthraw) {
+        $totalWidthraw += $widthraw->widthraw_amount;
+    }
 
-// }
+    return $totalWidthraw;
+}
 
 
 function level()

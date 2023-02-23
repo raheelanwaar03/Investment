@@ -122,7 +122,7 @@
                         <div class="dashboard-inner">
                             <div class="cont">
                                 <span class="title">Widthrawal Balance</span>
-                                <h5 class="amount">0</h5>
+                                <h5 class="amount">{{ userWidthrawalBalance() }}</h5>
                             </div>
                             <div class="thumb">
                                 <img src="{{ asset('assets/images/dashboard/dashboard4.png') }}" alt="dasboard">
@@ -132,7 +132,6 @@
                 </div>
             </div>
         </div>
-        {{ level() }}
         <div class="container-fluid sticky-bottom">
             <div class="dashboard-footer">
                 <div class="d-flex flex-wrap justify-content-between m-0-15-none">
