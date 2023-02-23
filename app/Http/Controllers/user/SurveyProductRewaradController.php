@@ -24,7 +24,6 @@ class SurveyProductRewaradController extends Controller
             $visitor->ip = request()->ip();
             $visitor->dateTime = date(now());
             $visitor->save();
-            return $visitor;
             // giving user product reward
             $user = User::where('id', auth()->user()->id)->first();
             $user->balance += $procutRewarad;
