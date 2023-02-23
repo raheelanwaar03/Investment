@@ -17,12 +17,12 @@ class SurveyProductRewaradController extends Controller
 
         // get user ip
 
-        $visitor = Vistor::where('user_id', auth()->user()->id)->where('id', $id)->whereDate('created_at',Carbon::today())->first();
+        $visitor = Vistor::where('user_id', auth()->user()->id)->where('id', $product->id)->whereDate('created_at',Carbon::today())->first();
         if (!$visitor) {
             // storing product
             $visitor = new Vistor();
             $visitor->user_id = auth()->user()->id;
-            $visitor->product_id = $id;
+            $visitor->product_id = $product->id;
             $visitor->ip = request()->ip();
             $visitor->dateTime = date(now());
             $visitor->save();

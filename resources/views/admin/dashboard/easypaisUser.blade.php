@@ -115,7 +115,7 @@
                                     <td>{{ $user->phone }}</td>
                                     <td>{{ $user->country }}</td>
                                     <td>{{ $user->status }}</td>
-                                    <td>{{ $user->trxIds->bank }}</td>
+                                    <td>{{ $user->trxIds->bank ?? 'unpaid user' }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
