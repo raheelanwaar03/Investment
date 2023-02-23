@@ -82,6 +82,9 @@ class AdminDashboardController extends Controller
 
         //  getting second user
         $firstUpliner = User::where('username', $user->referal)->first();
+        if ($firstUpliner == '') {
+            return redirect()->back()->with('success', 'Account has beed Approved successfully');
+        }
         //  Second Upliner
         $indirectCommission1 = 20;
         // getting user
@@ -145,8 +148,7 @@ class AdminDashboardController extends Controller
             $mainUser = User::where('referal', $user->username)->get();
             $referCount = $mainUser->count();
 
-            if (!$mainUser = '')
-            {
+            if (!$mainUser = '') {
                 if ($referCount <= 4) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 0';

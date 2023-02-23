@@ -15,17 +15,16 @@ class SurveyProductRewaradController extends Controller
         $product = AdminProductModel::find($id);
         $procutRewarad = $product->product_price;
 
-        // get user ip
-
-        $visitor = Vistor::where('user_id', auth()->user()->id)->where('id', $product->id)->whereDate('created_at',Carbon::today())->first();
+        $visitor = Vistor::where('user_id',auth()->user()->id)->where('product_id',$id)->whereDate('created_at','=',Carbon::today())->first();
         if (!$visitor) {
-            // storing product
+        //     // storing product
             $visitor = new Vistor();
             $visitor->user_id = auth()->user()->id;
-            $visitor->product_id = $product->id;
+            $visitor->product_id = $id;
             $visitor->ip = request()->ip();
             $visitor->dateTime = date(now());
             $visitor->save();
+            return $visitor;
             // giving user product reward
             $user = User::where('id', auth()->user()->id)->first();
             $user->balance += $procutRewarad;
