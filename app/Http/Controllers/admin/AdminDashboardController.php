@@ -135,4 +135,75 @@ class AdminDashboardController extends Controller
         $user->save();
         return redirect()->back()->with('success', 'User widthraw request rejected');
     }
+
+    // set user level
+
+    public function setLevel()
+    {
+        $users = User::where('status', 'approved')->get();
+        foreach ($users as $user) {
+            $mainUser = User::where('referal', $user->username)->get();
+            $referCount = $mainUser->count();
+
+            if (!$mainUser = '')
+            {
+                if ($referCount <= 4) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 0';
+                    $user->save();
+                }
+                if ($referCount >= 5) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 1';
+                    $user->save();
+                }
+                if ($referCount >= 20) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 2';
+                    $user->save();
+                }
+                if ($referCount >= 45) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 3';
+                    $user->save();
+                }
+                if ($referCount >= 70) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 4';
+                    $user->save();
+                }
+                if ($referCount >= 100) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 5';
+                    $user->save();
+                }
+                if ($referCount >= 145) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 6';
+                    $user->save();
+                }
+                if ($referCount >= 200) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 7';
+                    $user->save();
+                }
+                if ($referCount >= 270) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 8';
+                    $user->save();
+                }
+                if ($referCount >= 350) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 9';
+                    $user->save();
+                }
+                if ($referCount >= 450) {
+                    $user = User::where('id', $user->id)->first();
+                    $user->level = 'Level 10';
+                    $user->save();
+                }
+            }
+        }
+        return redirect()->back()->with('success', 'Level Given to all users according to their referals');
+    }
 }
