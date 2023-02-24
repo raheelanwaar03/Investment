@@ -29,6 +29,7 @@ class AdminDashboardController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->level = $request->level;
         $user->username = $request->username;
         $user->balance = $request->balance;
         $user->password = Hash::make($request->password);

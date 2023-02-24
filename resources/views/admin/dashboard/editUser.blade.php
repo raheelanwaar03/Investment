@@ -107,6 +107,10 @@
                                 <input type="text" name="email" value="{{ $user->email }}" class="form-control">
                             </div>
                             <div class="form-group">
+                                <label for="" class="ml-2">Level</label>
+                                <input type="text" name="email" value="{{ $user->level }}" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label for="" class="ml-2">UserName</label>
                                 <input type="text" name="username" value="{{ $user->username }}" class="form-control">
                             </div>
