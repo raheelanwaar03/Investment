@@ -100,6 +100,7 @@
                             <tr class="">
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Level</th>
                                 <th>Phone</th>
                                 <th>Country</th>
                                 <th>Status</th>
@@ -112,6 +113,7 @@
                                 <tr>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->level }}</td>
                                     <td>{{ $user->phone }}</td>
                                     <td>{{ $user->country }}</td>
                                     <td>{{ $user->status }}</td>
