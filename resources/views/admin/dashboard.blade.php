@@ -148,7 +148,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="d-flex justify-content-around align-items-center">
-                            <a href="{{ route('Admin.Daily.Reward.To.Users') }}" class="btn btn-primary mr-3">Daily Bouns</a>
+                            {{-- <a href="{{ route('Admin.Daily.Reward.To.Users') }}" class="btn btn-primary mr-3">Daily Bouns</a> --}}
                             <a href="{{ route('Admin.Set.User.Level') }}" class="btn btn-primary">Set Level</a>
                         </div>
                     </div>
