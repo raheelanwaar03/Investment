@@ -102,6 +102,7 @@
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Level</th>
                                 <th>Phone</th>
                                 <th>Balance</th>
                                 <th>Tids</th>
@@ -114,6 +115,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->level }}</td>
                                     <td>{{ $user->phone }}</td>
                                     <td>{{ $user->balance }}</td>
                                     <td>{{ $user->trxIds->tid ?? 'unpaid user' }}</td>
