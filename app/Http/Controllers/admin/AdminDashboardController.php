@@ -98,7 +98,7 @@ class AdminDashboardController extends Controller
             $secondUpliner->save();
         }
         // Third UPliner
-        $indirectCommission2 = 10;
+        $indirectCommission2 = 5;
         // getting third person;
         $thirdUpliner = User::where('username', $secondUpliner->referal)->first();
         if ($thirdUpliner == '') {
