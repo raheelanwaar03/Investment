@@ -107,7 +107,7 @@ class AdminDashboardController extends Controller
             $thirdUpliner->balance += $indirectCommission2;
             $thirdUpliner->save();
         }
-        return $thirdUpliner;
+        return redirect()->back()->with('success','User Approved Successfully');
     }
 
     public function rejectUserAccount($id)
