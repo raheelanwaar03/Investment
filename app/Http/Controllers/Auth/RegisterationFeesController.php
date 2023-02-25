@@ -5,6 +5,7 @@ namespace App\Http\Controllers\auth;
 use App\Http\Controllers\Controller;
 use App\Models\admin\EasyPaisaMangement;
 use App\Models\FeesCollecator;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegisterationFeesController extends Controller
@@ -47,6 +48,13 @@ class RegisterationFeesController extends Controller
             $tidCheck = $tidCheck->tid;
             if ($validated['tid'] == $tidCheck)
                 return redirect()->back()->with('error', 'This tid is used before');
+        }
+
+        $user = User::where('id',auth()->user()->id)->first();
+        if($user->status == 'rejected')
+        {
+            $user->status = 'pending';
+            $user->save();
         }
 
         $feesDetails = new FeesCollecator();
