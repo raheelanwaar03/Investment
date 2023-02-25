@@ -18,7 +18,8 @@
                     <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-between align-items-center">
                         <ul class="support-area">
                         </ul>
-                        <div class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                        <div
+                            class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
 
                             <ul class="dashboard-right-menus">
                                 <li>
@@ -122,7 +123,7 @@
                                         <form action="{{ route('Admin.Product.destroy', $product->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <a type="submit" class="btn btn-sm btn-danger">Delete</a>
+                                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
