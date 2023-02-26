@@ -130,9 +130,12 @@ class AdminDashboardController extends Controller
         $widthraw->status = 'approved';
         $widthraw->save();
         // deduct balance on approval
-        $user = User::where('id', $widthraw->user_id)->where('status','pending')->first();
-        $user->balance -= $widthraw->widthraw_amount;
+        $user = User::where('id', auth()->user()->id)->first();
+        $totalBalance = auth()->user()->balance;
+        $deductedBalance = $totalBalance - $widthraw->widthraw_amount;
+        $user->balance = $deductedBalance;
         $user->save();
+
         return redirect()->back()->with('success', 'User widthraw request Approved');
     }
 
@@ -142,12 +145,6 @@ class AdminDashboardController extends Controller
         $widthraw->widthraw_amount;
         $widthraw->status = 'rejected';
         $widthraw->save();
-
-        $user = User::where('id', auth()->user()->id)->first();
-        $totalBalance = auth()->user()->balance;
-        $deductedBalance = $totalBalance - $widthraw->widthraw_amount;
-        $user->balance = $deductedBalance;
-        $user->save();
 
         $user = User::where('id', $widthraw->user_id)->first();
         $user->balance += $widthraw->widthraw_amount;
