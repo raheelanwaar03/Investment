@@ -127,6 +127,8 @@ class AdminDashboardController extends Controller
     public function approveWidthraw($id)
     {
         $widthraw = WidthrawBalance::find($id);
+        return $widthraw;
+
         $widthraw = $widthraw->widthraw_amount;
         $widthraw->status = 'approved';
         $widthraw->save();
