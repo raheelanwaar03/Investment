@@ -126,17 +126,28 @@ class AdminDashboardController extends Controller
 
     public function approveWidthraw($id)
     {
-        $widthraw = WidthrawBalance::where('id',$id)->first();
+        $widthraw = WidthrawBalance::where('id', $id)->first();
         $widthraw->status = 'approved';
         $widthraw->save();
+        // deduct balance on approval
+        $user = User::where('id', $widthraw->user_id)->where('status','pending')->first();
+        $user->balance -= $widthraw->widthraw_amount;
+        $user->save();
         return redirect()->back()->with('success', 'User widthraw request Approved');
     }
 
     public function rejectWidthraw($id)
     {
-        $widthraw = WidthrawBalance::where('id',$id)->first();
+        $widthraw = WidthrawBalance::where('id', $id)->first();
+        $widthraw->widthraw_amount;
         $widthraw->status = 'rejected';
         $widthraw->save();
+
+        $user = User::where('id', auth()->user()->id)->first();
+        $totalBalance = auth()->user()->balance;
+        $deductedBalance = $totalBalance - $widthraw->widthraw_amount;
+        $user->balance = $deductedBalance;
+        $user->save();
 
         $user = User::where('id', $widthraw->user_id)->first();
         $user->balance += $widthraw->widthraw_amount;

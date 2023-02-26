@@ -58,15 +58,6 @@ class UserWorkController extends Controller
         $widthraw->widthraw_amount = $validated['widthraw_amount'];
         $widthraw->widthraw_name = $validated['widthraw_name'];
         $widthraw->widthraw_num = $validated['widthraw_num'];
-
-        if (auth()->user()->balance >= $validated['widthraw_amount']) {
-
-            $user = User::where('id', auth()->user()->id)->first();
-            $totalBalance = auth()->user()->balance;
-            $deductedBalance = $totalBalance - $validated['widthraw_amount'];
-            $user->balance = $deductedBalance;
-            $user->save();
-        }
         $widthraw->save();
         return redirect()->back()->with('success', 'You have successfully requested for widthraw you will notify when admin approved');
     }
