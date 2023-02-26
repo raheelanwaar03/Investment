@@ -80,11 +80,19 @@ class AdminDashboardController extends Controller
         $user = User::find($id);
         $user->status = 'approved';
         $user->save();
+        // getting widthraw commission of admin
+
+        $adminCommission = Setting::where('status', '1')->first();
+        $firstUpliner = $adminCommission->refer_amount;
+        $firstUplinerCommission = $adminCommission->refer_amount;
 
         //  getting second user
         $firstUpliner = User::where('username', $user->referal)->first();
         if ($firstUpliner == '') {
             return redirect()->back()->with('success', 'Account has beed Approved successfully');
+        } else {
+            $firstUpliner->balance += $firstUplinerCommission;
+            $firstUpliner->save();
         }
         //  Second Upliner
         $indirectCommission1 = 20;
@@ -107,7 +115,7 @@ class AdminDashboardController extends Controller
             $thirdUpliner->balance += $indirectCommission2;
             $thirdUpliner->save();
         }
-        return redirect()->back()->with('success','User Approved Successfully');
+        return redirect()->back()->with('success', 'User Approved Successfully');
     }
 
     public function rejectUserAccount($id)
