@@ -10,7 +10,7 @@ class WidthrawRequestsController extends Controller
 {
     public function allRequests()
     {
-        $widthrawRequests = WidthrawBalance::where('status','pending')->get();
+        $widthrawRequests = WidthrawBalance::get();
         return view('admin.account.widthrawRequest',compact('widthrawRequests'));
     }
 

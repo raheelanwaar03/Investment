@@ -61,7 +61,8 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -111,14 +112,16 @@
                         <tbody>
                             @foreach ($widthrawRequests as $widthrawRequest)
                                 <tr>
-                                   <td>{{ $widthrawRequest->widthraw_name }}</td>
+                                    <td>{{ $widthrawRequest->widthraw_name }}</td>
                                     <td>{{ $widthrawRequest->widthraw_bank }}</td>
                                     <td>{{ $widthrawRequest->widthraw_num }}</td>
                                     <td>{{ $widthrawRequest->widthraw_amount }}</td>
                                     <td>{{ $widthrawRequest->status }}</td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-success">Approve</a>
-                                        <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                                        <a href="{{ route('Admin.Approve.Widthraw', ['id' => $widthrawRequest->id]) }}"
+                                            class="btn btn-sm btn-success">Approve</a>
+                                        <a href="{{ route('Admin.Reject.Widthraw', ['id' => $widthrawRequest->id]) }}"
+                                            class="btn btn-sm btn-danger">Reject</a>
                                     </td>
                                     <td>{{ $widthrawRequest->created_at }}</td>
                                 </tr>

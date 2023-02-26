@@ -130,7 +130,7 @@ class AdminDashboardController extends Controller
 
     public function approveWidthraw($id)
     {
-        $widthraw = WidthrawBalance::find($id);
+        $widthraw = WidthrawBalance::where('id',$id)->first();
         $widthraw->status = 'approved';
         $widthraw->save();
         return redirect()->back()->with('success', 'User widthraw request Approved');
@@ -138,7 +138,7 @@ class AdminDashboardController extends Controller
 
     public function rejectWidthraw($id)
     {
-        $widthraw = WidthrawBalance::find($id);
+        $widthraw = WidthrawBalance::where('id',$id)->first();
         $widthraw->status = 'rejected';
         $widthraw->save();
 

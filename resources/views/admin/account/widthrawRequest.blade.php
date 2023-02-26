@@ -94,7 +94,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <h2 class="text-center">Widthrawal Requests</h2>
+                    <h2 class="text-center">All Widthrawal Requests</h2>
                     <hr>
                     <table id="myTable" class="table table-responsive table-bordered">
                         <thead>
