@@ -145,10 +145,6 @@ class AdminDashboardController extends Controller
         $widthraw->widthraw_amount;
         $widthraw->status = 'rejected';
         $widthraw->save();
-
-        $user = User::where('id', $widthraw->user_id)->first();
-        $user->balance += $widthraw->widthraw_amount;
-        $user->save();
         return redirect()->back()->with('success', 'User widthraw request rejected');
     }
 
