@@ -32,7 +32,7 @@ class UserWorkController extends Controller
 
         // See user balance
 
-        if ($userWidthrawAmount > auth()->user()->balance ) {
+        if ($userWidthrawAmount > auth()->user()->balance) {
             return redirect()->back()->with('error', 'You have not enough balance');
         }
 
@@ -48,6 +48,13 @@ class UserWorkController extends Controller
 
         if ($userWidthrawAmount > $adminWidthrawMax) {
             return redirect()->back()->with('error', 'Your Widthraw request is Greater than Admin Limite');
+        }
+
+        // checking user if he already request for widthraw
+
+        $widthrawRequest = WidthrawBalance::where('status', 'pending')->where('user_id', auth()->user()->id)->first();
+        if ($widthrawRequest) {
+            return redirect()->back()->with('error', 'You already requested for widthraw please waith for there approval');
         }
 
 
