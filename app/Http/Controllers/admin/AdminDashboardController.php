@@ -142,6 +142,7 @@ class AdminDashboardController extends Controller
     public function rejectWidthraw($id)
     {
         $widthraw = WidthrawBalance::where('id', $id)->where('status','pending')->first();
+        return $widthraw;
         $widthraw->widthraw_amount;
         $widthraw->status = 'rejected';
         $widthraw->save();
