@@ -19,12 +19,7 @@ class User extends Authenticatable
 
     function trxIds()
     {
-        return $this->hasOne(FeesCollecator::class,'user_id');
-    }
-
-    function userWidthraw()
-    {
-        return $this->hasMany(WidthrawBalance::class,'user_id');
+        return $this->hasOne(FeesCollecator::class, 'user_id');
     }
 
     /**

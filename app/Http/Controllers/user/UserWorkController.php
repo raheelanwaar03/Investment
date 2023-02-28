@@ -57,8 +57,6 @@ class UserWorkController extends Controller
             return redirect()->back()->with('error', 'You already requested for widthraw please waith for there approval');
         }
 
-
-
         $widthraw = new WidthrawBalance();
         $widthraw->user_id = auth()->user()->id;
         $widthraw->widthraw_bank = $validated['widthraw_bank'];

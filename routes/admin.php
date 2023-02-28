@@ -30,8 +30,8 @@ Route::prefix('Admin')->name('Admin.')->middleware('auth', 'admin')->group(funct
     Route::get('/Widthraw/Requests', [WidthrawRequestsController::class, 'allRequests'])->name('All.Widthraw.Requests');
     Route::get('/Rejected/Widthraw/Requests', [WidthrawRequestsController::class, 'rejectedWidthrawal'])->name('Rejected.Widthraw');
     Route::get('/Approved/Widthraw/Requests', [WidthrawRequestsController::class, 'approvedWidthrawal'])->name('Approved.Widthraw');
-    Route::get('/Approve/Widthraw/{id}', [AdminDashboardController::class, 'approveWidthraw'])->name('Approve.Widthraw');
-    Route::get('/Reject/Widthraw/{id}', [AdminDashboardController::class, 'rejectWidthraw'])->name('Reject.Widthraw');
+    Route::get('/Approve/Widthraw/{id}', [WidthrawRequestsController::class, 'approveWidthraw'])->name('Approve.Widthraw');
+    Route::get('/Reject/Widthraw/{id}', [WidthrawRequestsController::class, 'rejectWidthraw'])->name('Reject.Widthraw');
 
     // Admin esaypaisa details Routes
 

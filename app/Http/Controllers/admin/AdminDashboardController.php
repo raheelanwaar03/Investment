@@ -122,33 +122,6 @@ class AdminDashboardController extends Controller
         return redirect()->back()->with('success', 'Account has been Rejected successfully');
     }
 
-    // Approve widthraw by admin
-
-    public function approveWidthraw($id)
-    {
-        $widthraw = WidthrawBalance::where('id',$id)->where('status','pending')->first();
-        $widthraw->status = 'approved';
-        $widthraw->save();
-        // deduct balance on approval
-        $user = User::where('id', $widthraw->user_id)->first();
-        $totalBalance = $user->balance;
-        $deductedBalance = $totalBalance - $widthraw->widthraw_amount;
-        $user->balance = $deductedBalance;
-        $user->save();
-
-        return redirect()->back()->with('success', 'User widthraw request Approved');
-    }
-
-    public function rejectWidthraw($id)
-    {
-        $widthraw = WidthrawBalance::where('id', $id)->where('status','pending')->first();
-        return $widthraw;
-        $widthraw->widthraw_amount;
-        $widthraw->status = 'rejected';
-        $widthraw->save();
-        return redirect()->back()->with('success', 'User widthraw request rejected');
-    }
-
     // set user level
 
     public function setLevel()

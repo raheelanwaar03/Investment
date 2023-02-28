@@ -12,9 +12,13 @@ class WidthrawBalance extends Model
 
     protected $primaryKey = 'user_id';
 
-    function userWidthraw()
-    {
-        return $this->belongsTo(User::class, 'id');
-    }
-
+    protected $fillable = [
+        'id',
+        'user_id',
+        'widthraw_name',
+        'widthraw_bank',
+        'widthraw_num',
+        'widthraw_amount',
+        'status',
+    ];
 }

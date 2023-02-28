@@ -15,13 +15,12 @@ return new class extends Migration
     {
         Schema::create('widthraw_balances', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->string('user_id');
             $table->string('widthraw_name');
             $table->string('widthraw_num');
             $table->string('widthraw_bank');
             $table->string('widthraw_amount');
             $table->string('status')->default('pending');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
