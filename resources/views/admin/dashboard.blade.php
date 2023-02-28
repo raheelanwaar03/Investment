@@ -123,7 +123,7 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Verified User's</span>
+                                <span class="title">Approved User's</span>
                                 <h5 class="amount">{{ verifiedUsers() }}</h5>
                             </div>
                             <div class="thumb">
