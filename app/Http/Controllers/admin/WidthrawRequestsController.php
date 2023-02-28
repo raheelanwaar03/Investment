@@ -32,8 +32,7 @@ class WidthrawRequestsController extends Controller
 
     public function approveWidthraw($id)
     {
-        $widthraw = WidthrawBalance::where('id',$id)->first();
-        // return $widthraw;
+        $widthraw = WidthrawBalance::find($id);
         $widthraw->status = 'approved';
         $widthraw->save();
         // deduct balance on approval
@@ -47,7 +46,7 @@ class WidthrawRequestsController extends Controller
 
     public function rejectWidthraw($id)
     {
-        $widthraw = WidthrawBalance::where('id',$id)->first();
+        $widthraw = WidthrawBalance::find($id);
         $widthraw->status = 'rejected';
         $widthraw->save();
         return redirect()->back()->with('success', 'User widthraw request rejected');
