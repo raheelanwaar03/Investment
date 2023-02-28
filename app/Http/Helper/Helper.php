@@ -17,7 +17,7 @@ function pendingUsers()
 
 function verifiedUsers()
 {
-    $user = User::where('status', 'verified')->get()->count();
+    $user = User::where('status', 'approved')->get()->count();
     return $user;
 }
 
