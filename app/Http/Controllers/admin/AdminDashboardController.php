@@ -4,9 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\Setting;
-use App\Models\FeesCollecator;
 use App\Models\User;
-use App\Models\user\WidthrawBalance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -77,17 +75,19 @@ class AdminDashboardController extends Controller
 
     public function approveUserAccount($id)
     {
+        $setting = Setting::where('status',1)->first();
+        $firstCommission = $setting->refer_amount;
+
         $user = User::find($id);
         $user->status = 'approved';
         $user->save();
         // getting widthraw commission of admin
-
         //  getting second user
         $firstUpliner = User::where('username', $user->referal)->first();
         if ($firstUpliner == '') {
             return redirect()->back()->with('success', 'Account has beed Approved successfully');
         } else {
-            $firstUpliner->balance += 50;
+            $firstUpliner->balance += $firstCommission;
             $firstUpliner->save();
         }
         //  Second Upliner
