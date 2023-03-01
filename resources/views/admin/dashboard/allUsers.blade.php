@@ -116,7 +116,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->username }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->referl }}</td>
+                                    <td>{{ $user->referal }}</td>
                                     <td>{{ $user->level }}</td>
                                     <td>{{ $user->phone }}</td>
                                     <td>{{ $user->balance }}</td>
