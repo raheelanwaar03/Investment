@@ -100,8 +100,9 @@
                         <thead>
                             <tr class="">
                                 <th>Id</th>
-                                <th>Name</th>
+                                <th>Username</th>
                                 <th>Email</th>
+                                <th>Referal</th>
                                 <th>Level</th>
                                 <th>Phone</th>
                                 <th>Balance</th>
@@ -113,8 +114,9 @@
                             @foreach ($users as $user)
                                 <tr>
                                     <td>{{ $user->id }}</td>
-                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->username }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->referl }}</td>
                                     <td>{{ $user->level }}</td>
                                     <td>{{ $user->phone }}</td>
                                     <td>{{ $user->balance }}</td>
