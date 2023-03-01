@@ -38,6 +38,13 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $number = User::get();
+        foreach ($number as $num) {
+            if ($num->phone = $request->phone) {
+                return redirect()->back()->with('error', 'Phone Number should be Unique');
+            }
+        }
+
         $user = User::create([
             'name' => $request->name,
             'username' => $request->username,
