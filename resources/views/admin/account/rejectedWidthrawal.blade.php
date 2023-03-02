@@ -114,7 +114,7 @@
                         <tbody>
                             @foreach ($widthrawRequests as $widthrawRequest)
                                 <tr>
-                                    <<td>{{ $widthrawRequest->widthraw_name }}</td>
+                                    <td>{{ $widthrawRequest->widthraw_name }}</td>
                                         <td>{{ $widthrawRequest->widthraw_bank }}</td>
                                         <td>{{ $widthrawRequest->widthraw_num }}</td>
                                         <td>{{ $widthrawRequest->widthraw_amount }}</td>
