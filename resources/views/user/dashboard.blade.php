@@ -95,32 +95,6 @@
                     <div class="dashboard-item">
                         <div class="dashboard-inner">
                             <div class="cont">
-                                <span class="title">Level</span>
-                                <h5 class="amount">{{ auth()->user()->level }}</h5>
-                            </div>
-                            <div class="thumb">
-                                <img src="{{ asset('assets/images/dashboard/dashboard2.png') }}" alt="dasboard">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="dashboard-item">
-                        <div class="dashboard-inner">
-                            <div class="cont">
-                                <span class="title">Total Referal Friends</span>
-                                <h5 class="amount">{{ totalReferFriends() }}</h5>
-                            </div>
-                            <div class="thumb">
-                                <img src="{{ asset('assets/images/dashboard/dashboard3.png') }}" alt="dasboard">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="dashboard-item">
-                        <div class="dashboard-inner">
-                            <div class="cont">
                                 <span class="title">Widthrawal Balance</span>
                                 <h5 class="amount">{{ userWidthrawalBalance() }}</h5>
                             </div>

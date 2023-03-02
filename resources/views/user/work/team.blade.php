@@ -70,6 +70,10 @@
                     <li>
                         My Team
                     </li>
+                    <li>Your total team member's are: ( {{ totalReferFriends() }} )</li>
+                    <li>
+                        Your Level is: ({{ auth()->user()->level }})
+                    </li>
                 </ul>
             </div>
         </div>
