@@ -86,6 +86,8 @@ class SettingController extends Controller
     {
         $setting = Setting::find($id);
         $setting->refer_amount = $request->refer_amount;
+        $setting->minimum_amount = $request->minimum_amount;
+        $setting->maximun_amount = $request->maximun_amount;
         $setting->save();
         return redirect()->back()->with('success','Setting updated successfully');
     }

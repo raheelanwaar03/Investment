@@ -103,6 +103,14 @@
                             <label for="" class="m-3">Edit Refer Amount</label>
                             <input type="text" name="refer_amount" value="{{ $setting->refer_amount }}" class="form-group">
                             </div>
+                             <div class="form-group">
+                                <label for="" class="m-3">Edit Minimum Widthraw</label>
+                                <input type="text" name="minimum_amount" class="form-group" placeholder="Minimum Widthraw">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="m-3">Edit Maximum Widthraw</label>
+                                <input type="text" name="maximun_amount" class="form-group" placeholder="Maximun Widthraw">
+                            </div>
                             <button type="submit" class="btn btn-primary">update</button>
                         </form>
                     </div>
