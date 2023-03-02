@@ -61,7 +61,8 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -96,20 +97,23 @@
                 <hr>
                 <div class="col-md-12">
                     <div class="card">
-                        <form action="{{ route('Admin.Setting.update',$setting->id) }}" method="POST">
+                        <form action="{{ route('Admin.Setting.update', $setting->id) }}" method="POST">
                             @csrf
                             @method('put')
                             <div class="form-group">
-                            <label for="" class="m-3">Edit Refer Amount</label>
-                            <input type="text" name="refer_amount" value="{{ $setting->refer_amount }}" class="form-group">
+                                <label for="" class="m-3">Edit Refer Amount</label>
+                                <input type="text" name="refer_amount" value="{{ $setting->refer_amount }}"
+                                    class="form-group">
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="" class="m-3">Edit Minimum Widthraw</label>
-                                <input type="text" name="minimum_amount" class="form-group" placeholder="Minimum Widthraw">
+                                <input type="text" name="minimum_amount" value="{{ $setting->minimum_amount }}"
+                                    class="form-group" placeholder="Minimum Widthraw">
                             </div>
                             <div class="form-group">
                                 <label for="" class="m-3">Edit Maximum Widthraw</label>
-                                <input type="text" name="maximun_amount" class="form-group" placeholder="Maximun Widthraw">
+                                <input type="text" name="maximun_amount" value="{{ $setting->maximun_amount }}"
+                                    class="form-group" placeholder="Maximun Widthraw">
                             </div>
                             <button type="submit" class="btn btn-primary">update</button>
                         </form>
