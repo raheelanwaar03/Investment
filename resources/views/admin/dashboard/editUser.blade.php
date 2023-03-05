@@ -103,6 +103,10 @@
                                 <input type="text" name="name" value="{{ $user->name }}" class="form-control">
                             </div>
                             <div class="form-group">
+                                <label for="" class="ml-2">Username</label>
+                                <input type="text" name="username" value="{{ $user->username }}" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label for="" class="ml-2">Email</label>
                                 <input type="text" name="email" value="{{ $user->email }}" class="form-control">
                             </div>
@@ -110,17 +114,9 @@
                                 <label for="" class="ml-2">Level</label>
                                 <input type="text" name="level" value="{{ $user->level }}" class="form-control">
                             </div>
-                            <div class="form-group">
-                                <label for="" class="ml-2">UserName</label>
-                                <input type="text" name="username" value="{{ $user->username }}" class="form-control">
-                            </div>
                              <div class="form-group">
                                 <label for="" class="ml-2">Balance</label>
                                 <input type="text" name="balance" value="{{ $user->balance }}" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="ml-2">Password</label>
-                                <input type="text" name="password" value="{{ $user->password }}" class="form-control">
                             </div>
                             <button type="submit" class="btn btn-primary">update</button>
                         </form>

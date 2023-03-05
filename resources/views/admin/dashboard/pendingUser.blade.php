@@ -101,6 +101,7 @@
                             <tr class="">
                                 <th>Id</th>
                                 <th>Name</th>
+                                <th>Username</th>
                                 <th>Email</th>
                                 <th>Level</th>
                                 <th>Phone</th>
@@ -115,6 +116,7 @@
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
+                                    <td>{{ $user->username }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->level }}</td>
                                     <td>{{ $user->phone }}</td>
