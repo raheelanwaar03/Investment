@@ -99,7 +99,7 @@
                     <table id="myTable" class="table table-responsive table-bordered">
                         <thead>
                             <tr class="">
-                                <th>Name</th>
+                                <th>Id</th>
                                 <th>Username</th>
                                 <th>Email</th>
                                 <th>Referal</th>
@@ -113,7 +113,7 @@
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
-                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->id }}</td>
                                     <td>{{ $user->username }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->referal }}</td>
@@ -123,11 +123,11 @@
                                     <td>{{ $user->trxIds->tid ?? 'unpaid user' }}</td>
                                     <td>
                                         <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"
-                                            class="btn btn-small btn-success">Approved</a>
+                                            class="btn btn-sm btn-success">Approved</a>
                                         <a href="{{ route('Admin.Rejected.User.Account.Request', ['id' => $user->id]) }}"
-                                            class="btn btn-small btn-primary">Reject</a>
+                                            class="btn btn-sm btn-primary">Reject</a>
                                         <a href="{{ route('Admin.Edit.User', ['id' => $user->id]) }}"
-                                            class="btn btn-warning">Edit</a>
+                                            class="btn btn-sm btn-warning">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach

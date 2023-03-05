@@ -98,6 +98,7 @@
                     <table id="myTable" class="table table-responsive table-bordered">
                         <thead>
                             <tr class="">
+                                <th>Id</th>
                                 <th>Name</th>
                                 <th>Username</th>
                                 <th>Email</th>
@@ -112,7 +113,7 @@
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
-                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->id }}</td>
                                     <td>{{ $user->username }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->level }}</td>
