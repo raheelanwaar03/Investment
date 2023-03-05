@@ -74,13 +74,13 @@ class AdminDashboardController extends Controller
 
     public function approveUserAccount($id)
     {
+        // getting widthraw commission of admin
         $setting = Setting::where('status',1)->first();
         $firstCommission = $setting->refer_amount;
 
         $user = User::find($id);
         $user->status = 'approved';
         $user->save();
-        // getting widthraw commission of admin
         //  getting second user
         $firstUpliner = User::where('username', $user->referal)->first();
         if ($firstUpliner == '') {
