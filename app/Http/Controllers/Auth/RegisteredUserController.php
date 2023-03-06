@@ -38,6 +38,12 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        // check if user is regiestering by default
+        $referCheck = $request->referal;
+        if($referCheck == 'default'){
+            return redirect()->back()->with('error','Please register account through someones referal link!');
+            }
+
         $user = User::create([
             'name' => $request->name,
             'username' => $request->username,
