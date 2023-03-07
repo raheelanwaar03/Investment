@@ -35,7 +35,6 @@
                 </div>
                 <div class="account-header pb-0">
                     <span class="d-block mb-30 mt-2">Sign up with your work email</span>
-                    <span class="d-block mt-15">Don't have an account? <a href="{{ route('register') }}">Sign Up Here</a></span>
                 </div>
             </div>
         </div>
