@@ -4,7 +4,7 @@
     <div class="account-section bg_img" data-background="{{ asset('assets/background.jpg') }}">
         <div class="container">
             <div class="account-title text-center">
-                <a href="#0" class="logo">
+                <a href="{{ route('LandingPage') }}" class="logo">
                     <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
                 </a>
             </div>

@@ -6,7 +6,7 @@
             <div class="account-title text-center">
                 <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
                             class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
-                <a href="#0" class="logo">
+                <a href="{{ route('LandingPage') }}" class="logo">
                     <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px"
                         alt="logo">
                 </a>
