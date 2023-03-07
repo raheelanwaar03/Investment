@@ -7,7 +7,8 @@
                 <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
                             class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
                 <a href="#0" class="logo">
-                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
+                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px"
+                        alt="logo">
                 </a>
             </div>
             <div class="account-wrapper">
@@ -22,19 +23,14 @@
                         <div class="form-group">
                             <label for="pass">Password</label>
                             <input type="password" placeholder="Enter Your Password" id="pass" name="password">
-                            <span class="sign-in-recovery">Forgot your password? <a href="{{ route('password.request') }}">recover
+                            <span class="sign-in-recovery">Forgot your password? <a
+                                    href="{{ route('password.request') }}">recover
                                     password</a></span>
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="mt-2 mb-2">Sign In</button>
                         </div>
                     </form>
-                </div>
-                <div class="or">
-                    <span>OR</span>
-                </div>
-                <div class="account-header pb-0">
-                    <span class="d-block mb-30 mt-2">Sign up with your work email</span>
                 </div>
             </div>
         </div>
