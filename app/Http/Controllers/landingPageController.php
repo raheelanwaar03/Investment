@@ -21,6 +21,11 @@ class landingPageController extends Controller
         return view('LandingPage.contact');
     }
 
+    public function about()
+    {
+        return view('LandingPage.aboutUs');
+    }
+
     public function affilate()
     {
         return view('LandingPage.affliatePage');

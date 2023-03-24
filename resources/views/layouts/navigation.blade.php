@@ -1,139 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Data Entry || {{env('APP_NAME')}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ env('APP_NAME') }} - is a merging platform to earn money and best deals</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+
+    <!-- All css here -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/shortcode/shortcodes.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-    {{-- bootstrap links --}}
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
-
-    {{--
-    This website is developed by Raheel Anwaar
-    info@raheelanwaar.com for contact.
-     --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
 </head>
 
 <body>
-    <div class="main--body">
-        <!--========== Preloader ==========-->
-        <div class="loader">
-            <div class="loader-inner">
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="header-top blue-bg fix d-lg-block d-md-block d-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-3">
+                        <span>Welcome to {{ env('APP_NAME') }}</span>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="header-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3">
+                        <div class="search-container">
+                            <form action="#" method="post">
+                                <input placeholder="" type="text">
+                                <button><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
-        <div class="overlay"></div>
-        {{-- Header --}}
-        <header class="header-section">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <ul class="support-area">
-                                @if (!auth()->user())
-                                    <li>
-                                        <p>You have to Login first if you want to work with us.</p>
-                                    </li>
-                                @else
-                                    <li>
-                                        <p>Wellcome <b>{{ auth()->user()->username }}!</b> you are successfully Login.
-                                        </p>
-                                    </li>
-                                @endif
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul class="cart-area">
-                                @if (auth()->user())
-                                    <li>
-                                        <form action="{{ route('logout') }}" method="POST">
-                                            @csrf
-                                            <button type="submit" class="btn btn-sm btn-primary">Logout</button>
-                                        </form>
-                                    </li>
-                                @else
-                                    <li>
-                                        <a href="{{ route('login') }}">Sign In</a>
-                                    </li>
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-bottom">
-                <div class="container">
-                    <div class="header-area">
+        <div class="header-main bg-green white">
+            <div class="container">
+                <div class="header-main-wrapper">
+                    <div class="logo-wrapper">
                         <div class="logo">
-                            <a href="{{ route('LandingPage') }}">
-                                <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo">
-                            </a>
+                            <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png') }}"
+                                    alt="FINANCO" /></a>
                         </div>
-                        <ul class="menu">
-                            <li>
-                                <a href="{{ route('LandingPage') }}">Home</a>
-                            </li>
-                            @if (auth()->user())
-                                <li>
-                                    <a href="{{ route('User.Dashboard') }}">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('LandingPage.Product') }}">Products</a>
-                                </li>
-                            @endif
-                            <li>
-                                <a href="{{ route('LandingPage.Affilate') }}">Affiliate</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('LandingPage.Contact') }}">Contact</a>
-                            </li>
-                            <li class="pr-0">
-                                @if (auth()->user())
-                                    <a href="{{ route('Registeration.Fees') }}" class="custom-button">Enter Tid
-                                        Again</a>
-                                @else
-                                    <a href="{{ route('register') }}" class="custom-button">Join Us</a>
-                                @endif
-                            </li>
-                        </ul>
-                        <div class="header-bar d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                    </div>
+                    <div class="header-main-content">
+                        <div class="header-info">
+                            <img src="{{ asset('assets/img/icons/phone.png') }}" alt="">
+                            <div class="header-info-text">
+                                <h4>{{ env('APP_NUM') }}</h4>
+                                <span>We are open 9 am - 10pm</span>
+                            </div>
+                        </div>
+                        <div class="header-info">
+                            <img src="{{ asset('assets/img/icons/message.png') }}" alt="">
+                            <div class="header-info-text">
+                                <h4>{{ env('APP_EMAIL') }}</h4>
+                                <span>You can mail us</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-btn">
+                        @if (auth()->user())
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-warning text-white">Logout</button>
+                            </form>
+                        @else
+                            <a href="{{ route('register') }}" class="btn btn-large btn-warning  text-white">Register</a>
+                                <a href="{{ route('login') }}" class="btn btn-large btn-warning  text-white">Login</a>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Menu Area Start -->
+        <div class="mainmenu-area fixed header-sticky d-lg-block d-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <div class="main-menu text-center">
+                            <nav>
+                                <ul>
+                                    <li><a href="{{ route('LandingPage') }}">HOME</a>
+                                    </li>
+                                    @if (auth()->user())
+                                    <li><a href="{{ route('User.Dashboard') }}">Dashboard</a>
+                                    @endif
+                                    <li><a href="{{ route('LandingPage.About.Us') }}">ABOUT US</a></li>
+                                    </li>
+                                    <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
+                                    </li>
+                                    <li><a href="project.html">PROJECTS</a>
+                                    </li>
+                                    <li><a href="#">SHOP</a></li>
+                                    <li><a href="contact.html">CONTACT</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+        <!-- Main Menu Area Start -->
+        <!-- Mobile Menu Area start -->
+        <div class="mobile-menu-area d-lg-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="mobile-menu">
+                            <nav id="dropdown">
+                                <ul>
+                                    <li><a href="{{ route('LandingPage') }}">HOME</a></li>
+                                    <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
+                                    <li><a href="{{ route('LandingPage.About.Us') }}">About</a>
+                                    </li>
+                                    <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a></li>
+                                    <li><a href="blog.html">BLOG</a>
+                                        <ul class="submenu">
+                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Area end -->
+    </header>
