@@ -30,7 +30,7 @@
 <body>
     <div class="main--body dashboard-bg">
         <!--========== Preloader ==========-->
-        <div class="loader">
+        {{-- <div class="loader">
             <div class="loader-inner">
                 <div class="loader-line-wrap">
                     <div class="loader-line"></div>
@@ -48,7 +48,7 @@
                     <div class="loader-line"></div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="overlay"></div>
 
         <div class="notify-overlay"></div>
