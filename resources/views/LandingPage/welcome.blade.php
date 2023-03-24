@@ -58,7 +58,7 @@
                     <div class="banner-content">
                         <h1 class="title">Simply <span>Profitably </span> Conveniently</h1>
                         <p>
-                            A Profitable platform for high margin investment
+                            A Profitable platform for high-margin investment
                         </p>
                         <div class="button-group">
                             <a href="{{ route('register') }}" class="custom-button">Get Started Now!</a>
@@ -68,985 +68,535 @@
                     </div>
                 </div>
             </div>
-            <div class="single-slide" style="background-image: url('{{ asset('assets/img/slider/1.jpg') }}');">
-                <div class="banner-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <div class="text-content-wrapper slide-two">
-                                    <div class="text-content text-center">
-                                        <h3 class="title1 pt-65">WE PROVIDE BEST FINANCIAL SOLUTIONS</h3>
-                                        <h1 class="title2">FOR YOUR BUSINESS</h1>
-                                        <p>We have over 25 year’s of experience in Finance and Business management so we
-                                            can make your business more successful you can trust us</p>
-                                        <div class="banner-readmore">
-                                            <a class="button banner-btn" href="#">VIEW SERVICES</a>
-                                        </div>
-                                    </div>
-                                </div>
+        </div>
+    </section>
+    <div class="counter-section">
+        <div class="container">
+            <div class="row align-items-center mb-30-none justify-content-center">
+                <div class="col-sm-6 col-md-4">
+                    <div class="counter-item">
+                        <div class="counter-thumb">
+                            <img src="assets/images/counter/counter01.png" alt="counter">
+                        </div>
+                        <div class="counter-content">
+                            <div class="counter-header">
+                                <h3 class="title odometer" data-odometer-final="36.9">0</h3>
+                                <h3 class="title">M</h3>
                             </div>
+                            <p>Registered users</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="counter-item">
+                        <div class="counter-thumb">
+                            <img src="assets/images/counter/counter02.png" alt="counter">
+                        </div>
+                        <div class="counter-content">
+                            <div class="counter-header">
+                                <h3 class="title odometer" data-odometer-final="174">0</h3>
+                            </div>
+                            <p>Countries Supported</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="counter-item">
+                        <div class="counter-thumb">
+                            <img src="assets/images/counter/counter03.png" alt="counter">
+                        </div>
+                        <div class="counter-content">
+                            <div class="counter-header">
+                                <h3 class="title">$</h3>
+                                <h3 class="odometer title" data-odometer-final="10.8">0</h3>
+                                <h3 class="title">M</h3>
+                            </div>
+                            <p>Average Investment</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Background Area End -->
+    <!--=======Counter-Section Ends Here=======-->
 
-    <!-- About Area Start -->
-    <div class="about-area bg-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-text">
-                        <h3>We are <span>Financo</span></h3>
-                        <h2>Your Complete Financial Solutions </h2>
-                        <p>Financo amet, consectetur adipiscing elit, sed do eiusmod tempornt ut labore et dolore magna
-                            aliqua. Ut enim ad minim iam, quis norud esta exercitation ullamco laboris nisi ut aliquip
-                            exea commo consequat. Duis aute irure dolor
-                            in reprehenderit </p>
-                        <p>Financo amet, consectetur adipiscing elit, sed do eiusmod tempor incidi utdrfe on the labore
-                            et dolore magna aliqua enim ad minimiam, </p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-text-right">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="single-content">
-                                    <h4 class="single-title">Financial Service</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
-                                </div>
-                                <div class="single-content">
-                                    <h4 class="single-title">Business Analysis</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="single-content">
-                                    <h4 class="single-title">Best Consutancy</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
-                                </div>
-                                <div class="single-content">
-                                    <h4 class="single-title">24/7 Support</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About Area End -->
-    <!-- Information Area Start -->
-    <div class="information-area bg-light fix">
-        <div class="information-chart">
-            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-        </div>
-        <div class="information-text">
-            <h3><span>We Provide Best</span></h3>
-            <h2>Financial Plan for You</h2>
-            <p>Financo amet, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ipsum dolor sit
-                amet, etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequatiat </p>
-            <p>Financo amet, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium que laudantium,
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ipsum dolor sit amet, consectetur </p>
-            <a href="#" class="default-button">Learn more</a>
-        </div>
-    </div>
-    <!-- Information Area End -->
-    <!-- Services Area Start -->
-    <div class="service-area pt-120 pb-105">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="section-title text-center mb-55">
-                        <h2>Our Services</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/plan.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Financial Planning</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/cash.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Cash Investment</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/brif.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Financial Consultancy</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/hand.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Personal Insurance</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/commo.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Commodities Planning</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/reti.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Retirement Planning</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services Area End -->
-    <!-- Advertise Area Start -->
-    <div class="advertise-area bg-2 overlay-green">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="advertise-text text-white text-center">
-                        <h2>We Provide Best Financial Theme for your Business</h2>
-                        <p>We have over 25 year’s of experience in Finance and Business management so we can make your
-                            business more successful you can trust us and we care about it</p>
-                        <a href="#" class="default-button btn-white">Buy now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Advertise Area End -->
-    <!-- Features Area Start -->
-    <div class="features-area bg-light fix">
-        <div class="feature-left-column">
-            <img src="{{ asset('assets/img/banner/2.jpg') }}" alt="">
-        </div>
-        <div class="feature-right-column">
-            <div class="coustom-col-10">
-                <div class="feature-text">
-                    <h3><span>Why You</span></h3>
-                    <h2>Choose Financo</h2>
-                    <p>Financo amet, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ipsum dolor
-                        sit amet, etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                </div>
-            </div>
-            <div class="custom-row">
-                <div class="coustom-col-5">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/rocket.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Fast Loan Approval</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coustom-col-5">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/team.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Dedicated Team</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coustom-col-5">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/doc.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Free Documentation</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coustom-col-5">
-                    <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/refi.png') }}" alt="">
-                        </span>
-                        <div class="service-text">
-                            <h4>Refinancing</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features Area End -->
-    <!-- Projects Area Start -->
-    <div class="projects-area ptb-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="section-title text-center mb-55">
-                        <h2>Our Projects</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row custom-row grid fix">
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/13.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/13.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/14.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/14.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/15.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/15.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/16.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/16.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/17.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/17.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/18.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/18.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Projects Area End -->
-    <!-- Asked Area Start -->
-    <div class="asked-area pt-120 pb-85 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="sub_title">
-                        <h3>Reqeust a Call Back</h3>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua enim ad minim veniam</p>
 
-                    </div>
-                    <form id="contact-form" action="#" method="post">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-box">
-                                    <input type="text" name="name" placeholder="Name" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-box">
-                                    <input type="email" name="email" placeholder="Email" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-box">
-                                    <input type="text" name="subject" placeholder="Subject">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-box">
-                                    <input type="text" name="phone" placeholder="Phone">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-box">
-                                    <textarea name="message" placeholder="Message"></textarea>
-                                    <button type="submit" class="default-button submit-btn">Submit Now</button>
-                                </div>
-                                <p class="form-messege"></p>
-                            </div>
-                        </div>
-                    </form>
+    <!--=======About-Section Starts Here=======-->
+    <section class="about-section padding-top padding-bottom" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 d-none d-lg-block rtl">
+                    <img src="assets/images/about/about.png" alt="about">
                 </div>
                 <div class="col-lg-6">
-                    <div class="default-panel">
-                        <div class="sub_title">
-                            <h3>Frequently Ask Qustion</h3>
-                            <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut
-                                labore et dolore magna aliqua enim ad minim veniam</p>
+                    <div class="section-header left-style">
+                        <span class="cate">WELCOME TO {{ env('APP_NAME') }}</span>
+                        <h2 class="title">about {{ env('APP_NAME') }}</h2>
+                        <p>
+                            {{ env('APP_NAME') }} is an investment company, whose team is working on making money from the
+                            volatility of
+                            cryptocurrencies and offer great returns to our clients.
+                        </p>
+                    </div>
+                    <div class="about--content">
+                        <div class="about-item">
+                            <div class="about-thumb">
+                                <img src="assets/images/about/about01.png" alt="about">
+                            </div>
+                            <div class="about-content">
+                                <h5 class="title">Secure & Reliable</h5>
+                                <p>
+                                    Secure assets fund for users
+                                </p>
+                            </div>
                         </div>
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h4 class="card-title">
-                                        <a role="button" data-bs-toggle="collapse" aria-expanded="true"
-                                            href="#one" aria-controls="one">
-                                            <span></span> What kind of Financial Consultancy you need
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="one" class="collapse show" role="tabpanel"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
-                                    </div>
-                                </div>
+                        <div class="about-item">
+                            <div class="about-thumb">
+                                <img src="assets/images/about/about02.png" alt="about">
                             </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingTwo">
-                                    <h4 class="card-title">
-                                        <a class="collapsed" data-bs-toggle="collapse" aria-expanded="false"
-                                            href="#two" aria-controls="two">
-                                            <span></span> How we help you for your Business
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="two" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
-                                    </div>
-                                </div>
+                            <div class="about-content">
+                                <h5 class="title">Fast Withdrawals</h5>
+                                <p>
+                                    Quick money withdrawals for users
+                                </p>
                             </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingThree">
-                                    <h4 class="card-title">
-                                        <a class="collapsed" data-bs-toggle="collapse" aria-expanded="false"
-                                            href="#three" aria-controls="three">
-                                            <span></span> Financial Advice
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="three" class="collapse" role="tabpanel" aria-labelledby="headingThree"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="about-item">
+                            <div class="about-thumb">
+                                <img src="assets/images/about/about03.png" alt="about">
                             </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingFour">
-                                    <h4 class="card-title">
-                                        <a class="collapsed" data-bs-toggle="collapse" aria-expanded="false"
-                                            href="#four" aria-controls="four">
-                                            <span></span> What is the best Business plan for you
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="four" class="collapse" role="tabpanel" aria-labelledby="headingFour"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingFive">
-                                    <h4 class="card-title">
-                                        <a class="collapsed" data-bs-toggle="collapse" aria-expanded="false"
-                                            href="#five" aria-controls="five">
-                                            <span></span> Which is the right plan for Retirement
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="five" class="collapse" role="tabpanel" aria-labelledby="headingFive"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
-                                    </div>
-                                </div>
+                            <div class="about-content">
+                                <h5 class="title">Guaranteed</h5>
+                                <p>
+                                    Your return on investment is guaranteed
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Asked Area End -->
-    <!-- Fun Factor Start -->
-    <div class="fun-factor-area bg-3 overlay-green pt-100 fix pb-95">
-        <div class="container">
-            <div class="fun-custom-row">
-                <div class="fun-custom-column">
-                    <div class="single-fun-factor">
-                        <div class="text-icon block">
-                            <img src="{{ asset('assets/img/icons/cup.png') }}" alt="" class="mr-15">
-                            <h2><span class="counter">750</span></h2>
-                        </div>
-                        <h4>Cup Of Coffee</h4>
-                    </div>
-                </div>
-                <div class="fun-custom-column">
-                    <div class="single-fun-factor">
-                        <div class="text-icon block">
-                            <img src="{{ asset('assets/img/icons/check.png') }}" alt="" class="mr-15">
-                            <h2><span class="counter">350</span></h2>
-                        </div>
-                        <h4>Case Complete</h4>
-                    </div>
-                </div>
-                <div class="fun-custom-column">
-                    <div class="single-fun-factor">
-                        <div class="text-icon block">
-                            <img src="{{ asset('assets/img/icons/face.png') }}" alt="" class="mr-15">
-                            <h2><span class="counter">180</span></h2>
-                        </div>
-                        <h4>Happy Clients</h4>
-                    </div>
-                </div>
-                <div class="fun-custom-column">
-                    <div class="single-fun-factor">
-                        <div class="text-icon block">
-                            <img src="{{ asset('assets/img/icons/teams.png') }}" alt="" class="mr-15">
-                            <h2><span class="counter">62</span></h2>
-                        </div>
-                        <h4>Team Member</h4>
-                    </div>
-                </div>
-                <div class="fun-custom-column">
-                    <div class="single-fun-factor">
-                        <div class="text-icon block">
-                            <img src="{{ asset('assets/img/icons/trophy.png') }}" alt="" class="mr-15">
-                            <h2><span class="counter">45</span></h2>
-                        </div>
-                        <h4>Awards Win</h4>
-                    </div>
-                </div>
-            </div>
+    </section>
+    <!--=======About-Section Ends Here=======-->
+
+
+    <!--=======Feature-Section Starts Here=======-->
+    <section class="feature-section padding-top padding-bottom bg_img"
+        data-background="./assets/images/feature/feature-bg.png" id="feature">
+        <div class="ball-1" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground"
+            data-paroller-direction="horizontal">
+            <img src="assets/images/balls/ball1.png" alt="balls">
         </div>
-    </div>
-    <!-- Fun Factor End -->
-    <!-- Team Area Start -->
-    <div class="team-area fix pt-120 pb-120">
+        <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground"
+            data-paroller-direction="horizontal">
+            <img src="assets/images/balls/ball2.png" alt="balls">
+        </div>
+        <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30" data-paroller-type="foreground"
+            data-paroller-direction="horizontal">
+            <img src="assets/images/balls/ball3.png" alt="balls">
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="section-title text-center mb-95">
-                        <h2>Our Team</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="section-header">
+                        <span class="cate">Our Amazing Features</span>
+                        <h2 class="title">
+                            why should you invest
+                        </h2>
+                        <p class="mw-100">
+                            We are worldwide investment company who are committed to the principle of revenue
+                            maximization and reduction of the financial risks at investing.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row gy-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-team-member">
-                        <div class="member-image">
-                            <a href="#" class="block">
-                                <img src="{{ asset('assets/img/team/1.png') }}" alt="">
-                            </a>
+            <div class="row justify-content-center feature-wrapper">
+                <div class="col-md-6 col-sm-10 col-lg-4">
+                    <div class="feature-item">
+                        <div class="feature-thumb">
+                            <img src="assets/images/feature/feature01.png" alt="feature">
                         </div>
-                        <div class="member-text">
-                            <h3><a href="#">Robert Williams</a></h3>
-                            <span>Chef Executive Officer</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
-                            <div class="link-effect">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/facebook-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/twitter.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/twitter-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="feature-content">
+                            <h5 class="title">Profitable Investment</h5>
+                            <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-team-member">
-                        <div class="member-image">
-                            <a href="#" class="block">
-                                <img src="{{ asset('assets/img/team/2.png') }}" alt="">
-                            </a>
+                <div class="col-md-6 col-sm-10 col-lg-4">
+                    <div class="feature-item">
+                        <div class="feature-thumb">
+                            <img src="assets/images/feature/feature02.png" alt="feature">
                         </div>
-                        <div class="member-text">
-                            <h3><a href="#">Jasmin Jaquline</a></h3>
-                            <span>Financial Advisor</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
-                            <div class="link-effect">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/facebook-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/twitter.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/twitter-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="feature-content">
+                            <h5 class="title">DDS Protection</h5>
+                            <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-team-member">
-                        <div class="member-image">
-                            <a href="#" class="block">
-                                <img src="{{ asset('assets/img/team/3.png') }}" alt="">
-                            </a>
+                <div class="col-md-6 col-sm-10 col-lg-4">
+                    <div class="feature-item">
+                        <div class="feature-thumb">
+                            <img src="assets/images/feature/feature03.png" alt="feature">
                         </div>
-                        <div class="member-text">
-                            <h3><a href="#">Sharlok Homes</a></h3>
-                            <span>Chef Executive Officer</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
-                            <div class="link-effect">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/facebook-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/twitter.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/twitter-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-team-member">
-                        <div class="member-image">
-                            <a href="#" class="block">
-                                <img src="{{ asset('assets/img/team/4.png') }}" alt="">
-                            </a>
-                        </div>
-                        <div class="member-text">
-                            <h3><a href="#">Rose Smith</a></h3>
-                            <span>Financial Consultant</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
-                            <div class="link-effect">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/facebook-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/twitter.png') }}" alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/twitter-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
-                                        <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
-                                                alt=""></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="feature-content">
+                            <h5 class="title">24/7 Support Center</h5>
+                            <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Team Area End -->
-    <!-- testimonial Carousel Start -->
-    <div class="testmonial-carousel bg-light ptb-70">
+    </section>
+    <!--=======Feature-Section Ends Here=======-->
+
+
+    <!--=======How-Section Starts Here=======-->
+    <section class="get-section padding-top padding-bottom">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="testmonial-wrapper text-center">
-                        <div class="single-testi">
-                            <div class="testi-img">
-                                <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
-                            </div>
-                            <div class="testi-text">
-                                <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequatuis
-                                    aute irure</p>
-                                <h5><a href="#">Andrew Williams</a></h5>
-                                <span>CEO &amp; Founder</span>
-                            </div>
-                        </div>
-                        <div class="single-testi">
-                            <div class="testi-img">
-                                <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
-                            </div>
-                            <div class="testi-text">
-                                <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequatuis
-                                    aute irure</p>
-                                <h5><a href="#">Andrew Williams</a></h5>
-                                <span>CEO &amp; Founder</span>
-                            </div>
-                        </div>
-                        <div class="single-testi">
-                            <div class="testi-img">
-                                <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
-                            </div>
-                            <div class="testi-text">
-                                <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequatuis
-                                    aute irure</p>
-                                <h5><a href="#">Andrew Williams</a></h5>
-                                <span>CEO &amp; Founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonial Carousel End -->
-    <!-- Blog Area Start -->
-    <div class="blog-area pt-120 pb-115">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="section-title text-center mb-55">
-                        <h2>From Blog</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="section-header">
+                        <span class="cate">get to know</span>
+                        <h2 class="title">how we work?</h2>
+                        <p>
+                            Follow these simple steps and make profit!
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="blog-wrapper">
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/1.jpg') }}"
-                                    alt=""></a>
-                            <span>10 January, 2022</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Meeting</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/2.jpg') }}"
-                                    alt=""></a>
-                            <span>08 January, 2022</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Planning</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
+            <div class="hover-tab">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 d-lg-block d-none">
+                        <div class="hover-tab-area">
+                            <div class="tab-area">
+                                <div class="tab-item active first">
+                                    <img src="assets/images/how/how01.png" alt="how">
+                                </div>
+                                <div class="tab-item second">
+                                    <img src="assets/images/how/how02.png" alt="how">
+                                </div>
+                                <div class="tab-item third">
+                                    <img src="assets/images/how/how03.png" alt="how">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/3.jpg') }}"
-                                    alt=""></a>
-                            <span>06 January, 2022</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Tips and Tricks</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/4.jpg') }}"
-                                    alt=""></a>
-                            <span>04 January, 2022</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Investment</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
+                    <div class="col-lg-6 col-md-9">
+                        <div class="hover-tab-menu">
+                            <ul class="tab-menu">
+                                <li class="active">
+                                    <div class="menu-thumb">
+                                        <span>
+                                            01
+                                        </span>
+                                    </div>
+                                    <div class="menu-content">
+                                        <h5 class="title">Instant registration</h5>
+                                        <p>
+                                            Click <a href="{{ route('register') }}">Sign Up</a> to fill the blank, our 256
+                                            SSL will Protect
+                                            your privacy.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-thumb">
+                                        <span>
+                                            02
+                                        </span>
+                                    </div>
+                                    <div class="menu-content">
+                                        <h5 class="title">MAKE AN INVEST</h5>
+                                        <p>
+                                            <a href="#0">Login</a> your account to click invest to start to earn the
+                                            profit.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-thumb">
+                                        <span>
+                                            03
+                                        </span>
+                                    </div>
+                                    <div class="menu-content">
+                                        <h5 class="title">get profit</h5>
+                                        <p>
+                                            You will get your profit on your profile, also you will get Instant Payment
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Blog Area End -->
-    <!--Start of Footer Widget-area-->
-    <div class="footer-widget-area bg-4 overlay-blue pt-110 pb-100">
+    </section>
+    <!--=======How-Section Ends Here=======-->
+
+
+    <!--=======Check-Section Starts Here=======-->
+    <section class="call-section call-overlay bg_img" data-background="assets/images/call/call-bg.jpg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="call--item">
+                        <span class="cate">Why We are always ready</span>
+                        <h3 class="title">Request a call back</h3>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="call-button">
+                        <a href="Tel:0939303" class="call">
+                            <img src="assets/images/call/icon02.png" alt="call">
+                        </a>
+                        <a href="#0" class="custom-button"> Contact Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="profit-section padding-top" id="profit">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="section-header">
+                        <span class="cate">Calculate the amazing profits</span>
+                        <h2 class="title">You Can Earn</h2>
+                        <p>Calculate your profit before making an investment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <div class="profit-bg bg_img" data-background="assets/images/profit/profit-bg.png">
+                <div class="animation-group">
+                    <div class="platform">
+                        <img src="assets/images/profit/platform.png" alt="profit">
+                    </div>
+                    <div class="light">
+                        <img src="assets/images/profit/light.png" alt="profit">
+                    </div>
+                    <div class="coin-1 wow fadeOutDown" data-wow-delay="1s">
+                        <img src="assets/images/profit/coin6.png" alt="profit">
+                    </div>
+                    <div class="coin-2 wow fadeOutDown" data-wow-delay="1s">
+                        <img src="assets/images/profit/coin2.png" alt="profit">
+                    </div>
+                    <div class="coin-3 wow fadeOutDown" data-wow-delay="1s">
+                        <img src="assets/images/profit/coin3.png" alt="profit">
+                    </div>
+                    <div class="coin-4 wow fadeOutDown" data-wow-delay="1s">
+                        <img src="assets/images/profit/coin4.png" alt="profit">
+                    </div>
+                    <div class="coin-5 wow fadeOutDown" data-wow-delay="1s">
+                        <img src="assets/images/profit/coin5.png" alt="profit">
+                    </div>
+                    <div class="coin-6 wow fadeOutDown" data-wow-delay="1s">
+                        <img src="assets/images/profit/coin1.png" alt="profit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="affiliate-programe" id="affiliate">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12 order-md-1 order-1">
-                    <div class="single-footer-widget">
-                        <div class="footer-logo">
-                            <a href="index.html"><img src="{{ asset('assets/img/logo/footer-logo.png') }}"
-                                    alt="FINANCO"></a>
-                        </div>
-                        <p>Lorem must explain to you how all this mistaolt cing pleasure and praising ain wasnad I will
-                            give you a complete pain was prexplain to you lorem</p>
-                        <form action="#" id="mc-form" class="mc-form fix">
-                            <div class="subscribe-form">
-                                <input id="mc-email" type="email" name="email"
-                                    placeholder="Email for Newsletter">
-                                <button id="mc-submit" type="submit"><i class="fa fa-send"></i></button>
+                <div class="col-lg-7 padding-bottom padding-top">
+                    <div class="section-header left-style">
+                        <span class="cate">What You’ll Get As</span>
+                        <h2 class="title fz-md-49">Affiliate Program</h2>
+                        <p>
+                            We give you the opportunity to earn money by recommending our website to others. You can start
+                            earning money even if you do not invest.
+                        </p>
+                    </div>
+                    <div class="affiliate-wrapper">
+                        <div class="affiliate-item">
+                            <div class="affiliate-inner">
+                                <div class="affiliate-thumb">
+                                    <h3 class="title">2</h3>
+                                    <span class="remainder">%</span>
+                                    <span class="cont">1st</span>
+                                </div>
                             </div>
-                        </form>
-                        <!-- mailchimp-alerts Start -->
-                        <div class="mailchimp-alerts text-centre fix text-small">
-                            <div class="mailchimp-submitting"></div>
-                            <!-- mailchimp-submitting end -->
-                            <div class="mailchimp-success"></div>
-                            <!-- mailchimp-success end -->
-                            <div class="mailchimp-error"></div>
-                            <!-- mailchimp-error end -->
                         </div>
-                        <!-- mailchimp-alerts end -->
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12 order-md-3 order-2">
-                    <div class="single-footer-widget mt-sm-30">
-                        <h3>POPULAR POST</h3>
-                        <div class="footer-widget-content">
-                            <h5>Duplex Villa Design</h5>
-                            <span>Lorem ipsum dolor sit amet, tur<br>acinglit sed do eius </span>
+                        <div class="affiliate-item cl-two">
+                            <div class="affiliate-inner">
+                                <div class="affiliate-thumb">
+                                    <h3 class="title">5</h3>
+                                    <span class="remainder">%</span>
+                                    <span class="cont">2nd</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="footer-widget-content">
-                            <h5>Real Estate Fest</h5>
-                            <span>Lorem ipsum dolor sit amet, tur<br>acinglit sed do eius </span>
+                        <div class="affiliate-item cl-three">
+                            <div class="affiliate-inner">
+                                <div class="affiliate-thumb">
+                                    <h3 class="title">12</h3>
+                                    <span class="remainder">%</span>
+                                    <span class="cont">3rd</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12 order-md-2 order-3">
-                    <div class="single-footer-widget">
-                        <h3>QUICK LINK</h3>
-                        <ul class="footer-list">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">CASES</a></li>
-                            <li><a href="#">From Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                    <div class="affiliate-bottom">
+                        <h6 class="title">Make money with {{ env('APP_NAME') }}</h6>
+                        <a href="#0" class="custom-button">
+                            learn more <i class="flaticon-right"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12 order-md-4 order-4">
-                    <div class="single-footer-widget mt-sm-30">
-                        <h3>CONTACT US</h3>
-                        <div class="footer-contact-info">
-                            <img src="{{ asset('assets/img/icons/f-map.png') }}" alt="">
-                            <span class="block">256, 1st AVE, Manchester<br>
-                                125 , Noth England</span>
+                <div class="col-lg-5 d-lg-block d-none">
+                    <div class="afiliate-thumb">
+                        <img src="assets/images/affiliate/affiliate.png" alt="affiliate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=======Affiliate-Section Ends Here=======-->
+
+
+    <!--=======Check-Section Starts Here=======-->
+    <section class="call-section call-overlay bg_img" data-background="assets/images/call/call-bg.jpg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-xl-6">
+                    <div class="call-item text-center text-sm-left">
+                        <div class="call-icon">
+                            <img src="assets/images/call/icon01.png" alt="call">
                         </div>
-                        <div class="footer-contact-info">
-                            <img src="{{ asset('assets/img/icons/f-phone.png') }}" alt="">
-                            <span class="block">Telephone : {{ env('APP_NUM') }}<br>
-                                Telephone : {{ env('APP_NUM') }}</span>
+                        <div class="call-content">
+                            <h5 class="title">Ready To Start Your Earnings Through Crypto Currency</h5>
                         </div>
-                        <div class="footer-contact-info">
-                            <img src="{{ asset('assets/img/icons/f-globe.png') }}" alt="">
-                            <span class="block">Email : {{ env('APP_EMAIL') }}<br>
-                                Web : www.devitems.com</span>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xl-6 text-center text-sm-left text-md-right">
+                    <a href="#0" class="custom-button">learn more <i class="flaticon-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=======Check-Section Ends Here=======-->
+
+
+    <!--=======Check-Section Starts Here=======-->
+    <section class="client-section padding-bottom padding-top">
+        <div class="background-map">
+            <img src="assets/images/client/client-bg.png" alt="client">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <div class="section-header left-style">
+                        <span class="cate">TESTIMONIALS</span>
+                        <h2 class="title"><span>40,000</span> HAPPY CLIENTS AROUND THE WORLD</h2>
+                        <p class="mw-500">
+                            We have many happy investors invest with us .Some impresions from our Customers!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-9">
+                    <div class="m--30">
+                        <div class="client-slider owl-carousel owl-theme">
+                            <div class="client-item">
+                                <div class="client-content">
+                                    <p>
+                                        Perfect work to start on, support is awesome
+                                    </p>
+                                    <div class="rating">
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="client-thumb">
+                                    <a href="#0">
+                                        <img src="assets/images/client/client01.png" alt="client">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-content">
+                                    <p>
+                                        Very easy to use, perfect for invest
+                                    </p>
+                                    <div class="rating">
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="client-thumb">
+                                    <a href="#0">
+                                        <img src="assets/images/client/client02.png" alt="client">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-content">
+                                    <p>
+                                        Awesome {{ env('APP_NAME') }} most profitable site!
+                                    </p>
+                                    <div class="rating">
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="client-thumb">
+                                    <a href="#0">
+                                        <img src="assets/images/client/client03.png" alt="client">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--=======Check-Section Ends Here=======-->
 @endsection
