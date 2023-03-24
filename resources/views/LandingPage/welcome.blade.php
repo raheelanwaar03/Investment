@@ -58,7 +58,7 @@
                     <div class="banner-content">
                         <h1 class="title">Simply <span>Profitably </span> Conveniently</h1>
                         <p>
-                            A Profitable platform for high-margin investment
+                            A Profitable platform for high margin investment
                         </p>
                         <div class="button-group">
                             <a href="{{ route('register') }}" class="custom-button">Get Started Now!</a>
