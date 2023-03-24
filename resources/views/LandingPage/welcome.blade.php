@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
     <!--=======Banner-Section Starts Here=======-->
     <section class="banner-section" id="home">
         <div class="banner-bg d-lg-none">
@@ -65,28 +64,6 @@
                             <a href="{{ route('register') }}" class="custom-button">Get Started Now!</a>
                             <a href="https://www.youtube.com/watch?v=GT6-H4BRyqQ" class="popup video-button"><i
                                     class="flaticon-play"></i></a>
-=======
-
-    <div class="slider-area">
-        <div class="slider-wrapper">
-            <div class="single-slide" style="background-image: url('{{ asset('assets/img/slider/1.jpg') }}');">
-                <div class="banner-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <div class="text-content-wrapper">
-                                    <div class="text-content text-center">
-                                        <h3 class="title1 pt-65">WE PROVIDE BEST FINANCIAL SOLUTIONS</h3>
-                                        <h1 class="title2">FOR YOUR BUSINESS</h1>
-                                        <p>We have over 25 year’s of experience in Finance and Business management so we
-                                            can make your business more successful you can trust us</p>
-                                        <div class="banner-readmore">
-                                            <a class="button banner-btn" href="#">VIEW SERVICES</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
->>>>>>> fd90b791487159c8c4257063440d08ee6e2b4607
                         </div>
                     </div>
                 </div>

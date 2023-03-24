@@ -61,7 +61,8 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -104,11 +105,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="" class="m-3">Minimum Widthraw</label>
-                                <input type="text" name="minimum_amount" class="form-group" placeholder="Minimum Widthraw">
+                                <input type="text" name="minimum_amount" class="form-group"
+                                    placeholder="Minimum Widthraw">
                             </div>
                             <div class="form-group">
                                 <label for="" class="m-3">Maximum Widthraw</label>
-                                <input type="text" name="maximun_amount" class="form-group" placeholder="Maximun Widthraw">
+                                <input type="text" name="maximun_amount" class="form-group"
+                                    placeholder="Maximun Widthraw">
                             </div>
                             <button type="submit" class="btn btn-primary">Set</button>
                         </form>
@@ -135,7 +138,7 @@
                                     <td><a href="{{ route('Admin.Setting.edit', $setting->id) }}"
                                             class="btn btn-sm btn-primary">Change Limit</a></td>
                                 @empty
-                                <h4 class="text-center">No Limite Applied Yet</h4>
+                                    <h4 class="text-center">No Limite Applied Yet</h4>
                                 @endforelse
                             </tr>
                         </tbody>

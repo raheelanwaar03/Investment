@@ -1,78 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('auth.layout.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-    <title>Authentication</title>
-</head>
-
-<body style="background-image: url({{ asset('assets/img/bg/9.jpg') }});background-repeat:no-repeat;background-size:cover;">
-    <x-alert/>
-    <img src="" alt="">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center text-success">Register New Account</h1>
+@section('content')
+    <div class="account-section bg_img" data-background="{{ asset('assets/background.jpg') }}">
+        <div class="container">
+            <div class="account-title text-center">
+                <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
+                            class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
+                <a href="{{ route('LandingPage') }}" class="logo">
+                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
+                </a>
             </div>
-        </div>
-        <div class="row min-vh-100">
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
-                <div class="card bg-transparent border-black shadow-lg w-100">
-                    <div class="card-body">
-                        <form action="{{ route('register') }}" method="POST">
-                            @csrf
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">User Name</b></label>
-                                <input type="text" name="name" style="background: transparent;color:black "
-                                    class="form-control" placeholder="Enter Your Name">
-                            </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Email</b></label>
-                                <input type="text" style="background: transparent;color:black " name="email"
-                                    class="form-control" placeholder="Enter Your Email">
-                            </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Phone</b></label>
-                                <input type="number" style="background: transparent;color:black " name="phone"
-                                    class="form-control" placeholder="Enter Your Phone">
-                            </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Address</b></label>
-                                <input type="text" style="background: transparent;color:black " name="address"
-                                    class="form-control" placeholder="Enter Your Address">
-                            </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Password</b></label>
-                                <input type="password" style="background: transparent;color:black " name="password"
-                                    class="form-control" placeholder="Enter Your Password">
-                            </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Confirm Password</b></label>
-                                <input type="password" style="background: transparent;color:black "
-                                    name="password_confirmation" class="form-control"
-                                    placeholder="Enter Your Confirm Password">
-                            </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Referal</b></label>
-                                <input type="text" name="referal" value="{{ $referal }}" class="form-control text-dark" readonly>
-                            </div>
-                            <button type="submit" class="btn btn-success">Enroll</button>
-                        </form>
-                    </div>
+            <div class="account-wrapper">
+                <div class="account-body">
+                    <h4 class="title mb-20">Welcome To {{ env('APP_NAME') }}</h4>
+                    <form action="{{ route('register') }}" method="POST" class="account-form">
+                        @csrf
+                        <div class="form-group">
+                            <label for="sign-up">Your Name </label>
+                            <input type="text" placeholder="Enter Your name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="sign-up">Your Username </label>
+                            <input type="text" placeholder="Enter Your Username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="sign-up">Your Email </label>
+                            <input type="text" placeholder="Enter Your Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="sign-up">Your Phone </label>
+                            <input type="text" placeholder="Enter Your Phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="sign-up">Your Country </label>
+                            <input type="text" placeholder="Enter Your Country" name="country">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+                            <input type="password" placeholder="Enter Your Password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Confirm Password</label>
+                            <input type="password" placeholder="Re-type Password" name="password_confirmation">
+                        </div>
+                         <div class="form-group">
+                            <label for="pass">Referal</label>
+                            <input type="text" name="referal" value="{{ $referal }}" readonly>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="mt-2 mb-2">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="or">
+                    <span>OR</span>
+                </div>
+                <div class="account-header pb-0">
+                    <span class="d-block mt-15">Already have an account? <a href="{{ route('login') }}">Sign In
+                            Here</a></span>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center text-light">Already have account?<span><a href="{{ route('login') }}" style="text-decoration: none;" class="btn btn-success btn-lg"> Sign
-                            in </a></span></h1>
-            </div>
-        </div>
     </div>
-</body>
-
-</html>
+@endsection

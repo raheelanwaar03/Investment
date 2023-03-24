@@ -43,26 +43,26 @@ class clean extends Command
         $easyPaisa->status = 1;
         $easyPaisa->save();
 
-        $user = new User();
-        $user->name = 'Raheel Anwaar';
-        $user->referal = 'default';
-        $user->balance = '0';
-        $user->phone = '03149720318';
-        $user->email = 'raheelanwaar0316@gmail.com';
-        $user->password = Hash::make('asdfasdf');
-        $user->role = 'admin';
-        $user->save();
+        // $user = new User();
+        // $user->name = 'Raheel Anwaar';
+        // $user->referal = 'default';
+        // $user->balance = '0';
+        // $user->phone = '03149720318';
+        // $user->email = 'raheelanwaar0316@gmail.com';
+        // $user->password = Hash::make('asdfasdf');
+        // $user->role = 'admin';
+        // $user->save();
 
 
-        $user = new User();
-        $user->name = 'Hamza Anwaar';
-        $user->email = 'raheelanwaar28@gmail.com';
-        $user->referal = 'default';
-        $user->balance = '0';
-        $user->phone = '03167007156';
-        $user->password = Hash::make('asdfasdf');
-        $user->role = 'user';
-        $user->save();
+        // $user = new User();
+        // $user->name = 'Hamza Anwaar';
+        // $user->email = 'raheelanwaar28@gmail.com';
+        // $user->referal = 'default';
+        // $user->balance = '0';
+        // $user->phone = '03167007156';
+        // $user->password = Hash::make('asdfasdf');
+        // $user->role = 'user';
+        // $user->save();
 
         return Command::SUCCESS;
     }
