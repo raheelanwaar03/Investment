@@ -1,38 +1,55 @@
-@extends('auth.layout.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-    <div class="account-section bg_img" data-background="{{ asset('assets/background.jpg') }}">
-        <div class="container">
-            <div class="account-title text-center">
-                <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
-                            class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
-                <a href="{{ route('LandingPage') }}" class="logo">
-                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px"
-                        alt="logo">
-                </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <title>Authentication</title>
+</head>
+
+<body style="background-image: url({{ asset('assets/img/bg/9.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    <x-alert/>
+    <img src="" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center text-success">Login To Dashboard</h1>
             </div>
-            <div class="account-wrapper">
-                <div class="account-body">
-                    <h4 class="title mb-20">Welcome To {{ env('APP_NAME') }}</h4>
-                    <form action="{{ route('login') }}" method="POST" class="account-form">
-                        @csrf
-                        <div class="form-group">
-                            <label for="sign-up">Your Email </label>
-                            <input type="text" placeholder="Enter Your Email " id="sign-up" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="pass">Password</label>
-                            <input type="password" placeholder="Enter Your Password" id="pass" name="password">
-                            <span class="sign-in-recovery">Forgot your password? <a
-                                    href="{{ route('password.request') }}">recover
-                                    password</a></span>
-                        </div>
-                        <div class="form-group text-center">
-                            <button type="submit" class="mt-2 mb-2">Sign In</button>
-                        </div>
-                    </form>
+        </div>
+        <div style="margin-top: -100px" class="row min-vh-100">
+            <div class="col-md-12 d-flex justify-content-center align-items-center">
+                <div class="card bg-transparent border-black shadow-lg w-100">
+                    <div class="card-body">
+                        <form action="{{ route('login') }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label style="color:green"> <b style="font-size: 25px">Email</b> </label>
+                                <input type="text" style="background: transparent;color:black " name="email"
+                                    class="form-control" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group">
+                                <label style="color:green"><b style="font-size: 25px">Password</b></label>
+                                <input type="password" style="background: transparent;color:black " name="password"
+                                    class="form-control" placeholder="Enter Your Password">
+                            </div>
+                            <div class="">
+                                <button type="submit" class="btn btn-outline-success ">Login</button>
+                                <a href="{{ route('password.request') }}" class="btn btn-outline-secondary">Forgot Password?</a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="row" style="margin-top: -100px">
+            <div class="col-md-12">
+                <h1 class="text-center text-light">Have not register yet?<span><a href="{{ route('register') }}" style="text-decoration: none;" class="btn btn-success btn-lg"> Register Now! </a></span></h1>
+            </div>
+        </div>
     </div>
-@endsection
+</body>
+
+</html>
