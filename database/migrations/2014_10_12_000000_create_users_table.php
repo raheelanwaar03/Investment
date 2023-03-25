@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('referal')->default('default');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->string('address')->unique();
+            $table->string('address');
             $table->text('level')->default('Level 0');
             $table->string('status')->default('pending');
             $table->string('role')->default('user');

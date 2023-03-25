@@ -1,142 +1,136 @@
-            
-            
-            
-            
-            <!DOCTYPE html>
-            <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="9lQReAOP7TYMbm5nNnK5b7NtKpmZuMGXAIriNN7M">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Some description for the page" />
+    <meta property="og:title" content="Lezato : Restaurant Admin Laravel Template" />
+    <meta property="og:description" content="Lezato | Dashboard" />
+    <meta property="og:image" content="../social-image.html" />
+    <meta name="format-detection" content="telephone=no">
+    <title>Admin | Dashboard</title>
+    {{-- css --}}
+    <link href="{{ asset('admin/public/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/public/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/public/css/style.css') }}" rel="stylesheet" type="text/css" />
+</head>
 
-                <title>{{ env('APP_NAME') }} - is a merging platform where you can get best deals</title>
+<body>
 
-                <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/owl.min.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
-                <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-                <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
-                {{-- datatable --}}
-                {{-- datatable Links --}}
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-                    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-                    crossorigin="anonymous">
-                <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-
-            </head>
-
-            <body>
-                <div class="main--body dashboard-bg">
-                    <!--========== Preloader ==========-->
-                    <div class="loader">
-                        <div class="loader-inner">
-                            <div class="loader-line-wrap">
-                                <div class="loader-line"></div>
-                            </div>
-                            <div class="loader-line-wrap">
-                                <div class="loader-line"></div>
-                            </div>
-                            <div class="loader-line-wrap">
-                                <div class="loader-line"></div>
-                            </div>
-                            <div class="loader-line-wrap">
-                                <div class="loader-line"></div>
-                            </div>
-                            <div class="loader-line-wrap">
-                                <div class="loader-line"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overlay"></div>
-
-                    <div class="notify-overlay"></div>
-                    <section class="dashboard-section">
-                        <div class="side-header oh">
-                            <div class="cross-header-bar d-xl-none">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="site-header-container">
-                                <div class="side-logo">
-                                    <a href="{{ route('LandingPage') }}">
-                                        <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo">
-                                    </a>
+    <div id="preloader">
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div id="main-wrapper">
+        <div class="nav-header">
+            <a href="{{ route('LandingPage') }}" class="brand-logo">
+                <img src="{{ asset('admin/public/images/logo.png') }}" height="100px" width="100px" alt="logo">
+            </a>
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="nav-item">
+                                <div class="input-group search-area">
+                                    <input type="text" class="form-control" placeholder="Find something here......">
+                                    <span class="input-group-text"><a href="javascript:void(0)"><i
+                                                class="flaticon-381-search-2"></i></a></span>
                                 </div>
-                                <ul class="dashboard-menu">
-                                    <li>
-                                        <a href="{{ route('Admin.Dashboard') }}" class="active"><i
-                                                class="flaticon-man"></i>Dashboard</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.All.Users') }}"><i class="flaticon-team"></i>All
-                                            Users</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Pending.Users') }}"><i
-                                                class="flaticon-team"></i>Pending Users</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Easypaisa.Users') }}"><i
-                                                class="flaticon-team"></i>Easypaisa
-                                            User</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Approved.Users') }}"><i
-                                                class="flaticon-team"></i>Approved
-                                            User</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Rejected.Users') }}"><i
-                                                class="flaticon-team"></i>Rejected
-                                            User </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Easypaisa.index') }}"><i class="flaticon-coin"></i>Add
-                                            Easypaisa</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Product.create') }}"><i class="flaticon-deal"></i>Add
-                                            Product</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Product.index') }}"><i class="flaticon-deal"></i>All
-                                            Product</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Setting.index') }}"><i
-                                                class="flaticon-gears"></i>Settings</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.All.Widthraw.Requests') }}"><i
-                                                class="flaticon-atm"></i>Widthraw
-                                            Req</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Approved.Widthraw') }}"><i
-                                                class="flaticon-atm"></i>Approve
-                                            Widt</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('Admin.Rejected.Widthraw') }}"><i
-                                                class="flaticon-atm"></i>Reject
-                                            Widt</a>
-                                    </li>
-                                    <li>
-                                        <form action="{{ route('logout') }}" method="POST">
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger">
-                                                <i class="flaticon-right-arrow"></i>Logout
-                                            </button>
-                                        </form>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
+                        <ul class="navbar-nav header-right">
+                            <li class="nav-item recipe">
+                                <form action="{{ route('logout') }}" method="Post">
+                                    @csrf
+                                    <button class="btn btn-primary btn-rounded">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        {{-- links --}}
+
+        <div class="deznav">
+            <div class="deznav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li><a class="has-arrow ai-icon" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
+                            <i class="flaticon-025-dashboard"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-043-menu"></i>
+                            <span class="nav-text">User's</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('Admin.All.Users') }}">All User's</a></li>
+                            <li><a href="{{ route('Admin.Pending.Users') }}">Pending User's</a></li>
+                            <li><a href="{{ route('Admin.Approved.Users') }}">Approved User's</a></li>
+                            <li><a href="{{ route('Admin.Rejected.Users') }}">Rejected User's</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-041-graph"></i>
+                            <span class="nav-text">Settings</span>
+                        </a>
+                        {{-- <ul aria-expanded="false">
+                            <li><a href="{{ route('Admin.Set.Limite') }}">Add Referal limit</a></li>
+                            <li><a href="{{ route('Admin.Payment.Page.Text') }}">Payment Page Text</a></li>
+                            <li><a href="{{ route('Admin.Verification.Page.Text') }}">Verification Page Text</a></li>
+                        </ul> --}}
+                    </li>
+                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-013-checkmark"></i>
+                            <span class="nav-text">Daily Task</span>
+                        </a>
+                        {{-- <ul aria-expanded="false">
+                            <li><a href="{{ route('Admin.Daily.Task') }}">Add New Task</a></li>
+                            <li><a href="{{ route('Admin.All.Daily.Tasks') }}">All Tasks</a></li> --}}
+                        </ul>
+                    </li>
+                   {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-013-checkmark"></i>
+                            <span class="nav-text">Reservation</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#">Table Request</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-072-printer"></i>
+                            <span class="nav-text">Orders</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#">Pending Orders</a></li>
+                            <li><a href="#">Cancelled Orders</a></li>
+                            <li><a href="#">Delivered Orders</a></li>
+                        </ul>
+                    </li> --}}
+                </ul>
+                <div class="copyright">
+                    <p><strong>{{ env('APP_NAME') }} Data Entry Admin side</strong> © 2023 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>

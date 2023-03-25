@@ -28,7 +28,6 @@ class AdminDashboardController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->level = $request->level;
-        $user->username = $request->username;
         $user->balance = $request->balance;
         $user->save();
         return redirect()->back()->with('success', 'User Details updated successfully');
