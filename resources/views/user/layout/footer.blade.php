@@ -1,62 +1,22 @@
+<div class="footer">
+    <div class="copyright">
+        <p>Copyright © Designed &amp; Developed by <a href="https://raheelanwaar.com/"
+                target="_blank">{{ env('APP_NAME') }}</a> 2023</p>
+    </div>
+</div>
 </div>
 
-<script data-cfasync="false" src="{{ asset('../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
+<script src="{{ asset('admin/public/vendor/global/global.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/vendor/jquery-nice-select/js/jquery.nice-select.min.js') }}" type="text/javascript">
 </script>
-<script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
-<script src="{{ asset('assets/js/modernizr-3.6.0.min.js') }}"></script>
-<script src="{{ asset('assets/js/plugins.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/js/magnific-popup.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
-<script src="{{ asset('assets/js/wow.min.js') }}"></script>
-<script src="{{ asset('assets/js/odometer.min.js') }}"></script>
-<script src="{{ asset('assets/js/viewport.jquery.js') }}"></script>
-<script src="{{ asset('assets/js/nice-select.js') }}"></script>
-<script src="{{ asset('assets/js/owl.min.js') }}"></script>
-<script src="{{ asset('assets/js/paroller.js') }}"></script>
-<script src="{{ asset('assets/js/chart.js') }}"></script>
-<script src="{{ asset('assets/js/circle-progress.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
-
-{{-- datatable --}}
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-
-<script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $('#myTable').DataTable();
-    });
-</script>
-
-<script>
-    $('.progress1.circle').circleProgress({
-        value: .75,
-        fill: {
-            gradient: ['#00cca2', '#00cca2']
-        },
-    }).on('circle-animation-progress', function(event, progress) {
-        $(this).find('strong').html(Math.round(75 * progress) + '<i>%</i>');
-    });
-    $('.progress2.circle').circleProgress({
-        value: .90,
-        fill: {
-            gradient: ['#8d16e8', '#8d16e8']
-        },
-    }).on('circle-animation-progress', function(event, progress) {
-        $(this).find('strong').html(Math.round(90 * progress) + '<i>%</i>');
-    });
-    $('.progress3.circle').circleProgress({
-        value: .85,
-        fill: {
-            gradient: ['#ef764c', '#ef764c']
-        },
-    }).on('circle-animation-progress', function(event, progress) {
-        $(this).find('strong').html(Math.round(85 * progress) + '<i>%</i>');
-    });
-</script>
-
+<script src="{{ asset('admin/public/vendor/chart.js/Chart.bundle.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/vendor/apexchart/apexchart.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/vendor/peity/jquery.peity.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/js/dashboard/dashboard-1.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/js/custom.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/js/deznav-init.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/js/demo.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/public/vendor/global/global.min.js') }}" type="text/javascript"></script>
 </body>
 
 </html>

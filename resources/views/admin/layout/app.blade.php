@@ -2,7 +2,6 @@
 
 @yield('content')
 
-<x-alert />
+ <x-alert />
 
-@yield('datatable')
 @include('admin.layout.footer')
