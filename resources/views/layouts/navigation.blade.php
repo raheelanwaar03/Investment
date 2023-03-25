@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home One || {{env('APP_NAME')}}</title>
+    <title>Home One || {{ env('APP_NAME') }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -86,8 +86,9 @@
                                 <button type="submit" class="btn btn-warning text-white">Logout</button>
                             </form>
                         @else
-                            <a href="{{ route('register') }}" class="btn btn-large btn-warning  text-white">Register</a>
-                                <a href="{{ route('login') }}" class="btn btn-large btn-warning  text-white">Login</a>
+                            <a href="{{ route('register') }}"
+                                class="btn btn-large btn-warning  text-white">Register</a>
+                            <a href="{{ route('login') }}" class="btn btn-large btn-warning  text-white">Login</a>
                         @endif
                     </div>
                 </div>
@@ -101,14 +102,14 @@
                         <div class="main-menu text-center">
                             <nav>
                                 <ul>
-                                    <li><a href="{{ route('Welcome') }}">HOME</a>
+                                    <li><a href="{{ route('LandingPage') }}">HOME</a>
                                     </li>
                                     @if (auth()->user())
-                                    <li><a href="{{ route('User.Dashboard') }}">Dashboard</a>
+                                        <li><a href="{{ route('User.Dashboard') }}">Dashboard</a>
                                     @endif
-                                    <li><a href="{{ route('Welcome.About.Us') }}">ABOUT US</a></li>
+                                    <li><a href="{{ route('LandingPage.About.Us') }}">ABOUT US</a></li>
                                     </li>
-                                    <li><a href="{{ route('Welcome.Contact.Us') }}">Contact Us</a>
+                                    <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
                                     </li>
                                     <li><a href="project.html">PROJECTS</a>
                                     </li>
@@ -130,11 +131,11 @@
                         <div class="mobile-menu">
                             <nav id="dropdown">
                                 <ul>
-                                    <li><a href="{{ route('Welcome') }}">HOME</a></li>
+                                    <li><a href="{{ route('LandingPage') }}">HOME</a></li>
                                     <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
-                                    <li><a href="{{ route('Welcome.About.Us') }}">About</a>
+                                    <li><a href="{{ route('LandingPage.About.Us') }}">About</a>
                                     </li>
-                                    <li><a href="{{ route('Welcome.Contact.Us') }}">Contact Us</a></li>
+                                    <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a></li>
                                     <li><a href="blog.html">BLOG</a>
                                         <ul class="submenu">
                                             <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
