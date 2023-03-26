@@ -17,8 +17,10 @@
     <meta name="format-detection" content="telephone=no">
     <title>Admin | Dashboard</title>
     {{-- css --}}
-    <link href="{{ asset('admin/public/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('admin/public/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/public/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('admin/public/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet"
+        type="text/css" />
     <link href="{{ asset('admin/public/css/style.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
@@ -95,22 +97,22 @@
                             <i class="flaticon-041-graph"></i>
                             <span class="nav-text">Settings</span>
                         </a>
-                        {{-- <ul aria-expanded="false">
-                            <li><a href="{{ route('Admin.Set.Limite') }}">Add Referal limit</a></li>
-                            <li><a href="{{ route('Admin.Payment.Page.Text') }}">Payment Page Text</a></li>
-                            <li><a href="{{ route('Admin.Verification.Page.Text') }}">Verification Page Text</a></li>
-                        </ul> --}}
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('Admin.Setting.index') }}">Add Referal limit</a></li>
+                            <li><a href="{{ route('Admin.Easypaisa.index') }}">Payment Page Details</a></li>
+                            <li><a href="{{ route('Admin.Add.Verification.Details') }}">Verification Page Text</a></li>
+                        </ul>
                     </li>
-                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-013-checkmark"></i>
                             <span class="nav-text">Daily Task</span>
                         </a>
                         {{-- <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Daily.Task') }}">Add New Task</a></li>
                             <li><a href="{{ route('Admin.All.Daily.Tasks') }}">All Tasks</a></li> --}}
-                        </ul>
-                    </li>
-                   {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                </ul>
+                </li>
+                {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-013-checkmark"></i>
                             <span class="nav-text">Reservation</span>
                         </a>

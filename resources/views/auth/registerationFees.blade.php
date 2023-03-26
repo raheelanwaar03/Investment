@@ -11,6 +11,7 @@
 </head>
 
 <body style="background-image: url({{ asset('assets/img/bg/9.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    <x-alert/>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -21,10 +22,10 @@
             <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="card bg-transparent border-black shadow-lg w-100">
                     <div class="card-title">
-                        @forelse ($paymentText as $text)
-                        <p class="text-center mt-3">{{ $text->text }}</p>
-                        <h4 class="text-center">Easypaisa Holder Name: ({{ $text->holder }})</h4>
-                        <h4 class="text-center">Easypaisa Account Number: ({{ $text->account_num }})</h4>
+                        @forelse ($easyPaisas as $easyPaisa)
+                        <h5 class="text-center mt-3">{{ $easyPaisa->text }}</h5>
+                        <h4 class="text-center">Easypaisa Holder Name: {{ $easyPaisa->easy_name }}</h4>
+                        <h4 class="text-center">Easypaisa Account Number: {{ $easyPaisa->easy_num }}</h4>
                         @empty
 
                         @endforelse
@@ -57,55 +58,3 @@
 </body>
 
 </html>
-
-
-
-
-
-@extends('auth.layout.app')
-
-@section('content')
-    <div class="account-section bg_img" data-background="{{asset('assets/background.jpg')}}">
-        <div class="container">
-            <div class="account-title text-center">
-                <a href="{{ route('LandingPage') }}" class="logo">
-                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px" alt="logo">
-                </a>
-            </div>
-            <div class="account-wrapper">
-                <div class="account-body">
-                    <h4 class="title mb-20">Welcome To {{ env('APP_NAME') }}</h4>
-                    <p>Please Pay(pkr:670) Your Registeration Fees For Account Activation</p>
-                    @forelse ($easyPaisas as $easyPaisa)
-                    <p>EasyPaisa Name: {{ $easyPaisa->easy_name }}</p>
-                    <p>EasyPaisa Number: {{ $easyPaisa->easy_num }}</p>
-                    @empty
-                        <h4>No Account Added yet</h4>
-                    @endforelse
-                    <form action="{{ route('Store/Fees/Details') }}" method="POST" class="account-form">
-                        @csrf
-                        <div class="form-group">
-                            <label for="sign-up">Our Bank</label>
-                            <input type="text" name="bank" value="Easypaisa" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Enter Your Username</label>
-                            <input type="text" name="bank_username" placeholder="Your bank's username">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Sender Number</label>
-                            <input type="number" name="sender_num" placeholder="Your number from where you sent registeration fees">
-                        </div>
-                        <div class="form-group">
-                            <label for="">TRX or TID Num</label>
-                            <input type="text" name="tid" placeholder="Enter TID or TRX num or Transcation" required>
-                        </div>
-                        <div class="form-group text-center">
-                            <button type="submit" class="mt-2 mb-2">Procced</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection

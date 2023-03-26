@@ -40,6 +40,7 @@ class clean extends Command
         $easyPaisa = new EasyPaisaMangement();
         $easyPaisa->easy_name = 'test';
         $easyPaisa->easy_num = '9999999999';
+        $easyPaisa->text = 'Payment page text from admin';
         $easyPaisa->status = 1;
         $easyPaisa->save();
 

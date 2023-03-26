@@ -39,12 +39,14 @@ class EasypisaController extends Controller
     {
         $validated = $request->validate([
             'easy_name' => 'required',
-            'easy_num' => 'required'
+            'easy_num' => 'required',
+            'text' => 'required'
         ]);
 
         $easyPaisa = new EasyPaisaMangement();
         $easyPaisa->easy_name = $validated['easy_name'];
         $easyPaisa->easy_num = $validated['easy_num'];
+        $easyPaisa->text = $validated['text'];
         $easyPaisa->save();
         return redirect()->back()->with('success','Easypasia Detailsa added successfully');
     }
@@ -89,8 +91,9 @@ class EasypisaController extends Controller
         $easyPaisa = EasyPaisaMangement::find($id);
         $easyPaisa->easy_name = $validated['easy_name'];
         $easyPaisa->easy_num = $validated['easy_num'];
+        $easyPaisa->text = $request->text;
         $easyPaisa->save();
-        return redirect()->back()->with('success','Account Updated Successfully');
+        return redirect()->route('Admin.Easypaisa.index')->with('success','Details Updated Successfully');
 
     }
 

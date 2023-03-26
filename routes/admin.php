@@ -33,8 +33,14 @@ Route::prefix('Admin')->name('Admin.')->middleware('auth', 'admin')->group(funct
     Route::get('/Approve/Widthraw/{id}', [WidthrawRequestsController::class, 'approveWidthraw'])->name('Approve.Widthraw');
     Route::get('/Reject/Widthraw/{id}', [WidthrawRequestsController::class, 'rejectWidthraw'])->name('Reject.Widthraw');
 
-    // Admin esaypaisa details Routes
+    // Verification Page Routes
+    Route::get('Add/Verfication/Page/Details',[AdminDashboardController::class,'add'])->name('Add.Verification.Details');
+    Route::post('Store/Verfication/Page/Details',[AdminDashboardController::class,'store'])->name('Store.Verification.Details');
+    Route::get('Edit/Verfication/Page/Details/{id}',[AdminDashboardController::class,'edit'])->name('Edit.Verification.Details');
+    Route::post('Update/Verfication/Page/Details/{id}',[AdminDashboardController::class,'update'])->name('Update.Verification.Details');
 
+
+    // Admin esaypaisa details Routes
     Route::resource('Easypaisa', EasypisaController::class);
 
     // setting route

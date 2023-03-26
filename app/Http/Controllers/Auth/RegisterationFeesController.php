@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\admin\EasyPaisaMangement;
 use App\Models\FeesCollecator;
 use App\Models\User;
+use App\Models\verificationText;
 use Illuminate\Http\Request;
+
 
 class RegisterationFeesController extends Controller
 {
@@ -19,7 +21,6 @@ class RegisterationFeesController extends Controller
     public function feesDetailStore(Request $request)
     {
         $validated = $request->validate([
-            'bank' => 'required',
             'tid' => 'required',
             'bank_username' => 'required',
             'sender_num' => 'required',
@@ -59,11 +60,17 @@ class RegisterationFeesController extends Controller
 
         $feesDetails = new FeesCollecator();
         $feesDetails->user_id = auth()->user()->id;
-        $feesDetails->bank = $validated['bank'];
         $feesDetails->sender_num = $validated['sender_num'];
         $feesDetails->bank_username = $validated['bank_username'];
         $feesDetails->tid = $validated['tid'];
         $feesDetails->save();
-        return redirect('/')->with('success', 'Your details has been submited successfully our team will review your details and approve your account if given information is valid!');
+        return redirect()->route('Verification.Page');
     }
+
+    public function verificationPage()
+    {
+        $verificationText = verificationText::where('status',1)->get();
+        return view('auth.verificationPage',compact('verificationText'));
+    }
+
 }

@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fees_collecators', function (Blueprint $table) {
+        Schema::create('verification_texts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('sender_num');
-            $table->string('bank_username');
-            $table->string('tid')->nullable()->unique();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('text');
+            $table->string('status')->default(0);
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fees_collecators');
+        Schema::dropIfExists('verification_texts');
     }
 };

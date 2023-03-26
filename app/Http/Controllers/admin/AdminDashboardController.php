@@ -5,8 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\admin\Setting;
 use App\Models\User;
+use App\Models\verificationText;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class AdminDashboardController extends Controller
 {
@@ -189,4 +189,41 @@ class AdminDashboardController extends Controller
         }
         return redirect()->back()->with('success', 'Level Given to all users according to their referals');
     }
+
+    // Verification Details
+
+    public function add()
+    {
+        $verificationText = verificationText::where('status',1)->get();
+        return view('admin.verification.add',compact('verificationText'));
+    }
+
+    public function store(Request $request)
+    {
+       $validated = $request->validate([
+        'text' => 'required'
+       ]);
+
+       $verificationText = new verificationText();
+       $verificationText->text = $validated['text'];
+       $verificationText->save();
+       return redirect()->back()->with('success','Verfication Page Text Added');
+    }
+
+    public function edit($id)
+    {
+        $verificationText = verificationText::find($id);
+        return view('admin.verification.edit',compact('verificationText'));
+    }
+
+    public function update(Request $request,$id)
+    {
+        $verificationText = verificationText::find($id);
+
+       $verificationText->text = $request->text;
+       $verificationText->save();
+       return redirect()->back()->with('success','Verfication Page Updated successfully');
+    }
+
+
 }
