@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,17 +16,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-success">Login To Dashboard</h1>
+                <h1 class="text-center text-success">Login New Account</h1>
             </div>
         </div>
-        <div style="margin-top: -100px" class="row min-vh-100">
+        <div class="row min-vh-100">
             <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="card bg-transparent border-black shadow-lg w-100">
                     <div class="card-body">
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label style="color:green"> <b style="font-size: 25px">Email</b> </label>
+                                <label style="color:green"><b style="font-size: 25px">Email</b></label>
                                 <input type="text" style="background: transparent;color:black " name="email"
                                     class="form-control" placeholder="Enter Your Email">
                             </div>
@@ -39,18 +35,15 @@
                                 <input type="password" style="background: transparent;color:black " name="password"
                                     class="form-control" placeholder="Enter Your Password">
                             </div>
-                            <div class="">
-                                <button type="submit" class="btn btn-outline-success ">Login</button>
-                                <a href="{{ route('password.request') }}" class="btn btn-outline-secondary">Forgot Password</a>
-                            </div>
+                            <button type="submit" class="btn btn-success">Enroll</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-top: -100px">
+        <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-light">Have not register yet?<span><a href="{{ route('register') }}" style="text-decoration: none;" class="btn btn-success btn-lg"> Register Now! </a></span></h1>
+                <h1 class="text-center text-light">Have not register yet?<span><a href="{{ route('register') }}" style="text-decoration: none;" class="btn btn-success btn-lg">Register Now!</a></span></h1>
             </div>
         </div>
     </div>

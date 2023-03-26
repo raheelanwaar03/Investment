@@ -3,7 +3,9 @@
 namespace App\Console\Commands;
 
 use App\Models\admin\EasyPaisaMangement;
+use App\Models\admin\Setting;
 use App\Models\User;
+use App\Models\verificationText;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
@@ -43,6 +45,22 @@ class clean extends Command
         $easyPaisa->text = 'Payment page text from admin';
         $easyPaisa->status = 1;
         $easyPaisa->save();
+
+        // Referal limite
+        $setting = new Setting();
+        $setting->refer_amount = '50';
+        $setting->minimum_amount = '50';
+        $setting->maximun_amount = '500';
+        $setting->status = 1;
+        $setting->save();
+
+        // Verification page text
+
+       $verificationText = new verificationText();
+       $verificationText->text = 'Welcome to DataEntry website we will approve your account after checking your given details';
+       $verificationText->status = 1;
+       $verificationText->save();
+
 
         $user = new User();
         $user->name = 'Raheel Anwaar';
