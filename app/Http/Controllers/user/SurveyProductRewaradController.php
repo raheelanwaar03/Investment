@@ -28,8 +28,7 @@ class SurveyProductRewaradController extends Controller
             $user = User::where('id', auth()->user()->id)->first();
             $user->balance += $procutRewarad;
             $user->save();
-            return view('LandingPage.survey');
         }
-        return redirect()->back()->with('error', 'You have been rewarded before for this product');
+        return redirect()->back()->with('error', 'You have been compeleted this task before');
     }
 }

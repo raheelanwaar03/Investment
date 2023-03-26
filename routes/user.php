@@ -17,8 +17,9 @@ Route::name('User.')->prefix('User')->middleware('user','auth','feesCheck')->gro
         Route::get('/Refer/Friend',[UserWorkController::class,'referFriend'])->name('Refer.New.Friend');
         Route::get('/Widthraw/Balance',[UserWorkController::class,'widthrawBalance'])->name('Widthraw.Balance');
         Route::post('/Widthraw/Balance/Request',[UserWorkController::class,'widthrawBalanceRequest'])->name('Widthraw.Balance.Request');
+        // user Typed Text
+        Route::post('/Type/text/{id}',[UserDashboardController::class,'taskText'])->name('Type.Task');
         // giving commission on review and surve
-
         Route::get('Review/Product/{id}',[SurveyProductRewaradController::class,'index'])->name('Product.Reward');
 
     });

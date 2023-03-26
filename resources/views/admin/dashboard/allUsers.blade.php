@@ -17,6 +17,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Balance</th>
                                             <th>Phone</th>
                                             <th>Tid</th>
                                             <th>Status</th>
@@ -29,6 +30,7 @@
                                             <tr>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
+                                                <td>{{ $user->balance }}</td>
                                                 <td>{{ $user->phone }}</td>
                                                 <td>{{ $user->trxIds->tid ?? 'UnPaidUser' }}</td>
                                                 <td>{{ $user->status }}</td>

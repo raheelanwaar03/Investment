@@ -16,8 +16,9 @@
     <meta property="og:image" content="../social-image.html" />
     <meta name="format-detection" content="telephone=no">
     <title>User | Dashboard</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('admin/public/images/logo.png') }}" />
-    <link href="{{ asset('admin/public/vendor/chartist/css/chartist.min.css') }}" rel="stylesheet" type="text/css" />
+    {{-- css --}}
+    <link href="{{ asset('admin/public/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet"
+        type="text/css" />
     <link href="{{ asset('admin/public/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet"
         type="text/css" />
     <link href="{{ asset('admin/public/css/style.css') }}" rel="stylesheet" type="text/css" />
@@ -87,47 +88,29 @@
                             <span class="nav-text">Referal</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Total Team Member</a></li>
-                        </ul>
-                    </li>
-                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-041-graph"></i>
-                            <span class="nav-text">Limite's</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="chart-flot.html">Add Referal limit</a></li>
-                        </ul>
-                    </li> --}}
-                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-045-heart"></i>
-                            <span class="nav-text">Food</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Add Food</a></li>
-                            <li><a href="#">All Food</a></li>
+                            <li><a href="{{ route('User.Team') }}">Total Team Member</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-013-checkmark"></i>
-                            <span class="nav-text">Reservation</span>
+                            <i class="flaticon-041-graph"></i>
+                            <span class="nav-text">Widthraw</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Table Request</a></li>
+                            <li><a href="{{ route('User.Widthraw.Balance') }}">Widthraw Balance</a></li>
+                            <li><a href="{{ route('User.Widthraw.Request') }}">Widthraw Status</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-072-printer"></i>
-                            <span class="nav-text">Orders</span>
+                            <span class="nav-text">Task</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Pending Orders</a></li>
-                            <li><a href="#">Cancelled Orders</a></li>
-                            <li><a href="#">Delivered Orders</a></li>
+                            <li><a href="{{ route('User.Work') }}">Daily Task</a></li>
                         </ul>
-                    </li> --}}
+                    </li>
                 </ul>
                 <div class="copyright">
-                    <p><strong>{{ env('APP_NAME') }} Data Entry Admin side</strong> © 2023 All Rights Reserved</p>
+                    <p><strong>{{ env('APP_NAME') }} Data Entry Website</strong> © 2023 All Rights Reserved</p>
                 </div>
             </div>
         </div>

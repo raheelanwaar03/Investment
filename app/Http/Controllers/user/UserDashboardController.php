@@ -5,7 +5,11 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\admin\AdminProductModel;
 use App\Models\User;
+use App\Models\user\TypeText;
 use App\Models\user\WidthrawBalance;
+use App\Models\Vistor;
+use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class UserDashboardController extends Controller
 {
@@ -16,7 +20,7 @@ class UserDashboardController extends Controller
 
     public function team()
     {
-        $users = User::where('referal',auth()->user()->username)->where('status','approved')->get();
+        $users = User::where('referal',auth()->user()->name)->where('status','approved')->get();
         return view('user.work.team',compact('users'));
     }
 
@@ -31,4 +35,39 @@ class UserDashboardController extends Controller
         $products = AdminProductModel::where('product_level',auth()->user()->level)->paginate(6);
         return view('user.work.index',compact('products'));
     }
+
+
+    // User Type Task
+
+    public function taskText(Request $request,$id)
+    {
+        $product = AdminProductModel::find($id);
+        $productRewarad = $product->product_price;
+
+        $visitor = Vistor::where('user_id',auth()->user()->id)->where('product_id',$id)->whereDate('created_at','=',Carbon::today())->first();
+
+        if (!$visitor) {
+            //     // storing product
+                $visitor = new Vistor();
+                $visitor->user_id = auth()->user()->id;
+                $visitor->product_id = $id;
+                $visitor->ip = request()->ip();
+                $visitor->dateTime = date(now());
+                $visitor->save();
+                // Storing User Typed Text
+                $taskText = new TypeText();
+                $taskText->user_text = $request->user_text;
+                $taskText->save();
+                // giving user product reward
+                $user = User::where('id', auth()->user()->id)->first();
+                $user->balance += $productRewarad;
+                $user->save();
+                return redirect()->back()->with('success','You have successfully gained task reward');
+            }
+
+            return redirect()->back()->with('error', 'You have been compeleted this task before');
+
+    }
+
+
 }
