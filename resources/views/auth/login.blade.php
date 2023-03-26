@@ -35,7 +35,7 @@
                                 <input type="password" style="background: transparent;color:black " name="password"
                                     class="form-control" placeholder="Enter Your Password">
                             </div>
-                            <button type="submit" class="btn btn-success">Enroll</button>
+                            <button type="submit" class="btn btn-success">Login</button>
                         </form>
                     </div>
                 </div>

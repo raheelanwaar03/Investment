@@ -39,7 +39,7 @@
     <div id="main-wrapper">
         <div class="nav-header">
             <a href="{{ route('LandingPage') }}" class="brand-logo">
-                <img src="{{ asset('admin/public/images/logo.png') }}" height="100px" width="100px" alt="logo">
+                <img src="{{ asset('admin/public/images/logo.png') }}" height="60px" width="188px" alt="logo">
             </a>
             <div class="nav-control">
                 <div class="hamburger">
@@ -109,7 +109,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Product.create') }}">Add New Task</a></li>
-                           {{--  <li><a href="{{ route('Admin.All.Daily.Tasks') }}">All Tasks</a></li> --}}
+                            <li><a href="{{ route('Admin.Product.index') }}">All Tasks</a></li>
                 </ul>
                 </li>
                 {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
