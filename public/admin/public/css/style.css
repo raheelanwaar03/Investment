@@ -4,7 +4,7 @@
     Name                 : lezato
     Author               : DexignZone
     Author Portfolio     : https://themeforest.net/user/dexignzone/portfolio
-    
+
 
 
     Table of Sass Contents
@@ -16,7 +16,7 @@
         _mixin
         _variable
 
-    2. bootstrap 
+    2. bootstrap
         -Here goes all official bootstrap scss files
 
     3. Global/Base
@@ -73,19 +73,19 @@
 @import url(../vendor/perfect-scrollbar/css/perfect-scrollbar.css);
 @import url(../vendor/metismenu/css/metisMenu.min.css);
 :root {
-  --primary: #FD683E;
+  --primary: #28e928;
   --secondary: #624FD1;
-  --primary-hover: #fc410c;
-  --primary-dark: #a02502;
+  --primary-hover: #4ef026;
+  --primary-dark: #00ff40;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
   --rgba-primary-3: rgba(253, 104, 62, 0.3);
-  --rgba-primary-4: rgba(253, 104, 62, 0.4);
-  --rgba-primary-5: rgba(253, 104, 62, 0.5);
+  --rgba-primary-4: rgba(72, 245, 38, 0.4);
+  --rgba-primary-5: rgba(60, 134, 64, 0.5)
   --rgba-primary-6: rgba(253, 104, 62, 0.6);
-  --rgba-primary-7: rgba(253, 104, 62, 0.7);
-  --rgba-primary-8: rgba(253, 104, 62, 0.8);
-  --rgba-primary-9: rgba(253, 104, 62, 0.9);
+  --rgba-primary-7: rgba(37, 124, 25, 0.788);
+  --rgba-primary-8: rgba(25, 248, 4, 0.8));
+  --rgba-primary-9: rgba(16, 224, 79, 0.9)
   --font-family-base: Roboto, sans-serif;
   --font-family-title: MuseoModerno, cursive;
   --title: #000; }

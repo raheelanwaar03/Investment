@@ -37,8 +37,8 @@
     </div>
     <div id="main-wrapper">
         <div class="nav-header">
-            <a href="{{ route('Welcome') }}" class="brand-logo">
-                <img src="{{ asset('admin/public/images/logo.png') }}" height="100px" width="100px" alt="logo">
+            <a href="{{ route('LandingPage') }}" class="brand-logo">
+                <img src="{{ asset('admin/public/images/logo.png') }}" height="60px" width="188px" alt="logo">
             </a>
             <div class="nav-control">
                 <div class="hamburger">

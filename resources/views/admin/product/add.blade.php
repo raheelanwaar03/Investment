@@ -63,7 +63,8 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
+                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i
+                                                            class="fas fa-user-edit"></i>Edit
                                                         Profile</a>
                                                 </li>
                                                 <li>
@@ -101,21 +102,20 @@
                         <form action="{{ route('Admin.Product.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                            <label for="" class="m-3">Product Title</label>
-                            <input type="text" name="product_title" class="form-group" placeholder="Add Product Title">
+                                <label for="" class="m-3">Product Title</label>
+                                <input type="text" name="product_title" class="form-group"
+                                    placeholder="Add Product Title">
                             </div>
                             <div class="form-group">
                                 <label for="" class="m-3">Product Price</label>
-                                <input type="text" name="product_price" class="form-group" placeholder="Add Product Price">
-                                </div>
-                                <div class="form-group">
-                                <label for="" class="m-3">Product Level</label>
-                                <input type="text" name="product_level" class="form-group" placeholder="Add Product Level">
-                                </div>
+                                <input type="text" name="product_price" class="form-group"
+                                    placeholder="Add Product Price">
+                            </div>
                             <div class="form-group">
-                                <label for="" class="m-3">Product Link</label>
-                                <input type="text" name="product_link" class="form-group" placeholder="Add Product Title">
-                                </div>
+                                <label for="" class="m-3">Product Level</label>
+                                <input type="text" name="product_level" class="form-group"
+                                    placeholder="Add Product Level">
+                            </div>
                             <div class="form-group">
                                 <label for="" class="m-3">Product Description</label>
                                 <textarea name="product_des" class="form-control" rows="7" placeholder="Enter Product Details"></textarea>

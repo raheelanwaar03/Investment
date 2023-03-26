@@ -107,9 +107,9 @@
                             <i class="flaticon-013-checkmark"></i>
                             <span class="nav-text">Daily Task</span>
                         </a>
-                        {{-- <ul aria-expanded="false">
-                            <li><a href="{{ route('Admin.Daily.Task') }}">Add New Task</a></li>
-                            <li><a href="{{ route('Admin.All.Daily.Tasks') }}">All Tasks</a></li> --}}
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('Admin.Product.create') }}">Add New Task</a></li>
+                           {{--  <li><a href="{{ route('Admin.All.Daily.Tasks') }}">All Tasks</a></li> --}}
                 </ul>
                 </li>
                 {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

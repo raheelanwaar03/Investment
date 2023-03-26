@@ -59,7 +59,7 @@
                 <div class="header-main-wrapper">
                     <div class="logo-wrapper">
                         <div class="logo">
-                            <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png') }}"
+                            <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png') }}" width="188px" height="60px"
                                     alt="FINANCO" /></a>
                         </div>
                     </div>
