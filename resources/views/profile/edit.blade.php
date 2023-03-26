@@ -1,97 +1,103 @@
-@extends('auth.layout.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-    <div class="account-section bg_img" data-background="{{ asset('assets/images/account-bg.jpg') }}">
-        <div class="container">
-            <div class="account-title text-center">
-                <a href="{{ route('LandingPage') }}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
-                            class="d-none d-sm-inline-block">To {{ env('APP_NAME') }}</span></span></a>
-                <a href="#0" class="logo">
-                    <img src="{{ asset('assets/images/logo/footer-logo.png') }}" height="150px" width="150px"
-                        alt="logo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <title>Verification Page</title>
+</head>
+
+<body class="bg-success">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="{{ route('LandingPage') }}" class="text-center">
+                    <img src="{{ asset('asset/img/logo.png') }}" alt="Logo">
                 </a>
             </div>
-            <div class="account-wrapper">
-                <div class="account-body">
-                    <section>
-                        <header>
-                            <h2 class="text-lg font-medium text-gray-900">
-                                {{ __('Profile Information') }}
-                            </h2>
-                        </header>
+        </div>
+        <div style="margin-top: -100px" class="row min-vh-100">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                <div class="card border-black shadow-lg w-100">
+                    <div class="card-title">
+                        <h2 class="text-center mt-3">Profile Information</h2>
+                    </div>
+                    <div class="card-body">
 
-                        <form id="send-verification" method="post" action="{{ route('verification.send') }}">
-                            @csrf
-                        </form>
+                        <section>
+                            <form id="send-verification" method="post" action="{{ route('verification.send') }}">
+                                @csrf
+                            </form>
 
-                        <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
-                            @csrf
-                            @method('patch')
+                            <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+                                @csrf
+                                @method('patch')
 
-                            <div>
-                                <x-input-label for="name" :value="__('Name')" />
-                                <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"
-                                    :value="old('name', $user->name)" required autofocus autocomplete="name" />
-                                <x-input-error class="mt-2" :messages="$errors->get('name')" />
-                            </div>
+                                <div>
+                                    <x-input-label for="name" :value="__('Name')" />
+                                    <x-text-input id="name" name="name" type="text" class="mt-1 block w-full form-control"
+                                        :value="old('name', $user->name)" required autofocus autocomplete="name" />
+                                    <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                                </div>
 
-                            <div class="flex items-center gap-4">
-                                <x-primary-button>{{ __('Save') }}</x-primary-button>
+                                <div class="flex items-center gap-4">
+                                    <x-primary-button class='btn btn-success mt-3'>{{ __('Save') }}</x-primary-button>
 
-                                @if (session('status') === 'profile-updated')
-                                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
-                                        class="text-sm text-gray-600">{{ __('Saved.') }}</p>
-                                @endif
-                            </div>
-                        </form>
-                    </section>
+                                    @if (session('status') === 'profile-updated')
+                                        <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                                            class="text-sm text-gray-600">{{ __('Saved.') }}</p>
+                                    @endif
+                                </div>
+                            </form>
+                        </section>
+                    </div>
                 </div>
             </div>
-            <div class="account-wrapper mt-3">
-                <div class="account-body">
-                    <section>
-                        <header>
-                            <h2 class="text-lg font-medium text-gray-900">
-                                {{ __('Update Password') }}
-                            </h2>
-                        </header>
+            <div class="card border-black shadow-lg w-100">
+                <div class="card-title">
+                    <h2 class="text-center mt-3">Reset Password</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
+                        @csrf
+                        @method('put')
+                        <div>
+                            <x-input-label for="current_password" :value="__('Current Password')" />
+                            <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full form-control"
+                                autocomplete="current-password" />
+                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
+                        </div>
 
-                        <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
-                            @csrf
-                            @method('put')
-                            <div>
-                                <x-input-label for="current_password" :value="__('Current Password')" />
-                                <x-text-input id="current_password" name="current_password" type="password"
-                                    class="mt-1 block w-full" autocomplete="current-password" />
-                                <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
-                            </div>
+                        <div>
+                            <x-input-label for="password" :value="__('New Password')" />
+                            <x-text-input id="password" name="password" type="password" class="mt-1 block w-full form-control"
+                                autocomplete="new-password" />
+                            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
+                        </div>
 
-                            <div>
-                                <x-input-label for="password" :value="__('New Password')" />
-                                <x-text-input id="password" name="password" type="password" class="mt-1 block w-full"
-                                    autocomplete="new-password" />
-                                <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
-                            </div>
+                        <div>
+                            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                            <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full form-control"
+                                autocomplete="new-password" />
+                            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
+                        </div>
 
-                            <div>
-                                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-                                <x-text-input id="password_confirmation" name="password_confirmation" type="password"
-                                    class="mt-1 block w-full" autocomplete="new-password" />
-                                <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
-                            </div>
+                        <div class="flex items-center gap-4">
+                            <x-primary-button class='btn btn-success mt-3'>{{ __('Save') }}</x-primary-button>
 
-                            <div class="flex items-center gap-4">
-                                <x-primary-button>{{ __('Save') }}</x-primary-button>
-
-                                @if (session('status') === 'password-updated')
-                                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
-                                        class="text-sm text-gray-600">{{ __('Saved.') }}</p>
-                                @endif
-                            </div>
-                        </form>
-                    </section>
+                            @if (session('status') === 'password-updated')
+                                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                                    class="text-sm text-gray-600">{{ __('Saved.') }}</p>
+                            @endif
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-@endsection
+</body>
+
+</html>
+

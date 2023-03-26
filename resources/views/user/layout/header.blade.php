@@ -108,6 +108,14 @@
                             <li><a href="{{ route('User.Work') }}">Daily Task</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-072-printer"></i>
+                        <span class="nav-text">Profile</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
+                    </ul>
+                </li>
                 </ul>
                 <div class="copyright">
                     <p><strong>{{ env('APP_NAME') }} Data Entry Website</strong> © 2023 All Rights Reserved</p>

@@ -46,6 +46,35 @@ function userWidthrawalBalance()
     return $totalWidthraw;
 }
 
+function userPendingBalance()
+{
+    $totalPending = 0;
+    $pendingBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','pending')->get();
+    foreach ($pendingBalance as $widthraw) {
+        $totalPending += $widthraw->widthraw_amount;
+    }
+
+    return $totalPending;
+}
+
+function userApprovedBalance()
+{
+    $totalApproved = 0;
+    $approvedBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','approved')->get();
+    foreach ($approvedBalance as $widthraw) {
+        $totalApproved += $widthraw->widthraw_amount;
+    }
+
+    return $totalApproved;
+}
+
+function totalReferal()
+{
+    $totalRefers = User::where('referal',auth()->user()->name)->get();
+    $totalRefers = $totalRefers->count();
+    return $totalRefers;
+}
+
 
 function level()
 {
