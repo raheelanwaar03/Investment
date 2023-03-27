@@ -11,7 +11,6 @@
 </head>
 
 <body style="background-image: url({{ asset('assets/img/bg/9.jpg') }});background-repeat:no-repeat;background-size:cover;">
-    <x-alert/>
     <div class="container">
         <div class="row">
             <div class="col-md-12">

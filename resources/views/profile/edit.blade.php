@@ -9,18 +9,18 @@
     <title>Verification Page</title>
 </head>
 
-<body class="bg-success">
+<body class="">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <a href="{{ route('LandingPage') }}" class="text-center">
-                    <img src="{{ asset('asset/img/logo.png') }}" alt="Logo">
+                    <img src="{{ asset('assets/img/logo/logo.png') }}" height="70px" width="188px" alt="Logo">
                 </a>
             </div>
         </div>
-        <div style="margin-top: -100px" class="row min-vh-100">
+        <div class="row min-vh-100">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="card border-black shadow-lg w-100">
+                <div class="card card-success border-black shadow-lg w-100">
                     <div class="card-title">
                         <h2 class="text-center mt-3">Profile Information</h2>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card border-black shadow-lg w-100">
+            <div class="card border-black shadow-lg w-100 mb-3">
                 <div class="card-title">
                     <h2 class="text-center mt-3">Reset Password</h2>
                 </div>
@@ -93,6 +93,11 @@
                             @endif
                         </div>
                     </form>
+                </div>
+                <div class="card-footer">
+                    <h3 class="text-center">
+                        <a href="{{ route('User.Dashboard') }}" class="btn btn-outline-success">Dashboard</a>
+                    </h3>
                 </div>
             </div>
         </div>

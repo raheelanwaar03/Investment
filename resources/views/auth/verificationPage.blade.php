@@ -11,13 +11,6 @@
 
 <body class="bg-success">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a href="{{ route('LandingPage') }}" class="text-center">
-                    <img src="#" alt="Logo">
-                </a>
-            </div>
-        </div>
         <div style="margin-top: -100px" class="row min-vh-100">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="card border-black shadow-lg w-100">
