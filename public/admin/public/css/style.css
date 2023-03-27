@@ -2395,7 +2395,7 @@ textarea.form-control-lg {
   display: block; }
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
-  border-color: #f72b50;
+  border-color: #3acf0c;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23f72b50'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23f72b50' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2485,12 +2485,12 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #f5e50a;
+  background-color: #25f50a;
   border-color: #41a309; }
   .btn-secondary:hover {
     color: #fff;
     background-color: #f5e50a;
-    border-color: #e2f10ee0e0e0; }
+    border-color: #f5e50a; }
   .btn-check:focus + .btn-secondary, .btn-secondary:focus {
     color: #fff;
     background-color: #f5e50a;
@@ -12658,7 +12658,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
     [data-sibebarbg="color_2"][data-layout="horizontal"] .deznav .metismenu > li.mega-menu:hover > ul::after {
       background-color: #510bc4; }
     [data-sibebarbg="color_3"][data-layout="horizontal"] .deznav .metismenu > li.mega-menu:hover > ul::after {
-      background-color: #fc410c; }
+      background-color: #00ff40; }
     [data-sibebarbg="color_4"][data-layout="horizontal"] .deznav .metismenu > li.mega-menu:hover > ul::after {
       background-color: #360474; }
     [data-sibebarbg="color_5"][data-layout="horizontal"] .deznav .metismenu > li.mega-menu:hover > ul::after {
@@ -12718,7 +12718,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -12919,7 +12919,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -13146,7 +13146,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -18408,7 +18408,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 [data-primary="color_3"] {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -18618,7 +18618,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -18745,7 +18745,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -20553,7 +20553,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -21030,7 +21030,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -21279,7 +21279,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -21324,7 +21324,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -21377,7 +21377,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);
@@ -29468,7 +29468,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 :root {
   --primary: #6fbe44;
   --secondary: #00fc2a;
-  --primary-hover: #fc410c;
+  --primary-hover: #00ff40;
   --primary-dark: #a02502;
   --rgba-primary-1: rgba(253, 104, 62, 0.1);
   --rgba-primary-2: rgba(253, 104, 62, 0.2);

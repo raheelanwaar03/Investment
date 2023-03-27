@@ -54,8 +54,7 @@
                         <div class="header-left">
                             <div class="nav-item">
                                 <div class="input-group search-area">
-                                    <input type="text" class="form-control"
-                                        placeholder="Find something here......">
+                                    <input type="text" class="form-control" placeholder="Find something here......">
                                     <span class="input-group-text"><a href="javascript:void(0)"><i
                                                 class="flaticon-381-search-2"></i></a></span>
                                 </div>
@@ -79,12 +78,12 @@
             <div class="deznav-scroll">
                 <ul class="metismenu" id="menu">
                     <li><a class="has-arrow ai-icon" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
-                            <i class="flaticon-025-dashboard"></i>
+                            <i class="fa fa-home"></i>
                             <span class="nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-043-menu"></i>
+                            <i class="ti-user"></i>
                             <span class="nav-text">Referal</span>
                         </a>
                         <ul aria-expanded="false">
@@ -92,7 +91,7 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-041-graph"></i>
+                            <i class="flaticon-072-printer"></i>
                             <span class="nav-text">Widthraw</span>
                         </a>
                         <ul aria-expanded="false">
@@ -101,7 +100,7 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-072-printer"></i>
+                            <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Task</span>
                         </a>
                         <ul aria-expanded="false">
@@ -109,13 +108,13 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                        <i class="flaticon-072-printer"></i>
-                        <span class="nav-text">Profile</span>
-                    </a>
-                    <ul aria-expanded="false">
-                        <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
-                    </ul>
-                </li>
+                            <i class="ti-user"></i>
+                            <span class="nav-text">Profile</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="copyright">
                     <p><strong>{{ env('APP_NAME') }} Data Entry Website</strong> © 2023 All Rights Reserved</p>

@@ -78,12 +78,12 @@
             <div class="deznav-scroll">
                 <ul class="metismenu" id="menu">
                     <li><a class="has-arrow ai-icon" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
-                            <i class="flaticon-025-dashboard"></i>
+                            <i class="fa fa-home"></i>
                             <span class="nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-043-menu"></i>
+                            <i class="ti-user"></i>
                             <span class="nav-text">User's</span>
                         </a>
                         <ul aria-expanded="false">
@@ -104,14 +104,14 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-013-checkmark"></i>
+                            <i class="flaticon-043-menu"></i>
                             <span class="nav-text">Daily Task</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Product.create') }}">Add New Task</a></li>
                             <li><a href="{{ route('Admin.Product.index') }}">All Tasks</a></li>
-                </ul>
-                </li>
+                        </ul>
+                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-072-printer"></i>
                             <span class="nav-text">Widthraw Request</span>
