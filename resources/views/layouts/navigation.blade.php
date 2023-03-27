@@ -59,8 +59,8 @@
                 <div class="header-main-wrapper">
                     <div class="logo-wrapper">
                         <div class="logo">
-                            <a href="{{ route('LandingPage') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" width="188px" height="60px"
-                                    alt="logo" /></a>
+                            <a href="{{ route('LandingPage') }}"><img src="{{ asset('assets/img/logo/logo.png') }}"
+                                    width="188px" height="60px" alt="logo" /></a>
                         </div>
                     </div>
                     <div class="header-main-content">
@@ -106,13 +106,14 @@
                                     </li>
                                     @if (auth()->user())
                                         <li><a href="{{ route('User.Dashboard') }}">Dashboard</a>
+                                        @else
+                                        <li><a href="{{ route('register') }}">Register</a></li>
+                                        <li><a href="{{ route('login') }}">Login</a></li>
                                     @endif
                                     <li><a href="{{ route('LandingPage.About.Us') }}">ABOUT US</a></li>
                                     </li>
                                     <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
                                     </li>
-                                    <li><a href="{{ route('register') }}">Register</a></li>
-                                    <li><a href="{{ route('login') }}">Register</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -130,12 +131,15 @@
                             <nav id="dropdown">
                                 <ul>
                                     <li><a href="{{ route('LandingPage') }}">HOME</a></li>
-                                    <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
                                     <li><a href="{{ route('LandingPage.About.Us') }}">About</a></li>
                                     <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a></li>
                                     </li>
-                                    <li><a href="{{ route('login') }}">Login</a></li>
-                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                    @if (auth()->user())
+                                        <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
+                                    @else
+                                        <li><a href="{{ route('login') }}">Login</a></li>
+                                        <li><a href="{{ route('register') }}">Register</a></li>
+                                    @endif
                                 </ul>
                             </nav>
                         </div>
