@@ -28,10 +28,24 @@ class UserWorkController extends Controller
             'widthraw_name' => 'required',
             'widthraw_num' => 'required',
         ]);
+
+
+
+        // check if user widtraw some amount before
+        $firstWidthrawCheck = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','approved')->get();
+        $countFirstWidthraw = $firstWidthrawCheck->count();
+        if ($countFirstWidthraw >= 1) {
+            // check user referals for second widthraw
+            $referCheck = User::where('referal', auth()->user()->name)->get();
+            $referCheck = $referCheck->count();
+            if ($referCheck <= 4) {
+                return redirect()->back()->with('error', 'You must have 5 referal friends to request second widthraw');
+            }
+        }
+
         $userWidthrawAmount = $validated['widthraw_amount'];
 
         // See user balance
-
         if ($userWidthrawAmount > auth()->user()->balance) {
             return redirect()->back()->with('error', 'You have not enough balance');
         }

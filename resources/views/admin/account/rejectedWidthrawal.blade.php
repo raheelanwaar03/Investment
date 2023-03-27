@@ -35,8 +35,6 @@
                                                 <td>
                                                     <a href="{{ route('Admin.Approve.Widthraw', ['id' => $widthrawRequest->id]) }}"
                                                         class="btn btn-sm btn-success">Approve</a>
-                                                    <a href="{{ route('Admin.Reject.Widthraw', ['id' => $widthrawRequest->id]) }}"
-                                                        class="btn btn-sm btn-danger">Reject</a>
                                                 </td>
                                                 <td>{{ $widthrawRequest->created_at }}</td>
                                             </tr>

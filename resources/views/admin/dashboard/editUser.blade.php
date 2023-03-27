@@ -29,7 +29,7 @@
                                     <label for="" class="ml-2">Balance</label>
                                     <input type="text" name="balance" value="{{ $user->balance }}" class="form-control">
                                 </div>
-                                <button type="submit" class="btn btn-primary">update</button>
+                                <button type="submit" class="btn btn-primary mt-3">Update</button>
                             </form>
                         </div>
                     </div>
