@@ -126,4 +126,9 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="{{ route('Admin.Set.User.Level') }}" class="btn btn-primary">Set Level</a>
+        </div>
+    </div>
 @endsection
