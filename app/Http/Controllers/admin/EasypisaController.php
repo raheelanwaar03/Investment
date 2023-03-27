@@ -48,7 +48,7 @@ class EasypisaController extends Controller
         $easyPaisa->easy_num = $validated['easy_num'];
         $easyPaisa->text = $validated['text'];
         $easyPaisa->save();
-        return redirect()->back()->with('success','Easypasia Detailsa added successfully');
+        return redirect()->back()->with('massage','Easypasia Detailsa added successfully');
     }
 
     /**
@@ -93,7 +93,7 @@ class EasypisaController extends Controller
         $easyPaisa->easy_num = $validated['easy_num'];
         $easyPaisa->text = $request->text;
         $easyPaisa->save();
-        return redirect()->route('Admin.Easypaisa.index')->with('success','Details Updated Successfully');
+        return redirect()->route('Admin.Easypaisa.index')->with('massage','Details Updated Successfully');
 
     }
 

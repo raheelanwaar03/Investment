@@ -78,6 +78,6 @@ class UserWorkController extends Controller
         $widthraw->widthraw_name = $validated['widthraw_name'];
         $widthraw->widthraw_num = $validated['widthraw_num'];
         $widthraw->save();
-        return redirect()->back()->with('success', 'Wait for admin approval');
+        return redirect()->back()->with('massage', 'Wait for admin approval');
     }
 }

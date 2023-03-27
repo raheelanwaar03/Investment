@@ -48,7 +48,7 @@ class SettingController extends Controller
         $setting->minimum_amount = $validated['minimum_amount'];
         $setting->maximun_amount = $validated['maximun_amount'];
         $setting->save();
-        return redirect()->back()->with('succss','New Setting Appllied');
+        return redirect()->back()->with('massage','New Limite Appllied');
 
     }
 
@@ -89,7 +89,7 @@ class SettingController extends Controller
         $setting->minimum_amount = $request->minimum_amount;
         $setting->maximun_amount = $request->maximun_amount;
         $setting->save();
-        return redirect()->back()->with('success','Setting updated successfully');
+        return redirect()->back()->with('massage','Limite updated successfully');
     }
 
     /**

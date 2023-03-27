@@ -62,7 +62,7 @@ class UserDashboardController extends Controller
                 $user = User::where('id', auth()->user()->id)->first();
                 $user->balance += $productRewarad;
                 $user->save();
-                return redirect()->back()->with('success','You have successfully gained task reward');
+                return redirect()->back()->with('massage','You have successfully gained task reward');
             }
 
             return redirect()->back()->with('error', 'You have been compeleted this task before');

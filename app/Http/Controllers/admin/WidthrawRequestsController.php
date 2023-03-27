@@ -41,7 +41,7 @@ class WidthrawRequestsController extends Controller
         $deductedBalance = $totalBalance - $widthraw->widthraw_amount;
         $user->balance = $deductedBalance;
         $user->save();
-        return redirect()->back()->with('success', 'User widthraw request Approved');
+        return redirect()->back()->with('massage', 'User widthraw request Approved');
     }
 
     public function rejectWidthraw($id)
@@ -49,6 +49,6 @@ class WidthrawRequestsController extends Controller
         $widthraw = WidthrawBalance::find($id);
         $widthraw->status = 'rejected';
         $widthraw->save();
-        return redirect()->back()->with('success', 'User widthraw request rejected');
+        return redirect()->back()->with('massage', 'User widthraw request rejected');
     }
 }

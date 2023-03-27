@@ -52,7 +52,7 @@ class ProductController extends Controller
         $product->product_level = $validated['product_level'];
         $product->product_img = $imageName;
         $product->save();
-        return redirect()->back()->with('success', 'Product Added successfully');
+        return redirect()->back()->with('massage', 'Product Added successfully');
     }
 
     /**
@@ -101,7 +101,7 @@ class ProductController extends Controller
         $product->product_price = $request->product_price;
         $product->product_level = $request->product_level;
         $product->save();
-        return redirect()->back()->with('success', 'Product Updated successfully');
+        return redirect()->back()->with('massage', 'Task Updated successfully');
     }
 
     /**
@@ -114,6 +114,6 @@ class ProductController extends Controller
     {
         $product = AdminProductModel::find($id);
         $product->delete();
-        return redirect()->back()->with('success', 'Product Deleted successfully');
+        return redirect()->back()->with('error', 'Task Deleted successfully');
     }
 }

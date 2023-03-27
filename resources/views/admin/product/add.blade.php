@@ -21,7 +21,9 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-title">
-                            Add New Tasks
+                            <h2 class="text-center mt-2">
+                                Add New Tasks
+                            </h2>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('Admin.Product.store') }}" method="POST" enctype="multipart/form-data">
