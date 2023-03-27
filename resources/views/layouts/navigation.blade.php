@@ -88,7 +88,7 @@
                         @else
                             <a href="{{ route('register') }}"
                                 class="btn btn-large btn-warning  text-white">Register</a>
-                            <a href="{{ route('login') }}" Register="btn btn-large btn-warning  text-white">Login</a>
+                            <a href="{{ route('login') }}" class="btn btn-large btn-warning  text-white">Login</a>
                         @endif
                     </div>
                 </div>
