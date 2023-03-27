@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © Designed &amp; Developed by <a href="https://raheelanwaar.com/"
-                target="_blank">{{ env('APP_NAME') }}</a> 2023</p>
+        <p>Copyright © Designed &amp; Developed by <a href="https://www.fiyver.com/"
+                target="_blank">{{ env('APP_NAME') }}</a> 2019</p>
     </div>
 </div>
 </div>

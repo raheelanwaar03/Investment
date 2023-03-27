@@ -17,38 +17,42 @@
                 <h1 class="text-center text-success">Payment Page</h1>
             </div>
         </div>
-        <div style="margin-top: -100px" class="row min-vh-100">
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
-                <div class="card bg-transparent border-black shadow-lg w-100">
-                    <div class="card-title">
-                        @forelse ($easyPaisas as $easyPaisa)
-                        <h5 class="text-center mt-3">{{ $easyPaisa->text }}</h5>
-                        <h4 class="text-center">Easypaisa Holder Name: {{ $easyPaisa->easy_name }}</h4>
-                        <h4 class="text-center">Easypaisa Account Number: {{ $easyPaisa->easy_num }}</h4>
-                        @empty
+        <div class="row">
+            <div class="col-md-12">
+                <div style="margin-top: -100px" class="row min-vh-100">
+                    <div class="col-md-12 d-flex justify-content-center align-items-center">
+                        <div class="card bg-transparent border-black shadow-lg w-100">
+                            <div class="card-title">
+                                @forelse ($easyPaisas as $easyPaisa)
+                                <h5 class="text-center mt-3">{{ $easyPaisa->text }}</h5>
+                                <h4 class="text-center">Easypaisa Holder Name: {{ $easyPaisa->easy_name }}</h4>
+                                <h4 class="text-center">Easypaisa Account Number: {{ $easyPaisa->easy_num }}</h4>
+                                @empty
 
-                        @endforelse
-                    </div>
-                    <div class="card-body">
-                        <form action="{{ route('Store/Fees/Details') }}" method="POST">
-                            @csrf
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Easypaisa Account Holder Name</b></label>
-                                <input type="text" name="bank_username" style="background: transparent;color:black "
-                                    class="form-control" placeholder="Easypaisa Account Holder">
+                                @endforelse
                             </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Easypaisa Number</b></label>
-                                <input type="number" name="sender_num" style="background: transparent;color:black "
-                                    class="form-control" placeholder="Easypaisa Account Number">
+                            <div class="card-body">
+                                <form action="{{ route('Store/Fees/Details') }}" method="POST">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label style="color:green"><b style="font-size: 25px">Easypaisa Account Holder Name</b></label>
+                                        <input type="text" name="bank_username" style="background: transparent;color:black "
+                                            class="form-control" placeholder="Easypaisa Account Holder">
+                                    </div>
+                                    <div class="form-group">
+                                        <label style="color:green"><b style="font-size: 25px">Easypaisa Number</b></label>
+                                        <input type="number" name="sender_num" style="background: transparent;color:black "
+                                            class="form-control" placeholder="Easypaisa Account Number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label style="color:green"><b style="font-size: 25px">Put Trx or TID</b></label>
+                                        <input type="text" style="background: transparent;color:black " name="tid"
+                                            class="form-control" placeholder="Enter Your Phone">
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-success">Sumbit</button>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label style="color:green"><b style="font-size: 25px">Put Trx or TID</b></label>
-                                <input type="text" style="background: transparent;color:black " name="tid"
-                                    class="form-control" placeholder="Enter Your Phone">
-                            </div>
-                            <button type="submit" class="btn btn-outline-success">Sumbit</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
