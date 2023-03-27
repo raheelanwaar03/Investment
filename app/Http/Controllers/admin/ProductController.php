@@ -52,7 +52,7 @@ class ProductController extends Controller
         $product->product_level = $validated['product_level'];
         $product->product_img = $imageName;
         $product->save();
-        return redirect()->back()->with('massage', 'Product Added successfully');
+        return redirect()->back()->with('massage', 'Task Added successfully');
     }
 
     /**

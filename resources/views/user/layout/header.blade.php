@@ -37,11 +37,11 @@
         </div>
     </div>
     <div id="main-wrapper">
-        <div class="nav-header">
+        <div class="nav-header p-5">
             <a href="{{ route('LandingPage') }}" class="brand-logo">
                 <img src="{{ asset('admin/public/images/logo.png') }}" height="60px" width="188px" alt="logo">
             </a>
-            <div class="nav-control">
+            <div class="nav-control ml-5">
                 <div class="hamburger">
                     <span class="line"></span><span class="line"></span><span class="line"></span>
                 </div>
@@ -74,7 +74,7 @@
         </div>
         {{-- links --}}
 
-        <div class="deznav">
+       <div class="deznav">
             <div class="deznav-scroll">
                 <ul class="metismenu" id="menu">
                     <li><a class="has-arrow ai-icon" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
@@ -127,3 +127,4 @@
                 </div>
             </div>
         </div>
+
