@@ -115,6 +115,12 @@
                             <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        <button class="btn btn-danger">Logout</button>
+                        </form>
+                    </li>
                 </ul>
                 <div class="copyright">
                     <p><strong>{{ env('APP_NAME') }} Data Entry Website</strong> © 2023 All Rights Reserved</p>

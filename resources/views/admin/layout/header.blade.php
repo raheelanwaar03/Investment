@@ -122,6 +122,20 @@
                             <li><a href="{{ route('Admin.Rejected.Widthraw') }}">Rejected Widthraw</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="ti-user"></i>
+                            <span class="nav-text">Profile</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn btn-danger">Logout</button>
+                        </form>
+                    </li>
                 </ul>
                 <div class="copyright">
                     <p><strong>{{ env('APP_NAME') }} Data Entry Admin side</strong> © 2023 All Rights Reserved</p>
