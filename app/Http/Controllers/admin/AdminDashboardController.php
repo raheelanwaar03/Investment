@@ -30,7 +30,7 @@ class AdminDashboardController extends Controller
         $user->level = $request->level;
         $user->balance = $request->balance;
         $user->save();
-        return redirect()->back()->with('success', 'User Details updated successfully');
+        return redirect()->back()->with('massage', 'User Details updated successfully');
     }
 
     // rest work
@@ -83,7 +83,7 @@ class AdminDashboardController extends Controller
         //  getting second user
         $firstUpliner = User::where('name', $user->referal)->first();
         if ($firstUpliner == '') {
-            return redirect()->back()->with('success', 'Account has beed Approved successfully');
+            return redirect()->back()->with('massage', 'Account has beed Approved successfully');
         } else {
             $firstUpliner->balance += $firstCommission;
             $firstUpliner->save();
@@ -94,7 +94,7 @@ class AdminDashboardController extends Controller
         $secondUpliner = User::where('name', $firstUpliner->referal)->first();
 
         if ($secondUpliner == '') {
-            return redirect()->back()->with('success', 'Account has beed Approved successfully');
+            return redirect()->back()->with('massage', 'Account has beed Approved successfully');
         } else {
             $secondUpliner->balance += $indirectCommission1;
             $secondUpliner->save();
@@ -104,12 +104,12 @@ class AdminDashboardController extends Controller
         // getting third person;
         $thirdUpliner = User::where('name', $secondUpliner->referal)->first();
         if ($thirdUpliner == '') {
-            return redirect()->back()->with('success', 'Account has beed Approved successfully');
+            return redirect()->back()->with('massage', 'Account has beed Approved successfully');
         } else {
             $thirdUpliner->balance += $indirectCommission2;
             $thirdUpliner->save();
         }
-        return redirect()->back()->with('success', 'User Approved Successfully');
+        return redirect()->back()->with('massage', 'User Approved Successfully');
     }
 
     public function rejectUserAccount($id)
@@ -117,7 +117,7 @@ class AdminDashboardController extends Controller
         $user = User::find($id);
         $user->status = 'rejected';
         $user->save();
-        return redirect()->back()->with('success', 'Account has been Rejected successfully');
+        return redirect()->back()->with('massage', 'Account has been Rejected successfully');
     }
 
     // set user level
@@ -187,7 +187,7 @@ class AdminDashboardController extends Controller
                 }
             }
         }
-        return redirect()->back()->with('success', 'Level Given to all users according to their referals');
+        return redirect()->back()->with('massage', 'Level Given to all users according to their referals');
     }
 
     // Verification Details
@@ -207,7 +207,7 @@ class AdminDashboardController extends Controller
        $verificationText = new verificationText();
        $verificationText->text = $validated['text'];
        $verificationText->save();
-       return redirect()->back()->with('success','Verfication Page Text Added');
+       return redirect()->back()->with('massage','Verfication Page Text Added');
     }
 
     public function edit($id)
@@ -222,7 +222,7 @@ class AdminDashboardController extends Controller
 
        $verificationText->text = $request->text;
        $verificationText->save();
-       return redirect()->back()->with('success','Verfication Page Updated successfully');
+       return redirect()->back()->with('massage','Verfication Page Updated successfully');
     }
 
 

@@ -2,8 +2,21 @@
 
 @section('content')
     <div class="content-body">
-        <!-- row -->
         <div class="container-fluid">
+            @if ($message = Session::get('massage'))
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">X</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+
+
+            @if ($message = Session::get('error'))
+                <div class="alert alert-danger alert-block">
+                    <button type="button" class="close" data-dismiss="alert">X</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-12">
                     <div class="card">

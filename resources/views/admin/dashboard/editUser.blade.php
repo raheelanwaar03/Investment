@@ -3,6 +3,19 @@
 @section('content')
     <div class="content-body">
         <!-- row -->
+        @if ($message = Session::get('massage'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
+
+        @if ($message = Session::get('error'))
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -11,7 +24,7 @@
                             <h4 class="card-title">Edit User Details</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('Admin.Update.User',['id'=>$user->id]) }}" method="POST">
+                            <form action="{{ route('Admin.Update.User', ['id' => $user->id]) }}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label for="" class="ml-2">Name</label>
@@ -25,7 +38,7 @@
                                     <label for="" class="ml-2">Level</label>
                                     <input type="text" name="level" value="{{ $user->level }}" class="form-control">
                                 </div>
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <label for="" class="ml-2">Balance</label>
                                     <input type="text" name="balance" value="{{ $user->balance }}" class="form-control">
                                 </div>
