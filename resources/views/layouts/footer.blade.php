@@ -6,7 +6,7 @@
                     <span class="block">Copyright&copy;
                         <script>
                             document.write(new Date().getFullYear() + ' ');
-                        </script> <a href="https://hasthemes.com/">HasThemes</a>. All rights
+                        </script> <a href="https://fiyver.com/">Fiyver has</a>. All rights
                         reserved.
                     </span>
                 </div>

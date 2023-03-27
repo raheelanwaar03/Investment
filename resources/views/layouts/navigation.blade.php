@@ -59,8 +59,8 @@
                 <div class="header-main-wrapper">
                     <div class="logo-wrapper">
                         <div class="logo">
-                            <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png') }}" width="188px" height="60px"
-                                    alt="FINANCO" /></a>
+                            <a href="{{ route('LandingPage') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" width="188px" height="60px"
+                                    alt="logo" /></a>
                         </div>
                     </div>
                     <div class="header-main-content">
@@ -111,10 +111,6 @@
                                     </li>
                                     <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
                                     </li>
-                                    <li><a href="project.html">PROJECTS</a>
-                                    </li>
-                                    <li><a href="#">SHOP</a></li>
-                                    <li><a href="contact.html">CONTACT</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -133,12 +129,8 @@
                                 <ul>
                                     <li><a href="{{ route('LandingPage') }}">HOME</a></li>
                                     <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
-                                    <li><a href="{{ route('LandingPage.About.Us') }}">About</a>
-                                    </li>
+                                    <li><a href="{{ route('LandingPage.About.Us') }}">About</a></li>
                                     <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a></li>
-                                    <li><a href="blog.html">BLOG</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
                                         </ul>
                                     </li>
                                 </ul>

@@ -25,35 +25,33 @@
             <div class="row">
                 <div class="col-lg-7 col-12">
                     <div class="about-text">
-                        <h3>We are <span>Financo</span></h3>
+                        <h3>We are <span>{{ env('APP_NAME') }}</span></h3>
                         <h2>Your Complete Financial Solutions </h2>
-                        <p>Financo amet, consectetur adipiscing elit, sed do eiusmod tempornt ut labore et dolore magna
-                            aliqua. Ut enim ad minim iam, quis norud esta exercitation ullamco laboris nisi ut aliquip exea
-                            commo consequat. Duis aute irure dolor
-                            in reprehenderit </p>
-                        <p>Financo amet, consectetur adipiscing elit, sed do eiusmod tempor incidi utdrfe on the labore et
-                            dolore magna aliqua enim ad minimiam, </p>
+                        <p>{{ env('APP_NAME') }} is bringing something new for your financial problems. You simply need to
+                            register new account and complete some simply task and then just collect your rewards</p>
+                        <p>Now all you need to do is just simply attach with us. </p>
                     </div>
                     <div class="about-text-container">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-content">
                                     <h4 class="single-title">Financial Service</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>{{ env('APP_NAME') }} is providing 24/7 customer support</p>
                                 </div>
                                 <div class="single-content">
                                     <h4 class="single-title">Business Analysis</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>{{ env('APP_NAME') }} is giving alot of people their daliy rewards with now extera
+                                        effort</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-content">
                                     <h4 class="single-title">Best Consutancy</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>{{ env('APP_NAME') }} is bring new plan of earning at home</p>
                                 </div>
                                 <div class="single-content">
                                     <h4 class="single-title">24/7 Support</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>You can connect with us at any time</p>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +122,8 @@
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-95">
                         <h2>Our Team</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+                        <p>{{ env('APP_NAME') }} having a very hardworking team to solve your problems and giving you thier
+                            best! </p>
                     </div>
                 </div>
             </div>
@@ -140,7 +138,6 @@
                         <div class="member-text">
                             <h3><a href="#">Robert Williams</a></h3>
                             <span>Chef Executive Officer</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>
@@ -182,7 +179,9 @@
                         <div class="member-text">
                             <h3><a href="#">Jasmin Jaquline</a></h3>
                             <span>Financial Advisor</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
+                            <p>{{ env('APP_NAME') }} AliBabaSurvey is an investment company, whose team is working on
+                                making money from the volatility of cryptocurrencies and offer great returns to our clients.
+                            </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>
@@ -224,7 +223,9 @@
                         <div class="member-text">
                             <h3><a href="#">Sharlok Homes</a></h3>
                             <span>Chef Executive Officer</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
+                            <p>{{ env('APP_NAME') }} AliBabaSurvey is an investment company, whose team is working on
+                                making money from the volatility of cryptocurrencies and offer great returns to our clients.
+                            </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>
@@ -266,7 +267,9 @@
                         <div class="member-text">
                             <h3><a href="#">Rose Smith</a></h3>
                             <span>Financial Consultant</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
+                            <p>{{ env('APP_NAME') }} AliBabaSurvey is an investment company, whose team is working on
+                                making money from the volatility of cryptocurrencies and offer great returns to our clients.
+                            </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>

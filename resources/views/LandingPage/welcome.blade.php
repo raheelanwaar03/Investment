@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="slider-area">
         <div class="slider-wrapper">
             <div class="single-slide" style="background-image: url('{{ asset('assets/img/slider/1.jpg') }}');">
@@ -56,14 +55,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-text">
-                        <h3>We are <span>Financo</span></h3>
+                        <h3>We are <span>{{ env('APP_NAME') }}</span></h3>
                         <h2>Your Complete Financial Solutions </h2>
-                        <p>Financo amet, consectetur adipiscing elit, sed do eiusmod tempornt ut labore et dolore magna
-                            aliqua. Ut enim ad minim iam, quis norud esta exercitation ullamco laboris nisi ut aliquip
-                            exea commo consequat. Duis aute irure dolor
-                            in reprehenderit </p>
-                        <p>Financo amet, consectetur adipiscing elit, sed do eiusmod tempor incidi utdrfe on the labore
-                            et dolore magna aliqua enim ad minimiam, </p>
+                        <p>{{ env('APP_NAME') }} Financial copywriting makes up the content on your website, in your blog
+                            posts and in the emails you send out to clients. Content writers in the financial sector
+                            understand how to make complex concepts engaging and interesting while answering web users' most
+                            pressing questions</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -72,21 +69,29 @@
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-content">
                                     <h4 class="single-title">Financial Service</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                        scale to achieve monetary equilibrium or upward mobility on your income levels
+                                    </p>
                                 </div>
                                 <div class="single-content">
                                     <h4 class="single-title">Business Analysis</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                        scale to achieve monetary equilibrium or upward mobility on your income levels
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-content">
                                     <h4 class="single-title">Best Consutancy</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                        scale to achieve monetary equilibrium or upward mobility on your income levels
+                                    </p>
                                 </div>
                                 <div class="single-content">
                                     <h4 class="single-title">24/7 Support</h4>
-                                    <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt</p>
+                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                        scale to achieve monetary equilibrium or upward mobility on your income levels
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -104,13 +109,8 @@
         <div class="information-text">
             <h3><span>We Provide Best</span></h3>
             <h2>Financial Plan for You</h2>
-            <p>Financo amet, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ipsum dolor sit
-                amet, etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequatiat </p>
-            <p>Financo amet, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium que laudantium,
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis ipsum dolor sit amet, consectetur </p>
-            <a href="#" class="default-button">Learn more</a>
+            <p>{{ env('APP_NAME') }} is an investment company, whose team is working on making money from the
+                volatility of cryptocurrencies and offer great returns to our clients. </p>
         </div>
     </div>
     <!-- Information Area End -->
@@ -121,8 +121,7 @@
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-55">
                         <h2>Our Services</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        <p>{{ env('APP_NAME') }} give you the opportunity to earn money by recommending our website to others. You can start earning money even if you do not invest.
                         </p>
                     </div>
                 </div>
@@ -135,7 +134,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Financial Planning</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Cash Investment</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -157,7 +158,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Financial Consultancy</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -168,7 +170,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Personal Insurance</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -179,7 +182,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Commodities Planning</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -190,7 +194,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Retirement Planning</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -223,9 +228,8 @@
             <div class="coustom-col-10">
                 <div class="feature-text">
                     <h3><span>Why You</span></h3>
-                    <h2>Choose Financo</h2>
-                    <p>Financo amet, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ipsum dolor
-                        sit amet, etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                    <h2>Choose {{ env('APP_NAME') }}</h2>
+                    <p>{{ env('APP_NAME') }} are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing. </p>
                 </div>
             </div>
             <div class="custom-row">
@@ -236,7 +240,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Fast Loan Approval</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -247,7 +252,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Dedicated Team</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -258,7 +264,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Free Documentation</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -269,7 +276,8 @@
                         </span>
                         <div class="service-text">
                             <h4>Refinancing</h4>
-                            <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
+                                to achieve monetary equilibrium or upward mobility on your income levels </p>
                         </div>
                     </div>
                 </div>
@@ -284,8 +292,7 @@
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-55">
                         <h2>Our Projects</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        <p>{{ env('APP_NAME') }} are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
                         </p>
                     </div>
                 </div>
@@ -304,7 +311,8 @@
                                     src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
                             <div class="project-text">
                                 <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
                             </div>
                         </div>
                     </div>
@@ -320,7 +328,8 @@
                                     src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
                             <div class="project-text">
                                 <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
                             </div>
                         </div>
                     </div>
@@ -336,7 +345,8 @@
                                     src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
                             <div class="project-text">
                                 <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
                             </div>
                         </div>
                     </div>
@@ -352,7 +362,8 @@
                                     src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
                             <div class="project-text">
                                 <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
                             </div>
                         </div>
                     </div>
@@ -368,7 +379,8 @@
                                     src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
                             <div class="project-text">
                                 <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
                             </div>
                         </div>
                     </div>
@@ -384,7 +396,8 @@
                                     src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
                             <div class="project-text">
                                 <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>Financo consectetur adipiscing elit, sed do eiusmod tempor incididnt </p>
+                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
+                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
                             </div>
                         </div>
                     </div>
@@ -400,8 +413,7 @@
                 <div class="col-lg-6">
                     <div class="sub_title">
                         <h3>Reqeust a Call Back</h3>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua enim ad minim veniam</p>
+                        <p>You will get your profit on your profile, also you will get Instant Payment</p>
 
                     </div>
                     <form id="contact-form" action="#" method="post">
@@ -442,24 +454,22 @@
                     <div class="default-panel">
                         <div class="sub_title">
                             <h3>Frequently Ask Qustion</h3>
-                            <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut
-                                labore et dolore magna aliqua enim ad minim veniam</p>
+                            <p>{{ env('APP_NAME') }} is worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.</p>
                         </div>
                         <div class="accordion" id="accordionExample">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h4 class="card-title">
-                                        <a role="button" data-bs-toggle="collapse" aria-expanded="true"
-                                            href="#one" aria-controls="one">
+                                        <a role="button" data-bs-toggle="collapse" aria-expanded="true" href="#one"
+                                            aria-controls="one">
                                             <span></span> What kind of Financial Consultancy you need
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="one" class="collapse show" role="tabpanel"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="one" class="collapse show" role="tabpanel" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
+                                        <p>We have many happy investors invest with us .Some impresions from our Customers! </p>
                                     </div>
                                 </div>
                             </div>
@@ -475,8 +485,7 @@
                                 <div id="two" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
+                                        <p>We have many happy investors invest with us .Some impresions from our Customers! </p>
                                     </div>
                                 </div>
                             </div>
@@ -492,8 +501,7 @@
                                 <div id="three" class="collapse" role="tabpanel" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
+                                        <p>Click Sign Up to fill the blank, our 256 SSL will Protect your privacy. </p>
                                     </div>
                                 </div>
                             </div>
@@ -509,8 +517,7 @@
                                 <div id="four" class="collapse" role="tabpanel" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
+                                        <p>Click Sign Up to fill the blank, our 256 SSL will Protect your privacy. </p>
                                     </div>
                                 </div>
                             </div>
@@ -526,8 +533,7 @@
                                 <div id="five" class="collapse" role="tabpanel" aria-labelledby="headingFive"
                                     data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium
-                                            doloremque laudantium tam rem riam, eaque ipsa quae ab illo invet </p>
+                                        <p>Click Sign Up to fill the blank, our 256 SSL will Protect your privacy. </p>
                                     </div>
                                 </div>
                             </div>
@@ -598,8 +604,7 @@
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-95">
                         <h2>Our Team</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        <p>{{ env('APP_NAME') }}We give you the opportunity to earn money by recommending our website to others. You can start earning money even if you do not invest.
                         </p>
                     </div>
                 </div>
@@ -615,20 +620,19 @@
                         <div class="member-text">
                             <h3><a href="#">Robert Williams</a></h3>
                             <span>Chef Executive Officer</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                                ostrud </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>
                                         <a href="#" class="block p-img"><img
                                                 src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/call-hover.png') }}" alt=""></a>
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/facebook.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/facebook-hover.png') }}"
                                                 alt=""></a>
@@ -642,8 +646,7 @@
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/google-plus.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
                                                 alt=""></a>
@@ -663,20 +666,19 @@
                         <div class="member-text">
                             <h3><a href="#">Jasmin Jaquline</a></h3>
                             <span>Financial Advisor</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                                ostrud </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>
                                         <a href="#" class="block p-img"><img
                                                 src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/call-hover.png') }}" alt=""></a>
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/facebook.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/facebook-hover.png') }}"
                                                 alt=""></a>
@@ -690,8 +692,7 @@
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/google-plus.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
                                                 alt=""></a>
@@ -711,20 +712,19 @@
                         <div class="member-text">
                             <h3><a href="#">Sharlok Homes</a></h3>
                             <span>Chef Executive Officer</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                                ostrud </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>
                                         <a href="#" class="block p-img"><img
                                                 src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/call-hover.png') }}" alt=""></a>
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/facebook.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/facebook-hover.png') }}"
                                                 alt=""></a>
@@ -738,8 +738,7 @@
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/google-plus.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
                                                 alt=""></a>
@@ -759,20 +758,19 @@
                         <div class="member-text">
                             <h3><a href="#">Rose Smith</a></h3>
                             <span>Financial Consultant</span>
-                            <p>Financo amet sit amet, constur adipiscing elit, sed do mod tempor incididunt ostrud </p>
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                                ostrud </p>
                             <div class="link-effect">
                                 <ul>
                                     <li>
                                         <a href="#" class="block p-img"><img
                                                 src="{{ asset('assets/img/icons/call.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
-                                                src="{{ asset('assets/img/icons/call-hover.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/call-hover.png') }}" alt=""></a>
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/facebook.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/facebook.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/facebook-hover.png') }}"
                                                 alt=""></a>
@@ -812,7 +810,8 @@
                                 <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
                             </div>
                             <div class="testi-text">
-                                <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequatuis
                                     aute irure</p>
@@ -825,7 +824,8 @@
                                 <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
                             </div>
                             <div class="testi-text">
-                                <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequatuis
                                     aute irure</p>
@@ -838,7 +838,8 @@
                                 <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
                             </div>
                             <div class="testi-text">
-                                <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequatuis
                                     aute irure</p>
@@ -859,7 +860,8 @@
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-55">
                         <h2>From Blog</h2>
-                        <p>Financo amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         </p>
                     </div>
@@ -875,7 +877,7 @@
                         </div>
                         <div class="blog-text">
                             <h4><a href="blog-details.html">Financial Meeting</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
+                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
                             <a href="blog-details.html">Read More</a>
                         </div>
                     </div>
@@ -889,7 +891,7 @@
                         </div>
                         <div class="blog-text">
                             <h4><a href="blog-details.html">Financial Planning</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
+                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
                             <a href="blog-details.html">Read More</a>
                         </div>
                     </div>
@@ -903,7 +905,7 @@
                         </div>
                         <div class="blog-text">
                             <h4><a href="blog-details.html">Financial Tips and Tricks</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
+                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
                             <a href="blog-details.html">Read More</a>
                         </div>
                     </div>
@@ -917,7 +919,7 @@
                         </div>
                         <div class="blog-text">
                             <h4><a href="blog-details.html">Financial Investment</a></h4>
-                            <p>Financo consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
+                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
                             <a href="blog-details.html">Read More</a>
                         </div>
                     </div>
@@ -934,14 +936,13 @@
                     <div class="single-footer-widget">
                         <div class="footer-logo">
                             <a href="index.html"><img src="{{ asset('assets/img/logo/footer-logo.png') }}"
-                                    alt="FINANCO"></a>
+                                    height="70px" width="188px" alt="{{ env('APP_NAME') }}"></a>
                         </div>
-                        <p>Lorem must explain to you how all this mistaolt cing pleasure and praising ain wasnad I will
-                            give you a complete pain was prexplain to you lorem</p>
+                        <p></p>
+                        </p>
                         <form action="#" id="mc-form" class="mc-form fix">
                             <div class="subscribe-form">
-                                <input id="mc-email" type="email" name="email"
-                                    placeholder="Email for Newsletter">
+                                <input id="mc-email" type="email" name="email" placeholder="Email for Newsletter">
                                 <button id="mc-submit" type="submit"><i class="fa fa-send"></i></button>
                             </div>
                         </form>
@@ -962,7 +963,7 @@
                         <h3>POPULAR POST</h3>
                         <div class="footer-widget-content">
                             <h5>Duplex Villa Design</h5>
-                            <span>Lorem ipsum dolor sit amet, tur<br>acinglit sed do eius </span>
+                            <span> </span>
                         </div>
                         <div class="footer-widget-content">
                             <h5>Real Estate Fest</h5>
@@ -974,12 +975,9 @@
                     <div class="single-footer-widget">
                         <h3>QUICK LINK</h3>
                         <ul class="footer-list">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">CASES</a></li>
-                            <li><a href="#">From Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{{ route('LandingPage') }}">Home</a></li>
+                            <li><a href="{{ route('LandingPage.About.Us') }}">About us</a></li>
+                            <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -988,18 +986,16 @@
                         <h3>CONTACT US</h3>
                         <div class="footer-contact-info">
                             <img src="{{ asset('assets/img/icons/f-map.png') }}" alt="">
-                            <span class="block">256, 1st AVE, Manchester<br>
-                                125 , Noth England</span>
+                            <span class="block">{{ env('APP_ADDRESS') }}</span>
                         </div>
                         <div class="footer-contact-info">
                             <img src="{{ asset('assets/img/icons/f-phone.png') }}" alt="">
                             <span class="block">Telephone : {{ env('APP_NUM') }}<br>
-                                Telephone : {{ env('APP_NUM') }}</span>
                         </div>
                         <div class="footer-contact-info">
                             <img src="{{ asset('assets/img/icons/f-globe.png') }}" alt="">
                             <span class="block">Email : {{ env('APP_EMAIL') }}<br>
-                                Web : www.devitems.com</span>
+                                Web : {{ env('APP_URL') }}</span>
                         </div>
                     </div>
                 </div>
