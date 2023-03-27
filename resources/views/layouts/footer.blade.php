@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="footer-text">
-                    <span class="block">Copyright©&copy;
+                    <span class="block">Copyright&copy;
                         2019 Fiyver has</a>. All rights &
                         reserved.
                     </span>
