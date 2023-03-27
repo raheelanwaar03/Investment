@@ -112,24 +112,16 @@
                             <li><a href="{{ route('Admin.Product.index') }}">All Tasks</a></li>
                 </ul>
                 </li>
-                {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-013-checkmark"></i>
-                            <span class="nav-text">Reservation</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Table Request</a></li>
-                        </ul>
-                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-072-printer"></i>
-                            <span class="nav-text">Orders</span>
+                            <span class="nav-text">Widthraw Request</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Pending Orders</a></li>
-                            <li><a href="#">Cancelled Orders</a></li>
-                            <li><a href="#">Delivered Orders</a></li>
+                            <li><a href="{{ route('Admin.All.Widthraw.Requests') }}">All Widthraw Request</a></li>
+                            <li><a href="{{ route('Admin.Approved.Widthraw') }}">Approved Widthraw</a></li>
+                            <li><a href="{{ route('Admin.Rejected.Widthraw') }}">Rejected Widthraw</a></li>
                         </ul>
-                    </li> --}}
+                    </li>
                 </ul>
                 <div class="copyright">
                     <p><strong>{{ env('APP_NAME') }} Data Entry Admin side</strong> © 2023 All Rights Reserved</p>
