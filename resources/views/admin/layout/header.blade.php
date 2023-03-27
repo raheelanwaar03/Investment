@@ -138,7 +138,7 @@
                     </li>
                 </ul>
                 <div class="copyright">
-                    <p><strong>{{ env('APP_NAME') }} Data Entry Admin side</strong> © 2023 All Rights Reserved</p>
+                    <p><strong>{{ env('APP_NAME') }} coypright</strong> © 2019 All Rights Reserved</p>
                 </div>
             </div>
         </div>
