@@ -57,11 +57,11 @@ class UserWorkController extends Controller
         $adminWidthrawMax = $adminWidthraw->maximun_amount;
 
         if ($adminWidthrawMini > $userWidthrawAmount) {
-            return redirect()->back()->with('error', 'Your Widthraw request is less than Admin Limite');
+            return redirect()->back()->with('error', 'Your Widthrawal amount is less than Admin Limite');
         }
 
         if ($userWidthrawAmount > $adminWidthrawMax) {
-            return redirect()->back()->with('error', 'Your Widthraw request is Greater than Admin Limite');
+            return redirect()->back()->with('error', 'Your Widthrawal amount is Greater than Admin Limite');
         }
 
         // checking user if he already request for widthraw
@@ -78,6 +78,6 @@ class UserWorkController extends Controller
         $widthraw->widthraw_name = $validated['widthraw_name'];
         $widthraw->widthraw_num = $validated['widthraw_num'];
         $widthraw->save();
-        return redirect()->back()->with('success', 'You have successfully requested for widthraw you will notify when admin approved');
+        return redirect()->back()->with('success', 'Wait for admin approval');
     }
 }
