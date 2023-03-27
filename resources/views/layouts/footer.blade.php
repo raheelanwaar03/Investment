@@ -3,10 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="footer-text">
-                    <span class="block">Copyright&copy;
-                        <script>
-                            document.write(new Date().getFullYear() + ' ');
-                        </script> <a href="https://fiyver.com/">Fiyver has</a>. All rights
+                    <span class="block">Copyright©&copy;
+                        2019 Fiyver has</a>. All rights &
                         reserved.
                     </span>
                 </div>
