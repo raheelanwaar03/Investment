@@ -38,13 +38,17 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'refer_amount' => 'required',
+            'first_refer' => 'required',
+            'second_refer' => 'required',
+            'third_refer' => 'required',
             'minimum_amount' => 'required',
             'maximun_amount' => 'required'
         ]);
 
         $setting = new Setting();
-        $setting->refer_amount = $validated['refer_amount'];
+        $setting->first_refer = $validated['first_refer'];
+        $setting->second_refer = $validated['second_refer'];
+        $setting->third_refer = $validated['third_refer'];
         $setting->minimum_amount = $validated['minimum_amount'];
         $setting->maximun_amount = $validated['maximun_amount'];
         $setting->save();
@@ -85,7 +89,9 @@ class SettingController extends Controller
     public function update(Request $request, $id)
     {
         $setting = Setting::find($id);
-        $setting->refer_amount = $request->refer_amount;
+        $setting->first_refer = $request->first_refer;
+        $setting->second_refer = $request->second_refer;
+        $setting->third_refer = $request->third_refer;
         $setting->minimum_amount = $request->minimum_amount;
         $setting->maximun_amount = $request->maximun_amount;
         $setting->save();

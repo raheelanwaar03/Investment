@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\Setting;
+use App\Models\admin\ReferalLevel;
 use App\Models\User;
 use App\Models\verificationText;
 use Illuminate\Http\Request;
@@ -74,8 +75,10 @@ class AdminDashboardController extends Controller
     public function approveUserAccount($id)
     {
         // getting widthraw commission of admin
-        $setting = Setting::where('status',1)->first();
-        $firstCommission = $setting->refer_amount;
+        $setting = Setting::where('status', 1)->first();
+        $firstCommission = $setting->first_refer;
+        $secondCommission = $setting->second_refer;
+        $thirdCommission = $setting->third_refer;
 
         $user = User::find($id);
         $user->status = 'approved';
@@ -89,7 +92,7 @@ class AdminDashboardController extends Controller
             $firstUpliner->save();
         }
         //  Second Upliner
-        $indirectCommission1 = 20;
+        $indirectCommission1 = $secondCommission;
         // getting user
         $secondUpliner = User::where('name', $firstUpliner->referal)->first();
 
@@ -100,7 +103,7 @@ class AdminDashboardController extends Controller
             $secondUpliner->save();
         }
         // Third UPliner
-        $indirectCommission2 = 5;
+        $indirectCommission2 = $thirdCommission;
         // getting third person;
         $thirdUpliner = User::where('name', $secondUpliner->referal)->first();
         if ($thirdUpliner == '') {
@@ -126,7 +129,7 @@ class AdminDashboardController extends Controller
     {
         $users = User::where('status', 'approved')->get();
         foreach ($users as $user) {
-            $mainUser = User::where('referal', $user->name)->where('status','approved')->get();
+            $mainUser = User::where('referal', $user->name)->where('status', 'approved')->get();
             $referCount = $mainUser->count();
 
             if (!$mainUser = '') {
@@ -194,36 +197,100 @@ class AdminDashboardController extends Controller
 
     public function add()
     {
-        $verificationText = verificationText::where('status',1)->get();
-        return view('admin.verification.add',compact('verificationText'));
+        $verificationText = verificationText::where('status', 1)->get();
+        return view('admin.verification.add', compact('verificationText'));
     }
 
     public function store(Request $request)
     {
-       $validated = $request->validate([
-        'text' => 'required'
-       ]);
+        $validated = $request->validate([
+            'text' => 'required'
+        ]);
 
-       $verificationText = new verificationText();
-       $verificationText->text = $validated['text'];
-       $verificationText->save();
-       return redirect()->back()->with('massage','Verfication Page Text Added');
+        $verificationText = new verificationText();
+        $verificationText->text = $validated['text'];
+        $verificationText->save();
+        return redirect()->back()->with('massage', 'Verfication Page Text Added');
     }
 
     public function edit($id)
     {
         $verificationText = verificationText::find($id);
-        return view('admin.verification.edit',compact('verificationText'));
+        return view('admin.verification.edit', compact('verificationText'));
     }
 
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $verificationText = verificationText::find($id);
 
-       $verificationText->text = $request->text;
-       $verificationText->save();
-       return redirect()->back()->with('massage','Verfication Page Updated successfully');
+        $verificationText->text = $request->text;
+        $verificationText->save();
+        return redirect()->back()->with('massage', 'Verfication Page Updated successfully');
+    }
+
+    // set level routes
+
+    public function levelView()
+    {
+        $levels = ReferalLevel::where('status', 1)->get();
+        return view('admin.level.view', compact('levels'));
     }
 
 
+    public function levelStore(Request $request)
+    {
+        $validated = $request->validate([
+            'level1' => 'required',
+            'level2' => 'required',
+            'level3' => 'required',
+            'level4' => 'required',
+            'level5' => 'required',
+            'level6' => 'required',
+            'level7' => 'required',
+            'level8' => 'required',
+            'level9' => 'required',
+            'level10' => 'required'
+        ]);
+
+        $level = new ReferalLevel();
+        $level->level1 = $validated['level1'];
+        $level->level2 = $validated['level2'];
+        $level->level3 = $validated['level3'];
+        $level->level4 = $validated['level4'];
+        $level->level5 = $validated['level5'];
+        $level->level6 = $validated['level6'];
+        $level->level7 = $validated['level7'];
+        $level->level8 = $validated['level8'];
+        $level->level9 = $validated['level9'];
+        $level->level10 = $validated['level10'];
+        $level->save();
+
+        return redirect()->back()->with('massage', 'Level according to thier refers');
+    }
+
+    public function editLevelView($id)
+    {
+        $level = ReferalLevel::find($id);
+        return view('admin.level.edit', compact('level'));
+    }
+
+
+    public function updateLevelSetting(Request $request,$id)
+    {
+        $level = ReferalLevel::find($id);
+
+        $level->level1 = $request->level1;
+        $level->level2 = $request->level2;
+        $level->level3 = $request->level3;
+        $level->level4 = $request->level4;
+        $level->level5 = $request->level5;
+        $level->level6 = $request->level6;
+        $level->level7 = $request->level7;
+        $level->level8 = $request->level8;
+        $level->level9 = $request->level9;
+        $level->level10 = $request->level10;
+        $level->save();
+
+        return redirect()->back()->with('massage', 'Level setting updated successfully');
+    }
 }

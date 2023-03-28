@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\admin\EasyPaisaMangement;
+use App\Models\admin\ReferalLevel;
 use App\Models\admin\Setting;
 use App\Models\User;
 use App\Models\verificationText;
@@ -48,7 +49,9 @@ class clean extends Command
 
         // Referal limite
         $setting = new Setting();
-        $setting->refer_amount = '50';
+        $setting->first_refer = '50';
+        $setting->second_refer = '30';
+        $setting->third_refer = '10';
         $setting->minimum_amount = '50';
         $setting->maximun_amount = '500';
         $setting->status = 1;
@@ -56,10 +59,26 @@ class clean extends Command
 
         // Verification page text
 
-       $verificationText = new verificationText();
-       $verificationText->text = 'Welcome to DataEntry website we will approve your account after checking your given details';
-       $verificationText->status = 1;
-       $verificationText->save();
+        $verificationText = new verificationText();
+        $verificationText->text = 'Welcome to DataEntry website we will approve your account after checking your given details';
+        $verificationText->status = 1;
+        $verificationText->save();
+
+        //    set level according to thier referal
+
+        $level = new ReferalLevel();
+        $level->level1 = 1;
+        $level->level2 = 2;
+        $level->level3 = 3;
+        $level->level4 = 4;
+        $level->level5 = 5;
+        $level->level6 = 6;
+        $level->level7 = 7;
+        $level->level8 = 8;
+        $level->level9 = 9;
+        $level->level10 = 10;
+        $level->status = 1;
+        $level->save();
 
 
         $user = new User();

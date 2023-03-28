@@ -27,9 +27,19 @@
                                 @csrf
                                 @method('put')
                                 <div class="form-group">
-                                    <label for="" class="m-3">Edit Refer Amount</label>
-                                    <input type="text" name="refer_amount" value="{{ $setting->refer_amount }}"
-                                        class="form-control">
+                                    <label class="mt-2">First Commission</label>
+                                    <input type="number" name="first_refer" value="{{ $setting->first_refer }}" class="form-control"
+                                        placeholder="Enter User First referal commission">
+                                </div>
+                                <div class="form-group">
+                                    <label class="mt-2">Second Commission</label>
+                                    <input type="number" name="second_refer" value="{{ $setting->second_refer }}" class="form-control"
+                                        placeholder="Enter User Second Referal commission">
+                                </div>
+                                <div class="form-group">
+                                    <label class="mt-2">Third Commission</label>
+                                    <input type="number" name="third_refer" value="{{ $setting->third_refer }}" class="form-control"
+                                        placeholder="Enter User Third Referal commission">
                                 </div>
                                 <div class="form-group">
                                     <label for="" class="m-3">Edit Minimum Widthraw</label>

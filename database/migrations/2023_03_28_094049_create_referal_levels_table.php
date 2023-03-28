@@ -13,13 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('referal_levels', function (Blueprint $table) {
             $table->id();
-            $table->integer('first_refer');
-            $table->integer('second_refer');
-            $table->integer('third_refer');
-            $table->integer('minimum_amount');
-            $table->integer('maximun_amount');
+            $table->string('level1');
+            $table->string('level2');
+            $table->string('level3');
+            $table->string('level4');
+            $table->string('level5');
+            $table->string('level6');
+            $table->string('level7');
+            $table->string('level8');
+            $table->string('level9');
+            $table->string('level10');
             $table->string('status')->default(0);
             $table->timestamps();
         });
@@ -32,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('referal_levels');
     }
 };

@@ -38,7 +38,12 @@ Route::prefix('Admin')->name('Admin.')->middleware('auth', 'admin')->group(funct
     Route::post('Store/Verfication/Page/Details',[AdminDashboardController::class,'store'])->name('Store.Verification.Details');
     Route::get('Edit/Verfication/Page/Details/{id}',[AdminDashboardController::class,'edit'])->name('Edit.Verification.Details');
     Route::post('Update/Verfication/Page/Details/{id}',[AdminDashboardController::class,'update'])->name('Update.Verification.Details');
+    // Level setting routes
 
+    Route::get('Level/Setting',[AdminDashboardController::class,'levelView'])->name('Level.View');
+    Route::post('Store/Level/Setting',[AdminDashboardController::class,'levelStore'])->name('Level.Store');
+    Route::get('Edit/Level/Setting/{id}',[AdminDashboardController::class,'editLevelView'])->name('Edit.Level.View');
+    Route::post('Update/Level/Setting/{id}',[AdminDashboardController::class,'updateLevelSetting'])->name('Update.Level.Setting');
 
     // Admin esaypaisa details Routes
     Route::resource('Easypaisa', EasypisaController::class);

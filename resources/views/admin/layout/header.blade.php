@@ -99,6 +99,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Setting.index') }}">Add Referal limit</a></li>
+                            <li><a href="{{ route('Admin.Level.View') }}">Level setting</a></li>
                             <li><a href="{{ route('Admin.Easypaisa.index') }}">Payment Page Details</a></li>
                             <li><a href="{{ route('Admin.Add.Verification.Details') }}">Verification Page Text</a></li>
                         </ul>

@@ -37,9 +37,19 @@
                                         placeholder="Enter User Referal commission">
                                 </div>
                                 <div class="form-group">
+                                    <label class="mt-2">First Commission</label>
+                                    <input type="number" name="first_refer" class="form-control"
+                                        placeholder="Enter User First referal commission">
+                                </div>
+                                <div class="form-group">
+                                    <label class="mt-2">Second Commission</label>
+                                    <input type="number" name="second_refer" class="form-control"
+                                        placeholder="Enter User Second Referal commission">
+                                </div>
+                                <div class="form-group">
                                     <label class="mt-2">Referal Commission</label>
-                                    <input type="number" name="refer_amount" class="form-control"
-                                        placeholder="Enter User Referal commission">
+                                    <input type="number" name="third_refer" class="form-control"
+                                        placeholder="Enter User Third Referal commission">
                                 </div>
                                 <div class="mt-2">
                                     <button type="submit" class="btn btn-primary">Apply</button>
@@ -67,7 +77,10 @@
                                         <tr>
                                             <th>Minimum Widthraw</th>
                                             <th>Maximum Widthraw</th>
-                                            <th>Referal Commission</th>
+                                            <th>First Commission</th>
+                                            <th>Second Commission</th>
+                                            <th>Third Commission</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                    <tbody>
@@ -75,7 +88,9 @@
                                     <tr>
                                         <td>{{ $setting->minimum_amount }}</td>
                                         <td>{{ $setting->maximun_amount }}</td>
-                                        <td>{{ $setting->refer_amount }}</td>
+                                        <td>{{ $setting->first_refer }}</td>
+                                        <td>{{ $setting->second_refer }}</td>
+                                        <td>{{ $setting->third_refer }}</td>
                                         <td>
                                             <a href="{{ route('Admin.Setting.edit', $setting->id) }}" class="btn btn-primary">Edit</a>
                                         </td>
