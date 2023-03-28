@@ -94,58 +94,71 @@
                 </div>
             </div>
         </div>
-        <!-- Main Menu Area Start -->
-        <div class="mainmenu-area fixed header-sticky d-lg-block d-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-12">
-                        <div class="main-menu text-center">
-                            <nav>
-                                <ul>
-                                    <li><a href="{{ route('LandingPage') }}">HOME</a>
-                                    </li>
-                                    @if (auth()->user())
-                                        <li><a href="{{ route('User.Dashboard') }}">Dashboard</a>
+
+        @if ($message = Session::get('massage'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
+
+        @if ($message = Session::get('error'))
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+            </div
+        @endif
+            <div class="mainmenu-area fixed header-sticky d-lg-block d-none">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <div class="main-menu text-center">
+                                <nav>
+                                    <ul>
+                                        <li><a href="{{ route('LandingPage') }}">HOME</a>
+                                        </li>
+                                        @if (auth()->user())
+                                            <li><a href="{{ route('User.Dashboard') }}">Dashboard</a>
+                                            @else
+                                            <li><a href="{{ route('register') }}">Register</a></li>
+                                            <li><a href="{{ route('login') }}">Login</a></li>
+                                        @endif
+                                        <li><a href="{{ route('LandingPage.About.Us') }}">ABOUT US</a></li>
+                                        </li>
+                                        <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Menu Area Start -->
+            <!-- Mobile Menu Area start -->
+            <div class="mobile-menu-area d-lg-none">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul>
+                                        <li><a href="{{ route('LandingPage') }}">HOME</a></li>
+                                        <li><a href="{{ route('LandingPage.About.Us') }}">About</a></li>
+                                        <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a></li>
+                                        </li>
+                                        @if (auth()->user())
+                                            <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
                                         @else
-                                        <li><a href="{{ route('register') }}">Register</a></li>
-                                        <li><a href="{{ route('login') }}">Login</a></li>
-                                    @endif
-                                    <li><a href="{{ route('LandingPage.About.Us') }}">ABOUT US</a></li>
-                                    </li>
-                                    <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a>
-                                    </li>
-                                </ul>
-                            </nav>
+                                            <li><a href="{{ route('login') }}">Login</a></li>
+                                            <li><a href="{{ route('register') }}">Register</a></li>
+                                        @endif
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Main Menu Area Start -->
-        <!-- Mobile Menu Area start -->
-        <div class="mobile-menu-area d-lg-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12">
-                        <div class="mobile-menu">
-                            <nav id="dropdown">
-                                <ul>
-                                    <li><a href="{{ route('LandingPage') }}">HOME</a></li>
-                                    <li><a href="{{ route('LandingPage.About.Us') }}">About</a></li>
-                                    <li><a href="{{ route('LandingPage.Contact') }}">Contact Us</a></li>
-                                    </li>
-                                    @if (auth()->user())
-                                        <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
-                                    @else
-                                        <li><a href="{{ route('login') }}">Login</a></li>
-                                        <li><a href="{{ route('register') }}">Register</a></li>
-                                    @endif
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu Area end -->
+            <!-- Mobile Menu Area end -->
     </header>

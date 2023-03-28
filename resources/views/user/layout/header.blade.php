@@ -37,11 +37,12 @@
         </div>
     </div>
     <div id="main-wrapper">
-        <div class="nav-header p-5">
-            <a href="{{ route('LandingPage') }}" class="brand-logo">
-                <img src="{{ asset('admin/public/images/logo.png') }}" height="60px" width="188px" alt="logo">
-            </a>
-            <div class="nav-control ml-5">
+
+        <div class="nav-header">
+            <div class="p-2">
+                <h5>{{ auth()->user()->name }}</h5>
+            </div>
+            <div class="nav-control">
                 <div class="hamburger">
                     <span class="line"></span><span class="line"></span><span class="line"></span>
                 </div>
@@ -61,6 +62,115 @@
                             </div>
                         </div>
                         <ul class="navbar-nav header-right">
+                            <li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link  ai-icon" href="{{ route('User.Dashboard') }}">
+                                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="logo" width="150px"
+                                        height="60px">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        {{-- links --}}
+
+        <div class="deznav">
+            <div class="deznav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li><a class="has-arrow ai-icon" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
+                            <i class="ti-home"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="{{ route('User.Widthraw.Balance') }}">
+                        <i class="ti-money"></i>
+                        <span class="nav-text">My Earnings</span>
+                    </a>
+                </li>
+                    <li><a class="has-arrow ai-icon" href="{{ route('User.Refer.New.Friend') }}">
+                            <i class="ti-comments-smiley"></i>
+                            <span class="nav-text">Invite</span>
+                        </a>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="{{ route('User.Team') }}">
+                            <i class="ti-bar-chart"></i>
+                            <span class="nav-text">My Group</span>
+                        </a>
+                    </li>
+                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-072-printer"></i>
+                            <span class="nav-text">Widthraw</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('User.Widthraw.Balance') }}">Widthraw Balance</a></li>
+                            <li><a href="{{ route('User.Widthraw.Request') }}">Widthraw Status</a></li>
+                        </ul>
+                    </li> --}}
+                    <li><a href="{{ route('User.Work') }}" class="has-arrow ai-icon">
+                            <i class="ti-blackboard"></i>
+                            <span class="nav-text">Daily Task</span>
+                        </a>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="{{ route('profile.edit') }}">
+                            <i class="ti-user"></i>
+                            <span class="nav-text">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn btn-danger">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <p><strong>{{ env('APP_NAME') }} coypright</strong> © 2019 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {{-- old --}}
+
+
+        {{-- <div class="nav-header p-5">
+            <a href="{{ route('LandingPage') }}" class="brand-logo">
+                <img src="{{ asset('admin/public/images/logo.png') }}" height="60px" width="188px" alt="logo">
+            </a>
+            <div class="nav-control ml-5">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="nav-item">
+                                <div class="input-group search-area">
+                                    <img src="{{ asset('admin/public/images/logo.png') }}" height="60px" width="188px"
+                                        alt="logo">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="navbar-nav header-right">
                             <li class="nav-item recipe">
                                 <form action="{{ route('logout') }}" method="Post">
                                     @csrf
@@ -73,58 +183,3 @@
             </div>
         </div>
         {{-- links --}}
-
-       <div class="deznav">
-            <div class="deznav-scroll">
-                <ul class="metismenu" id="menu">
-                    <li><a class="has-arrow ai-icon" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
-                            <i class="fa fa-home"></i>
-                            <span class="nav-text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="ti-user"></i>
-                            <span class="nav-text">Referal</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('User.Team') }}">Total Team Member</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-072-printer"></i>
-                            <span class="nav-text">Widthraw</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('User.Widthraw.Balance') }}">Widthraw Balance</a></li>
-                            <li><a href="{{ route('User.Widthraw.Request') }}">Widthraw Status</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-043-menu"></i>
-                            <span class="nav-text">Task</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('User.Work') }}">Daily Task</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="ti-user"></i>
-                            <span class="nav-text">Profile</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                        <button class="btn btn-danger">Logout</button>
-                        </form>
-                    </li>
-                </ul>
-                <div class="copyright">
-                    <p><strong>{{ env('APP_NAME') }} coypright</strong> © 2019 All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-

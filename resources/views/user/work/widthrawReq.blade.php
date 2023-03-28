@@ -1,53 +1,47 @@
 @extends('user.layout.app')
 
+
 @section('content')
     <div class="content-body">
         <!-- row -->
         <div class="container-fluid">
-            @if ($message = Session::get('massage'))
-            <div class="alert alert-success alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>{{ $message }}</strong>
+            <div class="mb-sm-4 d-flex flex-wrap align-items-center text-head">
+                <h2 class="mb-3 me-auto">{{ auth()->user()->name }} Your Earning</h2>
             </div>
-            @endif
-
-            @if ($message = Session::get('error'))
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>{{ $message }}</strong>
-            </div>
-            @endif
             <div class="row">
-                <div class="col-12">
+                <div class="col-xl-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">All Referal Friends</h4>
+                        <div class="card-title">
+                            <h2 class="text-center my-3">Widthraw Balance</h2>
+                            <h2 class="text-center my-3">Your Balance: {{ auth()->user()->balance }}</h2>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table id="example" class="display" style="min-width: 845px">
-                                    <thead>
-                                        <th>Name</th>
-                                        <th>Bank</th>
-                                        <th>Number</th>
-                                        <th>Amount</th>
-                                        <th>Status</th>
-                                        <th>Date</th>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($widthraws as $widthraw)
-                                        <tr>
-                                            <td>{{ $widthraw->widthraw_name }}</td>
-                                            <td>{{ $widthraw->widthraw_bank }}</td>
-                                            <td>{{ $widthraw->widthraw_num }}</td>
-                                            <td>{{ $widthraw->widthraw_amount }}</td>
-                                            <td>{{ $widthraw->status }}</td>
-                                            <td>{{ $widthraw->created_at }}</td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
+                            <form action="{{ route('User.Widthraw.Balance.Request') }}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label class="mt-3" style="font-size:20px">Widthraw Amount</label>
+                                    <input type="num" name="widthraw_amount" class="form-control"
+                                        placeholder="Enter Amount You want to widthraw" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="mt-3" style="font-size:20px">Account Holder Name</label>
+                                    <input type="num" name="widthraw_name" class="form-control"
+                                        placeholder="Enter Account Holder Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="mt-3" style="font-size:20px">Account Number</label>
+                                    <input type="num" name="widthraw_num" class="form-control"
+                                        placeholder="Enter Account Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="mt-3" style="font-size:20px">Select Bank</label>
+                                    <select class="form-control" name="widthraw_bank">
+                                        <option value="easypaisa">Easypaisa</option>
+                                        <option value="jazzcash">Jazzcash</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-block btn-primary mt-2">Procced</button>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -39,7 +39,7 @@
                 @empty
             </div>
             <div class="col-md-6">
-                <h3>Admin have not added any product yet!</h3>
+                <h3>Admin have not added any task yet!</h3>
             </div>
             @endforelse
             <div>

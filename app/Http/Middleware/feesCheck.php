@@ -21,11 +21,11 @@ class feesCheck
         }
         if(auth()->user()->status == 'rejected')
         {
-            return redirect()->route('Registeration.Fees')->with('error','Your accound has been rejected Please pay your registeration fees and enter correct Tid & if you pay us before then enter correct tid username and number again');
+            return redirect()->route('Registeration.Fees')->with('error','Your accound has been rejected give us correct information');
         }
         else
         {
-            return redirect()->back()->with('error','Please wait for your Account Approval Or Pay your Registeration Fees');
+            return redirect()->back()->with('error','Your Account is Pending wait for Approval');
         }
     }
 }

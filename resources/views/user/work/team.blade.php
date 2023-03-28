@@ -30,8 +30,6 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Tid</th>
                                             <th>Status</th>
                                             <th>Date</th>
                                         </tr>
@@ -41,8 +39,6 @@
                                             <tr>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
-                                                <td>{{ $user->phone }}</td>
-                                                <td>{{ $user->trxIds->tid ?? 'UnPaidUser' }}</td>
                                                 <td>{{ $user->status }}</td>
                                                 <td>{{ $user->created_at }}</td>
                                             </tr>

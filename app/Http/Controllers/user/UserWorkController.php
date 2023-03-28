@@ -17,7 +17,8 @@ class UserWorkController extends Controller
 
     public function widthrawBalance()
     {
-        return view('user.account.widthraw');
+        $widthraws = WidthrawBalance::get();
+        return view('user.account.widthraw',compact('widthraws'));
     }
 
     public function widthrawBalanceRequest(Request $request)
