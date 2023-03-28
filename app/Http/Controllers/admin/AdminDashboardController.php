@@ -127,10 +127,27 @@ class AdminDashboardController extends Controller
 
     public function setLevel()
     {
+        $levelCheck = ReferalLevel::where('status', 1)->first();
+        $level1 = $levelCheck->level1;
+        $level2 = $levelCheck->level2;
+        $level3 = $levelCheck->level3;
+        $level4 = $levelCheck->level4;
+        $level5 = $levelCheck->level5;
+        $level6 = $levelCheck->level6;
+        $level7 = $levelCheck->level7;
+        $level8 = $levelCheck->level8;
+        $level9 = $levelCheck->level9;
+        $level10 = $levelCheck->level10;
+
+
+
         $users = User::where('status', 'approved')->get();
         foreach ($users as $user) {
             $mainUser = User::where('referal', $user->name)->where('status', 'approved')->get();
             $referCount = $mainUser->count();
+
+            // checking refers from admin side
+
 
             if (!$mainUser = '') {
                 if ($referCount <= 4) {
@@ -138,52 +155,52 @@ class AdminDashboardController extends Controller
                     $user->level = 'Level 0';
                     $user->save();
                 }
-                if ($referCount >= 5) {
+                if ($referCount >= $level1) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 1';
                     $user->save();
                 }
-                if ($referCount >= 20) {
+                if ($referCount >= $level2) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 2';
                     $user->save();
                 }
-                if ($referCount >= 45) {
+                if ($referCount >= $level3) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 3';
                     $user->save();
                 }
-                if ($referCount >= 70) {
+                if ($referCount >= $level4) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 4';
                     $user->save();
                 }
-                if ($referCount >= 100) {
+                if ($referCount >= $level5) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 5';
                     $user->save();
                 }
-                if ($referCount >= 145) {
+                if ($referCount >= $level6) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 6';
                     $user->save();
                 }
-                if ($referCount >= 200) {
+                if ($referCount >= $level7) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 7';
                     $user->save();
                 }
-                if ($referCount >= 270) {
+                if ($referCount >= $level8) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 8';
                     $user->save();
                 }
-                if ($referCount >= 350) {
+                if ($referCount >= $level9) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 9';
                     $user->save();
                 }
-                if ($referCount >= 450) {
+                if ($referCount >= $level10) {
                     $user = User::where('id', $user->id)->first();
                     $user->level = 'Level 10';
                     $user->save();
@@ -275,7 +292,7 @@ class AdminDashboardController extends Controller
     }
 
 
-    public function updateLevelSetting(Request $request,$id)
+    public function updateLevelSetting(Request $request, $id)
     {
         $level = ReferalLevel::find($id);
 
