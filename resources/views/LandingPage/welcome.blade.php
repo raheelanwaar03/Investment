@@ -10,12 +10,12 @@
                             <div class="col-lg-7">
                                 <div class="text-content-wrapper">
                                     <div class="text-content text-center">
-                                        <h3 class="title1 pt-65">WE PROVIDE BEST FINANCIAL SOLUTIONS</h3>
-                                        <h1 class="title2">FOR YOUR BUSINESS</h1>
-                                        <p>We have over 25 year’s of experience in Finance and Business management so we
-                                            can make your business more successful you can trust us</p>
+                                        <h3 class="title1 pt-65">Welcome to {{ env('APP_NAME') }}</h3>
+                                        <h1 class="title2">Are you looking for a job online to work at home.</h1>
+                                        <p>Work at your part time / full time and money from online job,Data entry jobs,Form
+                                            filling jobs.Wrok from your PC,Laptop or Mobile.</p>
                                         <div class="banner-readmore">
-                                            <a class="button banner-btn" href="#">VIEW SERVICES</a>
+                                            <a href="{{route('register')}}" class="button banner-btn" href="#">Register Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -31,12 +31,12 @@
                             <div class="col-lg-7">
                                 <div class="text-content-wrapper slide-two">
                                     <div class="text-content text-center">
-                                        <h3 class="title1 pt-65">WE PROVIDE BEST FINANCIAL SOLUTIONS</h3>
-                                        <h1 class="title2">FOR YOUR BUSINESS</h1>
-                                        <p>We have over 25 year’s of experience in Finance and Business management so we
-                                            can make your business more successful you can trust us</p>
+                                        <h3 class="title1 pt-65">Welcome to {{ env('APP_NAME') }}</h3>
+                                        <h1 class="title2">Are you looking for a job online to work at home.</h1>
+                                        <p>Work at your part time / full time and money from online job,Data entry jobs,Form
+                                            filling jobs.Wrok from your PC,Laptop or Mobile.</p>
                                         <div class="banner-readmore">
-                                            <a class="button banner-btn" href="#">VIEW SERVICES</a>
+                                            <a href="{{route('register')}}" class="button banner-btn" href="#">Register Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -47,81 +47,14 @@
             </div>
         </div>
     </div>
-    <!-- Background Area End -->
 
-    <!-- About Area Start -->
-    <div class="about-area bg-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-text">
-                        <h3>We are <span>{{ env('APP_NAME') }}</span></h3>
-                        <h2>Your Complete Financial Solutions </h2>
-                        <p>{{ env('APP_NAME') }} Financial copywriting makes up the content on your website, in your blog
-                            posts and in the emails you send out to clients. Content writers in the financial sector
-                            understand how to make complex concepts engaging and interesting while answering web users' most
-                            pressing questions</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-text-right">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="single-content">
-                                    <h4 class="single-title">Financial Service</h4>
-                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                        scale to achieve monetary equilibrium or upward mobility on your income levels
-                                    </p>
-                                </div>
-                                <div class="single-content">
-                                    <h4 class="single-title">Business Analysis</h4>
-                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                        scale to achieve monetary equilibrium or upward mobility on your income levels
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="single-content">
-                                    <h4 class="single-title">Best Consutancy</h4>
-                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                        scale to achieve monetary equilibrium or upward mobility on your income levels
-                                    </p>
-                                </div>
-                                <div class="single-content">
-                                    <h4 class="single-title">24/7 Support</h4>
-                                    <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                        scale to achieve monetary equilibrium or upward mobility on your income levels
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About Area End -->
-    <!-- Information Area Start -->
-    <div class="information-area bg-light fix">
-        <div class="information-chart">
-            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-        </div>
-        <div class="information-text">
-            <h3><span>We Provide Best</span></h3>
-            <h2>Financial Plan for You</h2>
-            <p>{{ env('APP_NAME') }} is an investment company, whose team is working on making money from the
-                volatility of cryptocurrencies and offer great returns to our clients. </p>
-        </div>
-    </div>
-    <!-- Information Area End -->
-    <!-- Services Area Start -->
     <div class="service-area pt-120 pb-105">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-55">
-                        <h2>Our Services</h2>
-                        <p>{{ env('APP_NAME') }} give you the opportunity to earn money by recommending our website to others. You can start earning money even if you do not invest.
+                        <h2>Our Features</h2>
+                        <p>Browse jobs from your interested sector.
                         </p>
                     </div>
                 </div>
@@ -129,73 +62,49 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/plan.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Financial Planning</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Data Entry</h4>
+                            <p>You can do simple data entry jobs at your home.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/cash.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Cash Investment</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Typing Jobs</h4>
+                            <p>You can do simple typing jobs and you will be earn well!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/brif.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Financial Consultancy</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Simple Task</h4>
+                            <p>We will give you simple task.That you have to daily for your daily earning</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/hand.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Personal Insurance</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Refer Friend</h4>
+                            <p>You can also earn from our referal program by inviting your friends</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/commo.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Commodities Planning</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Easy Widthraw</h4>
+                            <p>You can simply widthraw your earning in your easypaisa or jazzcash account.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/reti.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Retirement Planning</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Contact us</h4>
+                            <p>You can contact us we are here to help you 24/7.</p>
                         </div>
                     </div>
                 </div>
@@ -209,10 +118,10 @@
             <div class="row">
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="advertise-text text-white text-center">
-                        <h2>We Provide Best Financial Theme for your Business</h2>
-                        <p>We have over 25 year’s of experience in Finance and Business management so we can make your
-                            business more successful you can trust us and we care about it</p>
-                        <a href="#" class="default-button btn-white">Buy now</a>
+                        <h2>We work at home</h2>
+                        <p>We are a agency which offer you working at home.We offer typing and Ms office Excel jobs which
+                            you can compelet at home.</p>
+                        <a href="{{ route('register') }}" class="default-button btn-white">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -229,184 +138,46 @@
                 <div class="feature-text">
                     <h3><span>Why You</span></h3>
                     <h2>Choose {{ env('APP_NAME') }}</h2>
-                    <p>{{ env('APP_NAME') }} are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing. </p>
+                    <p>Work at your part time / full time and money from online job,Data entry jobs,Form
+                        filling jobs.Wrok from your PC,Laptop or Mobile</p>
                 </div>
             </div>
             <div class="custom-row">
                 <div class="coustom-col-5">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/rocket.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Fast Loan Approval</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Jobs</h4>
+                            <p>Browse jobs from your interested sector.</p>
                         </div>
                     </div>
                 </div>
                 <div class="coustom-col-5">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/team.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Dedicated Team</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Profile</h4>
+                            <p>Submit your job profile and get hired by employers.</p>
                         </div>
                     </div>
                 </div>
                 <div class="coustom-col-5">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/doc.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Free Documentation</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Task</h4>
+                            <p>Practice tasks from the member area.</p>
                         </div>
                     </div>
                 </div>
                 <div class="coustom-col-5">
                     <div class="single-item">
-                        <span class="service-image">
-                            <img src="{{ asset('assets/img/icons/refi.png') }}" alt="">
-                        </span>
                         <div class="service-text">
-                            <h4>Refinancing</h4>
-                            <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a scale
-                                to achieve monetary equilibrium or upward mobility on your income levels </p>
+                            <h4>Changes</h4>
+                            <p>Update your Profile adn job preferences at anytime.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Features Area End -->
-    <!-- Projects Area Start -->
-    <div class="projects-area ptb-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="section-title text-center mb-55">
-                        <h2>Our Projects</h2>
-                        <p>{{ env('APP_NAME') }} are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row custom-row grid fix">
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/13.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/13.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/14.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/14.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/15.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/15.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/16.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/16.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/17.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/17.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item">
-                    <div class="project-style">
-                        <div class="project-image">
-                            <img src="{{ asset('assets/img/project/18.jpg') }}" alt="" />
-                        </div>
-                        <div class="project-hover">
-                            <a class="project-icon image-popup-no-margins"
-                                href="{{ asset('assets/img/project/18.jpg') }}"><img
-                                    src="{{ asset('assets/img/icons/src.png') }}" alt=""></a>
-                            <div class="project-text">
-                                <h4><a href="project.html">Financial Planning</a></h4>
-                                <p>{{ env('APP_NAME') }} Financial planning means putting your incomes and expenses on a
-                                    scale to achieve monetary equilibrium or upward mobility on your income levels </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Projects Area End -->
-    <!-- Asked Area Start -->
     <div class="asked-area pt-120 pb-85 bg-light">
         <div class="container">
             <div class="row">
@@ -454,7 +225,8 @@
                     <div class="default-panel">
                         <div class="sub_title">
                             <h3>Frequently Ask Qustion</h3>
-                            <p>{{ env('APP_NAME') }} is worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.</p>
+                            <p>{{ env('APP_NAME') }} is worldwide investment company who are committed to the principle of
+                                revenue maximization and reduction of the financial risks at investing.</p>
                         </div>
                         <div class="accordion" id="accordionExample">
                             <div class="card">
@@ -469,7 +241,8 @@
                                 <div id="one" class="collapse show" role="tabpanel" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>We have many happy investors invest with us .Some impresions from our Customers! </p>
+                                        <p>We have many happy investors invest with us .Some impresions from our Customers!
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -485,7 +258,8 @@
                                 <div id="two" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>We have many happy investors invest with us .Some impresions from our Customers! </p>
+                                        <p>We have many happy investors invest with us .Some impresions from our Customers!
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -604,7 +378,8 @@
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-95">
                         <h2>Our Team</h2>
-                        <p>{{ env('APP_NAME') }}We give you the opportunity to earn money by recommending our website to others. You can start earning money even if you do not invest.
+                        <p>{{ env('APP_NAME') }}We give you the opportunity to earn money by recommending our website to
+                            others. You can start earning money even if you do not invest.
                         </p>
                     </div>
                 </div>
@@ -620,7 +395,8 @@
                         <div class="member-text">
                             <h3><a href="#">Robert Williams</a></h3>
                             <span>Chef Executive Officer</span>
-                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle
+                                of revenue maximization and reduction of the financial risks at investing.
                                 ostrud </p>
                             <div class="link-effect">
                                 <ul>
@@ -666,7 +442,8 @@
                         <div class="member-text">
                             <h3><a href="#">Jasmin Jaquline</a></h3>
                             <span>Financial Advisor</span>
-                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle
+                                of revenue maximization and reduction of the financial risks at investing.
                                 ostrud </p>
                             <div class="link-effect">
                                 <ul>
@@ -712,7 +489,8 @@
                         <div class="member-text">
                             <h3><a href="#">Sharlok Homes</a></h3>
                             <span>Chef Executive Officer</span>
-                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle
+                                of revenue maximization and reduction of the financial risks at investing.
                                 ostrud </p>
                             <div class="link-effect">
                                 <ul>
@@ -758,7 +536,8 @@
                         <div class="member-text">
                             <h3><a href="#">Rose Smith</a></h3>
                             <span>Financial Consultant</span>
-                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle of revenue maximization and reduction of the financial risks at investing.
+                            <p>{{ env('APP_NAME') }} We are worldwide investment company who are committed to the principle
+                                of revenue maximization and reduction of the financial risks at investing.
                                 ostrud </p>
                             <div class="link-effect">
                                 <ul>
@@ -784,8 +563,7 @@
                                     </li>
                                     <li>
                                         <a href="#" class="block p-img"><img
-                                                src="{{ asset('assets/img/icons/google-plus.png') }}"
-                                                alt=""></a>
+                                                src="{{ asset('assets/img/icons/google-plus.png') }}" alt=""></a>
                                         <a href="#" class="block s-img"><img
                                                 src="{{ asset('assets/img/icons/google-plus-hover.png') }}"
                                                 alt=""></a>
@@ -798,137 +576,6 @@
             </div>
         </div>
     </div>
-    <!-- Team Area End -->
-    <!-- testimonial Carousel Start -->
-    <div class="testmonial-carousel bg-light ptb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="testmonial-wrapper text-center">
-                        <div class="single-testi">
-                            <div class="testi-img">
-                                <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
-                            </div>
-                            <div class="testi-text">
-                                <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequatuis
-                                    aute irure</p>
-                                <h5><a href="#">Andrew Williams</a></h5>
-                                <span>CEO &amp; Founder</span>
-                            </div>
-                        </div>
-                        <div class="single-testi">
-                            <div class="testi-img">
-                                <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
-                            </div>
-                            <div class="testi-text">
-                                <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequatuis
-                                    aute irure</p>
-                                <h5><a href="#">Andrew Williams</a></h5>
-                                <span>CEO &amp; Founder</span>
-                            </div>
-                        </div>
-                        <div class="single-testi">
-                            <div class="testi-img">
-                                <img src="{{ asset('assets/img/testi/1.jpg') }}" alt="">
-                            </div>
-                            <div class="testi-text">
-                                <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequatuis
-                                    aute irure</p>
-                                <h5><a href="#">Andrew Williams</a></h5>
-                                <span>CEO &amp; Founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonial Carousel End -->
-    <!-- Blog Area Start -->
-    <div class="blog-area pt-120 pb-115">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="section-title text-center mb-55">
-                        <h2>From Blog</h2>
-                        <p>{{ env('APP_NAME') }} amet sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-wrapper">
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/1.jpg') }}"
-                                    alt=""></a>
-                            <span>10 January, 2019</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Meeting</a></h4>
-                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/2.jpg') }}"
-                                    alt=""></a>
-                            <span>08 January, 2019</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Planning</a></h4>
-                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/3.jpg') }}"
-                                    alt=""></a>
-                            <span>06 January, 2019</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Tips and Tricks</a></h4>
-                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="single-blog">
-                        <div class="blog-image">
-                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/4.jpg') }}"
-                                    alt=""></a>
-                            <span>04 January, 2019</span>
-                        </div>
-                        <div class="blog-text">
-                            <h4><a href="blog-details.html">Financial Investment</a></h4>
-                            <p>{{ env('APP_NAME') }} consectetur adipiscing elited do eiusmod tempor incididnt mint </p>
-                            <a href="blog-details.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Blog Area End -->
-    <!--Start of Footer Widget-area-->
     <div class="footer-widget-area bg-4 overlay-blue pt-110 pb-100">
         <div class="container">
             <div class="row">
