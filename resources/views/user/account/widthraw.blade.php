@@ -48,16 +48,6 @@
                             <div class="card">
                                 <div class="card-body d-flex align-items-center justify-content-between">
                                     <div class="menu">
-                                        <span class="font-w500 fs-16 d-block mb-2">Total Refer's</span>
-                                        <h2>{{ totalReferal() }}</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-sm-6">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center justify-content-between">
-                                    <div class="menu">
                                         <span class="font-w500 fs-16 d-block mb-2">Pending Balance</span>
                                         <h2>{{ userPendingBalance() }}</h2>
                                     </div>
