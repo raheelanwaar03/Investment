@@ -1,9 +1,13 @@
 @extends('user.layout.app')
 
 @section('content')
+
     <div class="content-body">
         <!-- row -->
         <div class="container-fluid">
+            <div class="mb-sm-4 d-flex flex-wrap align-items-center text-head">
+                <h2 class="mb-3 me-auto">{{ auth()->user()->name }} Your account Level is {{ auth()->user()->level}}</h2>
+            </div>
             @if ($message = Session::get('massage'))
             <div class="alert alert-success alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>

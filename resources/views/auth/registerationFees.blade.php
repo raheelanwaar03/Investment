@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-success">Payment Page</h1>
+                <h1 class="text-center text-light">Payment Page</h1>
             </div>
         </div>
         <div class="row">
@@ -38,9 +38,9 @@
                         <div class="card bg-transparent border-light shadow-lg w-100">
                             <div class="card-title">
                                 @forelse ($easyPaisas as $easyPaisa)
-                                    <h5 class="text-center mt-3">{{ $easyPaisa->text }}</h5>
-                                    <h4 class="text-center">Easypaisa Holder Name: {{ $easyPaisa->easy_name }}</h4>
-                                    <h4 class="text-center">Easypaisa Account Number: {{ $easyPaisa->easy_num }}</h4>
+                                    <h5 class="text-center text-light mt-3">{{ $easyPaisa->text }}</h5>
+                                    <h4 class="text-center text-light">Easypaisa Holder Name: {{ $easyPaisa->easy_name }}</h4>
+                                    <h4 class="text-center text-light" >Easypaisa Account Number: {{ $easyPaisa->easy_num }}</h4>
                                 @empty
                                 @endforelse
                             </div>

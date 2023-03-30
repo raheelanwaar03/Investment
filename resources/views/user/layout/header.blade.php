@@ -113,11 +113,16 @@
                             <span class="nav-text">Daily Task</span>
                         </a>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="{{ route('profile.edit') }}">
+                    <li><a class="has-arrow ai-icon" href="{{ route('User.Setting') }}">
                             <i class="ti-user"></i>
                             <span class="nav-text">Profile</span>
                         </a>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="{{ route('profile.edit') }}">
+                        <i class="ti-settings"></i>
+                        <span class="nav-text">Settinge</span>
+                    </a>
+                </li>
                     <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf

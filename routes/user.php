@@ -13,6 +13,7 @@ Route::name('User.')->prefix('User')->middleware('user','auth','feesCheck')->gro
         Route::get('/Dashboard',[UserDashboardController::class,'dashboard'])->name('Dashboard');
         Route::get('/My/Team',[UserDashboardController::class,'team'])->name('Team');
         Route::get('/My/Work',[UserDashboardController::class,'work'])->name('Work');
+        Route::get('/Setting',[UserDashboardController::class,'setting'])->name('Setting');
         Route::get('/Widthraw/Request',[UserDashboardController::class,'widthrawReq'])->name('Widthraw.Request');
         Route::get('/Refer/Friend',[UserWorkController::class,'referFriend'])->name('Refer.New.Friend');
         Route::get('/Widthraw/Balance',[UserWorkController::class,'widthrawBalance'])->name('Widthraw.Balance');

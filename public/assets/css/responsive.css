@@ -567,13 +567,13 @@
     }
 
     .slider-two-area .banner-btn {
-        background: #006b63 none repeat scroll 0 0;
+        background: #6fbe44 none repeat scroll 0 0;
         color: #ffffff;
     }
 
     .slider-two-area .banner-btn:hover {
         background: #fff none repeat scroll 0 0;
-        color: #006b63;
+        color: #6fbe44;
     }
 
     .slider-three-area .banner-btn,
@@ -1015,17 +1015,17 @@
     }
 
     .slider-two-area .banner-btn {
-        background: #006b63;
+        background: #6fbe44;
         color: #fff
     }
 
     .slider-two-area .banner-btn:hover {
         background: #fff;
-        color: #006b63
+        color: #6fbe44
     }
 
     .team-style-2 .member-text {
-        background: #006b63 none repeat scroll 0 0;
+        background: #6fbe44 none repeat scroll 0 0;
     }
 
     .slider-three-area .banner-btn,

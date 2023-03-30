@@ -69,5 +69,12 @@ class UserDashboardController extends Controller
 
     }
 
+    // user prfile
+
+    public function setting()
+    {
+        return view('user.account.profile');
+    }
+
 
 }

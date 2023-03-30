@@ -3,7 +3,7 @@
 @section('content')
     <div class="slider-area">
         <div class="slider-wrapper">
-            <div class="single-slide" style="background-image: url('{{ asset('assets/img/slider/1.jpg') }}');">
+            <div class="single-slide" style="background-image: url('{{ asset('assets/img/slider/bg.jpg') }}');">
                 <div class="banner-content">
                     <div class="container">
                         <div class="row">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-slide" style="background-image: url('{{ asset('assets/img/slider/1.jpg') }}');">
+            <div class="single-slide" style="background-image: url('{{ asset('assets/img/slider/bg.jpg') }}');">
                 <div class="banner-content">
                     <div class="container">
                         <div class="row">
@@ -56,6 +56,67 @@
                         <h2>Our Features</h2>
                         <p>Browse jobs from your interested sector.
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="service-text">
+                            <h4>Data Entry</h4>
+                            <p>You can do simple data entry jobs at your home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="service-text">
+                            <h4>Typing Jobs</h4>
+                            <p>You can do simple typing jobs and you will be earn well!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="service-text">
+                            <h4>Simple Task</h4>
+                            <p>We will give you simple task.That you have to daily for your daily earning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="service-text">
+                            <h4>Refer Friend</h4>
+                            <p>You can also earn from our referal program by inviting your friends</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="service-text">
+                            <h4>Easy Widthraw</h4>
+                            <p>You can simply widthraw your earning in your easypaisa or jazzcash account.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="service-text">
+                            <h4>Contact us</h4>
+                            <p>You can contact us we are here to help you 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-area pt-120 pb-105">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <div class="section-title text-center mb-55">
+                        <h2>About Us</h2>
                     </div>
                 </div>
             </div>
