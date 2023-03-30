@@ -129,6 +129,41 @@
             </div>
         </div>
     </div>
+    <div class="service-area pt-120 pb-105">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <div class="section-title text-center mb-55">
+                        <h2>About Us</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="single-item">
+                        <div class="service-text">
+                            <h4>Our Vision</h4>
+                            <p>We can give opportunities for you to earn extra money from home, which is also global trend
+                                during the pandemic. You do not need to go out or go to the office, the office is crowded,
+                                you can work directly with us at home adn can spend more time with your family.</p>
+                        </div>
+                        <div class="service-text">
+                            <h4>Benifits</h4>
+                            <ul>
+                                <li>flexible working schedule. Data entry jobs offer a bigger advantage of working according
+                                    to your specifications.</li>
+                                <li>Payment against entry.</li>
+                                <li>Low level of stress.</li>
+                                <li>Improves Skils.</li>
+                                <li>Improves communication skills.</li>
+                                <li>The process to Identify fraudulent Data Entry.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Advertise Area End -->
     <!-- Features Area Start -->
     <div class="features-area bg-light fix">
@@ -174,40 +209,6 @@
                         <div class="service-text">
                             <h4>Changes</h4>
                             <p>Update your Profile adn job preferences at anytime.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="service-area pt-120 pb-105">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div class="section-title text-center mb-55">
-                        <h2>About Us</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="single-item">
-                        <div class="service-text">
-                            <h4>Our Vision</h4>
-                            <p>We can give opportunities for you to earn extra money from home, which is also global trend
-                                during the pandemic. You do not need to go out or go to the office, the office is crowded,
-                                you can work directly with us at home adn can spend more time with your family.</p>
-                        </div>
-                        <div class="service-text">
-                            <h4>Benifits</h4>
-                            <ul>
-                                <li>flexible working schedule. Data entry jobs offer a bigger advantage of working according to your specifications.</li>
-                                <li>Payment against entry.</li>
-                                <li>Low level of stress.</li>
-                                <li>Improves Skils.</li>
-                                <li>Improves communication skills.</li>
-                                <li>The process to Identify fraudulent Data Entry.</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
