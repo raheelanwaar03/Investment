@@ -51,12 +51,12 @@
     </div>
 
     <div class="service-area pt-120 pb-105">
-        <div class="container">
+        <div class="container-fluid bg-success">
             <div class="row">
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-55">
-                        <h2>Our Features</h2>
-                        <p>Browse jobs from your interested sector.
+                        <h2 class="mt-2" style="color:rgb(147, 228, 147)">Our Features</h2>
+                        <p class="text-light">Browse jobs from your interested sector.
                         </p>
                     </div>
                 </div>
@@ -65,48 +65,48 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Data Entry</h4>
-                            <p>You can do simple data entry jobs at your home.</p>
+                            <h4 style="color:rgb(147, 228, 147)">Data Entry</h4>
+                            <p class="text-light">You can do simple data entry jobs at your home.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Typing Jobs</h4>
-                            <p>You can do simple typing jobs and you will be earn well!</p>
+                            <h4 style="color:rgb(147, 228, 147)">Typing Jobs</h4>
+                            <p class="text-light">You can do simple typing jobs and you will be earn well!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Simple Task</h4>
-                            <p>We will give you simple task.That you have to daily for your daily earning</p>
+                            <h4 style="color:rgb(147, 228, 147)">Simple Task</h4>
+                            <p class="text-light">We will give you simple task.That you have to daily for your daily earning</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Refer Friend</h4>
-                            <p>You can also earn from our referal program by inviting your friends</p>
+                            <h4 style="color:rgb(147, 228, 147)">Refer Friend</h4>
+                            <p class="text-light">You can also earn from our referal program by inviting your friends</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Easy Widthraw</h4>
-                            <p>You can simply widthraw your earning in your easypaisa or jazzcash account.</p>
+                            <h4 style="color:rgb(147, 228, 147)">Easy Widthraw</h4>
+                            <p class="text-light">You can simply widthraw your earning in your easypaisa or jazzcash account.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Contact us</h4>
-                            <p>You can contact us we are here to help you 24/7.</p>
+                            <h4 style="color:rgb(147, 228, 147)">Contact us</h4>
+                            <p class="text-light">You can contact us we are here to help you 24/7.</p>
                         </div>
                     </div>
                 </div>
@@ -130,11 +130,11 @@
         </div>
     </div>
     <div class="service-area pt-120 pb-105">
-        <div class="container">
+        <div class="container-fluid bg-success p-3">
             <div class="row">
                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                     <div class="section-title text-center mb-55">
-                        <h2>About Us</h2>
+                        <h2 class="text-light">About Us</h2>
                     </div>
                 </div>
             </div>
@@ -142,14 +142,14 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Our Vision</h4>
-                            <p>We can give opportunities for you to earn extra money from home, which is also global trend
+                            <h3 style="color:rgb(147, 228, 147)">Our Vision</h3>
+                            <p class="text-light">We can give opportunities for you to earn extra money from home, which is also global trend
                                 during the pandemic. You do not need to go out or go to the office, the office is crowded,
                                 you can work directly with us at home adn can spend more time with your family.</p>
                         </div>
                         <div class="service-text">
-                            <h4>Benifits</h4>
-                            <ul>
+                            <h3 style="color:rgb(147, 228, 147)">Benifits</h3>
+                            <ul class="text-light">
                                 <li>flexible working schedule. Data entry jobs offer a bigger advantage of working according
                                     to your specifications.</li>
                                 <li>Payment against entry.</li>
@@ -166,7 +166,7 @@
     </div>
     <!-- Advertise Area End -->
     <!-- Features Area Start -->
-    <div class="features-area bg-light fix">
+    <div class="features-area bg-success fix">
         <div class="feature-left-column">
             <img src="{{ asset('assets/img/banner/2.jpg') }}" alt="">
         </div>
@@ -174,8 +174,8 @@
             <div class="coustom-col-10">
                 <div class="feature-text">
                     <h3><span>Why You</span></h3>
-                    <h2>Choose {{ env('APP_NAME') }}</h2>
-                    <p>Work at your part time / full time and money from online job,Data entry jobs,Form
+                    <h2 style="color:rgb(147, 228, 147)">Choose {{ env('APP_NAME') }}</h2>
+                    <p class="text-light">Work at your part time / full time and money from online job,Data entry jobs,Form
                         filling jobs.Wrok from your PC,Laptop or Mobile</p>
                 </div>
             </div>
@@ -183,24 +183,24 @@
                 <div class="coustom-col-5">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Jobs</h4>
-                            <p>Browse jobs from your interested sector.</p>
+                            <h4 style="color:rgb(147, 228, 147)">Jobs</h4>
+                            <p class="text-light">Browse jobs from your interested sector.</p>
                         </div>
                     </div>
                 </div>
                 <div class="coustom-col-5">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Profile</h4>
-                            <p>Submit your job profile and get hired by employers.</p>
+                            <h4 style="color:rgb(147, 228, 147)">Profile</h4>
+                            <p class="text-light">Submit your job profile and get hired by employers.</p>
                         </div>
                     </div>
                 </div>
                 <div class="coustom-col-5">
                     <div class="single-item">
                         <div class="service-text">
-                            <h4>Task</h4>
-                            <p>Practice tasks from the member area.</p>
+                            <h4 style="color:rgb(147, 228, 147)">Task</h4>
+                            <p class="text-light">Practice tasks from the member area.</p>
                         </div>
                     </div>
                 </div>
@@ -208,42 +208,42 @@
                     <div class="single-item">
                         <div class="service-text">
                             <h4>Changes</h4>
-                            <p>Update your Profile adn job preferences at anytime.</p>
+                            <p class="text-light">Update your Profile adn job preferences at anytime.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="asked-area pt-120 pb-85 bg-light">
+    <div class="asked-area pt-120 pb-85 bg-success mt-3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="sub_title">
-                        <h3>Reqeust a Call Back</h3>
-                        <p>You will get your profit on your profile, also you will get Instant Payment</p>
+                        <h3 style="color:rgb(147, 228, 147)">Reqeust a Call Back</h3>
+                        <p class="text-light">You will get your profit on your profile, also you will get Instant Payment</p>
 
                     </div>
                     <form id="contact-form" action="#" method="post">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-box">
-                                    <input type="text" name="name" placeholder="Name" required>
+                                    <input type="text" style="color:white" name="name" placeholder="Name" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-box">
-                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="email" style="color:white" name="email" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-box">
-                                    <input type="text" name="subject" placeholder="Subject">
+                                    <input type="text" style="color:white" name="subject" placeholder="Subject">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-box">
-                                    <input type="text" name="phone" placeholder="Phone">
+                                    <input type="text" style="color:white" name="phone" placeholder="Phone">
                                 </div>
                             </div>
                         </div>
@@ -261,8 +261,8 @@
                 <div class="col-lg-6">
                     <div class="default-panel">
                         <div class="sub_title">
-                            <h3>Frequently Ask Qustion</h3>
-                            <p>{{ env('APP_NAME') }} is worldwide investment company who are committed to the principle of
+                            <h3 style="color:rgb(147, 228, 147)">Frequently Ask Qustion</h3>
+                            <p class="text-light">{{ env('APP_NAME') }} is worldwide investment company who are committed to the principle of
                                 revenue maximization and reduction of the financial risks at investing.</p>
                         </div>
                         <div class="accordion" id="accordionExample">
@@ -356,7 +356,7 @@
     </div>
     <!-- Asked Area End -->
     <!-- Fun Factor Start -->
-    <div class="fun-factor-area bg-3 overlay-green pt-100 fix pb-95">
+    <div class="fun-factor-area bg-3 overlay-green pt-100 fix pb-95 mt-3">
         <div class="container">
             <div class="fun-custom-row">
                 <div class="fun-custom-column">
