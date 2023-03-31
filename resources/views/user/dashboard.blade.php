@@ -21,13 +21,30 @@
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            <p class="text-white">Work at your part time / full time and earn money from online job,Data entry jobs,Form
-                                                filling jobs.Wrok from your PC,Laptop or Mobile.So you are at right place as we are offering remote jobs work in your comfort.</p>
-                                                <h4 class="text-center" style="color:white">Typing Jobs</h4>
-                                                <p class="text-white">Complete Typing assignments without errors on the fields provided.Search for typing assignments and get started.</p>
+                                            <p class="text-white">Work at your part time / full time and earn money from
+                                                online job,Data entry jobs,Form
+                                                filling jobs.Wrok from your PC,Laptop or Mobile.So you are at right place as
+                                                we are offering remote jobs work in your comfort.</p>
+                                            <h4 class="text-center" style="color:white">Typing Jobs</h4>
+                                            <p class="text-white">Complete Typing assignments without errors on the fields
+                                                provided.Search for typing assignments and get started.</p>
+
+                                            <h4 class="text-white">Benifits of Working at home</h4>
+                                            <ul class="text-white">
+                                                <li>Better Work-Life Balance.</li>
+                                                <li>Less Commute Stress.</li>
+                                                <li>Location Independence.</li>
+                                                <li>Improved Inclusivity.</li>
+                                                <li>Money Savings.</li>
+                                                <li>Positive Environmental Impact.</li>
+                                                <li>Impact on Sustainability.</li>
+                                                <li>A Customizable Office.</li>
+                                            </ul>
+
                                         </div>
                                         <div class="card-footer text-center">
-                                            <a href="{{ route('User.Work') }}" class="btn btn-success text-white">Daily Work</a>
+                                            <a href="{{ route('User.Work') }}" class="btn btn-white text-success">Daily
+                                                Work</a>
                                         </div>
                                     </div>
                                 </div>
