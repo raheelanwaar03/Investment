@@ -27,7 +27,15 @@
                                                 we are offering remote jobs work in your comfort.</p>
                                             <h4 class="text-center" style="color:white">Typing Jobs</h4>
                                             <p class="text-white">Complete Typing assignments without errors on the fields
-                                                provided.Search for typing assignments and get started.</p>
+                                                provided.Search for typing assignments and get started.This blog has posts
+                                                and articles from numerous authors detailing how you can earn money whilst
+                                                working from home. It caters specifically towards women who want to find a
+                                                remote career. It’s one of the most well known blogs and was founded by
+                                                Holly Reisem Hanna. Whilst being a stay-at-home mom, she felt the need to
+                                                try something different from the usual 9-5. She now blogs for a living,
+                                                collating articles, tips and tricks for others who would also like to work
+                                                from home.
+                                            </p>
 
                                             <h4 class="text-white">Benifits of Working at home</h4>
                                             <ul class="text-white">
