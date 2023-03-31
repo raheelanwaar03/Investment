@@ -35,6 +35,13 @@
                                                 try something different from the usual 9-5. She now blogs for a living,
                                                 collating articles, tips and tricks for others who would also like to work
                                                 from home.
+                                            </h5>
+                                            <h3 class="text-center text-white">Becoming a Specialist</h3>
+                                            <h5 class="text-white">
+                                                Like virtual assistants, data entry specialists also wear many hats. It all
+                                                depends on their employer’s requirements and business goals. They could be
+                                                data researchers by day, eagle-eyed fact-checkers by night. Below are some
+                                                of the responsibilities that data entry specialists may take on.
                                                 <ul>
                                                     <li>Verifying and correcting inaccurate data</li>
                                                     <li>
@@ -53,13 +60,7 @@
                                                         Observe data cleanliness and security standards
                                                     </li>
                                                 </ul>
-                                            </h5>
-                                            <h3>Becoming a Specialist</h3>
-                                            <h5>
-                                                Like virtual assistants, data entry specialists also wear many hats. It all
-                                                depends on their employer’s requirements and business goals. They could be
-                                                data researchers by day, eagle-eyed fact-checkers by night. Below are some
-                                                of the responsibilities that data entry specialists may take on
+
                                             </h5>
 
                                             <h3 class="text-white">Benifits of Working at home</h3>
