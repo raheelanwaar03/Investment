@@ -77,7 +77,7 @@
 
                                         </div>
                                         <div class="card-footer text-center">
-                                            <a href="{{ route('User.Work') }}" class="btn btn-white text-success">Daily
+                                            <a href="{{ route('User.Work') }}" class="btn btn-warning text-white">Daily
                                                 Work</a>
                                         </div>
                                     </div>
