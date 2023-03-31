@@ -27,7 +27,7 @@
                                                 <p class="text-white">Complete Typing assignments without errors on the fields provided.Search for typing assignments and get started.</p>
                                         </div>
                                         <div class="card-footer text-center">
-                                            <a href="{{ route('User.Work') }}" class="btn btn-outline-success">Daily Work</a>
+                                            <a href="{{ route('User.Work') }}" class="btn btn-success text-white">Daily Work</a>
                                         </div>
                                     </div>
                                 </div>
