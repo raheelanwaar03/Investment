@@ -25,31 +25,31 @@
                 <div class="col-xl-12">
                     <div class="row">
                         <div class="col-xl-6 col-sm-6">
-                            <div class="card">
+                            <div class="card bg-success">
                                 <div class="card-body d-flex align-items-center justify-content-between">
                                     <div class="menu">
-                                        <span class="font-w500 fs-16 d-block mb-2">Total Balance</span>
-                                        <h2>{{ auth()->user()->balance }}</h2>
+                                        <span class="font-w500 fs-16 d-block mb-2 text-white">Total Balance</span>
+                                        <h2 class="text-white">{{ auth()->user()->balance }}</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-6 col-sm-6">
-                            <div class="card">
+                            <div class="card bg-success">
                                 <div class="card-body d-flex align-items-center justify-content-between">
                                     <div class="menu">
-                                        <span class="font-w500 fs-16 d-block mb-2">Widthrawal Balance</span>
-                                        <h2>{{ userWidthrawalBalance() }}</h2>
+                                        <span class="font-w500 fs-16 d-block mb-2 text-white">Widthrawal Balance</span>
+                                        <h2 class="text-white">{{ userWidthrawalBalance() }}</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-6 col-sm-6">
-                            <div class="card">
+                            <div class="card bg-success">
                                 <div class="card-body d-flex align-items-center justify-content-between">
                                     <div class="menu">
-                                        <span class="font-w500 fs-16 d-block mb-2">Pending Balance</span>
-                                        <h2>{{ userPendingBalance() }}</h2>
+                                        <span class="font-w500 fs-16 d-block mb-2 text-white">Pending Balance</span>
+                                        <h2 class="text-white">{{ userPendingBalance() }}</h2>
                                     </div>
                                 </div>
                             </div>
