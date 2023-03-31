@@ -14,17 +14,17 @@
                         <div class="col-xl-12">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="card">
+                                    <div class="card bg-success">
                                         <div class="card-header">
                                             <div class="col-md-12 text-center">
-                                                <h3>Are you looking to online job work at home?</h3>
+                                                <h3 style="color:rgb(147, 228, 147)">Are you looking to online job work at home?</h3>
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            <p>Work at your part time / full time and earn money from online job,Data entry jobs,Form
+                                            <p class="text-light">Work at your part time / full time and earn money from online job,Data entry jobs,Form
                                                 filling jobs.Wrok from your PC,Laptop or Mobile.So you are at right place as we are offering remote jobs work in your comfort.</p>
-                                                <h4 class="text-center">Typing Jobs</h4>
-                                                <p>Complete Typing assignments without errors on the fields provided.Search for typing assignments and get started.</p>
+                                                <h4 class="text-center" style="color:rgb(147, 228, 147)">Typing Jobs</h4>
+                                                <p class="text-ligth">Complete Typing assignments without errors on the fields provided.Search for typing assignments and get started.</p>
                                         </div>
                                         <div class="card-footer text-center">
                                             <a href="{{ route('User.Work') }}" class="btn btn-primary">Daily Work</a>

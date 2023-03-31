@@ -120,7 +120,7 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="{{ route('profile.edit') }}">
                         <i class="ti-settings"></i>
-                        <span class="nav-text">Settinge</span>
+                        <span class="nav-text">Setting</span>
                     </a>
                 </li>
                     <li>
