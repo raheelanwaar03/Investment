@@ -76,8 +76,8 @@
                                             </ul>
 
                                         </div>
-                                        <div class="card-footer text-center">
-                                            <a href="{{ route('User.Work') }}" class="btn btn-warning text-white">Daily
+                                        <div class="card-footer text-center bg-light">
+                                            <a href="{{ route('User.Work') }}" class="btn btn-success text-white">Daily
                                                 Work</a>
                                         </div>
                                     </div>
