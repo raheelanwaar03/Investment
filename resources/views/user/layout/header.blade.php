@@ -85,10 +85,15 @@
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="{{ route('User.Widthraw.Balance') }}">
-                        <i class="ti-money"></i>
-                        <span class="nav-text">My Earnings</span>
-                    </a>
-                </li>
+                            <i class="ti-money"></i>
+                            <span class="nav-text">My Earnings</span>
+                        </a>
+                    </li>
+                    <li><a href="{{ route('User.Work') }}" class="has-arrow ai-icon">
+                            <i class="ti-blackboard"></i>
+                            <span class="nav-text">Daily Task</span>
+                        </a>
+                    </li>
                     <li><a class="has-arrow ai-icon" href="{{ route('User.Refer.New.Friend') }}">
                             <i class="ti-comments-smiley"></i>
                             <span class="nav-text">Invite</span>
@@ -99,18 +104,9 @@
                             <span class="nav-text">My Group</span>
                         </a>
                     </li>
-                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-072-printer"></i>
-                            <span class="nav-text">Widthraw</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('User.Widthraw.Balance') }}">Widthraw Balance</a></li>
-                            <li><a href="{{ route('User.Widthraw.Request') }}">Widthraw Status</a></li>
-                        </ul>
-                    </li> --}}
-                    <li><a href="{{ route('User.Work') }}" class="has-arrow ai-icon">
-                            <i class="ti-blackboard"></i>
-                            <span class="nav-text">Daily Task</span>
+                    <li><a href="{{ route('User.Contact.Us') }}" class="has-arrow ai-icon">
+                            <i class="ti-id-badge"></i>
+                            <span class="nav-text">Contact Us</span>
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="{{ route('User.Setting') }}">
@@ -119,10 +115,10 @@
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="{{ route('profile.edit') }}">
-                        <i class="ti-settings"></i>
-                        <span class="nav-text">Setting</span>
-                    </a>
-                </li>
+                            <i class="ti-settings"></i>
+                            <span class="nav-text">Setting</span>
+                        </a>
+                    </li>
                     <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf

@@ -17,6 +17,7 @@ Route::name('User.')->prefix('User')->middleware('user','auth','feesCheck')->gro
         Route::get('/Widthraw/Request',[UserDashboardController::class,'widthrawReq'])->name('Widthraw.Request');
         Route::get('/Refer/Friend',[UserWorkController::class,'referFriend'])->name('Refer.New.Friend');
         Route::get('/Widthraw/Balance',[UserWorkController::class,'widthrawBalance'])->name('Widthraw.Balance');
+        Route::get('/Contact/Us',[UserWorkController::class,'contact'])->name('Contact.Us');
         Route::post('/Widthraw/Balance/Request',[UserWorkController::class,'widthrawBalanceRequest'])->name('Widthraw.Balance.Request');
         // user Typed Text
         Route::post('/Type/text/{id}',[UserDashboardController::class,'taskText'])->name('Type.Task');

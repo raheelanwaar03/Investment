@@ -15,6 +15,11 @@ class UserWorkController extends Controller
         return view('user.work.refer');
     }
 
+    public function contact()
+    {
+        return view('user.contactUs');
+    }
+
     public function widthrawBalance()
     {
         $widthraws = WidthrawBalance::get();
