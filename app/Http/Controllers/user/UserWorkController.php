@@ -22,7 +22,7 @@ class UserWorkController extends Controller
 
     public function widthrawBalance()
     {
-        $widthraws = WidthrawBalance::get();
+        $widthraws = WidthrawBalance::where('user_id',auth()->user()->id)->get();
         return view('user.account.widthraw',compact('widthraws'));
     }
 

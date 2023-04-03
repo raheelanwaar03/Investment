@@ -47,7 +47,7 @@
                                 <div class="form-group">
                                     <label style="color:white"><b style="font-size: 25px">Email</b></label>
                                     <input type="text" style="background: transparent;color:white " name="email"
-                                        class="form-control" placeholder="Enter Your Email">
+                                        class="form-control" placeholder="Enter Your Email" required>
                                 </div>
                                 <div class="form-group">
                                     <label style="color:white"><b style="font-size: 25px">Phone</b></label>
@@ -56,19 +56,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label style="color:white"><b style="font-size: 25px">Address</b></label>
-                                    <input type="text" style="background: transparent;color:white " name="address"
+                                    <input type="text" style="background: transparent;color:white" name="address"
                                         class="form-control" placeholder="Enter Your Address">
                                 </div>
                                 <div class="form-group">
                                     <label style="color:white"><b style="font-size: 25px">Password</b></label>
                                     <input type="password" style="background: transparent;color:white " name="password"
-                                        class="form-control" placeholder="Enter Your Password">
+                                        class="form-control" placeholder="Enter Your Password" required minlength="8" maxlength="12">
                                 </div>
                                 <div class="form-group">
                                     <label style="color:white"><b style="font-size: 25px">Confirm Password</b></label>
                                     <input type="password" style="background: transparent;color:white "
                                         name="password_confirmation" class="form-control"
-                                        placeholder="Enter Your Confirm Password">
+                                        placeholder="Enter Your Confirm Password" required minlength="8" maxlength="12">
                                 </div>
                                 <div class="form-group">
                                     <label style="color:white"><b style="font-size: 25px">Referal</b></label>

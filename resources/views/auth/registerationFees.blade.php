@@ -19,23 +19,23 @@
             </div>
         </div>
         <div class="row">
-            @if ($message = Session::get('massage'))
-                <div class="alert alert-success alert-block">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>{{ $message }}</strong>
-                </div>
-            @endif
-
-            @if ($message = Session::get('error'))
-                <div class="alert alert-danger alert-block">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>{{ $message }}</strong>
-                </div>
-            @endif
             <div class="col-md-12">
                 <div class="row min-vh-100">
                     <div class="col-md-12 d-flex justify-content-center align-items-center">
                         <div class="card bg-transparent border-light shadow-lg w-100">
+                            @if ($message = Session::get('massage'))
+                            <div class="alert alert-success alert-block">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <strong>{{ $message }}</strong>
+                            </div>
+                        @endif
+
+                        @if ($message = Session::get('error'))
+                            <div class="alert alert-danger alert-block">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <strong>{{ $message }}</strong>
+                            </div>
+                        @endif
                             <div class="card-title">
                                 @forelse ($easyPaisas as $easyPaisa)
                                     <h5 class="text-center text-light mt-3">{{ $easyPaisa->text }}</h5>
@@ -55,7 +55,7 @@
                                             placeholder="Easypaisa Account Holder">
                                     </div>
                                     <div class="form-group">
-                                        <label style="color:white"><b style="font-size: 25px">Easypaisa
+                                        <label style="color:white"><b style="font-size: 25px" minlength="11">Easypaisa
                                                 Number</b></label>
                                         <input type="number" name="sender_num"
                                             style="background: transparent;color:white " class="form-control"
