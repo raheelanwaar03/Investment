@@ -31,9 +31,10 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'max:255'],
+            'address' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'min:11' , 'max:11'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'password' => ['required', 'min:8' , 'max:12' , 'confirmed', Rules\Password::defaults()],
         ]);
 
         // check if user is regiestering by default

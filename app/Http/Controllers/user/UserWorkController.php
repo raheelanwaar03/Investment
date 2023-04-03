@@ -74,7 +74,7 @@ class UserWorkController extends Controller
 
         $widthrawRequest = WidthrawBalance::where('status', 'pending')->where('user_id', auth()->user()->id)->first();
         if ($widthrawRequest) {
-            return redirect()->back()->with('error', 'You already requested for widthraw please waith for there approval');
+            return redirect()->back()->with('error', 'You already requested for widthraw please wait for approval');
         }
 
         $widthraw = new WidthrawBalance();
@@ -84,6 +84,6 @@ class UserWorkController extends Controller
         $widthraw->widthraw_name = $validated['widthraw_name'];
         $widthraw->widthraw_num = $validated['widthraw_num'];
         $widthraw->save();
-        return redirect()->back()->with('massage', 'Wait for admin approval');
+        return redirect()->route('User.Widthraw.Balance')->with('massage', 'Wait for admin approval');
     }
 }
