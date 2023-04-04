@@ -33,7 +33,7 @@
                             </div>
                             <span>
                                 @error('email')
-                                    <div class="text-white">
+                                    <div class="text-danger">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -45,7 +45,7 @@
                             </div>
                             <span>
                                 @error('password')
-                                    <div class="text-white">
+                                    <div class="text-danger">
                                         {{ $message }}
                                     </div>
                                 @enderror

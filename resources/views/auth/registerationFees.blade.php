@@ -54,18 +54,39 @@
                                             style="background: transparent;color:white " class="form-control"
                                             placeholder="Easypaisa Account Holder">
                                     </div>
+                                    <span>
+                                        @error('bank_username')
+                                            <div class="text-danger">
+                                            {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </span>
                                     <div class="form-group">
                                         <label style="color:white"><b style="font-size: 25px" minlength="11">Easypaisa
                                                 Number</b></label>
                                         <input type="number" name="sender_num"
                                             style="background: transparent;color:white " class="form-control"
-                                            placeholder="Easypaisa Account Number">
+                                            placeholder="Easypaisa Account Number" minlength="11" maxlength="11">
                                     </div>
+                                    <span>
+                                        @error('sender_num')
+                                            <div class="text-danger">
+                                            {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </span>
                                     <div class="form-group">
                                         <label style="color:white"><b style="font-size: 25px">Put Trx or TID</b></label>
                                         <input type="text" style="background: transparent;color:white"
                                             name="tid" class="form-control" placeholder="Enter Your Trx or TID">
                                     </div>
+                                    <span>
+                                        @error('tid')
+                                            <div class="text-danger">
+                                            {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </span>
                                     <button type="submit" class="btn btn-light text-success">Sumbit</button>
                                 </form>
                             </div>
