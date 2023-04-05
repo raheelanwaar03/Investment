@@ -21,7 +21,7 @@ class feesCheck
         }
         if(auth()->user()->status == 'rejected')
         {
-            return redirect()->route('Registeration.Fees')->with('error','Your accound has been rejected give us correct information');
+            return redirect()->route('Registeration.Fees')->with('error','Your account has been rejected give us correct information');
         }
         else
         {
