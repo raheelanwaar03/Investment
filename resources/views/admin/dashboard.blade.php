@@ -125,6 +125,7 @@
                 </div>
             </div>
         </div>
+        <x-alert/>
         <div class="row">
             <div class="col-md-12 text-center">
                 <a href="{{ route('Admin.Set.User.Level') }}" class="btn btn-primary">Set Level</a>
