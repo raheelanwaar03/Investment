@@ -82,3 +82,16 @@ function level()
     $userRefer = $users->count();
     return $userRefer;
 }
+
+// getting todays approved user
+
+function todayApprovedWidthraw()
+{
+    $totalApproved = 0;
+    $approvedBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','approved')->where('created_at',today())->get();
+    foreach ($approvedBalance as $widthraw) {
+        $totalApproved += $widthraw->widthraw_amount;
+    }
+
+    return $totalApproved;
+}
