@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('type_texts', function (Blueprint $table) {
             $table->id();
-            $table->string('user_text');
+            $table->longtext('user_text');
             $table->timestamps();
         });
     }
