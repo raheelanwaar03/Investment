@@ -91,6 +91,7 @@
                             <li><a href="{{ route('Admin.Pending.Users') }}">Pending User's</a></li>
                             <li><a href="{{ route('Admin.Approved.Users') }}">Approved User's</a></li>
                             <li><a href="{{ route('Admin.Rejected.Users') }}">Rejected User's</a></li>
+                            <li><a href="{{ route('Admin.Today.Approved.User') }}">Today's Approved Users</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

@@ -310,4 +310,11 @@ class AdminDashboardController extends Controller
 
         return redirect()->back()->with('massage', 'Level setting updated successfully');
     }
+
+    public function todayApprovedUser()
+    {
+        $users = User::where('status','approved')->where('created_at',today())->get();
+        return view('admin.dashboard.todayUser',compact('users'));
+    }
+
 }

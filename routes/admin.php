@@ -44,7 +44,7 @@ Route::prefix('Admin')->name('Admin.')->middleware('auth', 'admin')->group(funct
     Route::post('Store/Level/Setting',[AdminDashboardController::class,'levelStore'])->name('Level.Store');
     Route::get('Edit/Level/Setting/{id}',[AdminDashboardController::class,'editLevelView'])->name('Edit.Level.View');
     Route::post('Update/Level/Setting/{id}',[AdminDashboardController::class,'updateLevelSetting'])->name('Update.Level.Setting');
-
+    Route::get('Todays/Approved/Users',[AdminDashboardController::class,'todayApprovedUser'])->name('Today.Approved.User');
     // Admin esaypaisa details Routes
     Route::resource('Easypaisa', EasypisaController::class);
 
