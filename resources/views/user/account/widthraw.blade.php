@@ -77,9 +77,7 @@
                                     <div class="table-responsive">
                                         <table id="example" class="display" style="min-width: 845px">
                                             <thead>
-                                                <th>Name</th>
                                                 <th>Bank</th>
-                                                <th>Number</th>
                                                 <th>Amount</th>
                                                 <th>Status</th>
                                                 <th>Date</th>
@@ -87,9 +85,7 @@
                                             <tbody>
                                                 @foreach ($widthraws as $widthraw)
                                                     <tr>
-                                                        <td>{{ $widthraw->widthraw_name }}</td>
                                                         <td>{{ $widthraw->widthraw_bank }}</td>
-                                                        <td>{{ $widthraw->widthraw_num }}</td>
                                                         <td>{{ $widthraw->widthraw_amount }}</td>
                                                         <td>{{ $widthraw->status }}</td>
                                                         <td>{{ $widthraw->created_at }}</td>
