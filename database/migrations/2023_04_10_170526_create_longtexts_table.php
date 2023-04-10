@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('type_texts', function (Blueprint $table) {
+        Schema::create('longtexts', function (Blueprint $table) {
             $table->id();
-            $table->text('user_text',1000)->change();
+            $table->string('user_id');
+            $table->longText('longText');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_texts');
+        Schema::dropIfExists('longtexts');
     }
 };

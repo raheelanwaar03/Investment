@@ -5,7 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\admin\AdminProductModel;
 use App\Models\User;
-use App\Models\user\TypeText;
+use App\Models\user\Longtext;
 use App\Models\user\WidthrawBalance;
 use App\Models\Vistor;
 use Illuminate\Http\Request;
@@ -46,7 +46,7 @@ class UserDashboardController extends Controller
 
         $visitor = Vistor::where('user_id',auth()->user()->id)->where('product_id',$id)->whereDate('created_at','=',Carbon::today())->first();
 
-        if (!$visitor) {
+        if ($visitor == null) {
             //     // storing product
                 $visitor = new Vistor();
                 $visitor->user_id = auth()->user()->id;
@@ -55,8 +55,9 @@ class UserDashboardController extends Controller
                 $visitor->dateTime = date(now());
                 $visitor->save();
                 // Storing User Typed Text
-                $taskText = new TypeText();
-                $taskText->user_text = $request->user_text;
+                $taskText = new Longtext();
+                $taskText->user_id = auth()->user()->id;
+                $taskText->longText = $request->user_text;
                 $taskText->save();
                 // giving user product reward
                 $user = User::where('id', auth()->user()->id)->first();
