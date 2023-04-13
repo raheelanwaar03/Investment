@@ -51,6 +51,7 @@
                                 @enderror
                             </span>
                             <button type="submit" class="btn btn-success">Login</button>
+                            <a href="{{ route('password.request') }}" class="btn btn-outline-success text-white">Reset Password</a>
                         </form>
                     </div>
                 </div>

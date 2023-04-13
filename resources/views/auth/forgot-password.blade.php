@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-success">Request For Password Reset Link</h1>
+                <h1 class="text-center text-white">Request For Password Reset Link</h1>
             </div>
         </div>
         <div style="margin-top: -100px" class="row min-vh-100">
@@ -30,7 +30,7 @@
                         <form action="{{ route('password.email') }}" method="POST" class="account-form">
                             @csrf
                             <div class="form-group">
-                                <label for="sign-up">Your Working Email </label>
+                                <label for="sign-up" class="text-white">Your Working Email </label>
                                 <input type="text" placeholder="Give Us Your Working Email" class="form-control" id="sign-up" name="email">
                             </div>
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
