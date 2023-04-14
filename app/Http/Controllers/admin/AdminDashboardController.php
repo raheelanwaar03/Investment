@@ -85,9 +85,9 @@ class AdminDashboardController extends Controller
             //  getting second user
             $firstUpliner = User::where('name', $user->referal)->first();
             if ($firstUpliner == '') {
-                 // changing status
-                 $user->status = 'approved';
-                 $user->save();
+                // changing status
+                $user->status = 'approved';
+                $user->save();
                 return redirect()->back()->with('massage', 'Account has beed Approved successfully');
             } else {
                 $firstUpliner->balance += $firstCommission;
@@ -98,9 +98,9 @@ class AdminDashboardController extends Controller
             // getting user
             $secondUpliner = User::where('name', $firstUpliner->referal)->first();
             if ($secondUpliner == '') {
-                 // changing status
-                 $user->status = 'approved';
-                 $user->save();
+                // changing status
+                $user->status = 'approved';
+                $user->save();
                 return redirect()->back()->with('massage', 'Account has beed Approved successfully');
             } else {
                 $secondUpliner->balance += $indirectCommission1;
@@ -111,19 +111,20 @@ class AdminDashboardController extends Controller
             // getting third person;
             $thirdUpliner = User::where('name', $secondUpliner->referal)->first();
             if ($thirdUpliner == '') {
-                 // changing status
-                 $user->status = 'approved';
-                 $user->save();
+                // changing status
+                $user->status = 'approved';
+                $user->save();
                 return redirect()->back()->with('massage', 'Account has beed Approved successfully');
             } else {
                 $thirdUpliner->balance += $indirectCommission2;
                 $thirdUpliner->save();
             }
             return redirect()->back()->with('massage', 'User Approved Successfully');
+        } else {
+            $user->status = 'approved';
+            $user->save();
+            return redirect()->back()->with('massage', 'User Approved Successfully');
         }
-        $user->status = 'approved';
-        $user->save();
-        return redirect()->back()->with('massage', 'User Approved Successfully');
     }
 
     public function rejectUserAccount($id)
