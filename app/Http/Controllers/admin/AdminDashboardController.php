@@ -81,37 +81,40 @@ class AdminDashboardController extends Controller
         $thirdCommission = $setting->third_refer;
 
         $user = User::find($id);
+        if ($user != '') {
+            //  getting second user
+            $firstUpliner = User::where('name', $user->referal)->first();
+            if ($firstUpliner == '') {
+                return redirect()->back()->with('massage', 'Account has beed Approved successfully');
+            } else {
+                $firstUpliner->balance += $firstCommission;
+                $firstUpliner->save();
+            }
+            //  Second Upliner
+            $indirectCommission1 = $secondCommission;
+            // getting user
+            $secondUpliner = User::where('name', $firstUpliner->referal)->first();
+
+            if ($secondUpliner == '') {
+                return redirect()->back()->with('massage', 'Account has beed Approved successfully');
+            } else {
+                $secondUpliner->balance += $indirectCommission1;
+                $secondUpliner->save();
+            }
+            // Third UPliner
+            $indirectCommission2 = $thirdCommission;
+            // getting third person;
+            $thirdUpliner = User::where('name', $secondUpliner->referal)->first();
+            if ($thirdUpliner == '') {
+                return redirect()->back()->with('massage', 'Account has beed Approved successfully');
+            } else {
+                $thirdUpliner->balance += $indirectCommission2;
+                $thirdUpliner->save();
+            }
+            return redirect()->back()->with('massage', 'User Approved Successfully');
+        }
         $user->status = 'approved';
         $user->save();
-        //  getting second user
-        $firstUpliner = User::where('name', $user->referal)->first();
-        if ($firstUpliner == '') {
-            return redirect()->back()->with('massage', 'Account has beed Approved successfully');
-        } else {
-            $firstUpliner->balance += $firstCommission;
-            $firstUpliner->save();
-        }
-        //  Second Upliner
-        $indirectCommission1 = $secondCommission;
-        // getting user
-        $secondUpliner = User::where('name', $firstUpliner->referal)->first();
-
-        if ($secondUpliner == '') {
-            return redirect()->back()->with('massage', 'Account has beed Approved successfully');
-        } else {
-            $secondUpliner->balance += $indirectCommission1;
-            $secondUpliner->save();
-        }
-        // Third UPliner
-        $indirectCommission2 = $thirdCommission;
-        // getting third person;
-        $thirdUpliner = User::where('name', $secondUpliner->referal)->first();
-        if ($thirdUpliner == '') {
-            return redirect()->back()->with('massage', 'Account has beed Approved successfully');
-        } else {
-            $thirdUpliner->balance += $indirectCommission2;
-            $thirdUpliner->save();
-        }
         return redirect()->back()->with('massage', 'User Approved Successfully');
     }
 
@@ -313,8 +316,7 @@ class AdminDashboardController extends Controller
 
     public function todayApprovedUser()
     {
-        $users = User::where('status','approved')->where('created_at',today())->get();
-        return view('admin.dashboard.todayUser',compact('users'));
+        $users = User::where('status', 'approved')->where('created_at', today())->get();
+        return view('admin.dashboard.todayUser', compact('users'));
     }
-
 }
