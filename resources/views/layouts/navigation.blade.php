@@ -149,6 +149,12 @@
                                         </li>
                                         @if (auth()->user())
                                             <li><a href="{{ route('User.Dashboard') }}">Dashboard</a></li>
+                                            <li>
+                                                <form action="{{ route('logout') }}" method="POST">
+                                                    @csrf
+                                                    <button class="btn btn-warning">Logout</button>
+                                                </form>
+                                            </li>
                                         @else
                                             <li><a href="{{ route('login') }}">Login</a></li>
                                             <li><a href="{{ route('register') }}">Register</a></li>
