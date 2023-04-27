@@ -40,7 +40,7 @@
 
         <div class="nav-header">
             <div class="p-2">
-                <h5>{{ auth()->user()->name }}</h5>
+                <h5>{{ env('APP_NAME') }}</h5>
             </div>
             <div class="nav-control">
                 <div class="hamburger">
