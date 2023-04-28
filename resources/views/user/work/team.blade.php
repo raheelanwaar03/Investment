@@ -6,7 +6,7 @@
         <!-- row -->
         <div class="container-fluid">
             <div class="mb-sm-4 d-flex flex-wrap align-items-center text-head">
-                <h2 class="mb-3 me-auto">{{ auth()->user()->name }} Your account Level is {{ auth()->user()->level}}</h2>
+                <h2 class="mb-3 me-auto">Your account Level is {{ auth()->user()->level}}</h2>
             </div>
             @if ($message = Session::get('massage'))
             <div class="alert alert-success alert-block">

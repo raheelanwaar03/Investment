@@ -6,7 +6,7 @@
         <!-- row -->
         <div class="container-fluid">
             <div class="mb-sm-4 d-flex flex-wrap align-items-center text-head">
-                <h2 class="mb-3 me-auto">{{ auth()->user()->name }} Your Earning</h2>
+                <h2 class="mb-3 me-auto">Your Earning</h2>
             </div>
             <div class="row">
                 <div class="col-xl-12">
