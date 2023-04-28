@@ -84,7 +84,7 @@ class AdminDashboardController extends Controller
         $user->status = 'approved';
         $user->save();
             //  getting second user
-        $firstUpliner = User::where('name', $user->referal)->first();
+        $firstUpliner = User::where('email', $user->referal)->where('status','approved')->first();
         if ($firstUpliner == '') {
             return redirect()->back()->with('massage', 'Account has beed Approved successfully');
         } else {
@@ -94,7 +94,7 @@ class AdminDashboardController extends Controller
         //  Second Upliner
         $indirectCommission1 = $secondCommission;
         // getting user
-        $secondUpliner = User::where('name', $firstUpliner->referal)->first();
+        $secondUpliner = User::where('email', $firstUpliner->referal)->where('status','approved')->first();
 
         if ($secondUpliner == '') {
             return redirect()->back()->with('massage', 'Account has beed Approved successfully');
@@ -105,7 +105,7 @@ class AdminDashboardController extends Controller
         // Third UPliner
         $indirectCommission2 = $thirdCommission;
         // getting third person;
-        $thirdUpliner = User::where('name', $secondUpliner->referal)->first();
+        $thirdUpliner = User::where('email', $secondUpliner->referal)->where('status','approved')->first();
         if ($thirdUpliner == '') {
             return redirect()->back()->with('massage', 'Account has beed Approved successfully');
         } else {
@@ -143,7 +143,7 @@ class AdminDashboardController extends Controller
 
         $users = User::where('status', 'approved')->get();
         foreach ($users as $user) {
-            $mainUser = User::where('referal', $user->name)->where('status', 'approved')->get();
+            $mainUser = User::where('referal', $user->email)->where('status', 'approved')->get();
             $referCount = $mainUser->count();
 
             // checking refers from admin side
