@@ -19,7 +19,7 @@
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control"
-                                                        value="{{ route('register', ['referal' => Auth::user()->email]) }}"
+                                                        value="{{ route('register', ['referal' => Auth::user()->name]) }}"
                                                         id="myInput" readonly>
                                                 </div>
                                             </div>
