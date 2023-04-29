@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Symfony\Component\Console\Input\Input;
 
 class RegisteredUserController extends Controller
 {
@@ -29,6 +30,13 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+
+        // checking phone if exists
+
+        if (User::where('phone', '=', Input::get('phone'))->exists()) {
+            return redirect()->back()->with('error','Phone number already exists');
+        }
+
         $request->validate([
             'name' => ['required', 'string', 'max:255','unique:' . User::class],
             'address' => ['required', 'string', 'max:255'],
