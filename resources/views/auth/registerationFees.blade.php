@@ -89,6 +89,10 @@
                                     </span>
                                     <button type="submit" class="btn btn-light text-success">Sumbit</button>
                                 </form>
+                                <form action="{{ route('logout') }}" method="POST" class="mt-3">
+                                    @csrf
+                                    <button type="submit" class="btn btn-success">Logout</button>
+                                </form>
                             </div>
                         </div>
                     </div>

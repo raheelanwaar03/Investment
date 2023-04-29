@@ -150,57 +150,57 @@ class AdminDashboardController extends Controller
 
             if (!$mainUser = '') {
                 if ($referCount <= 4) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 0';
                     $user->save();
                 }
                 if ($referCount >= $level1) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 1';
                     $user->save();
                 }
                 if ($referCount >= $level2) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 2';
                     $user->save();
                 }
                 if ($referCount >= $level3) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 3';
                     $user->save();
                 }
                 if ($referCount >= $level4) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 4';
                     $user->save();
                 }
                 if ($referCount >= $level5) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 5';
                     $user->save();
                 }
                 if ($referCount >= $level6) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 6';
                     $user->save();
                 }
                 if ($referCount >= $level7) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 7';
                     $user->save();
                 }
                 if ($referCount >= $level8) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 8';
                     $user->save();
                 }
                 if ($referCount >= $level9) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 9';
                     $user->save();
                 }
                 if ($referCount >= $level10) {
-                    $user = User::where('id', $user->id)->first();
+                    $user = User::where('id', $user->id)->where('status','approved')->first();
                     $user->level = 'Level 10';
                     $user->save();
                 }
