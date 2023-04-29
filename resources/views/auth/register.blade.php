@@ -52,7 +52,7 @@
                                 </span>
                                 <div class="form-group">
                                     <label style="color:white"><b style="font-size: 25px">Phone</b></label>
-                                    <input type="number" style="background: transparent;color:white " name="phone"
+                                    <input type="number" style="background: transparent;color:white" name="phone"
                                         class="form-control" placeholder="Enter Your Phone">
                                 </div>
                                 <span>
