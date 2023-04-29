@@ -142,7 +142,7 @@ class AdminDashboardController extends Controller
 
         $users = User::where('status', 'approved')->get();
         foreach ($users as $user) {
-            $mainUser = User::where('referal', $user->name)->get();
+            $mainUser = User::where('referal', $user->name)->where('status','approved')->get();
             $referCount = $mainUser->count();
 
             // checking refers from admin side
