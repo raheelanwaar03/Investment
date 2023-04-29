@@ -30,17 +30,10 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-
-        // checking phone if exists
-
-        if (User::where('phone', '=', Input::get('phone'))->exists()) {
-            return redirect()->back()->with('error','Phone number already exists');
-        }
-
         $request->validate([
             'name' => ['required', 'string', 'max:255','unique:' . User::class],
             'address' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'min:11' , 'max:11'],
+            'phone' => ['required', 'min:11' , 'max:11','unique:' . User::class],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'min:8' , 'max:12' , 'confirmed', Rules\Password::defaults()],
         ]);
