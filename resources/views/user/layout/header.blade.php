@@ -22,6 +22,17 @@
     <link href="{{ asset('admin/public/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet"
         type="text/css" />
     <link href="{{ asset('admin/public/css/style.css') }}" rel="stylesheet" type="text/css" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1SCXYNG06"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z1SCXYNG06');
+</script>
+
 </head>
 
 <body>
