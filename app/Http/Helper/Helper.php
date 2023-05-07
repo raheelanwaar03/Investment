@@ -88,7 +88,7 @@ function level()
 function todayApprovedWidthraw()
 {
     $totalApproved = 0;
-    $approvedBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','approved')->where('created_at',today())->get();
+    $approvedBalance = WidthrawBalance::where('status','approved')->whereDay('created_at',now()->day)->get();
     foreach ($approvedBalance as $widthraw) {
         $totalApproved += $widthraw->widthraw_amount;
     }

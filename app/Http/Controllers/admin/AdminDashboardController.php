@@ -312,7 +312,7 @@ class AdminDashboardController extends Controller
 
     public function todayApprovedUser()
     {
-        $users = User::where('status', 'approved')->where('created_at', today())->get();
+        $users = User::where('status', 'approved')->whereDate('created_at',now()->today())->get();
         return view('admin.dashboard.todayUser', compact('users'));
     }
 }
