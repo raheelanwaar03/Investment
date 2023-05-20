@@ -29,6 +29,7 @@
                                 <table id="example" class="display" style="min-width: 845px">
                                     <thead>
                                         <tr>
+                                            <th>Id</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Balance</th>
@@ -43,6 +44,7 @@
                                     <tbody>
                                         @foreach ($users as $user)
                                             <tr>
+                                                <td>{{ $user->id }}</td>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->balance }}</td>
