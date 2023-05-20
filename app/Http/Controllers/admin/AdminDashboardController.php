@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\admin\Setting;
 use App\Models\admin\ReferalLevel;
 use App\Models\User;
+use App\Models\Vistor;
 use App\Models\verificationText;
 use Illuminate\Http\Request;
 
@@ -314,5 +315,11 @@ class AdminDashboardController extends Controller
     {
         $users = User::where('status', 'approved')->whereDate('created_at',now()->today())->get();
         return view('admin.dashboard.todayUser', compact('users'));
+    }
+
+    public function vistors()
+    {
+        $vistors = Vistor::get();
+        return view('admin.dashboard.vistors',compact('vistors'));
     }
 }
