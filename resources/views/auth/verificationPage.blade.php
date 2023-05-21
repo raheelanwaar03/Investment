@@ -9,7 +9,7 @@
     <title>Verification Page</title>
 </head>
 
-<body class="bg-success">
+<body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }})">
     <div class="container">
         <div style="margin-top: -100px" class="row min-vh-100">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
@@ -19,15 +19,15 @@
                     </div>
                     <div class="card-body">
                         @forelse ($verificationText as $text)
-                        <p class="text-center text-dark" style="font-size:30px;font-family:verdana;">
-                        {{$text->text}}
-                        </p>
+                            <p class="text-center text-dark" style="font-size:30px;font-family:verdana;">
+                                {{ $text->text }}
+                            </p>
                         @empty
                             <h4>Admin have not entered any text yet!</h4>
                         @endforelse
                     </div>
                     <div class="card-footer text-center">
-                        <a href="{{ route('LandingPage') }}" class="btn btn-outline-success">Main Page</a>
+                        <a href="{{ route('LandingPage') }}" class="btn btn-outline-info">Main Page</a>
                     </div>
                 </div>
             </div>

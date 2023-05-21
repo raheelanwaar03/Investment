@@ -11,12 +11,12 @@
 </head>
 
 <body
-    style="background-image: url({{ asset('assets/img/bg/9.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});background-repeat:no-repeat;background-size:cover;">
     <img src="" alt="">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-light">Login New Account</h1>
+                <h1 class="text-center text-light">Login New {{ env('APP_NAME') }}</h1>
             </div>
         </div>
         <div class="row min-vh-100">
@@ -50,8 +50,8 @@
                                     </div>
                                 @enderror
                             </span>
-                            <button type="submit" class="btn btn-success">Login</button>
-                            <a href="{{ route('password.request') }}" class="btn btn-outline-success text-white">Reset Password</a>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <a href="{{ route('password.request') }}" class="btn btn-outline-primary text-white">Reset Password</a>
                         </form>
                     </div>
                 </div>
@@ -59,9 +59,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-light">Have not register yet?<span><a href="{{ route('register') }}"
-                            style="text-decoration: none;" class="btn btn-light text-success btn-lg">Register
-                            Now!</a></span></h1>
+                <h1 class="text-center text-light"><a href="{{ route('register') }}" class=" text-white">Create New Account</a></h1>
             </div>
         </div>
     </div>

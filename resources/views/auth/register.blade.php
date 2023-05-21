@@ -11,12 +11,12 @@
 </head>
 
 <body
-    style="background-image: url({{ asset('assets/img/bg/9.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});background-repeat:no-repeat;background-size:cover;">
     <img src="" alt="">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-light">Register New Account</h1>
+                <h1 class="text-center text-light">Register To {{ env('APP_NAME') }}</h1>
             </div>
         </div>
         <div class="row min-vh-100">
@@ -106,7 +106,7 @@
                                     <input type="text" name="referal" value="{{ $referal }}"
                                         class="form-control text-dark" readonly>
                                 </div>
-                                <button type="submit" class="btn btn-success">Enroll</button>
+                                <button type="submit" class="btn btn-primary">Next</button>
                             </form>
                         </div>
                     </div>
@@ -114,9 +114,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-light">Already have account?<span><a href="{{ route('login') }}"
-                            style="text-decoration: none;" class="btn btn-light text-success  btn-lg"> Sign
-                            in </a></span></h1>
+                <h1 class="text-center text-light"><a href="{{ route('login') }}" class="text-white">Sign In</a></h1>
             </div>
         </div>
     </div>

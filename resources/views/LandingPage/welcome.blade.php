@@ -19,60 +19,70 @@
         <div class="row w-100">
             <div class="col-12 p-4">
                 <div class="nav d-flex justify-content-center">
+                    @if (auth()->user())
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link custom-btn m-3" href="#">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-btn m-1" href="#">Register</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="custom-btn">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+                    @else
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+    <a class="nav-link custom-btn m-3" href="{{ route('login') }}">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link custom-btn m-1" href="{{ route('register') }}">Register</a>
+    </li>
+</ul> @endif
+    </div>
+    </div>
+    </div>
     </div>
 
     <div class="container">
-        <div class="row m-3">
-            <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-sm-4">
-                    <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <i class="fa-solid fa-money-bill-transfer" style="font-size:25px;"></i>
-                                </div>
-                                <h5 class="text-decoration-none text-center">Widthraw</h5>
+    <div class="row m-3">
+        <div class="col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="col-sm-4">
+                <a href="" class="text-decoration-none card_css">
+                    <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa-solid fa-money-bill-transfer" style="font-size:25px;"></i>
                             </div>
+                            <h5 class="text-decoration-none text-center">Widthraw</h5>
                         </div>
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                </div>
-                                <h5 class="text-decoration-none text-center">Team</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="" class="text-decoration-none card_css">
+                    <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-users" aria-hidden="true"></i>
                             </div>
+                            <h5 class="text-decoration-none text-center">Team</h5>
                         </div>
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <i class="fa fa-book" aria-hidden="true"></i>
-                                </div>
-                                <h5 class="text-decoration-none text-center">Guide</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="" class="text-decoration-none card_css">
+                    <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-book" aria-hidden="true"></i>
                             </div>
+                            <h5 class="text-decoration-none text-center">Guide</h5>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
+    </div>
     </div>
     <div class="container">
         <div class="row m-3">
@@ -162,7 +172,7 @@
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
-                    <a href="" class="text-center">
+                    <a href="{{ route('LandingPage') }}" class="text-center">
                         <div style="float:left;">
                             <i class="fa-solid fa-door-open" style="color:white;font-size:60px;"></i>
                         </div>
@@ -173,6 +183,6 @@
         </div>
     </div>
 
-</body>
+    </body>
 
 </html>

@@ -11,36 +11,58 @@
 </head>
 
 <body
-    style="background-image: url({{ asset('assets/img/bg/9.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});background-repeat:no-repeat;background-size:cover;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-light">Payment Page</h1>
+                <h1 class="text-center text-light">Select Plan</h1>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center align-items-center">
+                <div class="col-md-4">
+                    <div class="card bg-transparent">
+                        <a href="#" style="border:1px solid white;">
+                            <div class="card-body text-white">
+                                <h2>Basic</h2>
+                                <h5>Rs: 500</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-transparent">
+                        <a href="#" style="border:1px solid white;">
+                            <div class="card-body text-white">
+                                <h2>Standard</h2>
+                                <h5>Rs: 1000</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-transparent">
+                        <a href="#" style="border:1px solid white;">
+                            <div class="card-body text-white">
+                                <h2>Premimum</h2>
+                                <h5>Rs: 1500</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+        <x-alert />
         <div class="row">
             <div class="col-md-12">
                 <div class="row min-vh-100">
                     <div class="col-md-12 d-flex justify-content-center align-items-center">
                         <div class="card bg-transparent border-light shadow-lg w-100">
-                            @if ($message = Session::get('massage'))
-                            <div class="alert alert-success alert-block">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <strong>{{ $message }}</strong>
-                            </div>
-                        @endif
-
-                        @if ($message = Session::get('error'))
-                            <div class="alert alert-danger alert-block">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <strong>{{ $message }}</strong>
-                            </div>
-                        @endif
                             <div class="card-title">
                                 @forelse ($easyPaisas as $easyPaisa)
                                     <h5 class="text-center text-light mt-3">{{ $easyPaisa->text }}</h5>
-                                    <h4 class="text-center text-light">Easypaisa Holder Name: {{ $easyPaisa->easy_name }}</h4>
-                                    <h4 class="text-center text-light" >Easypaisa Account Number: {{ $easyPaisa->easy_num }}</h4>
+                                    <h4 class="text-center text-light">Easypaisa Holder Name:
+                                        {{ $easyPaisa->easy_name }}</h4>
+                                    <h4 class="text-center text-light">Easypaisa Account Number:
+                                        {{ $easyPaisa->easy_num }}</h4>
                                 @empty
                                 @endforelse
                             </div>
@@ -57,7 +79,7 @@
                                     <span>
                                         @error('bank_username')
                                             <div class="text-danger">
-                                            {{ $message }}
+                                                {{ $message }}
                                             </div>
                                         @enderror
                                     </span>
@@ -71,27 +93,27 @@
                                     <span>
                                         @error('sender_num')
                                             <div class="text-danger">
-                                            {{ $message }}
+                                                {{ $message }}
                                             </div>
                                         @enderror
                                     </span>
                                     <div class="form-group">
                                         <label style="color:white"><b style="font-size: 25px">Put Trx or TID</b></label>
-                                        <input type="text" style="background: transparent;color:white"
-                                            name="tid" class="form-control" placeholder="Enter Your Trx or TID">
+                                        <input type="text" style="background: transparent;color:white" name="tid"
+                                            class="form-control" placeholder="Enter Your Trx or TID">
                                     </div>
                                     <span>
                                         @error('tid')
                                             <div class="text-danger">
-                                            {{ $message }}
+                                                {{ $message }}
                                             </div>
                                         @enderror
                                     </span>
-                                    <button type="submit" class="btn btn-light text-success">Sumbit</button>
+                                    <button type="submit" class="btn btn-info">Apply</button>
                                 </form>
                                 <form action="{{ route('logout') }}" method="POST" class="mt-3">
                                     @csrf
-                                    <button type="submit" class="btn btn-success">Logout</button>
+                                    <button type="submit" class="btn btn-danger">Logout</button>
                                 </form>
                             </div>
                         </div>
