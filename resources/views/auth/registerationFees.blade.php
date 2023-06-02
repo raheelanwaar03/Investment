@@ -13,7 +13,7 @@
 <body
     style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});background-repeat:no-repeat;background-size:cover;">
     <div class="container">
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center text-light">Select Plan</h1>
             </div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <x-alert />
         <div class="row">
             <div class="col-md-12">

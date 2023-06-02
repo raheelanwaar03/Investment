@@ -32,11 +32,12 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255','unique:' . User::class],
-            'address' => ['required', 'string', 'max:255'],
+            'plan' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'min:11' , 'max:11','unique:' . User::class],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'min:8' , 'max:12' , 'confirmed', Rules\Password::defaults()],
         ]);
+
 
         // check if user is regiestering by default
         $referCheck = $request->referal;
@@ -46,10 +47,10 @@ class RegisteredUserController extends Controller
 
         $user = User::create([
             'name' => $request->name,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'referal' => $request->referal,
             'email' => $request->email,
+            'phone' => $request->phone,
+            'plan' => $request->plan,
+            'referal' => $request->referal,
             'password' => Hash::make($request->password),
         ]);
 

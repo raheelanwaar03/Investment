@@ -85,7 +85,7 @@ class clean extends Command
         $user->name = 'Raheel Anwaar';
         $user->referal = 'default';
         $user->balance = '0';
-        $user->address = '318 j.b';
+        $user->plan = 'Premimum';
         $user->phone = '03149720318';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('asdfasdf');
@@ -97,7 +97,7 @@ class clean extends Command
         $user->name = 'Hamza Anwaar';
         $user->email = 'user@gmail.com';
         $user->referal = 'default';
-        $user->address = '318 j.b';
+        $user->plan = 'Premimum';
         $user->balance = '0';
         $user->phone = '03167007156';
         $user->password = Hash::make('asdfasdf');

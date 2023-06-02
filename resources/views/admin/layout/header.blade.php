@@ -46,11 +46,86 @@
 
 <body class="crm_body_bg">
 
-
-
     <nav class="sidebar">
         <div class="logo d-flex justify-content-between">
-            <a href="{{ route('Admin.Dashboard') }}"><img src="{{ asset('admin/img/logo.png') }}" alt=""></a>
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+            <div class="sidebar_close_icon d-lg-none">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+        <ul id="sidebar_menu">
+            <li class="side_menu_title">
+                <span>Dashboard</span>
+            </li>
+
+            <li class="mm-active">
+                <a class="has-arrow" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
+                    <img src="{{ asset('assets/img/menu-icon/1.svg') }}" alt="">
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="side_menu_title">
+                <span></span>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('assets/img/menu-icon/2.svg') }}" alt="">
+                    <span>Users</span>
+                </a>
+                <ul>
+                    <li><a href="{{ route('Admin.All.Users') }}">All Users</a></li>
+                    <li><a href="{{ route('Admin.Pending.Users') }}">Pending Users</a></li>
+                    <li><a href="{{ route('Admin.Approved.Users') }}">Approved Users</a></li>
+                    <li><a href="{{ route('Admin.Rejected.Users') }}">Rejected Users</a></li>
+                    <li><a href="{{ route('Admin.Today.Approved.User') }}">Today's Approved</a></li>
+                    <li><a href="{{ route('Admin.Vistors') }}">Today's Vistors</a></li>
+                </ul>
+            </li>
+            <li class="side_menu_title">
+                <span>Others</span>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('assets/img/menu-icon/4.svg') }}" alt="">
+                    <span>Settings</span>
+                </a>
+                <ul>
+                    <li><a href="{{ route('Admin.Setting.index') }}">Add Referal limit</a></li>
+                    <li><a href="{{ route('Admin.Level.View') }}">Level setting</a></li>
+                    <li><a href="{{ route('Admin.Easypaisa.index') }}">Payment Page Details</a></li>
+                    <li><a href="{{ route('Admin.Add.Verification.Details') }}">Verification Page Text</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('assets/img/menu-icon/5.svg') }}" alt="">
+                    <span>Task</span>
+                </a>
+                <ul>
+                    <li><a href="{{ route('Admin.Product.create') }}">Add New Task</a></li>
+                    <li><a href="{{ route('Admin.Product.index') }}">All Tasks</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('assets/img/menu-icon/7.svg') }}" alt="">
+                    <span>Widthraw</span>
+                </a>
+                <ul>
+                    <li><a href="{{ route('Admin.All.Widthraw.Requests') }}">All Widthraw Request</a></li>
+                    <li><a href="{{ route('Admin.Approved.Widthraw') }}">Approved Widthraw</a></li>
+                    <li><a href="{{ route('Admin.Rejected.Widthraw') }}">Rejected Widthraw</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    {{-- <nav class="sidebar">
+        <div class="logo d-flex justify-content-between">
+            <a href="{{ route('Admin.Dashboard') }}"><img src="{{ asset('admin/img/logo.png') }}"
+                    alt=""></a>
             <div class="sidebar_close_icon d-lg-none">
                 <i class="ti-close"></i>
             </div>
@@ -60,7 +135,7 @@
                 <span>Dashboard</span>
             </li>
             <li class="mm-active">
-                <a class="has-arrow" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
+                <a class="has-arrow" href="#" aria-expanded="false">
 
                     <img src="{{ asset('admin/img/menu-icon/1.svg') }}" alt="">
                     <span>Dashboard</span>
@@ -68,6 +143,12 @@
             </li>
             <li class="side_menu_title">
                 <span>Users</span>
+            </li>
+            <li class="mm-active">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('admin/img/menu-icon/1.svg') }}" alt="">
+                    <span>User</span>
+                </a>
             </li>
             <li class="">
                 <ul>
@@ -82,6 +163,12 @@
             <li class="side_menu_title">
                 <span>Settings</span>
             </li>
+            <li class="mm-active">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('admin/img/menu-icon/1.svg') }}" alt="">
+                    <span>Settings</span>
+                </a>
+            </li>
             <li class="">
                 <ul>
                     <li><a href="{{ route('Admin.Setting.index') }}">Add Referal limit</a></li>
@@ -93,6 +180,12 @@
             <li class="side_menu_title">
                 <span>Daily Video</span>
             </li>
+            <li class="mm-active">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('admin/img/menu-icon/1.svg') }}" alt="">
+                    <span>Task</span>
+                </a>
+            </li>
             <li class="">
                 <ul>
                     <li><a href="{{ route('Admin.Product.create') }}">Add New Task</a></li>
@@ -101,6 +194,12 @@
             </li>
             <li class="side_menu_title">
                 <span>Widthraw</span>
+            </li>
+            <li class="mm-active">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <img src="{{ asset('admin/img/menu-icon/1.svg') }}" alt="">
+                    <span>Widhtraw</span>
+                </a>
             </li>
             <li class="">
                 <ul>
@@ -116,4 +215,4 @@
                 </form>
             </li>
         </ul>
-    </nav>
+    </nav> --}}
