@@ -90,7 +90,7 @@
             <li class="">
                 <a class="has-arrow" href="#" aria-expanded="false">
                     <img src="{{ asset('assets/img/menu-icon/4.svg') }}" alt="">
-                    <span>Settings</span>
+                    <span><b>Settings</b></span>
                 </a>
                 <ul>
                     <li><a href="{{ route('Admin.Setting.index') }}">Add Referal limit</a></li>
@@ -102,7 +102,7 @@
             <li class="">
                 <a class="has-arrow" href="#" aria-expanded="false">
                     <img src="{{ asset('assets/img/menu-icon/5.svg') }}" alt="">
-                    <span>Task</span>
+                    <span><b>Task</b></span>
                 </a>
                 <ul>
                     <li><a href="{{ route('Admin.Product.create') }}">Add New Task</a></li>
@@ -112,7 +112,7 @@
             <li class="">
                 <a class="has-arrow" href="#" aria-expanded="false">
                     <img src="{{ asset('assets/img/menu-icon/7.svg') }}" alt="">
-                    <span>Widthraw</span>
+                    <span><b>Widthraw</b></span>
                 </a>
                 <ul>
                     <li><a href="{{ route('Admin.All.Widthraw.Requests') }}">All Widthraw Request</a></li>

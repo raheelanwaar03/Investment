@@ -60,7 +60,7 @@ class clean extends Command
         // Verification page text
 
         $verificationText = new verificationText();
-        $verificationText->text = 'Welcome to DataEntry website we will approve your account after checking your given details';
+        $verificationText->text = 'Welcome to MoviesPay website we will approve your account after checking your given details';
         $verificationText->status = 1;
         $verificationText->save();
 

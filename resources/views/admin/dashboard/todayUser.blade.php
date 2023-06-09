@@ -49,7 +49,7 @@
                     <div class="col-12">
                         <div class="QA_section">
                             <div class="white_box_tittle list_header">
-                                <h4>Pending Users</h4>
+                                <h4>Today Approved Users</h4>
                             </div>
                             <div class="table-responsive">
                                 <table id="myTable" class="table table-responsive table-bordered">
