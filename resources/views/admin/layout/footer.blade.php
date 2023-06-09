@@ -23,6 +23,20 @@
 <script src="{{ asset('admin/vendors/datatable/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('admin/vendors/datatable/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('admin/vendors/datatable/js/dataTables.buttons.min.js') }}"></script>
+
+{{-- data table --}}
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#dataTable').DataTable();
+    });
+</script>
+
+
 <script src="{{ asset('admin/vendors/datatable/js/buttons.flash.min.js') }}"></script>
 <script src="{{ asset('admin/vendors/datatable/js/jszip.min.js') }}"></script>
 <script src="{{ asset('admin/vendors/datatable/js/pdfmake.min.js') }}"></script>

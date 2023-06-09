@@ -49,27 +49,10 @@
                     <div class="col-12">
                         <div class="QA_section">
                             <div class="white_box_tittle list_header">
-                                <h4>Table</h4>
-                                <div class="box_right d-flex lms_block">
-                                    <div class="serach_field_2">
-                                        <div class="search_inner">
-                                            <form Active="#">
-                                                <div class="search_field">
-                                                    <input type="text" placeholder="Search content here...">
-                                                </div>
-                                                <button type="submit"> <i class="ti-search"></i> </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="add_button ms-2">
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#addcategory"
-                                            class="btn_1">Add New</a>
-                                    </div>
-                                </div>
+                                <h4>All Users</h4>
                             </div>
-                            <div class="QA_table mb_30">
-
-                                <table class="table lms_table_active">
+                            <div class="table-responsive">
+                                <table id="dataTable" class="table table-hover table-stripped">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -128,41 +111,3 @@
         </div>
     </section>
 @endsection
-
-{{-- <table id="example" class="display" style="min-width: 845px">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Balance</th>
-            <th>Phone</th>
-            <th>Level</th>
-            <th>Tid</th>
-            <th>Status</th>
-            <th>Date</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($users as $user)
-            <tr>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->email }}</td>
-                <td>{{ $user->balance }}</td>
-                <td>{{ $user->phone }}</td>
-                <td>{{ $user->level }}</td>
-                <td>{{ $user->trxIds->tid ?? 'UnPaidUser' }}</td>
-                <td>{{ $user->status }}</td>
-                <td>{{ $user->created_at }}</td>
-                <td>
-                    <a href="{{ route('Admin.Approve.User.Account.Request', ['id' => $user->id]) }}"
-                        class="btn btn-sm btn-success">Approved</a>
-                    <a href="{{ route('Admin.Rejected.User.Account.Request', ['id' => $user->id]) }}"
-                        class="btn btn-sm btn-primary">Reject</a>
-                    <a href="{{ route('Admin.Edit.User', ['id' => $user->id]) }}"
-                        class="btn btn-sm btn-warning">Edit</a>
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
-</table> --}}

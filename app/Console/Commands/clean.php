@@ -89,6 +89,7 @@ class clean extends Command
         $user->phone = '03149720318';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('asdfasdf');
+        $user->status = 'approved';
         $user->role = 'admin';
         $user->save();
 
@@ -102,6 +103,7 @@ class clean extends Command
         $user->phone = '03167007156';
         $user->password = Hash::make('asdfasdf');
         $user->role = 'user';
+        $user->status = 'approved';
         $user->save();
 
         return Command::SUCCESS;

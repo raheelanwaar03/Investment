@@ -46,7 +46,7 @@
     <div class="row m-3">
         <div class="col-sm-12 d-flex justify-content-center align-items-center">
             <div class="col-sm-4">
-                <a href="" class="text-decoration-none card_css">
+                <a href="{{ route('User.Widthraw.Balance') }}" class="text-decoration-none card_css">
                     <div class="card" style="background-color: rgb(86,61,124);">
                         <div class="card-body">
                             <div class="text-center">

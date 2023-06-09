@@ -1,134 +1,107 @@
 @extends('admin.layout.app')
 
 @section('content')
-    <div class="dasboard-body">
-        <div class="dashboard-hero">
-            <div class="header-top">
-                <div class="container">
-                    <div class="mobile-header d-flex justify-content-between d-lg-none align-items-center">
-                        <div class="author">
-                            <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
+    <section class="main_content dashboard_part">
+
+        <div class="container-fluid g-0">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <div class="header_iner d-flex justify-content-between align-items-center">
+                        <div class="sidebar_icon d-lg-none">
+                            <i class="ti-menu"></i>
                         </div>
-                        <div class="cross-header-bar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="serach_field-area">
+                            <div class="search_inner">
+                                <form action="#">
+                                    <div class="search_field">
+                                        <input type="text" placeholder="Search here...">
+                                    </div>
+                                    <button type="submit"> <img src="{{ asset('admin/img/icon/icon_search.svg') }}"
+                                            alt="">
+                                    </button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-between align-items-center">
-                        <ul class="support-area">
-                            <li>
-                                <a href="#0"><i class="flaticon-support"></i>Support</a>
-                            </li>
-                            <li>
-                                <i class="flaticon-globe"></i>
-                            </li>
-                        </ul>
-                        <div
-                            class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
-                            <ul class="dashboard-right-menus">
-                                <li>
-                                    <a href="#0">
-                                    </a>
-                                    <div class="notification-area">
-                                        <div class="notifacation-header d-flex flex-wrap justify-content-between">
-                                        </div>
-                                        <div class="notifacation-footer text-center">
-                                        </div>
+                        <div class="header_right d-flex justify-content-between align-items-center">
+                            <div class="profile_info">
+                                <img src="{{ asset('admin/img/client_img.png') }}" alt="#">
+                                <div class="profile_info_iner">
+                                    <p>{{ auth()->user()->role }} </p>
+                                    <h5>{{ auth()->user()->name }}</h5>
+                                    <div class="profile_info_details">
+                                        <form action="{{ route('login') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" style="border: none;font-size:16px;color:white;"
+                                                class="bg-transparent">Log Out <i class="ti-shift-left"></i></button>
+                                        </form>
                                     </div>
-                                </li>
-                                <li>
-                                    <a href="#0" class="author">
-                                        <div class="thumb">
-                                            <img src="{{ asset('assets/images/dashboard/author.png') }}" alt="dashboard">
-                                            <span class="checked">
-                                                <i class="flaticon-checked"></i>
-                                            </span>
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="title">{{ auth()->user()->name }}</h6>
-                                            <span class="country">{{ auth()->user()->country }}</span>
-                                        </div>
-                                    </a>
-                                    <div class="notification-area">
-                                        <div class="author-header">
-                                            <div class="thumb">
-                                                <img src="{{ asset('assets/images/dashboard/author.png') }}"
-                                                    alt="dashboard">
-                                            </div>
-                                            <h6 class="title">{{ auth()->user()->name }}</h6>
-                                        </div>
-                                        <div class="author-body">
-                                            <ul>
-                                                <li>
-                                                    <a href="{{ route('profile.edit') }}" class="text-seconday"><i class="fas fa-user-edit"></i>Edit
-                                                        Profile</a>
-                                                </li>
-                                                <li>
-                                                    <form action="{{ route('logout') }}" method="POST">
-                                                        @csrf
-                                                        <button type="submit" class="btn btn-danger"><i
-                                                                class="fas fa-sign-out-alt"></i>Log
-                                                            Out</button>
-                                                    </form>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="dashboard-hero-content text-white">
-                <h3 class="title">Admin Dashboard</h3>
-                <ul class="">
-                    <li>
-                        Dashboard
-                    </li>
-                </ul>
-            </div>
         </div>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <h2 class="text-center">Easypaisa Users</h2>
-                    <hr>
-                    <table id="myTable" class="table table-responsive table-bordered">
-                        <thead>
-                            <tr class="">
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Username</th>
-                                <th>Email</th>
-                                <th>Level</th>
-                                <th>Phone</th>
-                                <th>Country</th>
-                                <th>Status</th>
-                                <th>Account</th>
-                            </tr>
-                        </thead>
 
-                        <tbody>
-                            @foreach ($users as $user)
-                                <tr>
-                                    <td>{{ $user->id }}</td>
-                                    <td>{{ $user->username }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->level }}</td>
-                                    <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->country }}</td>
-                                    <td>{{ $user->status }}</td>
-                                    <td>{{ $user->trxIds->bank ?? 'unpaid user' }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
+        <div class="main_content_iner ">
+            <div class="container-fluid p-0">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="QA_section">
+                            <div class="white_box_tittle list_header">
+                                <h4>Easypaisa Users</h4>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-responsive table-bordered">
+                                    <thead>
+                                        <tr class="">
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Level</th>
+                                            <th>Phone</th>
+                                            <th>Country</th>
+                                            <th>Status</th>
+                                            <th>Account</th>
+                                        </tr>
+                                    </thead>
 
-                    </table>
+                                    <tbody>
+                                        @foreach ($users as $user)
+                                            <tr>
+                                                <td>{{ $user->id }}</td>
+                                                <td>{{ $user->username }}</td>
+                                                <td>{{ $user->email }}</td>
+                                                <td>{{ $user->level }}</td>
+                                                <td>{{ $user->phone }}</td>
+                                                <td>{{ $user->country }}</td>
+                                                <td>{{ $user->status }}</td>
+                                                <td>{{ $user->trxIds->bank ?? 'unpaid user' }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="footer_part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer_iner text-center">
+                            <p>2020 © copyright - Reserved by <a href="#"><img
+                                        src="{{ asset('admin/img/logo.png') }}" alt=""></a><a href="#">
+                                    Dashboard</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 @endsection
