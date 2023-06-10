@@ -40,17 +40,17 @@ class ProductController extends Controller
         $validated = $request->validate([
             'product_price' => 'required',
             'product_level' => 'required',
-            'product_img' => 'required',
+            'video' => 'required',
         ]);
 
-        $image = $validated['product_img'];
-        $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $imageName);
+        $video = $validated['video'];
+        $videoName = rand(111111, 999999) . '.' . $video->getClientOriginalExtension();
+        $video->move(public_path('images'), $videoName);
 
         $product = new AdminProductModel();
         $product->product_price = $validated['product_price'];
         $product->product_level = $validated['product_level'];
-        $product->product_img = $imageName;
+        $product->video = $videoName;
         $product->save();
         return redirect()->back()->with('massage', 'Task Added successfully');
     }
@@ -92,11 +92,11 @@ class ProductController extends Controller
 
         // check image
 
-        if ($request->product_img) {
-            $image = $request->product_img;
-            $imageName = rand(111111, 99999) . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images'), $imageName);
-            $product->product_img = $imageName;
+        if ($request->video) {
+            $video = $request->video;
+            $videoName = rand(111111, 99999) . '.' . $video->getClientOriginalExtension();
+            $video->move(public_path('images'), $videoName);
+            $product->video = $videoName;
         }
         $product->product_price = $request->product_price;
         $product->product_level = $request->product_level;
