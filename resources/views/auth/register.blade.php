@@ -65,9 +65,9 @@
                             <div class="form-group">
                                 <label style="color:white"><b style="font-size: 25px">Select Plan</b></label>
                                 <select name="plan" class="form-control">
-                                    <option value="Basic">Basic: 500</option>
-                                    <option value="Standard">Standard: 1000</option>
-                                    <option value="Premimum">Premimum: 1500</option>
+                                    <option value="1">Basic: 500</option>
+                                    <option value="2">Standard: 1000</option>
+                                    <option value="3">Premimum: 1500</option>
                                 </select>
                             </div>
                             <span>

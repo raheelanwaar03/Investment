@@ -1,92 +1,187 @@
-@extends('user.layout.app')
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/fb965b455a.js" crossorigin="anonymous"></script>
+    <title>{{ env('APP_NAME') }}</title>
+</head>
 
-@section('content')
-    <div class="content-body">
-        <!-- row -->
-        <div class="container-fluid">
-            <div class="mb-sm-4 d-flex flex-wrap align-items-center text-head">
-                <h2 class="mb-3 me-auto">Welcome to Data Entry Jobs</h2>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card bg-success">
-                                        <div class="card-header">
-                                            <div class="col-md-12 text-center">
-                                                <h2 style="color:white">Are you looking to online job work at home?</h2>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="text-white">Work at your part time / full time and earn money from
-                                                online job,Data entry jobs,Form
-                                                filling jobs.Wrok from your PC,Laptop or Mobile.So you are at right place as
-                                                we are offering remote jobs work in your comfort.</h5>
-                                            <h4 class="text-center" style="color:white">Typing Jobs</h4>
-                                            <h5 class="text-white">Complete Typing assignments without errors on the fields
-                                                provided.Search for typing assignments and get started.This blog has posts
-                                                and articles from numerous authors detailing how you can earn money whilst
-                                                working from home. It caters specifically towards women who want to find a
-                                                remote career. It’s one of the most well known blogs and was founded by
-                                                Holly Reisem Hanna. Whilst being a stay-at-home mom, she felt the need to
-                                                try something different from the usual 9-5. She now blogs for a living,
-                                                collating articles, tips and tricks for others who would also like to work
-                                                from home.
-                                            </h5>
-                                            <h3 class="text-center text-white">Becoming a Specialist</h3>
-                                            <h5 class="text-white">
-                                                Like virtual assistants, data entry specialists also wear many hats. It all
-                                                depends on their employer’s requirements and business goals. They could be
-                                                data researchers by day, eagle-eyed fact-checkers by night. Below are some
-                                                of the responsibilities that data entry specialists may take on.
-                                                <ul>
-                                                    <li>Verifying and correcting inaccurate data</li>
-                                                    <li>
-                                                        Digitizing data using software like word processors and spreadsheets
-                                                    </li>
-                                                    <li>
-                                                        Ensuring consistent formatting of organized data
-                                                    </li>
-                                                    <li>
-                                                        Analyzing data sets and compiling reports
-                                                    </li>
-                                                    <li>
-                                                        Retrieving missing information whenever necessary
-                                                    </li>
-                                                    <li>
-                                                        Observe data cleanliness and security standards
-                                                    </li>
-                                                </ul>
+<body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-12 p-4">
+                <div class="nav d-flex justify-content-center">
+                    @if (auth()->user())
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="custom-btn">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+                    @else
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+    <a class="nav-link custom-btn m-3" href="{{ route('login') }}">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link custom-btn m-1" href="{{ route('register') }}">Register</a>
+    </li>
+</ul> @endif
+    </div>
+    </div>
+    </div>
+    </div>
 
-                                            </h5>
-
-                                            <h3 class="text-white">Benifits of Working at home</h3>
-                                            <ul class="text-white">
-                                                <li>Better Work-Life Balance.</li>
-                                                <li>Less Commute Stress.</li>
-                                                <li>Location Independence.</li>
-                                                <li>Improved Inclusivity.</li>
-                                                <li>Money Savings.</li>
-                                                <li>Positive Environmental Impact.</li>
-                                                <li>Impact on Sustainability.</li>
-                                                <li>A Customizable Office.</li>
-                                            </ul>
-
-                                        </div>
-                                        <div class="card-footer text-center bg-light">
-                                            <a href="{{ route('User.Work') }}" class="btn btn-success text-white">Daily
-                                                Work</a>
-                                        </div>
-                                    </div>
-                                </div>
+    <div class="container">
+    <div class="row m-3">
+        <div class="col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="col-sm-4">
+                <a href="{{ route('User.Widthraw.Balance') }}" class="text-decoration-none card_css">
+                    <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa-solid fa-money-bill-transfer" style="font-size:25px;"></i>
                             </div>
+                            <h5 class="text-decoration-none text-center">Widthraw</h5>
                         </div>
                     </div>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="{{ route('User.Team') }}" class="text-decoration-none card_css">
+                    <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </div>
+                            <h5 class="text-decoration-none text-center">Team</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="" class="text-decoration-none card_css">
+                    <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </div>
+                            <h5 class="text-decoration-none text-center">Guide</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-md-12 d-flex justify-content-center align-items-center">
+                <div class="col-sm-4">
+                    <a href="" class="text-decoration-none card_css">
+                        <div class="card" style="background-color: rgb(86,61,124);">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-address-book" style="font-size:25px;"></i>
+                                </div>
+                                <h5 class="text-decoration-none text-center">Rules</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="" class="text-decoration-none card_css">
+                        <div class="card" style="background-color: rgb(86,61,124);">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-newspaper" style="font-size:25px;"></i>
+                                </div>
+                                <h5 class="text-decoration-none text-center">News</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="{{ route('User.Work') }}" class="text-decoration-none card_css">
+                        <div class="card" style="background-color: rgb(86,61,124);">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-circle-play" style="font-size:25px;"></i>
+                                </div>
+                                <h5 class="text-decoration-none text-center">Watch Video</h5>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-@endsection
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                <div class="col-sm-4">
+                    <a href="" class="text-decoration-none card_css">
+                        <div class="card" style="background-color: rgb(86,61,124);">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-house-circle-exclamation" style="font-size:25px;"></i>
+                                </div>
+                                <h5 class="text-decoration-none text-center">About Us</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="" class="text-decoration-none card_css">
+                        <div class="card" style="background-color: rgb(86,61,124);">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-comment-dots" style="font-size:25px;"></i>
+                                </div>
+                                <h5 class="text-decoration-none text-center">Feed Back</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="" class="text-decoration-none card_css">
+                        <div class="card" style="background-color: rgb(86,61,124);">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-hashtag" style="font-size:25px;"></i>
+                                </div>
+                                <h5 class="text-decoration-none text-center">Instagram</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
+                    <a href="{{ route('LandingPage') }}" class="text-center">
+                        <div style="float:left;">
+                            <i class="fa-solid fa-door-open" style="color:white;font-size:60px;"></i>
+                        </div>
+                        <h3 class="text-center text-white text-decoration-none">Welcome To {{ env('APP_NAME') }}</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+</html>

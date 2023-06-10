@@ -31,7 +31,7 @@ class User extends Authenticatable
         'name',
         'email',
         'status',
-        'address',
+        'plan',
         'phone',
         'referal',
         'role',
