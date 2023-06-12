@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('product_price');
             $table->string('product_level');
+            $table->string('duration');
             $table->string('video');
+
             $table->timestamps();
         });
     }

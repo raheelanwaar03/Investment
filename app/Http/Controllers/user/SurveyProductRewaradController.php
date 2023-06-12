@@ -28,7 +28,8 @@ class SurveyProductRewaradController extends Controller
             $user = User::where('id', auth()->user()->id)->first();
             $user->balance += $procutRewarad;
             $user->save();
+            return redirect()->back()->with('success','You have been rewarded');
         }
-        return redirect()->back()->with('error', 'You have been compeleted this task before');
+        return redirect()->back()->with('error', 'You have been watch this video before');
     }
 }

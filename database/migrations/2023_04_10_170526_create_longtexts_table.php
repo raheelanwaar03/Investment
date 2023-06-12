@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('longtexts', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
-            $table->longText('longText');
+            $table->longText('product_id');
             $table->timestamps();
         });
     }

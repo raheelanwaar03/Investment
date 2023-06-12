@@ -68,6 +68,11 @@
                                             placeholder="Add Task Level">
                                     </div>
                                     <div class="form-group">
+                                        <label for="" class="m-3">Add Video Duration</label>
+                                        <input type="text" name="duration" class="form-control"
+                                            placeholder="Add video time">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="" class="m-3">Video</label>
                                         <input type="file" name="video" class="form-control">
                                     </div>

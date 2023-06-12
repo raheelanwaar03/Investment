@@ -19,9 +19,10 @@ Route::name('User.')->prefix('User')->middleware('user','auth','feesCheck')->gro
         Route::get('/Widthraw/Balance',[UserWorkController::class,'widthrawBalance'])->name('Widthraw.Balance');
         Route::get('/Contact/Us',[UserWorkController::class,'contact'])->name('Contact.Us');
         Route::post('/Widthraw/Balance/Request',[UserWorkController::class,'widthrawBalanceRequest'])->name('Widthraw.Balance.Request');
+        // web.php
         // user Typed Text
-        Route::post('/Type/text/{id}',[UserDashboardController::class,'taskText'])->name('Type.Task');
-        // giving commission on review and surve
+        Route::get('/Type/text/{id}',[UserDashboardController::class,'taskText'])->name('Type.Task');
+        // giving commission on watching video
         Route::get('Review/Product/{id}',[SurveyProductRewaradController::class,'index'])->name('Product.Reward');
 
     });

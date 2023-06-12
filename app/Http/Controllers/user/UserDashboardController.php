@@ -57,7 +57,7 @@ class UserDashboardController extends Controller
                 // Storing User Typed Text
                 $taskText = new Longtext();
                 $taskText->user_id = auth()->user()->id;
-                $taskText->longText = $request->user_text;
+                $taskText->product_id = $id;
                 $taskText->save();
                 // giving user product reward
                 $user = User::where('id', auth()->user()->id)->first();

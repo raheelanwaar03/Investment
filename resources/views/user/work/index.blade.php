@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
@@ -46,7 +47,10 @@
         <div class="row m-3">
             @forelse ($products as $product)
                 <div class="col-md-4">
-                    <video controls="" src="{{ asset('images/' . $product->video) }}" width="300px" height="300px"></video>
+                    <!-- video/show.blade.php -->
+                    <video controls width="300px" height="300px">
+                        <source id="{{ $product->id }}" src="{{ asset('images/' . $product->video) }}" type="video/mp4">
+                    </video>
                 </div>
                 @empty
                 <h3>No Video uploaded yet!</h3> @endforelse
@@ -66,6 +70,24 @@
         </div>
     </div>
     </div>
+
+    <footer>
+        {{-- Javascript Code --}}
+        <script>
+            // redirect page after video ended seconds
+            setTimeout(function () {
+                window.location.href = "{{ route('User.Type.Task',['id'=>$product->id]) }}";
+            }, {{ $product->duration * 1000 }});
+
+            // // show timer 5 seconds
+            // var time = {{ $product->duration }};
+            // setInterval(function () {
+            //     time--;
+            //     $('#timer').text(time);
+            // }, {{ $product->duration * 1000 }});
+        </script>
+    </footer>
+
     </body>
 
 </html>

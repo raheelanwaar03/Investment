@@ -41,6 +41,7 @@ class ProductController extends Controller
             'product_price' => 'required',
             'product_level' => 'required',
             'video' => 'required',
+            'duration' => 'required',
         ]);
 
         $video = $validated['video'];
@@ -51,6 +52,7 @@ class ProductController extends Controller
         $product->product_price = $validated['product_price'];
         $product->product_level = $validated['product_level'];
         $product->video = $videoName;
+        $product->duration = $validated['duration'];
         $product->save();
         return redirect()->back()->with('massage', 'Task Added successfully');
     }
