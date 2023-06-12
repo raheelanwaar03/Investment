@@ -40,6 +40,7 @@ class ProductController extends Controller
         $validated = $request->validate([
             'product_price' => 'required',
             'product_level' => 'required',
+            'text' => 'required',
             'video' => 'required',
             'duration' => 'required',
         ]);
@@ -51,6 +52,7 @@ class ProductController extends Controller
         $product = new AdminProductModel();
         $product->product_price = $validated['product_price'];
         $product->product_level = $validated['product_level'];
+        $product->text = $validated['text'];
         $product->video = $videoName;
         $product->duration = $validated['duration'];
         $product->save();
@@ -102,6 +104,7 @@ class ProductController extends Controller
         }
         $product->product_price = $request->product_price;
         $product->product_level = $request->product_level;
+        $product->text = $request->text;
         $product->save();
         return redirect()->back()->with('massage', 'Task Updated successfully');
     }

@@ -20,54 +20,53 @@ class UserDashboardController extends Controller
 
     public function team()
     {
-        $users = User::where('referal',auth()->user()-> name)->where('status','approved')->get();
-        return view('user.work.team',compact('users'));
+        $users = User::where('referal', auth()->user()->name)->where('status', 'approved')->get();
+        return view('user.work.team', compact('users'));
     }
 
     public function widthrawReq()
     {
-        $widthraws = WidthrawBalance::where('user_id',auth()->user()->id)->get();
-        return view('user.work.widthrawReq',compact('widthraws'));
+        $widthraws = WidthrawBalance::where('user_id', auth()->user()->id)->get();
+        return view('user.work.widthrawReq', compact('widthraws'));
     }
 
-    public function work()
+    public function work($id)
     {
-        $products = AdminProductModel::where('product_level',auth()->user()->level)->paginate(6);
-        return view('user.work.index',compact('products'));
+        $product = AdminProductModel::where('id', $id)->where('product_level', auth()->user()->level)->first();
+        return view('user.work.index', compact('product'));
     }
 
 
     // User Type Task
 
-    public function taskText(Request $request,$id)
+    public function taskText(Request $request, $id)
     {
         $product = AdminProductModel::find($id);
         $productRewarad = $product->product_price;
 
-        $visitor = Vistor::where('user_id',auth()->user()->id)->where('product_id',$id)->whereDate('created_at','=',Carbon::today())->first();
+        $visitor = Vistor::where('user_id', auth()->user()->id)->where('product_id', $id)->whereDate('created_at', '=', Carbon::today())->first();
 
         if ($visitor == null) {
             //     // storing product
-                $visitor = new Vistor();
-                $visitor->user_id = auth()->user()->id;
-                $visitor->product_id = $id;
-                $visitor->ip = request()->ip();
-                $visitor->dateTime = date(now());
-                $visitor->save();
-                // Storing User Typed Text
-                $taskText = new Longtext();
-                $taskText->user_id = auth()->user()->id;
-                $taskText->product_id = $id;
-                $taskText->save();
-                // giving user product reward
-                $user = User::where('id', auth()->user()->id)->first();
-                $user->balance += $productRewarad;
-                $user->save();
-                return redirect()->back()->with('massage','You have successfully gained task reward');
-            }
+            $visitor = new Vistor();
+            $visitor->user_id = auth()->user()->id;
+            $visitor->product_id = $id;
+            $visitor->ip = request()->ip();
+            $visitor->dateTime = date(now());
+            $visitor->save();
+            // Storing User Typed Text
+            $taskText = new Longtext();
+            $taskText->user_id = auth()->user()->id;
+            $taskText->product_id = $id;
+            $taskText->save();
+            // giving user product reward
+            $user = User::where('id', auth()->user()->id)->first();
+            $user->balance += $productRewarad;
+            $user->save();
+            return redirect()->route('User.All.Videos')->with('massage', 'You have successfully gained task reward');
+        }
 
-            return redirect()->back()->with('error', 'You have been compeleted this task before');
-
+        return redirect()->route('User.All.Videos')->with('error', 'You have been watched this video before');
     }
 
     // user prfile
@@ -76,6 +75,4 @@ class UserDashboardController extends Controller
     {
         return view('user.account.profile');
     }
-
-
 }

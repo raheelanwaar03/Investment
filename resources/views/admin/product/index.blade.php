@@ -59,6 +59,8 @@
                                             <tr class="">
                                                 <th>Price</th>
                                                 <th>Level</th>
+                                                <th>Text</th>
+                                                <th>Duration</th>
                                                 <th>Video</th>
                                                 <th>Date</th>
                                                 <th>Action</th>
@@ -70,6 +72,8 @@
                                                 <tr>
                                                     <td>{{ $product->product_price }}</td>
                                                     <td>{{ $product->product_level }}</td>
+                                                    <td>{{ $product->text }}</td>
+                                                    <td>{{ $product->duration }}</td>
                                                     <td>{{ $product->video }}</td>
                                                     <td>{{ $product->created_at }}</td>
                                                     <td class="d-flex justify-content-center align-items-center">

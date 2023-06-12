@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('product_price');
             $table->string('product_level');
             $table->string('duration');
+            $table->string('text');
             $table->string('video');
 
             $table->timestamps();

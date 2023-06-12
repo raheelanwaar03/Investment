@@ -57,17 +57,27 @@
                                     @csrf
                                     @method('put')
                                     <div class="form-group">
-                                        <label for="" class="m-3">Price</label>
+                                        <label for="" class="m-3">Video Price</label>
                                         <input type="text" name="product_price" class="form-control"
                                             value="{{ $product->product_price }}" class="form-group">
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="m-3">Level</label>
+                                        <label for="" class="m-3">Set Level</label>
                                         <input type="text" name="product_level" class="form-control"
                                             value="{{ $product->product_level }}" class="form-group">
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="m-3">Video</label>
+                                        <label for="" class="m-3">Text</label>
+                                        <input type="text" name="text" class="form-control"
+                                            value="{{ $product->text }}" class="form-group">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="m-3">Update Video Duration</label>
+                                        <input type="text" name="duration" class="form-control"
+                                            value="{{ $product->duration }}" class="form-group">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="m-3">Change Video</label>
                                         <input type="file" name="video" class="form-control">
                                     </div>
                                     <div class="my-3">

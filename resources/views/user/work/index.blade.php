@@ -16,6 +16,7 @@
 </head>
 
 <body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});">
+    <x-alert/>
     <div class="container">
         <div class="row w-100">
             <div class="col-12 p-4">
@@ -44,39 +45,36 @@
     </div>
 
     <div class="container">
-        <div class="row m-3">
-            @forelse ($products as $product)
-                <div class="col-md-4">
-                    <!-- video/show.blade.php -->
-                    <video controls width="300px" height="300px">
-                        <source id="{{ $product->id }}" src="{{ asset('images/' . $product->video) }}" type="video/mp4">
-                    </video>
-                </div>
-                @empty
-                <h3>No Video uploaded yet!</h3> @endforelse
+    <div class="row m-3">
+        <div class="col-md-12">
+            <!-- video/show.blade.php -->
+            <video controls autoplay>
+                <source id="{{ $product->id }}" src="{{ asset('images/' . $product->video) }}" type="video/mp4">
+            </video>
         </div>
+    </div>
     </div>
     <div class="container">
-    <div class="row m-3">
-        <div class="col-sm-12 d-flex justify-content-center align-items-center">
-            <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
-                <a href="{{ route('LandingPage') }}" class="text-center">
-                    <div style="float:left;">
-                        <i class="fa-solid fa-door-open" style="color:white;font-size:60px;"></i>
-                    </div>
-                    <h3 class="text-center text-white text-decoration-none">Welcome To {{ env('APP_NAME') }}</h3>
-                </a>
+        <div class="row m-3">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
+                    <a href="{{ route('LandingPage') }}" class="text-center">
+                        <div style="float:left;">
+                            <i class="fa-solid fa-door-open" style="color:white;font-size:60px;"></i>
+                        </div>
+                        <h3 class="text-center text-white text-decoration-none">Welcome To {{ env('APP_NAME') }}</h3>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <footer>
         {{-- Javascript Code --}}
         <script>
             // redirect page after video ended seconds
-            setTimeout(function () {
-                window.location.href = "{{ route('User.Type.Task',['id'=>$product->id]) }}";
+            setTimeout(function() {
+                window.location.href = "{{ route('User.Type.Task', ['id' => $product->id]) }}";
             }, {{ $product->duration * 1000 }});
 
             // // show timer 5 seconds

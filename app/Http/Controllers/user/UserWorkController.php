@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\AdminProductModel;
 use App\Models\admin\Setting;
 use App\Models\User;
 use App\Models\user\WidthrawBalance;
@@ -86,4 +87,12 @@ class UserWorkController extends Controller
         $widthraw->save();
         return redirect()->route('User.Widthraw.Balance')->with('massage', 'Wait for admin approval');
     }
+
+    public function allVideo()
+    {
+        $allVideos = AdminProductModel::get();
+
+        return view('user.work.allVideos',compact('allVideos'));
+    }
+
 }
