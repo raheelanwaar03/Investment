@@ -75,4 +75,10 @@ class UserDashboardController extends Controller
     {
         return view('user.account.profile');
     }
+
+    public function rule()
+    {
+        return view('user.social.rule');
+    }
+
 }

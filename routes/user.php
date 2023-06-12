@@ -18,6 +18,7 @@ Route::name('User.')->prefix('User')->middleware('user','auth','feesCheck')->gro
         Route::get('/Refer/Friend',[UserWorkController::class,'referFriend'])->name('Refer.New.Friend');
         Route::get('/Widthraw/Balance',[UserWorkController::class,'widthrawBalance'])->name('Widthraw.Balance');
         Route::get('/Contact/Us',[UserWorkController::class,'contact'])->name('Contact.Us');
+        Route::get('/Rules',[UserWorkController::class,'rule'])->name('Rules');
         Route::post('/Widthraw/Balance/Request',[UserWorkController::class,'widthrawBalanceRequest'])->name('Widthraw.Balance.Request');
         Route::get('/All/Videos',[UserWorkController::class,'allVideo'])->name('All.Videos');
         // web.php
