@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    {{-- dataTable --}}
+    {{-- Datatable --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    {{-- icons --}}
+    {{-- favicon --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}">
+    {{-- style --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/fb965b455a.js" crossorigin="anonymous"></script>
     <title>{{ env('APP_NAME') }}</title>

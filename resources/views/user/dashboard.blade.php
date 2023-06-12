@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    {{-- Datatable --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    {{-- favicon --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}">
+    {{-- style --}}
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/fb965b455a.js" crossorigin="anonymous"></script>
     <title>{{ env('APP_NAME') }}</title>
 </head>
@@ -20,14 +24,17 @@
             <div class="col-12 p-4">
                 <div class="nav d-flex justify-content-center">
                     @if (auth()->user())
-                    <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button class="custom-btn">Logout</button>
-                        </form>
-                    </li>
-                </ul>
+                    <div class="">
+                        <div class="mb-2">
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="custom-btn">Logout</button>
+                            </form>
+                        </div>
+                        <div class="">
+                            <a href="{{ route('User.Dashboard') }}" class="nav-link"><img style="border:1px solid rgb(176, 135, 236)" src="{{ asset('assets/logo.png') }}" height="100px" width="100px"></a>
+                        </div>
+                    </div>
                     @else
                     <ul class="nav flex-column">
                     <li class="nav-item">
