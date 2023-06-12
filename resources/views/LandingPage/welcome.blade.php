@@ -48,7 +48,7 @@
             <div class="col-sm-4">
                 <a href="{{ route('User.Widthraw.Balance') }}" class="text-decoration-none card_css">
                     <div class="card" style="background-color: rgb(86,61,124);">
-                        <div class="card-body">
+                        <div class="card-body home_card">
                             <div class="text-center">
                                 <i class="fa-solid fa-money-bill-transfer" style="font-size:25px;"></i>
                             </div>
@@ -60,7 +60,7 @@
             <div class="col-sm-4">
                 <a href="{{ route('User.Team') }}" class="text-decoration-none card_css">
                     <div class="card" style="background-color: rgb(86,61,124);">
-                        <div class="card-body">
+                        <div class="card-body home_card">
                             <div class="text-center">
                                 <i class="fa fa-users" aria-hidden="true"></i>
                             </div>
@@ -72,7 +72,7 @@
             <div class="col-sm-4">
                 <a href="" class="text-decoration-none card_css">
                     <div class="card" style="background-color: rgb(86,61,124);">
-                        <div class="card-body">
+                        <div class="card-body home_card">
                             <div class="text-center">
                                 <i class="fa fa-book" aria-hidden="true"></i>
                             </div>
@@ -90,7 +90,7 @@
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
+                            <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-address-book" style="font-size:25px;"></i>
                                 </div>
@@ -102,7 +102,7 @@
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
+                            <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-newspaper" style="font-size:25px;"></i>
                                 </div>
@@ -114,7 +114,7 @@
                 <div class="col-sm-4">
                     <a href="{{ route('User.Work') }}" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
+                            <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-circle-play" style="font-size:25px;"></i>
                                 </div>
@@ -132,7 +132,7 @@
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
+                            <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-house-circle-exclamation" style="font-size:25px;"></i>
                                 </div>
@@ -144,7 +144,7 @@
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
+                            <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-comment-dots" style="font-size:25px;"></i>
                                 </div>
@@ -156,7 +156,7 @@
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
-                            <div class="card-body">
+                            <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-hashtag" style="font-size:25px;"></i>
                                 </div>

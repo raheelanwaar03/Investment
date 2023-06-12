@@ -172,7 +172,7 @@
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
-                    <a href="{{ route('LandingPage') }}" class="text-center">
+                    <a href="{{ route('User.Dashboard') }}" class="text-center">
                         <div style="float:left;">
                             <i class="fa-solid fa-door-open" style="color:white;font-size:60px;"></i>
                         </div>
