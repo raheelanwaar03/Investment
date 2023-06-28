@@ -18,15 +18,13 @@
     <title>{{ env('APP_NAME') }}</title>
 </head>
 
-<body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});">
-
-    <x-alert/>
+<body style="background-image: url({{ asset('assets/img/bg.jpg') }});">
 
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
-                    <a href="{{ route('User.Dashboard') }}" class="text-center">
+                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
+                    <a href="{{ route('User.Dashboard') }}" class="text-center text-decoration-none">
                         <div style="float:left;">
                             <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
                         </div>
@@ -42,7 +40,7 @@
             @forelse ($allVideos as $video)
                 <div class="col-md-4">
                     <a href="{{ route('User.Work', ['id' => $video->id]) }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-circle-play" style="font-size:25px;"></i>

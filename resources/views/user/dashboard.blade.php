@@ -18,13 +18,13 @@
     <title>{{ env('APP_NAME') }}</title>
 </head>
 
-<body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});">
+<body style="background-image: url({{ asset('assets/img/bg.jpg') }});">
 
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
-                    <a href="{{ route('User.Dashboard') }}" class="text-center">
+                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
+                    <a href="{{ route('User.Dashboard') }}" class="text-center text-decoration-none">
                         <div style="float:left;">
                             <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
                         </div>
@@ -40,7 +40,7 @@
         <div class="col-sm-12 d-flex justify-content-center align-items-center">
             <div class="col-sm-4">
                 <a href="{{ route('User.Widthraw.Balance') }}" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(86,61,124);">
+                    <div class="card" style="background-color: rgb(255, 0, 0);">
                         <div class="card-body">
                             <div class="text-center">
                                 <i class="fa-solid fa-money-bill-transfer" style="font-size:25px;"></i>
@@ -52,7 +52,7 @@
             </div>
             <div class="col-sm-4">
                 <a href="{{ route('User.Team') }}" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(86,61,124);">
+                    <div class="card" style="background-color: rgb(255, 0, 0);">
                         <div class="card-body">
                             <div class="text-center">
                                 <i class="fa fa-users" aria-hidden="true"></i>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-sm-4">
                     <a href="{{ route('User.Rules') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-address-book" style="font-size:25px;"></i>
@@ -82,7 +82,7 @@
             <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-newspaper" style="font-size:25px;"></i>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="{{ route('User.All.Videos') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-circle-play" style="font-size:25px;"></i>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-house-circle-exclamation" style="font-size:25px;"></i>
@@ -124,7 +124,7 @@
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-comment-dots" style="font-size:25px;"></i>
@@ -135,13 +135,13 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                    <a href="{{ route('profile.edit') }}" class="text-decoration-none card_css">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <i class="fa-solid fa-hashtag" style="font-size:25px;"></i>
+                                    <i class="fa fa-user-circle-o" style="font-size:25px;"></i>
                                 </div>
-                                <h5 class="text-decoration-none text-center">Instagram</h5>
+                                <h5 class="text-decoration-none text-center">Profile</h5>
                             </div>
                         </div>
                     </a>

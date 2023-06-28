@@ -18,12 +18,13 @@
     <title>{{ env('APP_NAME') }}</title>
 </head>
 
-<body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});">
+<body style="background-image: url({{ asset('assets/img/bg.jpg') }});">
+
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
-                    <a href="{{ route('User.Dashboard') }}" class="text-center">
+                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
+                    <a href="{{ route('User.Dashboard') }}" class="text-center text-decoration-none">
                         <div style="float:left;">
                             <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
                         </div>
@@ -68,7 +69,7 @@
                                     <option value="jazzcash">Jazzcash</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-block btn-primary mt-2">Procced</button>
+                            <button type="submit" class="btn btn-block btn-danger mt-2">Procced</button>
                         </form>
                     </div>
                 </div>

@@ -18,7 +18,7 @@
      <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
+                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
                     <a href="{{ route('LandingPage') }}" class="text-center">
                         <div style="float:left;">
                             <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
@@ -35,7 +35,7 @@
         <div class="col-sm-12 d-flex justify-content-center align-items-center">
             <div class="col-sm-4">
                 <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(86,61,124);">
+                    <div class="card" style="background-color: rgb(255, 0, 0);">
                         <div class="card-body home_card">
                             <div class="text-center">
                                 <i class="fa-solid fa-money-bill-transfer" style="font-size:25px;"></i>
@@ -47,7 +47,7 @@
             </div>
             <div class="col-sm-4">
                 <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(86,61,124);">
+                    <div class="card" style="background-color: rgb(255, 0, 0);">
                         <div class="card-body home_card">
                             <div class="text-center">
                                 <i class="fa fa-users" aria-hidden="true"></i>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-sm-4">
                 <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(86,61,124);">
+                    <div class="card" style="background-color: rgb(255, 0, 0);">
                         <div class="card-body home_card">
                             <div class="text-center">
                                 <i class="fa-solid fa-address-book" style="font-size:25px;"></i>
@@ -75,7 +75,7 @@
             <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-newspaper" style="font-size:25px;"></i>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-circle-play" style="font-size:25px;"></i>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-house-circle-exclamation" style="font-size:25px;"></i>
@@ -115,7 +115,7 @@
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-comment-dots" style="font-size:25px;"></i>
@@ -127,12 +127,12 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="{{ route('User.Dashboard') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(86,61,124);">
+                        <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body home_card">
                                 <div class="text-center">
                                     <i class="fa-solid fa-hashtag" style="font-size:25px;"></i>
                                 </div>
-                                <h5 class="text-decoration-none text-center">Instagram</h5>
+                                <h5 class="text-decoration-none text-center">Profile</h5>
                             </div>
                         </div>
                     </a>
