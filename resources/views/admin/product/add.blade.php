@@ -69,8 +69,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-3">Text</label>
-                                        <input type="text" name="text" class="form-control"
-                                            placeholder="Video Text">
+                                        <input type="text" name="text" class="form-control" placeholder="Video Text">
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-3">Add Video Duration</label>
@@ -89,48 +88,31 @@
                 </div>
             </div>
         </div>
-
-        <div class="footer_part">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer_iner text-center">
-                            <p>2020 © copyright - Reserved by <a href="#"><img src="{{ asset('admin/img/logo.png') }}"
-                                        alt=""></a><a href="#">
-                                    Dashboard</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 @endsection
-
-{{-- <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">Set limite Referal Commission</h4>
+<div class="card-header">
+    <h4 class="card-title">Set limite Referal Commission</h4>
+</div>
+<div class="card-body">
+    <form action="{{ route('Admin.Setting.store') }}" method="POST">
+        @csrf
+        <div class="form-group">
+            <label class="mt-2">User Minimum Widthraw</label>
+            <input type="number" name="minimum_amount" class="form-control"
+                placeholder="Enter User Referal commission">
         </div>
-        <div class="card-body">
-            <form action="{{ route('Admin.Setting.store') }}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <label class="mt-2">User Minimum Widthraw</label>
-                    <input type="number" name="minimum_amount" class="form-control"
-                        placeholder="Enter User Referal commission">
-                </div>
-                <div class="form-group">
-                    <label class="mt-2">User Maximum Widthraw</label>
-                    <input type="number" name="maximun_amount" class="form-control"
-                        placeholder="Enter User Referal commission">
-                </div>
-                <div class="form-group">
-                    <label class="mt-2">Referal Commission</label>
-                    <input type="number" name="refer_amount" class="form-control"
-                        placeholder="Enter User Referal commission">
-                </div>
-                <div class="mt-2">
-                    <button type="submit" class="btn btn-primary">Apply</button>
-                </div>
-            </form>
+        <div class="form-group">
+            <label class="mt-2">User Maximum Widthraw</label>
+            <input type="number" name="maximun_amount" class="form-control"
+                placeholder="Enter User Referal commission">
         </div>
-    </div> --}}
+        <div class="form-group">
+            <label class="mt-2">Referal Commission</label>
+            <input type="number" name="refer_amount" class="form-control" placeholder="Enter User Referal commission">
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary">Apply</button>
+        </div>
+    </form>
+</div>
+</div> --}}

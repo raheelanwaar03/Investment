@@ -19,14 +19,9 @@
 <script src="{{ asset('admin/vendors/owl_carousel/js/owl.carousel.min.js') }}"></script>
 
 <script src="{{ asset('admin/vendors/gijgo/gijgo.min.js') }}"></script>
-
-<script src="{{ asset('admin/vendors/datatable/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('admin/vendors/datatable/js/dataTables.responsive.min.js') }}"></script>
-<script src="{{ asset('admin/vendors/datatable/js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('admin/js/chart.min.js') }}"></script>
 
 {{-- data table --}}
-
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
 
@@ -37,13 +32,6 @@
 </script>
 
 
-<script src="{{ asset('admin/vendors/datatable/js/buttons.flash.min.js') }}"></script>
-<script src="{{ asset('admin/vendors/datatable/js/jszip.min.js') }}"></script>
-<script src="{{ asset('admin/vendors/datatable/js/pdfmake.min.js') }}"></script>
-<script src="{{ asset('admin/vendors/datatable/js/vfs_fonts.js') }}"></script>
-<script src="{{ asset('admin/vendors/datatable/js/buttons.html5.min.js') }}"></script>
-<script src="{{ asset('admin/vendors/datatable/js/buttons.print.min.js') }}"></script>
-<script src="{{ asset('admin/js/chart.min.js') }}"></script>
 
 <script src="{{ asset('admin/vendors/progressbar/jquery.barfiller.js') }}"></script>
 

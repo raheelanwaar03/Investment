@@ -84,7 +84,7 @@
                                         @enderror
                                     </span>
                                     <div class="form-group">
-                                        <label style="color:white"><b style="font-size: 25px" minlength="11">Easypaisa
+                                        <label style="color:white"><b style="font-size: 25px" minlength="11">Sender
                                                 Number</b></label>
                                         <input type="number" name="sender_num"
                                             style="background: transparent;color:white " class="form-control"

@@ -140,19 +140,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="footer_part">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer_iner text-center">
-                            <p>2020 © copyright - Reserved by <a href="#"><img
-                                        src="{{ asset('admin/img/logo.png') }}" alt=""></a><a href="#">
-                                    Dashboard</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 @endsection
