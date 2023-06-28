@@ -51,11 +51,11 @@
                         @csrf
                         @method('put')
                         <div class="form-group">
-                            <label for="">Name</label>
+                            <label class="text-white">Name</label>
                             <input type="text" class="form-control" value="{{ auth()->user()->name }}">
                         </div>
                         <div class="form-group">
-                            <label for="">Email</label>
+                            <label class="text-white">Email</label>
                             <input type="text" class="form-control" value="{{ auth()->user()->email }}">
                         </div>
                     </form>
