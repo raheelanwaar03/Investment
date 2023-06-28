@@ -148,20 +148,17 @@
                         <div class="mb-2">
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button class="custom-btn">Logout</button>
+                                <button class="btn btn-danger">Logout</button>
                             </form>
-                        </div>
-                        <div class="">
-                            <a href="{{ route('User.Dashboard') }}" class="nav-link"><img style="border:1px solid rgb(176, 135, 236)" src="{{ asset('assets/logo.png') }}" height="100px" width="100px"></a>
                         </div>
                     </div>
                     @else
                     <ul class="nav flex-column">
                     <li class="nav-item">
-             <a class="nav-link custom-btn m-3" href="{{ route('login') }}">Login</a>
+             <a class="nav-link btn btn-danger m-3" href="{{ route('login') }}">Login</a>
                    </li>
                 <li class="nav-item">
-                     <a class="nav-link custom-btn m-1" href="{{ route('register') }}">Register</a>
+                     <a class="nav-link btn btn-danger m-1" href="{{ route('register') }}">Register</a>
                          </li>
                          </ul> @endif
              </div>
