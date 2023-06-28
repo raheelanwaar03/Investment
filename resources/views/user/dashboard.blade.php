@@ -63,24 +63,6 @@
                 </a>
             </div>
             <div class="col-sm-4">
-                <a href="" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(86,61,124);">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <i class="fa fa-book" aria-hidden="true"></i>
-                            </div>
-                            <h5 class="text-decoration-none text-center">Guide</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="container">
-        <div class="row m-3">
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
-                <div class="col-sm-4">
                     <a href="{{ route('User.Rules') }}" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
                             <div class="card-body">
@@ -92,6 +74,12 @@
                         </div>
                     </a>
                 </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
@@ -116,12 +104,6 @@
                         </div>
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row m-3">
-            <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
@@ -134,6 +116,12 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(86,61,124);">
@@ -173,9 +161,6 @@
                                 @csrf
                                 <button class="custom-btn">Logout</button>
                             </form>
-                        </div>
-                        <div class="">
-                            <a href="{{ route('User.Dashboard') }}" class="nav-link"><img style="border:1px solid rgb(176, 135, 236)" src="{{ asset('assets/logo.png') }}" height="100px" width="100px"></a>
                         </div>
                     </div>
                     @else
