@@ -20,34 +20,18 @@
 
 <body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});">
     <div class="container">
-        <div class="row w-100">
-            <div class="col-12 p-4">
-                <div class="nav d-flex justify-content-center">
-                    @if (auth()->user())
-                    <div class="">
-                        <div class="mb-2">
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="custom-btn">Logout</button>
-                            </form>
+        <div class="row m-3">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(86,61,124)">
+                    <a href="{{ route('User.Dashboard') }}" class="text-center">
+                        <div style="float:left;">
+                            <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
                         </div>
-                        <div class="">
-                            <a href="{{ route('User.Dashboard') }}" class="nav-link"><img style="border:1px solid rgb(176, 135, 236)" src="{{ asset('assets/logo.png') }}" height="100px" width="100px"></a>
-                        </div>
-                    </div>
-                </ul>
-                    @else
-                    <ul class="nav flex-column">
-                    <li class="nav-item">
-    <a class="nav-link custom-btn m-3" href="{{ route('login') }}">Login</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link custom-btn m-1" href="{{ route('register') }}">Register</a>
-    </li>
-</ul> @endif
-    </div>
-    </div>
-    </div>
+                        <h3 class="text-center text-white text-decoration-none">Welcome To {{ env('APP_NAME') }}</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container">
         <div class="row">
