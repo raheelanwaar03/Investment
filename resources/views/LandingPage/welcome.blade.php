@@ -13,7 +13,7 @@
     <title>{{ env('APP_NAME') }}</title>
 </head>
 
-<body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});">
+<body style="background-image: url({{ asset('assets/img/bg.jpg') }});">
 
      <div class="container">
         <div class="row m-3">
