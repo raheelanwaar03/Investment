@@ -11,7 +11,7 @@
 </head>
 
 <body
-    style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    style="background-image: url({{ asset('assets/img/bg.jpg') }});background-repeat:no-repeat;background-size:cover;">
     <img src="" alt="">
     <div class="container">
         <div class="row">
@@ -50,8 +50,8 @@
                                     </div>
                                 @enderror
                             </span>
-                            <button type="submit" class="btn btn-primary">Login</button>
-                            <a href="{{ route('password.request') }}" class="btn btn-outline-primary text-white">Reset Password</a>
+                            <button type="submit" class="btn btn-danger">Login</button>
+                            <a href="{{ route('password.request') }}" class="btn btn-outline-danger text-white">Reset Password</a>
                         </form>
                     </div>
                 </div>

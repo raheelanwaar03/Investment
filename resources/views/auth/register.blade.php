@@ -11,8 +11,7 @@
 </head>
 
 <body
-    style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});background-repeat:no-repeat;background-size:cover;">
-    <img src="" alt="">
+    style="background-image: url({{ asset('assets/img/bg.jpg') }});background-repeat:no-repeat;background-size:cover;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -108,7 +107,7 @@
                                 <input type="text" name="referal" value="{{ $referal }}"
                                     class="form-control text-dark" readonly>
                             </div>
-                            <button type="submit" class="btn btn-primary">Next</button>
+                            <button type="submit" class="btn btn-danger">Next</button>
                         </form>
                     </div>
                 </div>
