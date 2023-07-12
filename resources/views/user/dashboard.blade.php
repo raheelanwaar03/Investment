@@ -81,18 +81,6 @@
         <div class="row m-3">
             <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
-                    <a href="" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(255, 0, 0);">
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <i class="fa-solid fa-newspaper" style="font-size:25px;"></i>
-                                </div>
-                                <h5 class="text-decoration-none text-center">News</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4">
                     <a href="{{ route('User.All.Videos') }}" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
@@ -123,13 +111,13 @@
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
-                    <a href="" class="text-decoration-none card_css">
+                    <a href="mailto:raheelanwaar28@gmail.com?subject=Mail from our Website" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-comment-dots" style="font-size:25px;"></i>
                                 </div>
-                                <h5 class="text-decoration-none text-center">Feed Back</h5>
+                                <h5 class="text-decoration-none text-center">Contact us</h5>
                             </div>
                         </div>
                     </a>

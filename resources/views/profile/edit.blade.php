@@ -52,11 +52,11 @@
                         @method('put')
                         <div class="form-group">
                             <label class="text-white">Name</label>
-                            <input type="text" class="form-control" value="{{ auth()->user()->name }}">
+                            <input type="text" class="form-control" value="{{ auth()->user()->name }}" readonly>
                         </div>
                         <div class="form-group">
                             <label class="text-white">Email</label>
-                            <input type="text" class="form-control" value="{{ auth()->user()->email }}">
+                            <input type="text" class="form-control" value="{{ auth()->user()->email }}" readonly>
                         </div>
                     </form>
                 </div>
