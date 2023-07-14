@@ -67,7 +67,7 @@
                             <span class="star-icon" style="font-size: 30px;color:white">☆</span>
                           </div>
                           <div class="d-flex justify-content-around align-items-center">
-                              <a href="{{ route('User.Type.Task',['id'=>$video->id]) }}" class="btn btn-danger">Submit</a>
+                              <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-danger">Submit</a>
                               <button id="shareButton" class="btn btn-sm btn-warning text-white">Share Now</button>
                           </div>
                         </div>
@@ -75,18 +75,57 @@
                 </div>
 
                 <script>
-                    document.getElementById('shareButton').addEventListener('click', function() {
-                        // Replace the video URL and message with your own values
-                        const videoUrl = '{{ $video->link }}';
-                        const message = 'Check out this amazing video!';
+                   // Check if Web Share API is supported
+if (navigator.share) {
+  const shareButton = document.getElementById('shareButton');
+  shareButton.addEventListener('click', shareVideo);
+} else {
+  console.log('Web Share API is not supported in this browser.');
+}
 
-                        // Construct the Twitter sharing URL
-                        const twitterUrl =
-                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&url=${encodeURIComponent(videoUrl)}`;
+function shareVideo() {
+  // Get the video link
+  const videoLink = '{{ $video->link }}'; // Replace with your video link
 
-                        // Open the Twitter sharing window
-                        window.open(twitterUrl, '_blank');
-                    });
+  // Check if Web Share API is supported
+  if (navigator.share) {
+    // Use Web Share API to share the video link
+    navigator.share({
+      title: 'Check out this video',
+      url: videoLink
+    })
+      .then(() => console.log('Video shared successfully.'))
+      .catch((error) => console.log('Error sharing video:', error));
+  } else {
+    // If Web Share API is not supported, display a prompt with the video link and copy option
+    const promptText = `Share this video:\n${videoLink}`;
+
+    // Create a textarea element to hold the video link
+    const textarea = document.createElement('textarea');
+    textarea.value = videoLink;
+    textarea.style.position = 'fixed'; // Ensure the textarea is hidden
+    document.body.appendChild(textarea);
+
+    // Select the text within the textarea
+    textarea.select();
+    textarea.setSelectionRange(0, videoLink.length);
+
+    try {
+      // Copy the video link to the clipboard
+      document.execCommand('copy');
+      console.log('Video link copied to clipboard.');
+    } catch (error) {
+      console.log('Error copying video link:', error);
+    }
+
+    // Remove the textarea element from the DOM
+    document.body.removeChild(textarea);
+
+    // Show a prompt to inform the user that the video link has been copied
+    alert(`${promptText}\n\nVideo link copied to clipboard.`);
+  }
+}
+
                 </script>
                 @empty
                 <h3>No Video uploaded yet!</h3> @endforelse
