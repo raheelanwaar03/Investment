@@ -60,6 +60,7 @@
                                             <th>Balance</th>
                                             <th>Phone</th>
                                             <th>Level</th>
+                                            <th>Plan</th>
                                             <th>Tid</th>
                                             <th>Status</th>
                                             <th>Date</th>

@@ -59,7 +59,8 @@
                                             <th>Email</th>
                                             <th>Balance</th>
                                             <th>Phone</th>
-                                            <th>level</th>
+                                            <th>Level</th>
+                                            <th>Plan</th>
                                             <th>Tid</th>
                                             <th>Status</th>
                                             <th>Date</th>
@@ -74,6 +75,7 @@
                                                 <td>{{ $user->balance }}</td>
                                                 <td>{{ $user->phone }}</td>
                                                 <td>{{ $user->level }}</td>
+                                                <td>{{ $user->plan }}</td>
                                                 <td>{{ $user->trxIds->tid ?? 'UnpaidUser' }}</td>
                                                 <td>{{ $user->status }}</td>
                                                 <td>{{ $user->created_at }}</td>
