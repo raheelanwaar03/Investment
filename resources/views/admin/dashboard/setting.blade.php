@@ -130,6 +130,9 @@
                                             <th>First Commission</th>
                                             <th>Second Commission</th>
                                             <th>Third Commission</th>
+                                            <th>For Silver</th>
+                                            <th>For Gold</th>
+                                            <th>For Dimond</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -141,6 +144,9 @@
                                                 <td>{{ $setting->first_refer }}</td>
                                                 <td>{{ $setting->second_refer }}</td>
                                                 <td>{{ $setting->third_refer }}</td>
+                                                <td>{{ $setting->silver }}</td>
+                                                <td>{{ $setting->gold }}</td>
+                                                <td>{{ $setting->dimond }}</td>
                                                 <td>
                                                     <a href="{{ route('Admin.Setting.edit', $setting->id) }}"
                                                         class="btn btn-primary">Edit</a>
