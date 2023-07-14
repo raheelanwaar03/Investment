@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('first_refer');
             $table->integer('second_refer');
             $table->integer('third_refer');
-            $table->integer('sliver');
+            $table->integer('silver');
             $table->integer('gold');
             $table->integer('dimond');
             $table->integer('minimum_amount');
