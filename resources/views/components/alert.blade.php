@@ -1,4 +1,5 @@
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 @if ($errors->any())
     @foreach ($errors->all() as $error)
         <script>
@@ -17,7 +18,14 @@
     </script>
 @endif
 <script>
-    window.addEventListener('showAlert', event => {
-        swal("Success!", event.detail.message, "success");
-    })
+    Swal.fire(
+        'success'
+    )
+
+    Swal.fire(
+    'error'
+    )
+
+
+    )
 </script>

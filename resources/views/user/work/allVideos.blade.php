@@ -33,6 +33,8 @@
 
 <body style="background-image: url({{ asset('assets/img/bg.jpg') }});">
 
+    <x-alert />
+
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
