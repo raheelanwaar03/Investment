@@ -41,22 +41,17 @@ class ProductController extends Controller
             'product_price' => 'required',
             'product_level' => 'required',
             'text' => 'required',
-            'video' => 'required',
-            'duration' => 'required',
+            'link' => 'required',
         ]);
 
-        $video = $validated['video'];
-        $videoName = rand(111111, 999999) . '.' . $video->getClientOriginalExtension();
-        $video->move(public_path('images'), $videoName);
 
         $product = new AdminProductModel();
         $product->product_price = $validated['product_price'];
         $product->product_level = $validated['product_level'];
         $product->text = $validated['text'];
-        $product->video = $videoName;
-        $product->duration = $validated['duration'];
+        $product->link = $validated['link'];
         $product->save();
-        return redirect()->back()->with('massage', 'Task Added successfully');
+        return redirect()->route('Admin.Product.index')->with('massage', 'Task Added successfully');
     }
 
     /**
@@ -95,13 +90,6 @@ class ProductController extends Controller
         $product = AdminProductModel::find($id);
 
         // check image
-
-        if ($request->video) {
-            $video = $request->video;
-            $videoName = rand(111111, 99999) . '.' . $video->getClientOriginalExtension();
-            $video->move(public_path('images'), $videoName);
-            $product->video = $videoName;
-        }
         $product->product_price = $request->product_price;
         $product->product_level = $request->product_level;
         $product->text = $request->text;

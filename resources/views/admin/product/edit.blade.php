@@ -72,17 +72,11 @@
                                             value="{{ $product->text }}" class="form-group">
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="m-3">Update Video Duration</label>
-                                        <input type="text" name="duration" class="form-control"
-                                            value="{{ $product->duration }}" class="form-group">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="" class="m-3">Change Video</label>
-                                        <input type="file" name="video" class="form-control">
+                                        <input type="text" name="link" value="{{ $product->link }}" class="form-control">
                                     </div>
                                     <div class="my-3">
-                                        <img src="{{ asset('images/' . $product->product_img) }}" alt="product img"
-                                            width="200px" height="200px">
+
                                     </div>
                                     <button type="submit" class="btn btn-primary">Update</button>
                                 </form>

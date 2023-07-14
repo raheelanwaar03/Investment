@@ -11,11 +11,24 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     {{-- favicon --}}
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}">
+
+    {{-- jquery --}}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     {{-- style --}}
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/fb965b455a.js" crossorigin="anonymous"></script>
     <title>{{ env('APP_NAME') }}</title>
+
+    <style>
+        .yellow {
+          color: yellow;
+        }
+      </style>
+
 </head>
 
 <body style="background-image: url({{ asset('assets/img/bg.jpg') }});">
@@ -39,26 +52,57 @@
         <div class="row m-3">
             @forelse ($allVideos as $video)
                 <div class="col-md-4">
-                    <a href="{{ route('User.Work', ['id' => $video->id]) }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(255, 0, 0);">
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <i class="fa-solid fa-circle-play" style="font-size:25px;"></i>
-                                </div>
-                                <h5 class="text-decoration-none text-center">{{ $video->text }}</h5>
-                            </div>
+                    <div class="card" style="width: 18rem;background-color: rgb(255, 0, 0);">
+                        <iframe src="{{ $video->link }}"></iframe>
+                        <div class="card-body">
+                          <h5 class="card-title text-white">Watch and earn</h5>
+                          <p class="card-text text-white">{{ $video->text }}</p>
+                          <div class="d-flex">
+                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
+                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
+                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
+                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
+                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
+                          </div>
+                          <div class="d-flex justify-content-around align-items-center">
+                              <a href="{{ route('User.Type.Task',['id'=>$video->id]) }}" class="btn btn-danger">Submit</a>
+                              <button id="shareButton" class="btn btn-sm btn-warning text-white">Share Now</button>
+                          </div>
                         </div>
-                    </a>
+                      </div>
                 </div>
+
+                <script>
+                    document.getElementById('shareButton').addEventListener('click', function() {
+                        // Replace the video URL and message with your own values
+                        const videoUrl = '{{ $video->link }}';
+                        const message = 'Check out this amazing video!';
+
+                        // Construct the Twitter sharing URL
+                        const twitterUrl =
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&url=${encodeURIComponent(videoUrl)}`;
+
+                        // Open the Twitter sharing window
+                        window.open(twitterUrl, '_blank');
+                    });
+                </script>
                 @empty
                 <h3>No Video uploaded yet!</h3> @endforelse
         </div>
     </div>
     <div class="container">
     <div class="row m-3">
-
     </div>
     </div>
+    <footer>
+        <script>
+            $(document).ready(function() {
+                $('.star-icon').click(function() {
+                    $(this).toggleClass('yellow');
+                });
+            });
+        </script>
+    </footer>
 
     </body>
 

@@ -72,13 +72,8 @@
                                         <input type="text" name="text" class="form-control" placeholder="Video Text">
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="m-3">Add Video Duration</label>
-                                        <input type="text" name="duration" class="form-control"
-                                            placeholder="Add video time">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="m-3">Video</label>
-                                        <input type="file" name="video" class="form-control">
+                                        <label for="" class="m-3">Video Link</label>
+                                        <input type="text" name="link" class="form-control" placeholder="Enter Video link">
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-3">Add</button>
                                 </form>
@@ -90,29 +85,3 @@
         </div>
     </section>
 @endsection
-<div class="card-header">
-    <h4 class="card-title">Set limite Referal Commission</h4>
-</div>
-<div class="card-body">
-    <form action="{{ route('Admin.Setting.store') }}" method="POST">
-        @csrf
-        <div class="form-group">
-            <label class="mt-2">User Minimum Widthraw</label>
-            <input type="number" name="minimum_amount" class="form-control"
-                placeholder="Enter User Referal commission">
-        </div>
-        <div class="form-group">
-            <label class="mt-2">User Maximum Widthraw</label>
-            <input type="number" name="maximun_amount" class="form-control"
-                placeholder="Enter User Referal commission">
-        </div>
-        <div class="form-group">
-            <label class="mt-2">Referal Commission</label>
-            <input type="number" name="refer_amount" class="form-control" placeholder="Enter User Referal commission">
-        </div>
-        <div class="mt-2">
-            <button type="submit" class="btn btn-primary">Apply</button>
-        </div>
-    </form>
-</div>
-</div> --}}

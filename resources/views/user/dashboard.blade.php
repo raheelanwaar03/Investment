@@ -104,12 +104,6 @@
                         </div>
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row m-3">
-            <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="mailto:raheelanwaar28@gmail.com?subject=Mail from our Website" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(255, 0, 0);">
@@ -122,6 +116,12 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="{{ route('profile.edit') }}" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(255, 0, 0);">
