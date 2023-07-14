@@ -52,11 +52,11 @@ class clean extends Command
         $setting->first_refer = '50';
         $setting->second_refer = '30';
         $setting->third_refer = '10';
-        $setting->minimum_amount = '50';
-        $setting->maximun_amount = '500';
         $setting->silver = '0';
         $setting->gold = '0';
         $setting->dimond = '0';
+        $setting->minimum_amount = '50';
+        $setting->maximun_amount = '500';
         $setting->status = 1;
         $setting->save();
 
