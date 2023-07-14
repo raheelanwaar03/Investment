@@ -18,11 +18,11 @@ return new class extends Migration
             $table->integer('first_refer');
             $table->integer('second_refer');
             $table->integer('third_refer');
+            $table->integer('minimum_amount');
+            $table->integer('maximun_amount');
             $table->integer('silver');
             $table->integer('gold');
             $table->integer('dimond');
-            $table->integer('minimum_amount');
-            $table->integer('maximun_amount');
             $table->string('status')->default(0);
             $table->timestamps();
         });
