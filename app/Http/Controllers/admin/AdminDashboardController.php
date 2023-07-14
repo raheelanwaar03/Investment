@@ -77,6 +77,9 @@ class AdminDashboardController extends Controller
     {
         // getting widthraw commission of admin
         $setting = Setting::where('status', 1)->first();
+        $silver = $setting->silver;
+        $gold = $setting->gold;
+        $dimond = $setting->dimond;
         $firstCommission = $setting->first_refer;
         $secondCommission = $setting->second_refer;
         $thirdCommission = $setting->third_refer;
@@ -84,18 +87,45 @@ class AdminDashboardController extends Controller
         $user = User::find($id);
         $user->status = 'approved';
         $user->save();
-            //  getting second user
-        $firstUpliner = User::where('name', $user->referal)->where('status','approved')->first();
-        if ($firstUpliner == '') {
-            return redirect()->back()->with('massage', 'Account has beed Approved successfully');
-        } else {
-            $firstUpliner->balance += $firstCommission;
-            $firstUpliner->save();
+
+        // checking user selected plan
+        $userPlan = $user->plan;
+        if ($userPlan = 'silver') {
+            $firstUpliner = User::where('email', $user->referal)->where('status', 'approved')->first();
+            if ($firstUpliner == '') {
+                return redirect()->back()->with('massage', 'Account has beed Approved successfully');
+            } else {
+                $firstUpliner->balance += $silver;
+                $firstUpliner->save();
+            }
         }
+
+        if ($userPlan = 'gold') {
+            $firstUpliner = User::where('email', $user->referal)->where('status', 'approved')->first();
+            if ($firstUpliner == '') {
+                return redirect()->back()->with('massage', 'Account has beed Approved successfully');
+            } else {
+                $firstUpliner->balance += $gold;
+                $firstUpliner->save();
+            }
+        }
+
+        if ($userPlan = 'dimond') {
+            $firstUpliner = User::where('email', $user->referal)->where('status', 'approved')->first();
+            if ($firstUpliner == '') {
+                return redirect()->back()->with('massage', 'Account has beed Approved successfully');
+            } else {
+                $firstUpliner->balance += $dimond;
+                $firstUpliner->save();
+            }
+        }
+
+        //  getting second user
+
         //  Second Upliner
         $indirectCommission1 = $secondCommission;
         // getting user
-        $secondUpliner = User::where('name', $firstUpliner->referal)->where('status','approved')->first();
+        $secondUpliner = User::where('email', $firstUpliner->referal)->where('status', 'approved')->first();
         if ($secondUpliner == '') {
             return redirect()->back()->with('massage', 'Account has beed Approved successfully');
         } else {
@@ -105,7 +135,7 @@ class AdminDashboardController extends Controller
         // Third UPliner
         $indirectCommission2 = $thirdCommission;
         // getting third person;
-        $thirdUpliner = User::where('name', $secondUpliner->referal)->where('status','approved')->first();
+        $thirdUpliner = User::where('email', $secondUpliner->referal)->where('status', 'approved')->first();
         if ($thirdUpliner == '') {
             return redirect()->back()->with('massage', 'Account has beed Approved successfully');
         } else {
@@ -143,7 +173,7 @@ class AdminDashboardController extends Controller
 
         $users = User::where('status', 'approved')->get();
         foreach ($users as $user) {
-            $mainUser = User::where('referal', $user->name)->where('status','approved')->get();
+            $mainUser = User::where('referal', $user->email)->where('status', 'approved')->get();
             $referCount = $mainUser->count();
 
             // checking refers from admin side
@@ -151,57 +181,57 @@ class AdminDashboardController extends Controller
 
             if (!$mainUser = '') {
                 if ($referCount <= 4) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 0';
                     $user->save();
                 }
                 if ($referCount >= $level1) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 1';
                     $user->save();
                 }
                 if ($referCount >= $level2) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 2';
                     $user->save();
                 }
                 if ($referCount >= $level3) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 3';
                     $user->save();
                 }
                 if ($referCount >= $level4) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 4';
                     $user->save();
                 }
                 if ($referCount >= $level5) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 5';
                     $user->save();
                 }
                 if ($referCount >= $level6) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 6';
                     $user->save();
                 }
                 if ($referCount >= $level7) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 7';
                     $user->save();
                 }
                 if ($referCount >= $level8) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 8';
                     $user->save();
                 }
                 if ($referCount >= $level9) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 9';
                     $user->save();
                 }
                 if ($referCount >= $level10) {
-                    $user = User::where('id', $user->id)->where('status','approved')->first();
+                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
                     $user->level = 'Level 10';
                     $user->save();
                 }
@@ -313,13 +343,13 @@ class AdminDashboardController extends Controller
 
     public function todayApprovedUser()
     {
-        $users = User::where('status', 'approved')->whereDate('created_at',now()->today())->get();
+        $users = User::where('status', 'approved')->whereDate('created_at', now()->today())->get();
         return view('admin.dashboard.todayUser', compact('users'));
     }
 
     public function vistors()
     {
         $vistors = Vistor::get();
-        return view('admin.dashboard.vistors',compact('vistors'));
+        return view('admin.dashboard.vistors', compact('vistors'));
     }
 }

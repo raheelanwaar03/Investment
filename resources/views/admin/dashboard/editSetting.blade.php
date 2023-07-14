@@ -88,8 +88,22 @@
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Edit Maximum Widthraw</label>
                                                     <input type="text" name="maximun_amount"
-                                                        value="{{ $setting->maximun_amount }}" class="form-control"
-                                                        placeholder="Maximun Widthraw">
+                                                        value="{{ $setting->maximun_amount }}" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="m-3">Silver</label>
+                                                    <input type="text" name="silver" value="{{ $setting->silver }}"
+                                                        class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="m-3">Gold</label>
+                                                    <input type="text" name="gold" value="{{ $setting->gold }}"
+                                                        class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="m-3">Dimond</label>
+                                                    <input type="text" name="dimond" value="{{ $setting->dimond }}"
+                                                        class="form-control">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary mt-3">Update</button>
                                             </form>

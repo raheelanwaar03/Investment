@@ -81,8 +81,23 @@
                                                         placeholder="Enter User Second Referal commission">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="mt-2">Referal Commission</label>
+                                                    <label class="mt-2">Third Commission</label>
                                                     <input type="number" name="third_refer" class="form-control"
+                                                        placeholder="Enter User Third Referal commission">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="mt-2">For Silver</label>
+                                                    <input type="number" name="silver" class="form-control"
+                                                        placeholder="Enter User Third Referal commission">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="mt-2">For Gold</label>
+                                                    <input type="number" name="gold" class="form-control"
+                                                        placeholder="Enter User Third Referal commission">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="mt-2">For Dimond</label>
+                                                    <input type="number" name="dimond" class="form-control"
                                                         placeholder="Enter User Third Referal commission">
                                                 </div>
                                                 <div class="mt-2">

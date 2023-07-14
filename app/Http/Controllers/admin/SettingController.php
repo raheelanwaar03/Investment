@@ -42,7 +42,10 @@ class SettingController extends Controller
             'second_refer' => 'required',
             'third_refer' => 'required',
             'minimum_amount' => 'required',
-            'maximun_amount' => 'required'
+            'maximun_amount' => 'required',
+            'silver' => 'required',
+            'gold' => 'required',
+            'dimond' => 'required'
         ]);
 
         $setting = new Setting();
@@ -51,6 +54,9 @@ class SettingController extends Controller
         $setting->third_refer = $validated['third_refer'];
         $setting->minimum_amount = $validated['minimum_amount'];
         $setting->maximun_amount = $validated['maximun_amount'];
+        $setting->silver = $validated['silver'];
+        $setting->gold = $validated['gold'];
+        $setting->dimond = $validated['dimond'];
         $setting->save();
         return redirect()->back()->with('massage','New Limite Appllied');
 
@@ -94,6 +100,9 @@ class SettingController extends Controller
         $setting->third_refer = $request->third_refer;
         $setting->minimum_amount = $request->minimum_amount;
         $setting->maximun_amount = $request->maximun_amount;
+        $setting->silver = $request->silver;
+        $setting->gold = $request->gold;
+        $setting->dimond = $request->dimond;
         $setting->save();
         return redirect()->back()->with('massage','Limite updated successfully');
     }
