@@ -54,6 +54,9 @@ class clean extends Command
         $setting->third_refer = '10';
         $setting->minimum_amount = '50';
         $setting->maximun_amount = '500';
+        $setting->silver = '0';
+        $setting->gold = '0';
+        $setting->dimond = '0';
         $setting->status = 1;
         $setting->save();
 
