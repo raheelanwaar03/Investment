@@ -86,7 +86,7 @@ class clean extends Command
         $user->referal = 'default';
         $user->balance = '0';
         $user->plan = 'Premimum';
-        $user->phone = '03149720318';
+        $user->phone = '03167007156';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('asdfasdf');
         $user->status = 'approved';

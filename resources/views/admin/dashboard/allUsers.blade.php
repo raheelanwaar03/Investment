@@ -75,7 +75,6 @@
                                                 <td>{{ $user->balance }}</td>
                                                 <td>{{ $user->phone }}</td>
                                                 <td>{{ $user->level }}</td>
-                                                <td>{{ $user->level }}</td>
                                                 <td>{{ $user->plan }}</td>
                                                 <td>{{ $user->trxIds->tid ?? 'UnPaidUser' }}</td>
                                                 <td>{{ $user->status }}</td>
