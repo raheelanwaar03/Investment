@@ -114,9 +114,59 @@ class AdminDashboardController extends Controller
             $firstUpliner = User::where('email', $user->referal)->where('status', 'approved')->first();
             if ($firstUpliner == '') {
                 return redirect()->back()->with('massage', 'Account has beed Approved successfully');
-            } else {
-                $firstUpliner->balance += $dimond;
-                $firstUpliner->save();
+            }else {
+                $firstUpliner->balance += $firstCommission;
+                // giving upliner his level
+                $mainUser = User::where('referal', $firstUpliner->username)->where('status','approved')->get();
+                $referCount = $mainUser->count();
+
+                if ($mainUser != '') {
+                    if ($referCount <= 4) {
+                        $firstUpliner->level = 'Level 0';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 5) {
+                        $firstUpliner->level = 'Level 1';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 20) {
+                        $firstUpliner->level = 'Level 2';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 45) {
+                        $firstUpliner->level = 'Level 3';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 70) {
+                        $firstUpliner->level = 'Level 4';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 100) {
+                        $firstUpliner->level = 'Level 5';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 145) {
+                        $firstUpliner->level = 'Level 6';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 200) {
+                        $firstUpliner->level = 'Level 7';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 270) {
+                        $firstUpliner->level = 'Level 8';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 350) {
+                        $firstUpliner->level = 'Level 9';
+                        $firstUpliner->save();
+                    }
+                    if ($referCount >= 10000) {
+                        $firstUpliner->level = 'Level 10';
+                        $firstUpliner->save();
+                    }
+                }
+
             }
         }
 
@@ -155,90 +205,90 @@ class AdminDashboardController extends Controller
 
     // set user level
 
-    public function setLevel()
-    {
-        $levelCheck = ReferalLevel::where('status', 1)->first();
-        $level1 = $levelCheck->level1;
-        $level2 = $levelCheck->level2;
-        $level3 = $levelCheck->level3;
-        $level4 = $levelCheck->level4;
-        $level5 = $levelCheck->level5;
-        $level6 = $levelCheck->level6;
-        $level7 = $levelCheck->level7;
-        $level8 = $levelCheck->level8;
-        $level9 = $levelCheck->level9;
-        $level10 = $levelCheck->level10;
+    // public function setLevel()
+    // {
+    //     $levelCheck = ReferalLevel::where('status', 1)->first();
+    //     $level1 = $levelCheck->level1;
+    //     $level2 = $levelCheck->level2;
+    //     $level3 = $levelCheck->level3;
+    //     $level4 = $levelCheck->level4;
+    //     $level5 = $levelCheck->level5;
+    //     $level6 = $levelCheck->level6;
+    //     $level7 = $levelCheck->level7;
+    //     $level8 = $levelCheck->level8;
+    //     $level9 = $levelCheck->level9;
+    //     $level10 = $levelCheck->level10;
 
 
 
-        $users = User::where('status', 'approved')->get();
-        foreach ($users as $user) {
-            $mainUser = User::where('referal', $user->email)->where('status', 'approved')->get();
-            $referCount = $mainUser->count();
+    //     $users = User::where('status', 'approved')->get();
+    //     foreach ($users as $user) {
+    //         $mainUser = User::where('referal', $user->email)->where('status', 'approved')->get();
+    //         $referCount = $mainUser->count();
 
-            // checking refers from admin side
+    //         // checking refers from admin side
 
 
-            if (!$mainUser = '') {
-                if ($referCount <= 4) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 0';
-                    $user->save();
-                }
-                if ($referCount >= $level1) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 1';
-                    $user->save();
-                }
-                if ($referCount >= $level2) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 2';
-                    $user->save();
-                }
-                if ($referCount >= $level3) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 3';
-                    $user->save();
-                }
-                if ($referCount >= $level4) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 4';
-                    $user->save();
-                }
-                if ($referCount >= $level5) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 5';
-                    $user->save();
-                }
-                if ($referCount >= $level6) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 6';
-                    $user->save();
-                }
-                if ($referCount >= $level7) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 7';
-                    $user->save();
-                }
-                if ($referCount >= $level8) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 8';
-                    $user->save();
-                }
-                if ($referCount >= $level9) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 9';
-                    $user->save();
-                }
-                if ($referCount >= $level10) {
-                    $user = User::where('id', $user->id)->where('status', 'approved')->first();
-                    $user->level = 'Level 10';
-                    $user->save();
-                }
-            }
-        }
-        return redirect()->back()->with('massage', 'Level Given to all users according to their referals');
-    }
+    //         if (!$mainUser = '') {
+    //             if ($referCount <= 4) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 0';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level1) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 1';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level2) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 2';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level3) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 3';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level4) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 4';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level5) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 5';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level6) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 6';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level7) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 7';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level8) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 8';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level9) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 9';
+    //                 $user->save();
+    //             }
+    //             if ($referCount >= $level10) {
+    //                 $user = User::where('id', $user->id)->where('status', 'approved')->first();
+    //                 $user->level = 'Level 10';
+    //                 $user->save();
+    //             }
+    //         }
+    //     }
+    //     return redirect()->back()->with('massage', 'Level Given to all users according to their referals');
+    // }
 
     // Verification Details
 
