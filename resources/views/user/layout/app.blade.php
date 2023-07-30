@@ -2,4 +2,5 @@
 
 @yield('content')
 
+
 @include('user.layout.footer')

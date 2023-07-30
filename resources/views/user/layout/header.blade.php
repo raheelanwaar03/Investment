@@ -23,6 +23,23 @@
         type="text/css" />
     <link href="{{ asset('admin/public/css/style.css') }}" rel="stylesheet" type="text/css" />
 
+    <style>
+        /* Custom CSS */
+        .alert {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        }
+
+        .alert-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        }
+
+    </style>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1SCXYNG06"></script>
     <script>
@@ -145,13 +162,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
 
 
 

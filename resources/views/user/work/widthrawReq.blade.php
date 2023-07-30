@@ -1,6 +1,5 @@
 @extends('user.layout.app')
 
-
 @section('content')
     <div class="content-body">
         <!-- row -->
@@ -16,7 +15,7 @@
                             <h2 class="text-center my-3">Your Balance: {{ auth()->user()->balance }}</h2>
                         </div>
                         <div class="card-body">
-                            <x-alert/>
+                            <x-alert>
                             <form action="{{ route('User.Widthraw.Balance.Request') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
