@@ -23,6 +23,10 @@
         type="text/css" />
     <link href="{{ asset('admin/public/css/style.css') }}" rel="stylesheet" type="text/css" />
 
+    {{-- youtube api --}}
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+
     <style>
         /* Custom CSS */
         .alert {

@@ -35,7 +35,7 @@
 
     <link rel="stylesheet" href="{{ asset('admin/css/style1.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/css/colors/default.css') }}" id="colorSkinCSS">
-
+    <script src="https://www.youtube.com/iframe_api"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 
 </head>

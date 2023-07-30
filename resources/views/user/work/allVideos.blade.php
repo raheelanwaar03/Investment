@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     {{-- favicon --}}
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}">
+    <script src="https://www.youtube.com/iframe_api"></script>
 
     {{-- jquery --}}
 

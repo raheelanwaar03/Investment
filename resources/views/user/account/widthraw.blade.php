@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/fb965b455a.js" crossorigin="anonymous"></script>
     <title>{{ env('APP_NAME') }}</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
 </head>
 
 <body style="background-image: url({{ asset('assets/img/bg.jpg') }});">
