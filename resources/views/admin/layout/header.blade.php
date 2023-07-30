@@ -58,12 +58,8 @@
 
             <li class="mm-active">
                 <a class="has-arrow" href="{{ route('Admin.Dashboard') }}" aria-expanded="false">
-                    <img src="{{ asset('assets/img/menu-icon/1.svg') }}" alt="">
-                    <span>Dashboard</span>
+                    Dashboard
                 </a>
-            </li>
-            <li class="side_menu_title">
-                <span></span>
             </li>
             <li class="">
                 <a class="has-arrow" href="#" aria-expanded="false">

@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-    <title>Verification Page</title>
+    <title>Authentication</title>
 </head>
 
-<body style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }})">
+<body
+    style="background-image: url({{ asset('assets/img/bg.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    <div class="container">
     <div class="container">
         <div style="margin-top: -100px" class="row min-vh-100">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="card border-black shadow-lg w-100">
                     <div class="card-title">
-                        <h2 class="text-center mt-3">Verification</h2>
+                        <h2 class="text-center mt-3" style="color: red">Verification</h2>
                     </div>
                     <div class="card-body">
                         @forelse ($verificationText as $text)
-                            <p class="text-center text-dark" style="font-size:30px;font-family:verdana;">
+                            <p class="text-center" style="font-size:30px;font-family:verdana;color:red">
                                 {{ $text->text }}
                             </p>
                         @empty
@@ -27,7 +30,7 @@
                         @endforelse
                     </div>
                     <div class="card-footer text-center">
-                        <a href="{{ route('LandingPage') }}" class="btn btn-outline-info">Main Page</a>
+                        <a href="{{ route('LandingPage') }}" class="btn btn-outline-danger">Main Page</a>
                     </div>
                 </div>
             </div>

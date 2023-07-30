@@ -30,6 +30,8 @@
                         </div>
                         <h3 class="text-center text-white text-decoration-none">Welcome To {{ env('APP_NAME') }}</h3>
                     </a>
+                    <h4 class="text-center text-white">Your Team members are: ( {{ totalReferal() }} )</h4>
+                    <h4 class="text-center text-white">Your Account level is: ({{ auth()->user()->level }})</h4>
                 </div>
             </div>
         </div>

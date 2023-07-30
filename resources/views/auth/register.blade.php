@@ -32,7 +32,7 @@
                             </div>
                             <span>
                                 @error('name')
-                                    <div class="text-danger">
+                                    <div class="text-white">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -44,7 +44,7 @@
                             </div>
                             <span>
                                 @error('email')
-                                    <div class="text-danger">
+                                    <div class="text-white">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -56,7 +56,7 @@
                             </div>
                             <span>
                                 @error('phone')
-                                    <div class="text-danger">
+                                    <div class="text-white">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -64,14 +64,14 @@
                             <div class="form-group">
                                 <label style="color:white"><b style="font-size: 25px">Select Plan</b></label>
                                 <select name="plan" class="form-control">
-                                    <option value="1">Silver: 500</option>
-                                    <option value="2">Gold: 1000</option>
-                                    <option value="3">Dimond: 1500</option>
+                                    <option value="silver">Silver: 500</option>
+                                    <option value="gold">Gold: 1000</option>
+                                    <option value="dimond">Dimond: 1500</option>
                                 </select>
                             </div>
                             <span>
                                 @error('plan')
-                                    <div class="text-danger">
+                                    <div class="text-white">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -84,7 +84,7 @@
                             </div>
                             <span>
                                 @error('password')
-                                    <div class="text-danger">
+                                    <div class="text-white">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -97,7 +97,7 @@
                             </div>
                             <span>
                                 @error('password_confirmation')
-                                    <div class="text-danger">
+                                    <div class="text-white">
                                         {{ $message }}
                                     </div>
                                 @enderror

@@ -93,7 +93,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="" class="text-decoration-none card_css">
+                    <a href="{{ route('User.About-Us') }}" class="text-decoration-none card_css">
                         <div class="card" style="background-color: rgb(255, 0, 0);">
                             <div class="card-body">
                                 <div class="text-center">

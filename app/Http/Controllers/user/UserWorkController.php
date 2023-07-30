@@ -95,4 +95,14 @@ class UserWorkController extends Controller
         return view('user.work.allVideos',compact('allVideos'));
     }
 
+    public function rule()
+    {
+        return view('user.social.rule');
+    }
+
+    public function about()
+    {
+        return view('user.social.aboutUs');
+    }
+
 }

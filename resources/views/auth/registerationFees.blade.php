@@ -7,50 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-    <title>Payment Page</title>
+    <title>Registeration Fees</title>
 </head>
 
-<body
-    style="background-image: url({{ asset('assets/img/bg/bg1.jpg') }});background-repeat:no-repeat;background-size:cover;">
+<body style="background-image: url({{ asset('assets/img/bg.jpg') }});background-repeat:no-repeat;background-size:cover;">
+    <x-alert />
     <div class="container">
-        {{-- <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center text-light">Select Plan</h1>
-            </div>
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-4">
-                    <div class="card bg-transparent">
-                        <a href="#" style="border:1px solid white;">
-                            <div class="card-body text-white">
-                                <h2>Basic</h2>
-                                <h5>Rs: 500</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-transparent">
-                        <a href="#" style="border:1px solid white;">
-                            <div class="card-body text-white">
-                                <h2>Standard</h2>
-                                <h5>Rs: 1000</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-transparent">
-                        <a href="#" style="border:1px solid white;">
-                            <div class="card-body text-white">
-                                <h2>Premimum</h2>
-                                <h5>Rs: 1500</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <x-alert />
         <div class="row">
             <div class="col-md-12">
                 <div class="row min-vh-100">
