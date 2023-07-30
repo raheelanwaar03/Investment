@@ -15,9 +15,6 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->integer('first_refer');
-            $table->integer('second_refer');
-            $table->integer('third_refer');
             $table->integer('minimum_amount');
             $table->integer('maximun_amount');
             $table->integer('silver');

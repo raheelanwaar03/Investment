@@ -15,8 +15,8 @@ class SettingController extends Controller
      */
     public function index()
     {
-        $settings = Setting::where('status',1)->get();
-        return view('admin.dashboard.setting',compact('settings'));
+        $settings = Setting::where('status', 1)->get();
+        return view('admin.dashboard.setting', compact('settings'));
     }
 
     /**
@@ -38,9 +38,6 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'first_refer' => 'required',
-            'second_refer' => 'required',
-            'third_refer' => 'required',
             'minimum_amount' => 'required',
             'maximun_amount' => 'required',
             'silver' => 'required',
@@ -49,17 +46,13 @@ class SettingController extends Controller
         ]);
 
         $setting = new Setting();
-        $setting->first_refer = $validated['first_refer'];
-        $setting->second_refer = $validated['second_refer'];
-        $setting->third_refer = $validated['third_refer'];
         $setting->minimum_amount = $validated['minimum_amount'];
         $setting->maximun_amount = $validated['maximun_amount'];
         $setting->silver = $validated['silver'];
         $setting->gold = $validated['gold'];
         $setting->dimond = $validated['dimond'];
         $setting->save();
-        return redirect()->back()->with('massage','New Limite Appllied');
-
+        return redirect()->back()->with('massage', 'New Limite Appllied');
     }
 
     /**
@@ -82,7 +75,7 @@ class SettingController extends Controller
     public function edit($id)
     {
         $setting = Setting::find($id);
-        return view('admin.dashboard.editSetting',compact('setting'));
+        return view('admin.dashboard.editSetting', compact('setting'));
     }
 
     /**
@@ -95,16 +88,13 @@ class SettingController extends Controller
     public function update(Request $request, $id)
     {
         $setting = Setting::find($id);
-        $setting->first_refer = $request->first_refer;
-        $setting->second_refer = $request->second_refer;
-        $setting->third_refer = $request->third_refer;
         $setting->minimum_amount = $request->minimum_amount;
         $setting->maximun_amount = $request->maximun_amount;
         $setting->silver = $request->silver;
         $setting->gold = $request->gold;
         $setting->dimond = $request->dimond;
         $setting->save();
-        return redirect()->back()->with('massage','Limite updated successfully');
+        return redirect()->back()->with('massage', 'Limite updated successfully');
     }
 
     /**

@@ -85,21 +85,6 @@
                                                     <input type="number" name="third_refer" class="form-control"
                                                         placeholder="Enter User Third Referal commission">
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="mt-2">For Silver</label>
-                                                    <input type="number" name="silver" class="form-control"
-                                                        placeholder="Enter User Third Referal commission">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="mt-2">For Gold</label>
-                                                    <input type="number" name="gold" class="form-control"
-                                                        placeholder="Enter User Third Referal commission">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="mt-2">For Dimond</label>
-                                                    <input type="number" name="dimond" class="form-control"
-                                                        placeholder="Enter User Third Referal commission">
-                                                </div>
                                                 <div class="mt-2">
                                                     <button type="submit" class="btn btn-primary">Apply</button>
                                                 </div>
@@ -127,9 +112,6 @@
                                         <tr>
                                             <th>Minimum Widthraw</th>
                                             <th>Maximum Widthraw</th>
-                                            <th>First Commission</th>
-                                            <th>Second Commission</th>
-                                            <th>Third Commission</th>
                                             <th>For Silver</th>
                                             <th>For Gold</th>
                                             <th>For Dimond</th>
@@ -141,9 +123,6 @@
                                             <tr>
                                                 <td>{{ $setting->minimum_amount }}</td>
                                                 <td>{{ $setting->maximun_amount }}</td>
-                                                <td>{{ $setting->first_refer }}</td>
-                                                <td>{{ $setting->second_refer }}</td>
-                                                <td>{{ $setting->third_refer }}</td>
                                                 <td>{{ $setting->silver }}</td>
                                                 <td>{{ $setting->gold }}</td>
                                                 <td>{{ $setting->dimond }}</td>
