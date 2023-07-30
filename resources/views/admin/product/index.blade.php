@@ -73,15 +73,14 @@
                                                     <td>{{ $product->product_price }}</td>
                                                     <td>{{ $product->product_level }}</td>
                                                     <td>{{ $product->text }}</td>
-                                                    <td>{{ $product->duration }}</td>
-                                                    <td>{{ $product->video }}</td>
+                                                    <td>{{ $product->link }}</td>
                                                     <td>{{ $product->created_at }}</td>
                                                     <td class="d-flex justify-content-center align-items-center">
                                                         <a href="{{ route('Admin.Product.edit', $product->id) }}"
                                                             class="btn btn-info mx-3">Edit</a>
                                                         <form action="{{ route('Admin.Product.destroy', $product->id) }}"
                                                             method="POST">
-                                                            @csrf
+                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit" class="btn btn-danger">Delete</button>
                                                         </form>
