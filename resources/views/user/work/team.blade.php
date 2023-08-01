@@ -32,9 +32,9 @@
                         </div>
                         <h3 class="text-center text-white text-decoration-none">Welcome To {{ env('APP_NAME') }}</h3>
                     </a>
-                    <h4 class="text-center text-white">Your Team members are: ( {{ totalReferal() }} )</h4>
-                    <h4 class="text-center text-white">Your Account level is: ({{ auth()->user()->level }})</h4>
-                    <h4 class="text-center text-white">Package: ({{ auth()->user()->plan }})</h4>
+                    <h4 class="text-center text-white">Team members : ( {{ totalReferal() }} )</h4>
+                    <h4 class="text-center text-white">Level : ({{ auth()->user()->level }})</h4>
+                    <h4 class="text-center text-white">Package : ({{ auth()->user()->plan }})</h4>
                 </div>
             </div>
         </div>
