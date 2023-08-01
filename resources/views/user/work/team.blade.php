@@ -34,6 +34,7 @@
                     </a>
                     <h4 class="text-center text-white">Your Team members are: ( {{ totalReferal() }} )</h4>
                     <h4 class="text-center text-white">Your Account level is: ({{ auth()->user()->level }})</h4>
+                    <h4 class="text-center text-white">Package: ({{ auth()->user()->plan }})</h4>
                 </div>
             </div>
         </div>
