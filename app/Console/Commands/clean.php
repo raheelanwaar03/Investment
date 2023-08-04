@@ -51,6 +51,7 @@ class clean extends Command
         $setting = new Setting();
         $setting->minimum_amount = '50';
         $setting->maximun_amount = '500';
+        $setting->dollar_rate = '287';
         $setting->silver = '10';
         $setting->gold = '20';
         $setting->dimond = '30';
@@ -99,7 +100,7 @@ class clean extends Command
         $user->email = 'user@gmail.com';
         $user->referal = 'default';
         $user->plan = 'dimond';
-        $user->balance = '0';
+        $user->balance = '10';
         $user->phone = '03000000000';
         $user->password = Hash::make('asdfasdf');
         $user->role = 'user';

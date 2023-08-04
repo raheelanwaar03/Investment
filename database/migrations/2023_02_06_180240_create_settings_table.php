@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('minimum_amount');
             $table->integer('maximun_amount');
+            $table->integer('dollar_rate');
             $table->integer('silver');
             $table->integer('gold');
             $table->integer('dimond');

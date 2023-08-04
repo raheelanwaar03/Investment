@@ -59,7 +59,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="" class="m-3">Price</label>
-                                        <input type="text" name="product_price" class="form-control"
+                                        <input type="text" name="product_price" step="0.01" class="form-control"
                                             placeholder="Add Task Price">
                                     </div>
                                     <div class="form-group">

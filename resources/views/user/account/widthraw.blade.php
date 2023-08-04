@@ -43,7 +43,9 @@
                 <div class="card bg-transparent border-light shadow-lg w-100">
                     <div class="card-title">
                         <h2 class="text-center text-white my-3">Widthraw Balance</h2>
-                        <h2 class="text-center text-white my-3">Your Balance: {{ auth()->user()->balance }}</h2>
+                        <h2 class="text-center text-white my-3">Your Balance: {{ auth()->user()->balance }}$</h2>
+                        <h2 class="text-center text-white my-3">Today Dollar Rate: {{ dollar_rate() }}</h2>
+                        <h3 class="text-center text-white my-3">Balance in Pkr: {{ pkr_balance() }}</h3>
                     </div>
                     <div class="card-body">
                         <x-alert/>

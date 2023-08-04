@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\admin\Setting;
 use App\Models\User;
 use App\Models\user\WidthrawBalance;
 
@@ -29,7 +30,7 @@ function rejectedUsers()
 
 function totalReferFriends()
 {
-    $user = User::where('referal', auth()->user()->email)->where('status','approved')->get()->count();
+    $user = User::where('referal', auth()->user()->email)->where('status', 'approved')->get()->count();
     return $user;
 }
 
@@ -38,7 +39,7 @@ function totalReferFriends()
 function userWidthrawalBalance()
 {
     $totalWidthraw = 0;
-    $widthrawBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','approved')->get();
+    $widthrawBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status', 'approved')->get();
     foreach ($widthrawBalance as $widthraw) {
         $totalWidthraw += $widthraw->widthraw_amount;
     }
@@ -49,7 +50,7 @@ function userWidthrawalBalance()
 function userPendingBalance()
 {
     $totalPending = 0;
-    $pendingBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','pending')->get();
+    $pendingBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status', 'pending')->get();
     foreach ($pendingBalance as $widthraw) {
         $totalPending += $widthraw->widthraw_amount;
     }
@@ -60,7 +61,7 @@ function userPendingBalance()
 function userApprovedBalance()
 {
     $totalApproved = 0;
-    $approvedBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status','approved')->get();
+    $approvedBalance = WidthrawBalance::where('user_id', auth()->user()->id)->where('status', 'approved')->get();
     foreach ($approvedBalance as $widthraw) {
         $totalApproved += $widthraw->widthraw_amount;
     }
@@ -70,7 +71,7 @@ function userApprovedBalance()
 
 function totalReferal()
 {
-    $totalRefers = User::where('referal',auth()->user()->email)->get();
+    $totalRefers = User::where('referal', auth()->user()->email)->get();
     $totalRefers = $totalRefers->count();
     return $totalRefers;
 }
@@ -88,10 +89,30 @@ function level()
 function todayApprovedWidthraw()
 {
     $totalApproved = 0;
-    $approvedBalance = WidthrawBalance::where('status','approved')->whereDay('created_at',now()->day)->get();
+    $approvedBalance = WidthrawBalance::where('status', 'approved')->whereDay('created_at', now()->day)->get();
     foreach ($approvedBalance as $widthraw) {
         $totalApproved += $widthraw->widthraw_amount;
     }
 
     return $totalApproved;
+}
+
+
+function dollar_rate()
+{
+    $setting = Setting::where('status', '1')->first();
+    $dollar_rate = $setting->dollar_rate;
+    return $dollar_rate;
+}
+
+function pkr_balance()
+{
+    $setting = Setting::where('status', '1')->first();
+    $dollar_rate = $setting->dollar_rate;
+
+    $balance = auth()->user()->balance;
+
+    $converted_balance = $dollar_rate * $balance;
+    return $converted_balance;
+
 }

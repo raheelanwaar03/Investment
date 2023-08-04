@@ -40,6 +40,7 @@ class SettingController extends Controller
         $validated = $request->validate([
             'minimum_amount' => 'required',
             'maximun_amount' => 'required',
+            'dollar_rate' => 'required',
             'silver' => 'required',
             'gold' => 'required',
             'dimond' => 'required'
@@ -48,6 +49,7 @@ class SettingController extends Controller
         $setting = new Setting();
         $setting->minimum_amount = $validated['minimum_amount'];
         $setting->maximun_amount = $validated['maximun_amount'];
+        $setting->dollar_rate = $validated['dollar_rate'];
         $setting->silver = $validated['silver'];
         $setting->gold = $validated['gold'];
         $setting->dimond = $validated['dimond'];
@@ -90,6 +92,7 @@ class SettingController extends Controller
         $setting = Setting::find($id);
         $setting->minimum_amount = $request->minimum_amount;
         $setting->maximun_amount = $request->maximun_amount;
+        $setting->dollar_rate = $request->dollar_rate;
         $setting->silver = $request->silver;
         $setting->gold = $request->gold;
         $setting->dimond = $request->dimond;

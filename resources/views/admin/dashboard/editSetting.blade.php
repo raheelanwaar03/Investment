@@ -62,47 +62,34 @@
                                                 @csrf
                                                 @method('put')
                                                 <div class="form-group">
-                                                    <label class="mt-2">First Commission</label>
-                                                    <input type="number" name="first_refer"
-                                                        value="{{ $setting->first_refer }}" class="form-control"
-                                                        placeholder="Enter User First referal commission">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="mt-2">Second Commission</label>
-                                                    <input type="number" name="second_refer"
-                                                        value="{{ $setting->second_refer }}" class="form-control"
-                                                        placeholder="Enter User Second Referal commission">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="mt-2">Third Commission</label>
-                                                    <input type="number" name="third_refer"
-                                                        value="{{ $setting->third_refer }}" class="form-control"
-                                                        placeholder="Enter User Third Referal commission">
-                                                </div>
-                                                <div class="form-group">
                                                     <label for="" class="m-3">Edit Minimum Widthraw</label>
-                                                    <input type="text" name="minimum_amount"
+                                                    <input type="number" name="minimum_amount"
                                                         value="{{ $setting->minimum_amount }}" class="form-control"
                                                         placeholder="Minimum Widthraw">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Edit Maximum Widthraw</label>
-                                                    <input type="text" name="maximun_amount"
+                                                    <input type="number" name="maximun_amount"
                                                         value="{{ $setting->maximun_amount }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="" class="m-3">Dollar Rate</label>
+                                                    <input type="number" name="dollar_rate" step="0.1"
+                                                        value="{{ $setting->dollar_rate }}" class="form-control">
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="" class="m-3">Silver</label>
-                                                    <input type="text" name="silver" value="{{ $setting->silver }}"
+                                                    <input type="number" name="silver" value="{{ $setting->silver }}"
                                                         class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Gold</label>
-                                                    <input type="text" name="gold" value="{{ $setting->gold }}"
+                                                    <input type="number" name="gold" value="{{ $setting->gold }}"
                                                         class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Dimond</label>
-                                                    <input type="text" name="dimond" value="{{ $setting->dimond }}"
+                                                    <input type="number" name="dimond" value="{{ $setting->dimond }}"
                                                         class="form-control">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary mt-3">Update</button>
