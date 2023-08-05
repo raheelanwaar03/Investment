@@ -97,6 +97,20 @@ function todayApprovedWidthraw()
     return $totalApproved;
 }
 
+// total given widthraw
+
+
+function totalGivenWidthraw()
+{
+    $totalApproved = 0;
+    $approvedBalance = WidthrawBalance::where('status', 'approved')->get();
+    foreach ($approvedBalance as $widthraw) {
+        $totalApproved += $widthraw->widthraw_amount;
+    }
+
+    return $totalApproved;
+}
+
 
 function dollar_rate()
 {

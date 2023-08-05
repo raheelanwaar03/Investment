@@ -94,6 +94,11 @@
                                                     </h3>
                                                     <p>Today Given Widthraw</p>
                                                 </div>
+                                                <div class="count_content">
+                                                    <h3><span class="counter">{{ totalGivenWidthraw() }}</span>
+                                                    </h3>
+                                                    <p>Total Widthraw</p>
+                                                </div>
                                             </div>
                                             <div class="single_quick_activity d-flex">
                                                 <div class="count_content">
