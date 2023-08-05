@@ -129,7 +129,7 @@ function shareVideo() {
 
                 </script>
                 @empty
-                <h3>No Video uploaded yet!</h3> @endforelse
+                <h3 class="text-white">No Video uploaded yet!</h3> @endforelse
         </div>
     </div>
     <div class="container">
