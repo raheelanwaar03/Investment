@@ -44,12 +44,16 @@ class ProductController extends Controller
             'link' => 'required',
         ]);
 
+        $video = $validated['link'];
+        $video_name = rand(1111111,9999999).'.'. $video->getClientOriginalExtension();
+        $video->move(public_path('video'),$video_name);
+
 
         $product = new AdminProductModel();
         $product->product_price = $validated['product_price'];
         $product->product_level = $validated['product_level'];
         $product->text = $validated['text'];
-        $product->link = $validated['link'];
+        $product->link = $video_name;
         $product->save();
         return redirect()->route('Admin.Product.index')->with('massage', 'Task Added successfully');
     }
@@ -88,6 +92,14 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = AdminProductModel::find($id);
+
+        if($request->link)
+        {
+            $video = $request->link;
+            $video_name = rand(1111111,9999999).'.'. $video->getClientOriginalExtension();
+            $video->move(public_path('video'),$video_name);
+            $product->link = $video_name;
+        }
 
         // check image
         $product->product_price = $request->product_price;

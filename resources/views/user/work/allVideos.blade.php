@@ -56,7 +56,7 @@
             @forelse ($allVideos as $video)
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;background-color: rgb(255, 0, 0);">
-                        <iframe src="{{ $video->link }}"></iframe>
+                        <iframe src="{{ asset('video/'.$video->link) }}"></iframe>
                         <div class="card-body">
                           <h5 class="card-title text-white">Watch and earn</h5>
                           <p class="card-text text-white">{{ $video->text }}</p>

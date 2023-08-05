@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-3">Change Video</label>
-                                        <input type="text" name="link" value="{{ $product->link }}" class="form-control">
+                                        <input type="file" name="link" value="{{ $product->link }}" class="form-control">
                                     </div>
                                     <div class="my-3">
 
