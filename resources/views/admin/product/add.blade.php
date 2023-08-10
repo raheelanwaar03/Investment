@@ -68,12 +68,21 @@
                                             placeholder="Add Task Level">
                                     </div>
                                     <div class="form-group">
+                                        <label for="" class="m-3">Plan</label>
+                                        <select name="product_plan" class="form-control">
+                                            <option value="silver">Silver</option>
+                                            <option value="gold">Gold</option>
+                                            <option value="dimond">Dimond</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="" class="m-3">Text</label>
                                         <input type="text" name="text" class="form-control" placeholder="Video Text">
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-3">Video Link</label>
-                                        <input type="file" name="link" class="form-control" placeholder="Enter Video link">
+                                        <input type="file" name="link" class="form-control"
+                                            placeholder="Enter Video link">
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-3">Add</button>
                                 </form>

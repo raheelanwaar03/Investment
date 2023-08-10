@@ -67,13 +67,22 @@
                                             value="{{ $product->product_level }}" class="form-group">
                                     </div>
                                     <div class="form-group">
+                                        <label for="" class="m-3">Plan</label>
+                                        <select name="product_plan" class="form-control">
+                                            <option value="silver">Silver</option>
+                                            <option value="gold">Gold</option>
+                                            <option value="dimond">Dimond</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="" class="m-3">Text</label>
                                         <input type="text" name="text" class="form-control"
                                             value="{{ $product->text }}" class="form-group">
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-3">Change Video</label>
-                                        <input type="file" name="link" value="{{ $product->link }}" class="form-control">
+                                        <input type="file" name="link" value="{{ $product->link }}"
+                                            class="form-control">
                                     </div>
                                     <div class="my-3">
 

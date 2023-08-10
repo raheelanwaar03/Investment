@@ -63,7 +63,7 @@ class UserDashboardController extends Controller
             $user = User::where('id', auth()->user()->id)->first();
             $user->balance += $productRewarad;
             $user->save();
-            return redirect()->route('User.All.Videos')->with('massage', 'You have successfully gained task reward');
+            return redirect()->route('User.All.Videos')->with('massage', 'You have successfully gained video reward');
         }
 
         return redirect()->route('User.All.Videos')->with('error', 'You have been watched this video before');

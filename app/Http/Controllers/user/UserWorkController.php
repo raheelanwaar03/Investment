@@ -90,8 +90,7 @@ class UserWorkController extends Controller
 
     public function allVideo()
     {
-        $allVideos = AdminProductModel::get();
-
+        $allVideos = AdminProductModel::where('product_level',auth()->user()->level)->where('product_plan',auth()->user()->plan)->get();
         return view('user.work.allVideos',compact('allVideos'));
     }
 
