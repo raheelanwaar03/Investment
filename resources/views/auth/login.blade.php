@@ -50,8 +50,8 @@
                                     </div>
                                 @enderror
                             </span>
-                            <button type="submit" class="btn btn-danger">Login</button>
-                            <a href="{{ route('password.request') }}" class="btn btn-outline-danger text-white">Reset Password</a>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <a href="{{ route('password.request') }}" class="btn btn-outline-primary text-white">Reset Password</a>
                         </form>
                     </div>
                 </div>

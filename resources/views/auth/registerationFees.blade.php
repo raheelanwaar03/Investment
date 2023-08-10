@@ -71,7 +71,7 @@
                                             </div>
                                         @enderror
                                     </span>
-                                    <button type="submit" class="btn btn-info">Apply</button>
+                                    <button type="submit" class="btn btn-primary">Apply</button>
                                 </form>
                                 <form action="{{ route('logout') }}" method="POST" class="mt-3">
                                     @csrf

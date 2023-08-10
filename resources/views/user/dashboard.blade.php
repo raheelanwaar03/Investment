@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
+                <div class="col-md-12 p-3 mt-5" style="background-color: blue">
                     <a href="{{ route('User.Dashboard') }}" class="text-center text-decoration-none">
                         <div style="float:left;">
                             <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
@@ -42,7 +42,7 @@
         <div class="col-sm-12 d-flex justify-content-center align-items-center">
             <div class="col-sm-4">
                 <a href="{{ route('User.Widthraw.Balance') }}" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(255, 0, 0);">
+                    <div class="card" style="background-color: blue;">
                         <div class="card-body">
                             <div class="text-center">
                                 <i class="fa-solid fa-money-bill-transfer" style="font-size:25px;"></i>
@@ -54,7 +54,7 @@
             </div>
             <div class="col-sm-4">
                 <a href="{{ route('User.Team') }}" class="text-decoration-none card_css">
-                    <div class="card" style="background-color: rgb(255, 0, 0);">
+                    <div class="card" style="background-color: blue;">
                         <div class="card-body">
                             <div class="text-center">
                                 <i class="fa fa-users" aria-hidden="true"></i>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-sm-4">
                     <a href="{{ route('User.Rules') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(255, 0, 0);">
+                        <div class="card" style="background-color: blue;">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-address-book" style="font-size:25px;"></i>
@@ -84,7 +84,7 @@
             <div class="col-md-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="{{ route('User.All.Videos') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(255, 0, 0);">
+                        <div class="card" style="background-color: blue;">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-circle-play" style="font-size:25px;"></i>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="{{ route('User.About-Us') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(255, 0, 0);">
+                        <div class="card" style="background-color: blue;">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-house-circle-exclamation" style="font-size:25px;"></i>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="mailto:raheelanwaar28@gmail.com?subject=Mail from our Website" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(255, 0, 0);">
+                        <div class="card" style="background-color: blue;">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa-solid fa-comment-dots" style="font-size:25px;"></i>
@@ -126,7 +126,7 @@
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="col-sm-4">
                     <a href="{{ route('profile.edit') }}" class="text-decoration-none card_css">
-                        <div class="card" style="background-color: rgb(255, 0, 0);">
+                        <div class="card" style="background-color: blue;">
                             <div class="card-body">
                                 <div class="text-center">
                                     <i class="fa fa-user-circle-o" style="font-size:25px;"></i>
@@ -149,17 +149,17 @@
                         <div class="mb-2">
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button class="custom-btn">Logout</button>
+                                <button class="btn btn-primary">Logout</button>
                             </form>
                         </div>
                     </div>
                     @else
                     <ul class="nav flex-column">
                     <li class="nav-item">
-    <a class="nav-link custom-btn m-3" href="{{ route('login') }}">Login</a>
+    <a class="nav-link btn btn-primary m-3" href="{{ route('login') }}">Login</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link custom-btn m-1" href="{{ route('register') }}">Register</a>
+        <a class="nav-link btn btn-primary m-1" href="{{ route('register') }}">Register</a>
     </li>
 </ul> @endif
     </div>

@@ -107,7 +107,7 @@
                                 <input type="text" name="referal" value="{{ $referal }}"
                                     class="form-control text-dark" readonly>
                             </div>
-                            <button type="submit" class="btn btn-danger">Next</button>
+                            <button type="submit" class="btn btn-primary">Next</button>
                         </form>
                     </div>
                 </div>

@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
+                <div class="col-md-12 p-3 mt-5" style="background-color: blue">
                     <a href="{{ route('User.Dashboard') }}" class="text-center text-decoration-none">
                         <div style="float:left;">
                             <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
@@ -50,7 +50,7 @@
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
+                <div class="col-md-12 p-3 mt-5" style="background-color: blue">
                     <a href="{{ route('LandingPage') }}" class="text-center">
                         <div style="float:left;">
                             <i class="fa-solid fa-door-open" style="color:white;font-size:60px;"></i>

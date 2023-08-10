@@ -39,7 +39,7 @@
     <div class="container">
         <div class="row m-3">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 p-3 mt-5" style="background-color: rgb(255, 0, 0)">
+                <div class="col-md-12 p-3 mt-5" style="background-color: blue">
                     <a href="{{ route('User.Dashboard') }}" class="text-center text-decoration-none">
                         <div style="float:left;">
                             <img src="{{ asset('assets/logo.png') }}" alt="" height="80px" width="80px">
@@ -55,7 +55,7 @@
         <div class="row m-3">
             @forelse ($allVideos as $video)
                 <div class="col-md-4">
-                    <div class="card" style="width: 18rem;background-color: rgb(255, 0, 0);">
+                    <div class="card" style="width: 18rem;background-color: blue;">
                         <iframe src="{{ asset('video/' . $video->link) }}"></iframe>
                         <div class="card-body">
                           <h5 class="card-title text-white">Watch and earn</h5>
@@ -68,8 +68,8 @@
                             <span class="star-icon" style="font-size: 30px;color:white">☆</span>
                           </div>
                           <div class="d-flex justify-content-around align-items-center">
-                              <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-danger">Submit</a>
-                              <button id="shareButton" class="btn btn-sm btn-warning text-white">Share Now</button>
+                              <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-primary">Submit</a>
+                              <button id="shareButton" class="btn btn-sm btn-info text-white">Share Now</button>
                           </div>
                         </div>
                       </div>

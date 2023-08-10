@@ -24,7 +24,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-footer text-center">
-                                            <button onclick="copy()" class="btn btn-secondary mt-2">copy</button>
+                                            <button onclick="copy()" class="btn btn-info mt-2">copy</button>
                                             </div>
                                         </div>
                                     </div>
