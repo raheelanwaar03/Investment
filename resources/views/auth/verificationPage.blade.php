@@ -13,16 +13,15 @@
 <body
     style="background-image: url({{ asset('assets/img/bg.jpg') }});background-repeat:no-repeat;background-size:cover;">
     <div class="container">
-    <div class="container">
         <div style="margin-top: -100px" class="row min-vh-100">
             <div class="col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="card border-black shadow-lg w-100">
                     <div class="card-title">
-                        <h2 class="text-center mt-3" style="color: red">Verification</h2>
+                        <h2 class="text-center mt-3" style="color: blue">Verification</h2>
                     </div>
                     <div class="card-body">
                         @forelse ($verificationText as $text)
-                            <p class="text-center" style="font-size:30px;font-family:verdana;color:red">
+                            <p class="text-center" style="font-size:30px;font-family:verdana;color:blue">
                                 {{ $text->text }}
                             </p>
                         @empty
@@ -30,7 +29,7 @@
                         @endforelse
                     </div>
                     <div class="card-footer text-center">
-                        <a href="{{ route('LandingPage') }}" class="btn btn-outline-danger">Main Page</a>
+                        <a href="{{ route('LandingPage') }}" class="btn btn-outline-primary">Main Page</a>
                     </div>
                 </div>
             </div>

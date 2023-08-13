@@ -52,7 +52,7 @@
                                 <h4>Pending Users</h4>
                             </div>
                             <div class="table-responsive">
-                                <table id="myTable" class="table table-responsive table-bordered">
+                                <table id="dataTable" class="table table-responsive table-bordered">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
