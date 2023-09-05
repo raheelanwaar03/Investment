@@ -58,7 +58,7 @@
                                     @method('put')
                                     <div class="form-group">
                                         <label for="" class="m-3">Video Price</label>
-                                        <input type="text" name="product_price" class="form-control"
+                                        <input type="number" name="product_price" class="form-control"
                                             value="{{ $product->product_price }}" class="form-group">
                                     </div>
                                     <div class="form-group">
