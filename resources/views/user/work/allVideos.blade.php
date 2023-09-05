@@ -54,9 +54,11 @@
     <div class="container">
         <div class="row m-3">
             @forelse ($allVideos as $video)
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="card" style="width: 18rem;background-color: blue;">
-                        <iframe src="{{ asset('video/' . $video->link) }}"></iframe>
+                        <video controls autoplay="false">
+                            <source src="{{ asset('video/' . $video->link) }}" type="video/mp4">
+                        </video>
                         <div class="card-body">
                           <h5 class="card-title text-white">Watch and earn</h5>
                           <p class="card-text text-white">{{ $video->text }}</p>
