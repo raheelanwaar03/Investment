@@ -41,7 +41,7 @@
     <div class="row m-3">
         <div class="col-md-12">
             <!-- video/show.blade.php -->
-            <video controls autoplay>
+            <video controls autoplay="false">
                 <source id="{{ $product->id }}" src="{{ asset('images/' . $product->video) }}" type="video/mp4">
             </video>
         </div>
