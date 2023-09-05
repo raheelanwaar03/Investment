@@ -109,7 +109,7 @@ class ProductController extends Controller
         $product->product_plan = $request->product_plan;
         $product->text = $request->text;
         $product->save();
-        return redirect()->back()->with('massage', 'Task Updated successfully');
+        return redirect()->route('Admin.Product.index')->with('massage', 'Task Updated successfully');
     }
 
     /**
