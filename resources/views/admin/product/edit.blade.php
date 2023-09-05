@@ -68,8 +68,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-3">Plan</label>
-                                        <input type="text" name="product_plan" class="form-control"
-                                            value="{{ $product->product_plan }}" class="form-group">
+                                        <select name="product_plan" value="{{ $product->product_plan }}" class="form-control">
+                                            <option value="silver">Silver</option>
+                                            <option value="gold">Gold</option>
+                                            <option value="dimond">Dimond</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-3">Text</label>
