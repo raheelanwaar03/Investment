@@ -26,13 +26,13 @@
 
     <style>
         .star {
+            display: inline-block;
             font-size: 24px;
             cursor: pointer;
-            color: #ccc; /* Initial star color */
-            transition: color 0.3s; /* Smooth transition for color change */
+            color: white;
         }
-        .star.active {
-            color: gold; /* Brighter star color when active */
+        .bright {
+            color: gold;
         }
     </style>
 
@@ -68,29 +68,17 @@
                         <div class="card-body">
                           <h5 class="card-title text-white">Watch and earn</h5>
                           <p class="card-text text-white">{{ $video->text }}</p>
-                          <div id="stars">
-                            <!-- Five stars will be added here using JavaScript -->
-                        </div>
-                        <script>
-                            // Function to create a single star element
-                            function createStar(index) {
-                                const star = document.createElement("span");
-                                star.classList.add("star");
-                                star.textContent = "★"; // Star character
-                                star.addEventListener("click", () => {
-                                    // Toggle the "active" class to make the star brighter
-                                    star.classList.toggle("active");
-                                });
-                                return star;
-                            }
-
-                            // Create five stars and add them to the page
-                            const starsContainer = document.getElementById("stars");
-                            for (let i = 0; i < 5; i++) {
-                                const star = createStar(i);
-                                starsContainer.appendChild(star);
-                            }
-                        </script>
+                          <div class="star" onclick="toggleStar(1)">★</div>
+                          <div class="star" onclick="toggleStar(2)">★</div>
+                          <div class="star" onclick="toggleStar(3)">★</div>
+                          <div class="star" onclick="toggleStar(4)">★</div>
+                          <div class="star" onclick="toggleStar(5)">★</div>
+    <script>
+        function toggleStar(starNumber) {
+            const star = document.querySelector(`.star:nth-child(${starNumber})`);
+            star.classList.toggle('bright');
+        }
+    </script>
                           <div class="d-flex justify-content-around align-items-center">
                               <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-primary">Submit</a>
                               <button id="shareButton" class="btn btn-sm btn-info text-white">Share Now</button>
