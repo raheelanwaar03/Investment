@@ -81,27 +81,6 @@
                 </div>
 
                 <script>
-                    let currentRating = 0;
-
-                    function highlightStar(starId) {
-                        // Reset all stars to their default color
-                        const stars = document.querySelectorAll('.star');
-                        for (let i = 0; i < stars.length; i++) {
-                            stars[i].style.color = "black";
-                        }
-
-                        // Highlight stars up to the clicked star
-                        const starIndex = Array.from(stars).findIndex(star => star.id === starId);
-                        for (let i = 0; i <= starIndex; i++) {
-                            stars[i].style.color = "gold";
-                        }
-
-                        currentRating = starIndex + 1;
-                    }
-                </script>
-
-
-                <script>
                    // Check if Web Share API is supported
 if (navigator.share) {
   const shareButton = document.getElementById('shareButton');
@@ -162,6 +141,28 @@ function shareVideo() {
     <div class="row m-3">
     </div>
     </div>
+    <footer>
+        <script>
+            let currentRating = 0;
+
+            function highlightStar(rating) {
+                // Reset all stars to their default color
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.querySelector(`.star:nth-child(${i})`);
+                    star.style.color = "black";
+                }
+
+                // Highlight stars up to the clicked star
+                for (let i = 1; i <= rating; i++) {
+                    const star = document.querySelector(`.star:nth-child(${i})`);
+                    star.style.color = "gold";
+                }
+
+                currentRating = rating;
+            }
+        </script>
+    </footer>
+
     </body>
 
 </html>
