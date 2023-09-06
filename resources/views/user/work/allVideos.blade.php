@@ -24,11 +24,16 @@
     <script src="https://kit.fontawesome.com/fb965b455a.js" crossorigin="anonymous"></script>
     <title>{{ env('APP_NAME') }}</title>
 
-    <style>
-        .yellow {
-          color: yellow;
+     <style>
+        .star {
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
         }
-      </style>
+        .star:hover {
+            color: gold;
+        }
+    </style>
 
 </head>
 
@@ -62,13 +67,11 @@
                         <div class="card-body">
                           <h5 class="card-title text-white">Watch and earn</h5>
                           <p class="card-text text-white">{{ $video->text }}</p>
-                          <div class="d-flex">
-                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
-                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
-                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
-                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
-                            <span class="star-icon" style="font-size: 30px;color:white">☆</span>
-                          </div>
+                            <div class="star" onclick="highlightStar(1)">★</div>
+    <div class="star" onclick="highlightStar(2)">★</div>
+    <div class="star" onclick="highlightStar(3)">★</div>
+    <div class="star" onclick="highlightStar(4)">★</div>
+    <div class="star" onclick="highlightStar(5)">★</div>
                           <div class="d-flex justify-content-around align-items-center">
                               <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-primary">Submit</a>
                               <button id="shareButton" class="btn btn-sm btn-info text-white">Share Now</button>
@@ -139,13 +142,25 @@ function shareVideo() {
     </div>
     </div>
     <footer>
-        <script>
-            $(document).ready(function() {
-                $('.star-icon').click(function() {
-                    $(this).toggleClass('yellow');
-                });
-            });
-        </script>
+         <script>
+        let currentRating = 0;
+
+        function highlightStar(rating) {
+            // Reset all stars to their default color
+            for (let i = 1; i <= 5; i++) {
+                const star = document.querySelector(`.star:nth-child(${i})`);
+                star.style.color = "black";
+            }
+
+            // Highlight stars up to the clicked star
+            for (let i = 1; i <= rating; i++) {
+                const star = document.querySelector(`.star:nth-child(${i})`);
+                star.style.color = "gold";
+            }
+
+            currentRating = rating;
+        }
+    </script>
     </footer>
 
     </body>
