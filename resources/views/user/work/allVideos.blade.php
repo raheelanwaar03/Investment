@@ -71,6 +71,26 @@
                           <div id="stars">
                             <!-- Five stars will be added here using JavaScript -->
                         </div>
+                        <script>
+                            // Function to create a single star element
+                            function createStar(index) {
+                                const star = document.createElement("span");
+                                star.classList.add("star");
+                                star.textContent = "★"; // Star character
+                                star.addEventListener("click", () => {
+                                    // Toggle the "active" class to make the star brighter
+                                    star.classList.toggle("active");
+                                });
+                                return star;
+                            }
+
+                            // Create five stars and add them to the page
+                            const starsContainer = document.getElementById("stars");
+                            for (let i = 0; i < 5; i++) {
+                                const star = createStar(i);
+                                starsContainer.appendChild(star);
+                            }
+                        </script>
                           <div class="d-flex justify-content-around align-items-center">
                               <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-primary">Submit</a>
                               <button id="shareButton" class="btn btn-sm btn-info text-white">Share Now</button>
@@ -78,27 +98,6 @@
                         </div>
                       </div>
                 </div>
-
-                <script>
-                    // Function to create a single star element
-                    function createStar(index) {
-                        const star = document.createElement("span");
-                        star.classList.add("star");
-                        star.textContent = "★"; // Star character
-                        star.addEventListener("click", () => {
-                            // Toggle the "active" class to make the star brighter
-                            star.classList.toggle("active");
-                        });
-                        return star;
-                    }
-
-                    // Create five stars and add them to the page
-                    const starsContainer = document.getElementById("stars");
-                    for (let i = 0; i < 5; i++) {
-                        const star = createStar(i);
-                        starsContainer.appendChild(star);
-                    }
-                </script>
 
                 <script>
                    // Check if Web Share API is supported
