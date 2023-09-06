@@ -142,25 +142,25 @@ function shareVideo() {
     </div>
     </div>
     <footer>
-         <script>
-        let currentRating = 0;
+        <script>
+            let currentRating = 0;
 
-        function highlightStar(rating) {
-            // Reset all stars to their default color
-            for (let i = 1; i <= 5; i++) {
-                const star = document.querySelector(`.star:nth-child(${i})`);
-                star.style.color = "black";
+            function highlightStar(rating) {
+                // Reset all stars to their default color
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.querySelector(`.star:nth-child(${i})`);
+                    star.style.color = "black";
+                }
+
+                // Highlight stars up to the clicked star
+                for (let i = 1; i <= rating; i++) {
+                    const star = document.querySelector(`.star:nth-child(${i})`);
+                    star.style.color = "gold";
+                }
+
+                currentRating = rating;
             }
-
-            // Highlight stars up to the clicked star
-            for (let i = 1; i <= rating; i++) {
-                const star = document.querySelector(`.star:nth-child(${i})`);
-                star.style.color = "gold";
-            }
-
-            currentRating = rating;
-        }
-    </script>
+        </script>
     </footer>
 
     </body>
