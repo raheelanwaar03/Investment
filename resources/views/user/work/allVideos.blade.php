@@ -31,9 +31,6 @@
             cursor: pointer;
             color: white;
         }
-        .bright {
-            color: gold;
-        }
     </style>
 
 </head>
@@ -68,17 +65,21 @@
                         <div class="card-body">
                           <h5 class="card-title text-white">Watch and earn</h5>
                           <p class="card-text text-white">{{ $video->text }}</p>
-                          <div class="star" onclick="toggleStar(1)">★</div>
-                          <div class="star" onclick="toggleStar(2)">★</div>
-                          <div class="star" onclick="toggleStar(3)">★</div>
-                          <div class="star" onclick="toggleStar(4)">★</div>
-                          <div class="star" onclick="toggleStar(5)">★</div>
-    <script>
-        function toggleStar(starNumber) {
-            const star = document.querySelector(`.star:nth-child(${starNumber})`);
-            star.classList.toggle('bright');
-        }
-    </script>
+                          <div class="star" onclick="toggleStar(this)">★</div>
+                          <div class="star" onclick="toggleStar(this)">★</div>
+                          <div class="star" onclick="toggleStar(this)">★</div>
+                          <div class="star" onclick="toggleStar(this)">★</div>
+                          <div class="star" onclick="toggleStar(this)">★</div>
+
+                          <script>
+                            function toggleStar(star) {
+                                if (star.style.color === 'white') {
+                                    star.style.color = 'gold';
+                                } else {
+                                    star.style.color = 'white';
+                                }
+                            }
+                        </script>
                           <div class="d-flex justify-content-around align-items-center">
                               <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-primary">Submit</a>
                               <button id="shareButton" class="btn btn-sm btn-info text-white">Share Now</button>
