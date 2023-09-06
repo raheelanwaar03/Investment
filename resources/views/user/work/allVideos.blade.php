@@ -24,14 +24,15 @@
     <script src="https://kit.fontawesome.com/fb965b455a.js" crossorigin="anonymous"></script>
     <title>{{ env('APP_NAME') }}</title>
 
-     <style>
+    <style>
         .star {
-            display: inline-block;
             font-size: 24px;
             cursor: pointer;
+            color: #ccc; /* Initial star color */
+            transition: color 0.3s; /* Smooth transition for color change */
         }
-        .star:hover {
-            color: gold;
+        .star.active {
+            color: gold; /* Brighter star color when active */
         }
     </style>
 
@@ -67,11 +68,9 @@
                         <div class="card-body">
                           <h5 class="card-title text-white">Watch and earn</h5>
                           <p class="card-text text-white">{{ $video->text }}</p>
-                            <div class="star" onclick="highlightStar(1)">★</div>
-    <div class="star" onclick="highlightStar(2)">★</div>
-    <div class="star" onclick="highlightStar(3)">★</div>
-    <div class="star" onclick="highlightStar(4)">★</div>
-    <div class="star" onclick="highlightStar(5)">★</div>
+                          <div id="stars">
+                            <!-- Five stars will be added here using JavaScript -->
+                        </div>
                           <div class="d-flex justify-content-around align-items-center">
                               <a href="{{ route('User.Type.Task', ['id' => $video->id]) }}" class="btn btn-primary">Submit</a>
                               <button id="shareButton" class="btn btn-sm btn-info text-white">Share Now</button>
@@ -79,6 +78,27 @@
                         </div>
                       </div>
                 </div>
+
+                <script>
+                    // Function to create a single star element
+                    function createStar(index) {
+                        const star = document.createElement("span");
+                        star.classList.add("star");
+                        star.textContent = "★"; // Star character
+                        star.addEventListener("click", () => {
+                            // Toggle the "active" class to make the star brighter
+                            star.classList.toggle("active");
+                        });
+                        return star;
+                    }
+
+                    // Create five stars and add them to the page
+                    const starsContainer = document.getElementById("stars");
+                    for (let i = 0; i < 5; i++) {
+                        const star = createStar(i);
+                        starsContainer.appendChild(star);
+                    }
+                </script>
 
                 <script>
                    // Check if Web Share API is supported
@@ -141,28 +161,6 @@ function shareVideo() {
     <div class="row m-3">
     </div>
     </div>
-    <footer>
-        <script>
-            let currentRating = 0;
-
-            function highlightStar(rating) {
-                // Reset all stars to their default color
-                for (let i = 1; i <= 5; i++) {
-                    const star = document.querySelector(`.star:nth-child(${i})`);
-                    star.style.color = "black";
-                }
-
-                // Highlight stars up to the clicked star
-                for (let i = 1; i <= rating; i++) {
-                    const star = document.querySelector(`.star:nth-child(${i})`);
-                    star.style.color = "gold";
-                }
-
-                currentRating = rating;
-            }
-        </script>
-    </footer>
-
     </body>
 
 </html>
