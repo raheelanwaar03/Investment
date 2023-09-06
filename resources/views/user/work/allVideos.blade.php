@@ -83,20 +83,20 @@
                 <script>
                     let currentRating = 0;
 
-                    function highlightStar(rating) {
+                    function highlightStar(starId) {
                         // Reset all stars to their default color
-                        for (let i = 1; i <= 5; i++) {
-                            const star = document.querySelector(`.star:nth-child(${i})`);
-                            star.style.color = "black";
+                        const stars = document.querySelectorAll('.star');
+                        for (let i = 0; i < stars.length; i++) {
+                            stars[i].style.color = "black";
                         }
 
                         // Highlight stars up to the clicked star
-                        for (let i = 1; i <= rating; i++) {
-                            const star = document.querySelector(`.star:nth-child(${i})`);
-                            star.style.color = "gold";
+                        const starIndex = Array.from(stars).findIndex(star => star.id === starId);
+                        for (let i = 0; i <= starIndex; i++) {
+                            stars[i].style.color = "gold";
                         }
 
-                        currentRating = rating;
+                        currentRating = starIndex + 1;
                     }
                 </script>
 
