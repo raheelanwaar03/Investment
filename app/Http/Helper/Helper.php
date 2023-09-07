@@ -71,7 +71,7 @@ function userApprovedBalance()
 
 function totalReferal()
 {
-    $totalRefers = User::where('referal', auth()->user()->email)->get();
+    $totalRefers = User::where('referal', auth()->user()->email)->where('status','approved')->get();
     $totalRefers = $totalRefers->count();
     return $totalRefers;
 }
@@ -79,7 +79,7 @@ function totalReferal()
 
 function level()
 {
-    $users = User::where('referal', auth()->user()->email)->get();
+    $users = User::where('referal', auth()->user()->email)->where('status','approved')->get();
     $userRefer = $users->count();
     return $userRefer;
 }
