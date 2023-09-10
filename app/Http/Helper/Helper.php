@@ -124,7 +124,8 @@ function pkr_balance()
     $setting = Setting::where('status', '1')->first();
     $dollar_rate = $setting->dollar_rate;
 
-    $balance = auth()->user()->balance;
+    $user = User::where('id',auth()->user()->id)->first();
+    $balance = $user->balance;
 
     $converted_balance = $dollar_rate * $balance;
     return $converted_balance;

@@ -23,8 +23,8 @@ class UserWorkController extends Controller
 
     public function widthrawBalance()
     {
-        $widthraws = WidthrawBalance::where('user_id',auth()->user()->id)->get();
-        return view('user.account.widthraw',compact('widthraws'));
+        $widthraws = WidthrawBalance::where('user_id', auth()->user()->id)->get();
+        return view('user.account.widthraw', compact('widthraws'));
     }
 
     public function widthrawBalanceRequest(Request $request)
@@ -53,7 +53,7 @@ class UserWorkController extends Controller
         $userWidthrawAmount = $validated['widthraw_amount'];
 
         // See user balance
-        if ($userWidthrawAmount > auth()->user()->balance) {
+        if ($userWidthrawAmount > pkr_balance()) {
             return redirect()->back()->with('error', 'You have not enough balance');
         }
 
@@ -85,13 +85,13 @@ class UserWorkController extends Controller
         $widthraw->widthraw_name = $validated['widthraw_name'];
         $widthraw->widthraw_num = $validated['widthraw_num'];
         $widthraw->save();
-        return redirect()->route('User.Widthraw.Balance')->with('massage', 'Wait for admin approval');
+        return redirect()->route('User.Widthraw.Balance')->with('massage', 'Wait for admin approval. Your account balance will deduct when admin approve it.');
     }
 
     public function allVideo()
     {
-        $allVideos = AdminProductModel::where('product_level',auth()->user()->level)->where('product_plan',auth()->user()->plan)->get();
-        return view('user.work.allVideos',compact('allVideos'));
+        $allVideos = AdminProductModel::where('product_level', auth()->user()->level)->where('product_plan', auth()->user()->plan)->get();
+        return view('user.work.allVideos', compact('allVideos'));
     }
 
     public function rule()
@@ -103,5 +103,4 @@ class UserWorkController extends Controller
     {
         return view('user.social.aboutUs');
     }
-
 }
