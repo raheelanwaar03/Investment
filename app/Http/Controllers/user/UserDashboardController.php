@@ -27,7 +27,9 @@ class UserDashboardController extends Controller
     public function widthrawReq()
     {
         $widthraws = WidthrawBalance::where('user_id', auth()->user()->id)->get();
-        return view('user.work.widthrawReq', compact('widthraws'));
+        $user = User::where('id',auth()->user()->id)->firstOrFail();
+        $balance = number_format($user->balance, 3);
+        return view('user.work.widthrawReq', compact('widthraws','balance'));
     }
 
     public function work($id)
@@ -43,7 +45,7 @@ class UserDashboardController extends Controller
     {
         $product = AdminProductModel::find($id);
         $productRewarad = $product->product_price;
-
+        // checking user
         $visitor = Vistor::where('user_id', auth()->user()->id)->where('product_id', $id)->whereDate('created_at', '=', Carbon::today())->first();
 
         if ($visitor == null) {
@@ -54,11 +56,6 @@ class UserDashboardController extends Controller
             $visitor->ip = request()->ip();
             $visitor->dateTime = date(now());
             $visitor->save();
-            // Storing User Typed Text
-            $taskText = new Longtext();
-            $taskText->user_id = auth()->user()->id;
-            $taskText->product_id = $id;
-            $taskText->save();
             // giving user product reward
             $user = User::where('id', auth()->user()->id)->first();
             $user->balance += $productRewarad;

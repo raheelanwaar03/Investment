@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('balance')->default(0);
+            $table->decimal('balance',10,3)->default(0);
             $table->string('referal')->default('default');
             $table->string('email')->unique();
             $table->string('plan');

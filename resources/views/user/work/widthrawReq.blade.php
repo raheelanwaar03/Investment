@@ -12,7 +12,7 @@
                     <div class="card">
                         <div class="card-title">
                             <h2 class="text-center my-3">Widthraw Balance</h2>
-                            <h2 class="text-center my-3">Your Balance: {{ auth()->user()->balance }}</h2>
+                            <h2 class="text-center my-3">Your Balance: {{ $balance }}</h2>
                         </div>
                         <div class="card-body">
                             <x-alert>
