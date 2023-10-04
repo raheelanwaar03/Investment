@@ -89,7 +89,7 @@ class clean extends Command
         $user->plan = 'dimond';
         $user->phone = '03000000000';
         $user->email = 'admin@gmail.com';
-        $user->password = Hash::make('asdfasdf');
+        $user->password = Hash::make('Movies123@');
         $user->status = 'approved';
         $user->role = 'admin';
         $user->save();
