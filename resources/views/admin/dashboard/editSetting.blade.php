@@ -74,23 +74,23 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Dollar Rate</label>
-                                                    <input type="number" name="dollar_rate" step="0.1"
+                                                    <input type="number" name="dollar_rate"
                                                         value="{{ $setting->dollar_rate }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Silver</label>
-                                                    <input type="number" name="silver" value="{{ $setting->silver }}"
-                                                        class="form-control">
+                                                    <input type="number" name="silver" step="0.0001"
+                                                        value="{{ $setting->silver }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Gold</label>
-                                                    <input type="number" name="gold" value="{{ $setting->gold }}"
-                                                        class="form-control">
+                                                    <input type="number" name="gold" step="0.0001"
+                                                        value="{{ $setting->gold }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Dimond</label>
-                                                    <input type="number" name="dimond" value="{{ $setting->dimond }}"
-                                                        class="form-control">
+                                                    <input type="number" name="dimond" step="0.0001"
+                                                        value="{{ $setting->dimond }}" class="form-control">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary mt-3">Update</button>
                                             </form>
