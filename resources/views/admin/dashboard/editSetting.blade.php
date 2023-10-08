@@ -79,7 +79,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="" class="m-3">Silver</label>
-                                                    <input type="number" name="silver" step="0.0001"
+                                                    <input type="number" name="silver" step="0.000001"
                                                         value="{{ $setting->silver }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
