@@ -24,7 +24,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-footer text-center">
-                                            <button onclick="copy()" class="btn btn-info mt-2">copy</button>
+                                            1:18 AM 10/11/2023
                                             </div>
                                         </div>
                                     </div>
