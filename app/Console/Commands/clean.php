@@ -107,6 +107,6 @@ class clean extends Command
         $user->status = 'approved';
         $user->save();
 
-        return Command::SUCCESS;
+
     }
 }
